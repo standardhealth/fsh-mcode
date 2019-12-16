@@ -1,0 +1,25 @@
+{
+    "name": "fhir.us.mcode",
+    "version" : "0.1.0",  
+    "canonical" : "http://hl7.org/fhir/us/mcode",
+    "url" : "http://hl7.org/fhir/us/mcode/Draft1",
+    "title" : "mCODE IG",
+    "description": "Gives an example of how FSH can be used to create the mCODE IG",
+    "dependencies": {
+       "hl7.fhir.core": "4.0.1",
+       "hl7.fhir.us.core": "3.1.0"
+    },
+    "keywords": [
+      "us",
+      "FSH"
+    ],
+    "language": "en",
+    "author": "James Tuna",
+    "maintainers": [
+      {
+        "name": "Bill Cod",
+        "email": "cod@reef.gov"
+      }
+    ],
+    "license": "CC0-1.0"
+   }
