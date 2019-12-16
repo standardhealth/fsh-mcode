@@ -8,7 +8,6 @@ A radiological treatment addressing a cancer condition. The scope of this profil
 
 Conformance note: If an ICD-10-PCS code is used in the code attribute, and there is a semantically equivalent SNOMED CT or CPT code, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html)
 """
-* bodySite, TreatmentIntent, RadiationDose MS
 // We should be able to remove the next four lines after 0.4.0 release
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
@@ -16,9 +15,10 @@ Conformance note: If an ICD-10-PCS code is used in the code attribute, and there
 * extension ^slicing.rules = #open
 * extension contains 
     RadiationDose 0..1 and 
-    TreatmentIntent and 
+    TreatmentIntent 0..1 and 
     TerminationReason 0..* and 
     StatementDateTime 0..1
+* bodySite, extension[TreatmentIntent], extension[RadiationDose] MS    
 // Removing `basedOn` constraint. The only reason it was in mCODE was that OBF didn't implement CarePlan
 //* basedOn only Reference(ServiceRequest)
 // Removing `partOf` constraint. The only reason this was a diff was because CIMPL generated an obf-Procedure and obf-Observation
@@ -59,21 +59,21 @@ Id: RadiationDosePerFraction
 Title: "Radiation Dose Per Fraction"
 Description: "The amount of radiation administered during a single session (fraction) of radiation therapy therapy."
 * value[x] only Quantity
-* valueQuantity units = UCUM#cGy
+* valueQuantity = UCUM#cGy
 
 Extension: RadiationFractionsDelivered
 Id: RadiationFractionsDelivered
 Title: "Radiation Fractions Delivered"
 Description: "Records the total number of treatment sessions (fractions) administered during the first course of therapy. Corresponds to LOINC 21950-2 'Number of radiation treatment' [sic]."
 * value[x] only Quantity
-* valueQuantity units = UCUM#1
+* valueQuantity = UCUM#1
 
 Extension: TotalRadiationDoseDelivered
 Id: TotalRadiationDoseDelivered
 Title: "Total Radiation Dose Delivered"
 Description: "The total amount of radiation dose delivered for the course of therapy. (source: SNOMED, ASTRO)"
 * value[x] only Quantity
-* valueQuantity units = UCUM#cGy
+* valueQuantity = UCUM#cGy
 
 
 
