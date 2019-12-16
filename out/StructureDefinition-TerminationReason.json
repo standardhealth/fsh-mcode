@@ -35,7 +35,7 @@
       ]
     }
   ],
-  "description": "Base StructureDefinition for Extension Type: Optional Extension Element - found in all resources.",
+  "description": "A code explaning an unplanned or premature termination of a plan of treatment, course of medication, or research study.",
   "purpose": "The ability to add extensions in a structured way is what keeps FHIR resources simple.",
   "fhirVersion": "4.0.1",
   "mapping": [
@@ -320,7 +320,7 @@
         "isSummary": false,
         "binding": {
           "strength": "required",
-          "valueSet": "TerminationReasonVS"
+          "valueSet": "TreatmentTerminationReasonVS"
         },
         "mapping": [
           {
@@ -384,7 +384,7 @@
         "isSummary": false,
         "binding": {
           "strength": "required",
-          "valueSet": "TerminationReasonVS"
+          "valueSet": "TreatmentTerminationReasonVS"
         },
         "mapping": [
           {

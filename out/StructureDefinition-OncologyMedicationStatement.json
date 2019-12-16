@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "OncologyMedicationStatement",
+  "id": "CancerRelatedMedicationStatement",
   "meta": {
     "lastUpdated": "2019-11-01T09:29:23.356+11:00"
   },
@@ -30,9 +30,9 @@
       "valueCode": "phx"
     }
   ],
-  "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/OncologyMedicationStatement",
+  "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerRelatedMedicationStatement",
   "version": "4.0.1",
-  "name": "OncologyMedicationStatement",
+  "name": "CancerRelatedMedicationStatement",
   "title": "Oncology Medication Statement",
   "status": "draft",
   "date": "2019-11-01T09:29:23+11:00",
