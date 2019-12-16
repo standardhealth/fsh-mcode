@@ -1,3 +1,4 @@
+Alias:   USCoreCondition = http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition
 Alias:   USCoreDocumentReference = http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentReference
 Alias:   USCoreEncounter = http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
 Alias:   USCoreLocation = http://hl7.org/fhir/us/core/StructureDefinition/us-core-location

@@ -16,7 +16,7 @@ Conformance note: If an ICD-10-PCS code is used in the code attribute, and there
 * extension ^slicing.rules = #open
 * extension contains 
     RadiationDose 0..1 and 
-    TreatmentIntent and 
+    TreatmentIntent 0..1 and 
     TerminationReason 0..* and 
     StatementDateTime 0..1
 // Removing `basedOn` constraint. The only reason it was in mCODE was that OBF didn't implement CarePlan
