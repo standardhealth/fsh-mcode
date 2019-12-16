@@ -2,7 +2,7 @@ Profile:  CancerRelatedMedicationStatement
 Parent:   MedicationStatement // USCoreMedicationStatement
 Id:       CancerRelatedMedicationStatement
 Title:    "Cancer-Related Medication Statement"
-Description:    "A record of the use of a medication (individual administration or entire course) for a condition that is related to a primary or secondary cancer condition or comorbid condition. The use may be reported by the patient or clinician and adminstration does not have to be directly observed."
+Description:    "A record of the use of a medication (individual administration or entire course) for a condition that is related to a primary or secondary cancer condition condition. The use may be reported by the patient or clinician and adminstration does not have to be directly observed."
 // We should be able to remove the next four lines after 0.4.0 release
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
