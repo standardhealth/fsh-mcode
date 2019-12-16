@@ -20,9 +20,7 @@ Conformance note: If an ICD-10-PCS code is used in the code attribute, and there
     StatementDateTime 0..1
 * bodySite, extension[TreatmentIntent], extension[RadiationDose] MS    
 // Removing `basedOn` constraint. The only reason it was in mCODE was that OBF didn't implement CarePlan
-//* basedOn only Reference(ServiceRequest)
 // Removing `partOf` constraint. The only reason this was a diff was because CIMPL generated an obf-Procedure and obf-Observation
-//* partOf only Reference(Procedure | MedicationAdministration | Observation)
 * code from RadiationProcedureVS (extensible)
 // Recorder should include PractitionerRole (added). Changed Patient to CancerPatient.
 * recorder only Reference(CancerPatient | USCorePractitioner | PractitionerRole)

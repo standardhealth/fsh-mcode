@@ -1,5 +1,3 @@
-Alias:  LNC = http://loinc.org
-
 Profile:  CancerDiseaseStatus
 Parent:   Observation
 Id:       CancerDiseaseStatus
@@ -27,7 +25,7 @@ Description:    "A clinician's qualitative judgment on the current trend of the 
 * partOf only Reference(MedicationAdministration | MedicationStatement | Procedure)
 * code = LNC#88040-1 "Response to cancer treatment"
 // change from US Core Patient to CancerPatient
-* subject only CancerPatient
+* subject only Reference(CancerPatient)
 * focus only Reference(PrimaryCancerCondition | SecondaryCancerCondition | Tumor)
 // Should this be Encounter, or US Core Encounter?
 * encounter only USCoreEncounter
