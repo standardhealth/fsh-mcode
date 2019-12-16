@@ -4,6 +4,11 @@ Parent:  Condition  // USCoreCondition
 Id: CancerCondition
 Title: "Cancer Condition"
 Description:  "Abstract class for describing a primary or secondary metastatic neoplastic diseases."
+// We should be able to remove the next four lines after 0.4.0 release
+* extension ^slicing.discriminator.type = #value
+* extension ^slicing.discriminator.path = "url"
+* extension ^slicing.ordered = false
+* extension ^slicing.rules = #open
 * extension contains HistologyMorphologyBehavior 0..1
 * category = SCT#64572001 "Disease"
 * severity 0..0
@@ -24,7 +29,7 @@ Cancer staging information summarized in this profile should reflect the most re
 Conformance note: For the code attribute, to be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.
 """
 * code from PrimaryOrUncertainBehaviorCancerDisorderVS (extensible)
-* stageInformation.stageDetail only Reference(CancerStageGroup)
+* stage.assessment only Reference(CancerStageGroup)
 
 
 Extension:  HistologyMorphologyBehavior
@@ -32,4 +37,4 @@ Id: HistologyMorphologyBehavior
 Title: "Histology-Morphology-Behavior"
 Description: "A description of the morphologic and behavioral characteristics of the cancer."
 * value[x] only CodeableConcept
-* concept from HistologyMorphologyBehaviorVS (extensible)
+* valueCodeableConcept from HistologyMorphologyBehaviorVS (extensible)
