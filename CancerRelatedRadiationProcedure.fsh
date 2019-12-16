@@ -1,6 +1,6 @@
 
 Profile:  CancerRelatedRadiationProcedure
-Parent:   Procedure // TODO: change to US core procedure when supported
+Parent:   Procedure // USCoreProcedure
 Id:       CancerRelatedRadiationProcedure
 Title:    "Cancer Related Radiation Procedure"
 Description: """
@@ -8,13 +8,17 @@ A radiological treatment addressing a cancer condition. The scope of this profil
 
 Conformance note: If an ICD-10-PCS code is used in the code attribute, and there is a semantically equivalent SNOMED CT or CPT code, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html)
 """
-* bodySite, treatmentIntent, RadiationDose MS
+* bodySite, TreatmentIntent, RadiationDose MS
 // We should be able to remove the next four lines after 0.4.0 release
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.ordered = false
 * extension ^slicing.rules = #open
-* extension contains RadiationDose 0..1 and TerminationReason 0..* and StatementDateTime 0..1
+* extension contains 
+    RadiationDose 0..1 and 
+    TreatmentIntent and 
+    TerminationReason 0..* and 
+    StatementDateTime 0..1
 // Removing `basedOn` constraint. The only reason it was in mCODE was that OBF didn't implement CarePlan
 //* basedOn only Reference(ServiceRequest)
 // Removing `partOf` constraint. The only reason this was a diff was because CIMPL generated an obf-Procedure and obf-Observation
@@ -30,7 +34,7 @@ Conformance note: If an ICD-10-PCS code is used in the code attribute, and there
 * reasonReference only Reference(PrimaryCancerCondition | SecondaryCancerCondition)
 * bodySite from RadiationTargetBodySiteVS (extensible)
 * bodySite.extension contains 
-// Laterality changed from 0..* to 0..1 (possible bug in CIMPL or mCODE 0.9)
+// Laterality changed from 0..* to 0..1 (possible bug in CIMPL or mCODE 0.9 spec)
     Laterality 0..1 and
     AnatomicalOrientation 0..* and
     RelationToLandmark 0..*

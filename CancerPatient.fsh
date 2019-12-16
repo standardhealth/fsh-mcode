@@ -1,5 +1,5 @@
 Profile: CancerPatient
-Parent: USCorePatient
+Parent: Patient //USCorePatient
 Id: CancerPatient
 Title: "Cancer Patient"
 // The only difference is deceased is Must Support
