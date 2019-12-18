@@ -39,6 +39,10 @@ Conformance note: If an ICD-10-PCS code is used in the code attribute, and there
 * reasonCode from CancerDisorderVS (extensible)
 * reasonReference only Reference(PrimaryCancerCondition | SecondaryCancerCondition)
 * bodySite from RadiationTargetBodySiteVS (extensible)
+* bodySite.extension ^slicing.discriminator.type = #value
+* bodySite.extension ^slicing.discriminator.path = "url"
+* bodySite.extension ^slicing.ordered = false
+* bodySite.extension ^slicing.rules = #open
 * bodySite.extension contains 
 // Laterality changed from 0..* to 0..1 (possible bug in CIMPL or mCODE 0.9 spec)
     Laterality 0..1 and
