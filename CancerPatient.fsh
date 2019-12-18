@@ -7,7 +7,7 @@ Title: "Cancer Patient"
  2) organization should be Reference(Organization), not Reference(US Core Organization)
  3) US Core doesn't profile generalPractitioner. Neither should mCODE.
  4) managingOrganization should be Reference(Organization)
- 5) We probably should NOT required link.other to be a CancerPatient (CIMPL gave us no control over it)
+ 5) We should probably call this "CancerPatient", not "Patient", to avoid confusion
 */
 // The only difference is deceased is Must Support
 * deceased[x] MS

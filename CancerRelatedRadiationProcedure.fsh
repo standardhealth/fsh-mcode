@@ -11,15 +11,15 @@ Conformance note: If an ICD-10-PCS code is used in the code attribute, and there
 /* Issues relative to mCODE 0.9.x
 1) basedOn should not include ProcedureRequest. No such class in R4.
 2) basedOn should include CarePlan
-2) partOf should probably not include MedicationAdministration or Observation.
-3) recorder should include PractitionerRole and not include RelatedPerson
-4) Practitioner in recorder should not be restricted to US Core Practitioner (US Core doesn't do that)
-5) performer.actor, restricted to Reference(US Core Practitioner Profile) in mCODE, should be relaxed to Practitioner
-6) performer.actor should allow PractitionerRole and Organization, and maybe allow Device (to allow recording of the device used in the radiation procedure)
-7) location should not be restricted to US Core Location (US Core doesn't). Relax to Reference(Location)
-8) Subject should at least be constrained to US Core Patient (US Core does), and maybe constrained to CancerPatient
-9) Encounter should not be constrained to US Core Encounter -- US Core doesn't have this constraint
-10) report should allow Reference(DiagnosticReport | DocumentReference | Composition) -- currently mCODE constrains to DiagnosticReport only.
+3) partOf should probably not include MedicationAdministration or Observation.
+4) recorder should include PractitionerRole and not include RelatedPerson
+5) Practitioner in recorder should not be restricted to US Core Practitioner (US Core doesn't do that)
+6) performer.actor, restricted to Reference(US Core Practitioner Profile) in mCODE, should be relaxed to Practitioner
+7) performer.actor should allow PractitionerRole and Organization, and maybe allow Device (to allow recording of the device used in the radiation procedure)
+8) location should not be restricted to US Core Location (US Core doesn't). Relax to Reference(Location)
+9) Subject should at least be constrained to US Core Patient (US Core does), and maybe constrained to CancerPatient
+10) Encounter should not be constrained to US Core Encounter -- US Core doesn't have this constraint
+11) report should allow Reference(DiagnosticReport | DocumentReference | Composition) -- currently mCODE constrains to DiagnosticReport only.
 */
 // We should be able to remove the next four lines after 0.4.0 release
 * extension ^slicing.discriminator.type = #value
