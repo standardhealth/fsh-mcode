@@ -13,7 +13,6 @@ Description:  "Abstract class for describing a primary or secondary metastatic n
 * category = SCT#64572001 "Disease"
 * severity 0..0
 * bodySite from CancerBodyLocationVS (preferred)
-// add PractitionerRole to asserter
 * asserter only Reference(Practitioner | PractitionerRole)
 * recorder only Reference(Practitioner | PractitionerRole)
 
@@ -28,6 +27,10 @@ Cancer staging information summarized in this profile should reflect the most re
 
 Conformance note: For the code attribute, to be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.
 """
+/* Issues relative to mCODE 0.9.x
+1) asserter should include PractitionerRole
+2) recorder should include PractitionerRole
+*/
 * code from PrimaryOrUncertainBehaviorCancerDisorderVS (extensible)
 * stage.assessment only Reference(CancerStageGroup)
 
@@ -38,3 +41,4 @@ Title: "Histology-Morphology-Behavior"
 Description: "A description of the morphologic and behavioral characteristics of the cancer."
 * value[x] only CodeableConcept
 * valueCodeableConcept from HistologyMorphologyBehaviorVS (extensible)
+

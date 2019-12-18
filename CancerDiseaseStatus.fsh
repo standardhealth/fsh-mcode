@@ -1,10 +1,19 @@
-Alias:  LNC = http://loinc.org
-
 Profile:  CancerDiseaseStatus
 Parent:   Observation
 Id:       CancerDiseaseStatus
 Title:    "Cancer Disease Status"
 Description:    "A clinician's qualitative judgment on the current trend of the cancer, e.g., whether it is stable, worsening (progressing), or improving (responding). The judgment may be based a single type or multiple kinds of evidence, such as imaging data, assessment of symptoms, tumor markers, laboratory data, etc."
+/* There are several anomalies in mCODE 0.9.3:
+1) Not sure if `basedOn` should include MedicationRequest or just ServiceRequest. 
+2) ProcedureRequest shouldn't in `basedOn` -- it is an artifact of OBF (doesn't exist in FHIR)
+3) Should `partOf` include MedicationAdministration or MedicationStatement?
+4) There's no reason category should be 0..1 (maybe because of DSTU2?) 
+4) Binding of category should be preferred, not extensible
+5) Unless we are forcing US Core onto mCODE users, encounter should be Reference(Encounter), not Reference(US Core Encounter)
+6) patient should be Reference(CancerPatient) -- the mCODE profile -- not Reference(US Core Patient)
+7) There's no apparent reason that interpretation should constrained to 0..1 (from 0..*)
+8) derivedFrom is missing Reference(ImagingStudy | MolecularSequence) choices - I think these were omitted only because they weren't in OBF.
+*/
 // We should be able to remove the next four lines after 0.4.0 release
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
@@ -13,7 +22,7 @@ Description:    "A clinician's qualitative judgment on the current trend of the 
 * extension contains EvidenceType 0..*
 // The following line is correct, but it is generating an error. Nick is looking into it (12/16/2019)
 * extension[EvidenceType].valueCodeableConcept from CancerDiseaseStatusEvidenceTypeVS (required)
-* effective[x], valueCodeableConcept MS
+* status, code, subject, effective[x], valueCodeableConcept MS
 * bodySite 0..0
 * specimen 0..0
 * device 0..0
@@ -21,21 +30,16 @@ Description:    "A clinician's qualitative judgment on the current trend of the 
 * hasMember 0..0
 * component 0..0
 * interpretation 0..1
-// Not sure if `basedOn` should be MedicationRequest instead of US Core MedicationRequest, or limited to only ServiceRequest
-* basedOn only Reference(ServiceRequest | USCoreMedicationRequest)
-// Should `partOf` include MedicationAdministration or MedicationStatement?
+* subject 1..1
+* basedOn only Reference(ServiceRequest | MedicationRequest)
 * partOf only Reference(MedicationAdministration | MedicationStatement | Procedure)
 * code = LNC#88040-1 "Response to cancer treatment"
-// change from US Core Patient to CancerPatient
-* subject only CancerPatient
+* subject only Reference(CancerPatient)
 * focus only Reference(PrimaryCancerCondition | SecondaryCancerCondition | Tumor)
-// Should this be Encounter, or US Core Encounter?
-* encounter only USCoreEncounter
 * effective[x] only dateTime or Period
 * performer only Reference(USCorePractitioner)
 * value[x] only CodeableConcept
 * valueCodeableConcept from ConditionStatusTrendVS (required)
-// MK added ImagingStudy and MolecularSequence - I think these were omitted only because they weren't in OBF
 * derivedFrom only 	Reference(USCoreDocumentReference | Media | QuestionnaireResponse | Observation | ImagingStudy | MolecularSequence)
 
 

@@ -1207,7 +1207,7 @@
           "coding": [
             {
               "code": "88040-1",
-              "system": "http://loinc.org"
+              "system": "LNC"
             }
           ]
         },
@@ -1279,10 +1279,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Patient",
-              "http://hl7.org/fhir/StructureDefinition/Group",
-              "http://hl7.org/fhir/StructureDefinition/Device",
-              "http://hl7.org/fhir/StructureDefinition/Location"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerPatient"
             ]
           }
         ],
@@ -3225,10 +3222,22 @@
           "coding": [
             {
               "code": "88040-1",
-              "system": "http://loinc.org"
+              "system": "LNC"
             }
           ]
         }
+      },
+      {
+        "id": "Observation.subject",
+        "path": "Observation.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerPatient"
+            ]
+          }
+        ]
       },
       {
         "id": "Observation.effective[x]",
