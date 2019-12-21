@@ -12,11 +12,6 @@ Description:    "A record of the use of a medication (individual administration 
 6) informationSource is missing PractitionerRole
 7) not sure why reasonCode has be changed from 0..* to 0..1
 */
-// We should be able to remove the next four lines after 0.4.0 release
-* extension ^slicing.discriminator.type = #value
-* extension ^slicing.discriminator.path = "url"
-* extension ^slicing.ordered = false
-* extension ^slicing.rules = #open
 * extension contains 
     TreatmentIntent 0..1 MS and 
     TerminationReason 0..* MS 

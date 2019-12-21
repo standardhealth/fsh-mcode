@@ -22,10 +22,6 @@ Conformance note: If an ICD-10-PCS code is used in the code attribute, and there
 11) report should allow Reference(DiagnosticReport | DocumentReference | Composition) -- currently mCODE constrains to DiagnosticReport only.
 */
 // We should be able to remove the next four lines after 0.4.0 release
-* extension ^slicing.discriminator.type = #value
-* extension ^slicing.discriminator.path = "url"
-* extension ^slicing.ordered = false
-* extension ^slicing.rules = #open
 * extension contains 
     RadiationDose 0..1 and 
     TreatmentIntent 0..1 and 
@@ -39,10 +35,6 @@ Conformance note: If an ICD-10-PCS code is used in the code attribute, and there
 * reasonCode from CancerDisorderVS (extensible)
 * reasonReference only Reference(PrimaryCancerCondition | SecondaryCancerCondition)
 * bodySite from RadiationTargetBodySiteVS (extensible)
-* bodySite.extension ^slicing.discriminator.type = #value
-* bodySite.extension ^slicing.discriminator.path = "url"
-* bodySite.extension ^slicing.ordered = false
-* bodySite.extension ^slicing.rules = #open
 * bodySite.extension contains 
 // Laterality changed from 0..* to 0..1 (possible bug in CIMPL or mCODE 0.9 spec)
     Laterality 0..1 and
@@ -55,10 +47,6 @@ Extension: RadiationDose
 Id: RadiationDose
 Title:  "Radiation Dose"
 Description: "Information related to the dose of radiation received in a RadiationProcedure, including the dose per fraction, the number of fractions delivered, and the total radiation dose delivered."
-* extension ^slicing.discriminator.type = #value
-* extension ^slicing.discriminator.path = "url"
-* extension ^slicing.ordered = false
-* extension ^slicing.rules = #open
 * extension contains 
     RadiationDosePerFraction 0..1 and
     RadiationFractionsDelivered 0..1 and

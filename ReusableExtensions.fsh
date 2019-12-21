@@ -41,10 +41,6 @@ The relationship between a landmark that helps determine a body location and the
 * Specifying the direction from the landmark to the body location, and
 * Specifying the distance from the landmark to the body location.
 """
-* extension ^slicing.discriminator.type = #value
-* extension ^slicing.discriminator.path = "url"
-* extension ^slicing.ordered = false
-* extension ^slicing.rules = #open
 * extension contains
     LandmarkType 0..1 and
     LandmarkLocation 0..1 and
@@ -63,13 +59,9 @@ Id:  LandmarkLocation
 
 Title: "Landmark Location"
 Description: "The body location of the landmark, specified by a location code and optional laterality and orientation."
-* extension ^slicing.discriminator.type = #value
-* extension ^slicing.discriminator.path = "url"
-* extension ^slicing.ordered = false
-* extension ^slicing.rules = #open
-* extension contains
 // change from `code` to BodySiteCode and bind the code to a value set
 // Also change BodySiteCode from 0..1 to 1..1
+* extension contains
     BodySiteCode 1..1
     Laterality 0..1 and
     AnatomicalOrientation 0..* and

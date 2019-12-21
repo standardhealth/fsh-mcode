@@ -14,11 +14,6 @@ Description:    "A clinician's qualitative judgment on the current trend of the 
 7) There's no apparent reason that interpretation should constrained to 0..1 (from 0..*)
 8) derivedFrom is missing Reference(ImagingStudy | MolecularSequence) choices - I think these were omitted only because they weren't in OBF.
 */
-// We should be able to remove the next four lines after 0.4.0 release
-* extension ^slicing.discriminator.type = #value
-* extension ^slicing.discriminator.path = "url"
-* extension ^slicing.ordered = false
-* extension ^slicing.rules = #open
 * extension contains EvidenceType 0..*
 // The following line is correct, but it is generating an error. Nick is looking into it (12/16/2019)
 * extension[EvidenceType].valueCodeableConcept from CancerDiseaseStatusEvidenceTypeVS (required)
