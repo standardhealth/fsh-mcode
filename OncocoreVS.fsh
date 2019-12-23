@@ -24,7 +24,7 @@ Description: "Codes representing the structure, arrangement, and behavioral char
 * codes from system SCT where code is-a SCT#367651003 "Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)" 
 * codes from system SCT where code is-a SCT#399919001 "Carcinoma in situ - category (morphologic abnormality)"
 * codes from system SCT where 
-    code is-a SCT# SCT#399983006 "In situ adenomatous neoplasm - category (morphologic abnormality)" and
+    code is-a SCT#399983006 "In situ adenomatous neoplasm - category (morphologic abnormality)" and
     code is-not-a SCT#399983006 "Papillary neoplasm, pancreatobiliary-type, with high grade intraepithelial neoplasia (morphologic abnormality)" and
     code is-not-a SCT#128640002 "Glandular intraepithelial neoplasia, grade III (morphologic abnormality)" and
     code is-not-a SCT#450890000 "Glandular intraepithelial neoplasia, low grade (morphologic abnormality)" and
