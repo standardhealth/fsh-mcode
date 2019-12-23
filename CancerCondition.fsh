@@ -5,8 +5,7 @@ Extension: AssertedDate
 Id: AssertedDate
 Title: "Asserted Date"
 Description: "Date when the condition was asserted"
-* value[x] only valueDateTime
-* valueDateTime only dateTime
+* value[x] only dateTime
 
 
 // No way to designate CancerCondition as abstract. We could make it a mixin, but that is not supported yet.
@@ -15,15 +14,16 @@ Parent:  Condition  // USCoreCondition
 Id: CancerCondition
 Title: "Cancer Condition"
 Description:  "Abstract class for describing a primary or secondary metastatic neoplastic diseases."
-* extension[AssertedDate], extension[HistologyMorphologyBehavior], bodySite, bodySite.extension[Laterality] MS
-* category = SCT#64572001 "Disease"
-* severity 0..0
-* bodySite from CancerBodyLocationVS (preferred)
+* extension contains AssertedDate 0..1 and HistologyMorphologyBehavior 0..1
 * bodySite.extension contains 
 // Laterality should be 0..1 not 0..* (possible bug in CIMPL or mCODE 0.9 spec)
     Laterality 0..1 and
     AnatomicalOrientation 0..* and
     RelationToLandmark 0..*
+* extension[AssertedDate], extension[HistologyMorphologyBehavior], bodySite, bodySite.extension[Laterality] MS
+* category = SCT#64572001 "Disease"
+* severity 0..0
+* bodySite from CancerBodyLocationVS (preferred)
 * asserter only Reference(Practitioner | PractitionerRole)
 * recorder only Reference(Practitioner | PractitionerRole)
 
@@ -76,5 +76,5 @@ Extension: RelatedPrimaryCancerCondition
 Id: RelatedPrimaryCancerCondition
 Title: "Related Primary Cancer Condition"
 Description: "The primary cancer related to this secondary cancer."
-* value[x] only valueReference
+* value[x] only Reference
 * valueReference only Reference(PrimaryCancerCondition)
