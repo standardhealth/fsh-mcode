@@ -46,4 +46,58 @@ InstanceOf: CancerPatient
 * communication.language.text = "English"
 
 
+Instance: mCODEECOGPerformanceStatusExample01 
+InstanceOf: ECOGPerformanceStatus
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-ECOGPerformanceStatus" 
 
+* status = #final "final"
+* focus = Reference(mCODEPrimaryCancerConditionExample01)
+* method = SCT#5880005 "Clinical examination"
+* code = LNC#89262-0 "ECOG Performance Status [Interpretation]"
+* subject = Reference(mCODEPatientExample01)
+* onsetDateTime = "2019-04-01"
+* asserter = Reference(mCODEPractitionerExample01) 
+* valueCodeableConcept = SCT#422512005 "ECOG Performance Status - grade 1"
+
+
+Instance: mCODEKarnofskyPerformanceStatusExample01
+InstanceOf: KarnofskyPerformanceStatus
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-KarnofskyPerformanceStatus"
+
+* status = #final "final"
+* focus = Reference(mCODEPrimaryCancerConditionExample01)
+* method = SCT#5880005 "Clinical examination"
+* code = LNC#89245-5 "Karnofsky Performance Status [Interpretation]"
+* subject = Reference(mCODEPatientExample01)
+* onsetDateTime = "2019-04-01"
+* asserter = Reference(mCODEPractitionerExample01)
+* valueCodeableConcept = LNC#LA29177-5 "Norml activity with effort; some signs or symptoms of disease"
+
+
+Instance: mCODECancerRelatedMedicationStatementExample01
+InstanceOf: mCODECancerRelatedMedicationStatement
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-CancerRelatedMedicationStatement"
+
+* status = #active "active"
+* medicationCodeableConcept = RXN#93698 "Carboplatin Injectable Solution [Paraplatin]"
+* subject = Reference(mCODEPatientExample01)
+* effectiveDateTime = "2019-04-01"
+* dateAsserted = "2019-04-01"
+* extension.valueCodeableConcept = SCT#373808002 "Curative - procedure intent" I'm not sure how to write extensions into the example
+//not sure how to write in extensions
+
+
+Instance: mCODECancerRelatedSurgicalProcedureExample01
+InstanceOf: mCODECancerRelatedSurgicalProcedure
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-CancerRelatedSurgicalProcedure"
+
+* status = #completed "completed"
+* code = SCT#359615001 "Partial lobectomy of lung (procedure)"
+* subject = Reference(mCODEPatientExample01)
+* asserter = Reference(mCODEPractitionerExample01)
+* performedDateTime = "2019-03-01"
+* extension.valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
+//not sure how to write in extensions
+* reasonReference = Reference(mCODEPrimaryCancerConditionExample01)
+* reasonCode = SCT#254637007 "Non-small cell lung cancer (disorder)"
+* bodySite = SCT#41224006 "Structure of lower lobe of left lung (body structure)"
