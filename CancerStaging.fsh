@@ -19,16 +19,20 @@ Description:  "Abstract parent class for members of cancer staging panels. Cance
 * method from CancerStagingSystemVS (extensible)
 * performer only Reference(Practitioner)
 
-Profile: TNMClinicalStageGroup
-Id: TNMClinicalStageGroup
+Profile: CancerStageGroup
+Id: CancerStageGroup
 Parent: CancerStageParent
-Title: "TNM Clinical Stage Group"
-Description: "The extent of the cancer in the body, according to the TNM classification system, based on information obtained prior to neoadjuvant treatment and surgery, e.g. based on evidence such as physical examination, imaging, and/or biopsy."
-* code = LNC#21908-9 "Stage group.clinical Cancer"
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.ordered = false
 * extension ^slicing.rules = #open
+
+Profile: TNMClinicalStageGroup
+Id: TNMClinicalStageGroup
+Parent: CancerStageGroup
+Title: "TNM Clinical Stage Group"
+Description: "The extent of the cancer in the body, according to the TNM classification system, based on information obtained prior to neoadjuvant treatment and surgery, e.g. based on evidence such as physical examination, imaging, and/or biopsy."
+* code = LNC#21908-9 "Stage group.clinical Cancer"
 *hasMember contains 
     TNMClinicalPrimaryTumorCategory 0..1 and
     TNMClinicalRegionalNodesCategory 0..1 and
@@ -37,14 +41,10 @@ Description: "The extent of the cancer in the body, according to the TNM classif
 
 Profile: TNMPathologicalStageGroup
 Id: TNMPathologicalStageGroup
-Parent: CancerStageParent
+Parent: CancerStageGroupParent
 Title: "TNM Pathological Stage Group"
 Description: "The extent of the cancer in the body, according to the TNM classification system, based on information obtained prior to neoadjuvant treatment and surgery, e.g. based on evidence such as physical examination, imaging, and/or biopsy."
 * code =  LNC#21902-2 "Stage group.pathology Cancer"
-* extension ^slicing.discriminator.type = #value
-* extension ^slicing.discriminator.path = "url"
-* extension ^slicing.ordered = false
-* extension ^slicing.rules = #open
 * hasMember contains 
     TNMPathologicalPrimaryTumorCategory 0..1 and
     TNMPathologicalRegionalNodesCategory 0..1 and
