@@ -83,7 +83,7 @@ InstanceOf: mCODECancerRelatedMedicationStatement
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * dateAsserted = "2019-04-01"
-* extension.valueCodeableConcept = SCT#373808002 "Curative - procedure intent" I'm not sure how to write extensions into the example
+* extension.valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 //not sure how to write in extensions
 
 
