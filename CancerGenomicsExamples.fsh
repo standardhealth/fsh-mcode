@@ -11,7 +11,7 @@ InstanceOf: CancerGeneticVariant
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * component[0].code.coding = LNC#48018-6 "Gene studied [ID]"
-* component[0].valueCodeableConcept = HGNC#HGNC:11389 "STK11" // NOTE: HGNCand HGVS codes have special characters in them so SUSHI needs to handle this.
+* component[0].valueCodeableConcept = HGNC#HGNC:11389 "STK11" // NOTE: HGNC and HGVS codes have special characters in them so SUSHI needs to handle this.
 * component[1].code.coding = LNC#81252-9 "Discrete genetic variant"
 * component[1].valueCodeableConcept = CLINVAR#619728 "NC_000019.8:g.1171707G>A"
 * component[2].code.coding = LNC#81290-9 "Genomic DNA change (gHGVS)"
