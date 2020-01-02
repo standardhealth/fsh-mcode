@@ -5,8 +5,6 @@ Title:      "Cancer Genetic Variant"
 Description:    "Records an alteration in the most common DNA nucleotide sequence. The term variant can be used to describe an alteration that may be benign, pathogenic, or of unknown significance. The term variant is increasingly being used in place of the term mutation."
 * status, code, subject, effective[x], valueCodeableConcept, method MS
 * bodySite 0..0
-* specimen 0..0
-* device 0..0
 * referenceRange 0..0
 * hasMember 0..0
 * identifier 0..*
@@ -15,6 +13,9 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
     FillerOrderNumber 0..1 MS and
     PlacerOrderNumber 0..1 MS
 * code = LNC#69548-6 "Genetic variant assessment"
+* specimen only Reference(GeneticSpecimen) 
+* value[x] only valueCodeableConcept    // constrain since Observation is value[x]
+* valueCodeableConcept from https://fhir.loinc.org/ValueSet/LL1971-2 (required)
 * component contains
     GeneStudied 0..* MS and
     VariationCode 0..* MS and
@@ -97,9 +98,7 @@ Description:    "The result of a tumor marker test. Tumor marker tests are gener
 Implementation note: The data value for TumorMarkerTest has cardinality is 0..1 (required if known) because when the test result is indeterminate, no quantitative data value will be reported. Instead, the reason for the null value will be reported in the DataAbsentReason field."
 * status, code, subject, effective[x], valueCodeableConcept MS
 * bodySite 0..0
-* specimen 0..0
-* device 0..0
-* referenceRange 0..0
+* referenceRange 0..1
 * hasMember 0..0
 * identifier 0..*
 * identifier contains
@@ -118,6 +117,15 @@ Implementation note: The data value for TumorMarkerTest has cardinality is 0..1 
 * performer only Reference(USCorePractitioner)
 * value[x] 1..1     // there is no data type constraint on the value
 * derivedFrom only 	Reference(USCoreDocumentReference | Media | QuestionnaireResponse | Observation | ImagingStudy | MolecularSequence)
+
+Profile:    GeneticSpecimen
+Parent:     Specimen
+Id:         GeneticSpecimen
+Title:      "Genetic Specimen"
+Description:    "A small sample of blood, hair, skin, amniotic fluid (the fluid that surrounds a fetus during pregnancy), or other tissue which is excised from a subject for the purposes of genomics testing or analysis."
+* type 1..1 MS
+* type from GeneticSpecimenTypeVS
+* bodySite, bodySite.extension[Laterality] MS  // specified in ReusableExtensions.fsh
 
 // ****** TO BE ADDED: CancerGenomicsReport ******
 /*
