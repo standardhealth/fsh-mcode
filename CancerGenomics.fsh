@@ -24,6 +24,11 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
     AminoAcidChangeType 0..1 MS and
     CytogeneticLocation 0..* MS and
     CytogeneticNomenclature 0..1 MS
+* component[0] ^slicing.discriminator.type = #pattern
+* component[0] ^slicing.discriminator.path = "code"
+* component[0] ^slicing.ordered = false
+* component[0] ^slicing.rules = #open
+* component[0] ^slicing.description = "Slice based on the component.code pattern"
 * component[GeneStudied] ^short = "Gene studied [ID]"
 * component[GeneStudied].code = LOINC#48018-6
 * component[GeneStudied].value[x] only CodeableConcept
