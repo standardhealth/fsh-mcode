@@ -9,26 +9,22 @@ Description:    "The Karnofsky Performance Status (KPS) is a tool used to measur
 * subject 1..1
 * value[x] 1..1
 * dataAbsentReason 0..0
-* interpretation 0..1
 * bodySite 0..0
 * specimen 0..0
 * device 0..0
 * referenceRange 0..0
 * hasMember 0..0
 * component 0..0
-* basedOn only Reference (Service Request | Procedure Request)
+* basedOn only Reference (ServiceRequest | CarePlan)
 * partOf only Reference (Procedure)
 * category only ObservationCategoryCodes (extensible)
 * code = LNC#89245-5 "Karnofsky Performance Status [Interpretation]"
 * subject only Reference(Patient)
-* focus only Reference(Resource)
-* encounter only Reference(USCoreEncounter)
+* encounter only Reference(Encounter)
 * effective[x] only dateTime or Period 
-* performer only Reference(USCorePractitioner)
+* performer only Reference(Practitioner)
 * value[x] only CodeableConcept
 * valueCodeableConcept from KarnofskyPerformanceStatusVS (required)
-* derivedFrom only Reference(USCoreDocumentReference | Media | QuestionnaireResponse | Observation)
-
 
 Profile:    ECOGPerformanceStatus
 Parent:     Observation
@@ -40,7 +36,6 @@ Description:    "The Eastern Cooperative Oncology Group (ECOG) Performance Statu
 * category 0..1
 * subject 1..1
 * value[x] 1..1
-* interpretation 0..1
 * dataAbsentReason 0..0
 * bodysite 0..0
 * specimen 0..0
@@ -48,15 +43,13 @@ Description:    "The Eastern Cooperative Oncology Group (ECOG) Performance Statu
 * referenceRange 0..0
 * hasMember 0..0
 * component 0..0
-* basedOn only Reference(ServiceRequest|ProcedureRequest)
+* basedOn only Reference((ServiceRequest | CarePlan)
 * partOf only Reference(Procedure)
 * category only ObservationCategoryCodes (extensible)
 * code = LNC#89262-0 "ECOG Performance Status [Interpretation]"
 * subject only Reference(Patient)
-* focus only Reference(Resource)
-* encounter only Reference(USCoreEncounter)
+* encounter only Reference(Encounter)
 * effective[x] only dateTime or Period 
-* performer only Reference(USCorePractitioner)
+* performer only Reference(Practitioner)
 * value[x] only valueCodeableConcept
 * valueCodeableConcept from ECOGPerformanceStatusVS (required)
-* derivedFrom only Reference(USCoreDocumentReference | Media | QuestionnaireResponse | Observation)

@@ -51,12 +51,11 @@ InstanceOf: ECOGPerformanceStatus
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-ECOGPerformanceStatus" 
 
 * status = #final "final"
-* focus = Reference(mCODEPrimaryCancerConditionExample01)
 * method = SCT#5880005 "Clinical examination"
 * code = LNC#89262-0 "ECOG Performance Status [Interpretation]"
 * subject = Reference(mCODEPatientExample01)
-* onsetDateTime = "2019-04-01"
-* asserter = Reference(mCODEPractitionerExample01) 
+* effectiveDateTime = "2019-04-01"
+* practitioner = Reference(mCODEPractitionerExample01) 
 * valueCodeableConcept = SCT#422512005 "ECOG Performance Status - grade 1"
 
 
@@ -65,12 +64,11 @@ InstanceOf: KarnofskyPerformanceStatus
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-KarnofskyPerformanceStatus"
 
 * status = #final "final"
-* focus = Reference(mCODEPrimaryCancerConditionExample01)
 * method = SCT#5880005 "Clinical examination"
 * code = LNC#89245-5 "Karnofsky Performance Status [Interpretation]"
 * subject = Reference(mCODEPatientExample01)
-* onsetDateTime = "2019-04-01"
-* asserter = Reference(mCODEPractitionerExample01)
+* effectiveDateTime = "2019-04-01"
+* practitioner = Reference(mCODEPractitionerExample01)
 * valueCodeableConcept = LNC#LA29177-5 "Norml activity with effort; some signs or symptoms of disease"
 
 
@@ -84,7 +82,7 @@ InstanceOf: mCODECancerRelatedMedicationStatement
 * effectiveDateTime = "2019-04-01"
 * dateAsserted = "2019-04-01"
 * extension.valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
-//not sure how to write in extensions
+* extension[TreatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 
 
 Instance: mCODECancerRelatedSurgicalProcedureExample01
@@ -96,8 +94,6 @@ InstanceOf: mCODECancerRelatedSurgicalProcedure
 * subject = Reference(mCODEPatientExample01)
 * asserter = Reference(mCODEPractitionerExample01)
 * performedDateTime = "2019-03-01"
-* extension.valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
-//not sure how to write in extensions
+* extension[TreatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 * reasonReference = Reference(mCODEPrimaryCancerConditionExample01)
-* reasonCode = SCT#254637007 "Non-small cell lung cancer (disorder)"
 * bodySite = SCT#41224006 "Structure of lower lobe of left lung (body structure)"
