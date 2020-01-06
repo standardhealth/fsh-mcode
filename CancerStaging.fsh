@@ -19,17 +19,17 @@ Description:  "Abstract parent class for members of cancer staging panels. Cance
 * method from CancerStagingSystemVS (extensible)
 * performer only Reference(Practitioner)
 
-Profile: CancerStageGroup
+Profile: CancerStageGroupParent
 Id: CancerStageGroup
 Parent: CancerStageParent
-* extension ^slicing.discriminator.type = #value
-* extension ^slicing.discriminator.path = "url"
-* extension ^slicing.ordered = false
-* extension ^slicing.rules = #open
+* hasMember ^slicing.discriminator.type = #value
+* hasMember ^slicing.discriminator.path = "url"
+* hasMember ^slicing.ordered = false
+* hasMember ^slicing.rules = #open
 
 Profile: TNMClinicalStageGroup
 Id: TNMClinicalStageGroup
-Parent: CancerStageGroup
+Parent: CancerStageGroupParent
 Title: "TNM Clinical Stage Group"
 Description: "The extent of the cancer in the body, according to the TNM classification system, based on information obtained prior to neoadjuvant treatment and surgery, e.g. based on evidence such as physical examination, imaging, and/or biopsy."
 * code = LNC#21908-9 "Stage group.clinical Cancer"
