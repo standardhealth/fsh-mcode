@@ -25,11 +25,11 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
     AminoAcidChangeType 0..1 MS and
     CytogeneticLocation 0..* MS and
     CytogeneticNomenclature 0..1 MS
-* component[0] ^slicing.discriminator.type = #pattern
-* component[0] ^slicing.discriminator.path = "code"
-* component[0] ^slicing.ordered = false
-* component[0] ^slicing.rules = #open
-* component[0] ^slicing.description = "Slice based on the component.code pattern"
+* component ^slicing.discriminator.type = #pattern
+* component ^slicing.discriminator.path = "code"
+* component ^slicing.ordered = false
+* component ^slicing.rules = #open
+* component ^slicing.description = "Slice based on the component.code pattern"
 * component[GeneStudied] ^short = "Gene studied [ID]"
 * component[GeneStudied].code = LOINC#48018-6
 * component[GeneStudied].value[x] only CodeableConcept
@@ -100,23 +100,26 @@ Implementation note: The data value for TumorMarkerTest has cardinality is 0..1 
 * bodySite 0..0
 * referenceRange 0..1
 * hasMember 0..0
-* identifier 0..*
+* component 0..0
+* interpretation 0..1
+* subject 1..1
+* identifier ^slicing.discriminator.type = #pattern
+* identifier ^slicing.discriminator.path = "code"
+* identifier ^slicing.ordered = false
+* identifier ^slicing.rules = #open
 * identifier contains
     AccessionIdentifier 0..1 MS and
     FillerOrderNumber 0..1 MS and
     PlacerOrderNumber 0..1 MS
-* component 0..0
-* interpretation 0..1
-* subject 1..1
 * basedOn only Reference(ServiceRequest | MedicationRequest)
 * partOf only Reference(MedicationAdministration | MedicationStatement | Procedure)
 * code from TumorMarkerTestVS (extensible)
 * subject only Reference(CancerPatient)
 * focus only Reference(PrimaryCancerCondition | SecondaryCancerCondition | Tumor)
 * effective[x] only dateTime or Period
-* performer only Reference(USCorePractitioner)
-* value[x] 1..1     // there is no data type constraint on the value
-* derivedFrom only 	Reference(USCoreDocumentReference | Media | QuestionnaireResponse | Observation | ImagingStudy | MolecularSequence)
+* performer only Reference(Practitioner) // is there any reason to limit to US Core Practitioner? 
+// * value[x] 1..1   ---  inconsistent with implementation note directly above
+// * derivedFrom only 	Reference(USCoreDocumentReference | Media | QuestionnaireResponse | Observation | ImagingStudy | MolecularSequence) -- I don't see any reason to limit DocumentReference to US Core 
 
 Profile:    GeneticSpecimen
 Parent:     Specimen
