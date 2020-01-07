@@ -52,7 +52,6 @@ InstanceOf: ECOGPerformanceStatus
 
 * status = #final "final"
 * method = SCT#5880005 "Clinical examination"
-* code = LNC#89262-0 "ECOG Performance Status [Interpretation]"
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * practitioner = Reference(mCODEPractitionerExample01) 
@@ -65,7 +64,6 @@ InstanceOf: KarnofskyPerformanceStatus
 
 * status = #final "final"
 * method = SCT#5880005 "Clinical examination"
-* code = LNC#89245-5 "Karnofsky Performance Status [Interpretation]"
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * practitioner = Reference(mCODEPractitionerExample01)
