@@ -69,7 +69,7 @@ InstanceOf: KarnofskyPerformanceStatus
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * practitioner = Reference(mCODEPractitionerExample01)
-* valueCodeableConcept = LNC#LA29177-5 "Norml activity with effort; some signs or symptoms of disease"
+* valueCodeableConcept = LNC#LA29177-5 "Normal activity with effort; some signs or symptoms of disease"
 
 
 Instance: mCODECancerRelatedMedicationStatementExample01
