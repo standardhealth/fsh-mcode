@@ -35,12 +35,10 @@ Description: "AnatomicalOrientation of the body location, if needed to distingui
 Extension: RelationToLandmark
 Id:  RelationToLandmark
 Title: "Relation to Landmark"
-Description: """
-The relationship between a landmark that helps determine a body location and the body location itself. The location relative to a landmark is specified by:
+Description: "The relationship between a landmark that helps determine a body location and the body location itself. The location relative to a landmark is specified by:
 * Specifying the location and type of landmark using a body site code and optional laterality/orientation,
 * Specifying the direction from the landmark to the body location, and
-* Specifying the distance from the landmark to the body location.
-"""
+* Specifying the distance from the landmark to the body location."
 * value[x] 0..0
 * extension contains
     LandmarkType 0..1 and
