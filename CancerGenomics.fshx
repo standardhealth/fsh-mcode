@@ -127,9 +127,7 @@ Implementation note: The data value for TumorMarkerTest has cardinality is 0..1 
 * subject only Reference(CancerPatient)
 * focus only Reference(PrimaryCancerCondition | SecondaryCancerCondition | Tumor)
 * effective[x] only dateTime or Period
-* performer only Reference(Practitioner) // is there any reason to limit to US Core Practitioner? 
-// * value[x] 1..1   ---  inconsistent with implementation note directly above
-// * derivedFrom only 	Reference(USCoreDocumentReference | Media | QuestionnaireResponse | Observation | ImagingStudy | MolecularSequence) -- I don't see any reason to limit DocumentReference to US Core 
+* performer only Reference(Practitioner) 
 
 Profile:    GeneticSpecimen
 Parent:     Specimen
