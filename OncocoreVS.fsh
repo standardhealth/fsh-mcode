@@ -1,3 +1,25 @@
+Alias:   LNC = http://loinc.org
+Alias:   SCT = http://snomed.info/sct
+Alias:   UCUM = http://unitsofmeasure.org
+Alias:   MTH = http://ncimeta.nci.nih.gov
+Alias:   ICD10CM = http://hl7.org/fhir/sid/icd-10-cm 
+Alias:   RXN = http://www.nlm.nih.gov/research/umls/rxnorm
+Alias:   CPT = http://www.ama-assn.org/go/cpt
+Alias:   ICD10PCS = http://www.nlm.nih.gov/research/umls/icd10pcs
+Alias:   AJCC = http://cancerstaging.org
+Alias:   GTR = http://www.ncbi.nlm.nih.gov/gtr
+Alias:   CLINVAR = http://www.ncbi.nlm.nih.gov/clinvar
+Alias:   IDTYPE = http://terminology.hl7.org/CodeSystem/v2-0203
+Alias:   HGNC = http://www.genenames.org/geneId
+Alias:   HGVS = http://varnomen.hgvs.org
+Alias:   SPTY = http://terminology.hl7.org/CodeSystem/v2-0487
+
+ValueSet: 				YesNoUnknownVS
+Description:			"A value set containing yes, no, and unknown."
+SCT#373066001			"Yes"
+SCT#373067005			"No"
+SCT#261665006			"Unknown"
+
 ValueSet:    GeneticTestVS
 Title: "Genetic Test Value Set"
 Description: "Value set containing codes representing genetic tests. Currently the best source of codes is the [Genetic Test Registry](http://www.ncbi.nlm.nih.gov/gtr). The user should be aware that the GTR cannot be a sole reliable source since the test data is voluntarily updated and there is no overarching data steward. This value set contains all codes from http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-lab-codes (namely, the subset of LOINC codes with CLASSTYPE = 1), plus all codes in GTR.

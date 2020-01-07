@@ -1,3 +1,6 @@
+Alias:   LNC = http://loinc.org
+Alias:   USCoreCondition = http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition
+
 Profile:  CancerDiseaseStatus
 Parent:   Observation
 Id:       CancerDiseaseStatus
@@ -30,15 +33,16 @@ Description:    "A clinician's qualitative judgment on the current trend of the 
 * partOf only Reference(MedicationAdministration | MedicationStatement | Procedure)
 * code = LNC#88040-1 "Response to cancer treatment"
 * subject only Reference(CancerPatient)
-* focus only Reference(PrimaryCancerCondition | SecondaryCancerCondition | Tumor)
+* focus only Reference(CancerConditionParent)
 * effective[x] only dateTime or Period
 * performer only Reference(USCorePractitioner)
 * value[x] only CodeableConcept
 * valueCodeableConcept from ConditionStatusTrendVS (required)
-* derivedFrom only 	Reference(USCoreDocumentReference | Media | QuestionnaireResponse | Observation | ImagingStudy | MolecularSequence)
 
 
 Extension: EvidenceType
 Title: "Evidence Type"
 Id:  EvidenceType
 * value[x] only CodeableConcept
+
+

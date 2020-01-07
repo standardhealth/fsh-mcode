@@ -1,6 +1,8 @@
+Alias:   UCUM = http://unitsofmeasure.org
+Alias:   USCoreProcedure = http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure
 
 Profile:  CancerRelatedRadiationProcedure
-Parent:   Procedure // USCoreProcedure
+Parent:   Procedure  // USCoreProcedure
 Id:       CancerRelatedRadiationProcedure
 Title:    "Cancer Related Radiation Procedure"
 Description: """
@@ -35,8 +37,7 @@ Conformance note: If an ICD-10-PCS code is used in the code attribute, and there
 * reasonCode from CancerDisorderVS (extensible)
 * reasonReference only Reference(PrimaryCancerCondition | SecondaryCancerCondition)
 * bodySite from RadiationTargetBodySiteVS (extensible)
-* bodySite.extension contains 
-// Laterality changed from 0..* to 0..1 (possible bug in CIMPL or mCODE 0.9 spec)
+* bodySite.extension contains
     Laterality 0..1 and
     AnatomicalOrientation 0..* and
     RelationToLandmark 0..*
@@ -47,6 +48,7 @@ Extension: RadiationDose
 Id: RadiationDose
 Title:  "Radiation Dose"
 Description: "Information related to the dose of radiation received in a RadiationProcedure, including the dose per fraction, the number of fractions delivered, and the total radiation dose delivered."
+* value[x] 0..0
 * extension contains 
     RadiationDosePerFraction 0..1 and
     RadiationFractionsDelivered 0..1 and
