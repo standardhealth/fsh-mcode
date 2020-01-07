@@ -1,3 +1,29 @@
+Alias:   LNC = http://loinc.org
+Alias:   SCT = http://snomed.info/sct
+Alias:   UCUM = http://unitsofmeasure.org
+Alias:   MTH = http://ncimeta.nci.nih.gov
+Alias:   ICD10CM = http://hl7.org/fhir/sid/icd-10-cm 
+Alias:   RXN = http://www.nlm.nih.gov/research/umls/rxnorm
+Alias:   CPT = http://www.ama-assn.org/go/cpt
+Alias:   ICD10PCS = http://www.nlm.nih.gov/research/umls/icd10pcs
+Alias:   AJCC = http://cancerstaging.org
+Alias:   GTR = http://www.ncbi.nlm.nih.gov/gtr
+Alias:   CLINVAR = http://www.ncbi.nlm.nih.gov/clinvar
+Alias:   IDTYPE = http://terminology.hl7.org/CodeSystem/v2-0203
+Alias:   HGNC = http://www.genenames.org/geneId
+Alias:   HGVS = http://varnomen.hgvs.org
+Alias:   SPTY = http://terminology.hl7.org/CodeSystem/v2-0487
+Alias:   USCoreCondition = http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition
+Alias:   USCoreDocumentReference = http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentReference
+Alias:   USCoreEncounter = http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
+Alias:   USCoreLocation = http://hl7.org/fhir/us/core/StructureDefinition/us-core-location
+Alias:   USCoreMedicationRequest = http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest
+Alias:   USCoreMedicationStatement = http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationstatement
+Alias:   USCorePatient = http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+Alias:   USCorePractitioner = http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+Alias:   USCoreObservationLab = http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
+
+
 // restore and remove AssertedDate extension (below)
 // Alias: AssertedDate = http://hl7.org/fhir/StructureDefinition/condition-assertedDate
 // temporary!~
@@ -16,7 +42,6 @@ Title: "Cancer Condition"
 Description:  "Abstract class for describing a primary or secondary metastatic neoplastic diseases."
 * extension contains AssertedDate 0..1 and HistologyMorphologyBehavior 0..1
 * bodySite.extension contains 
-// Laterality should be 0..1 not 0..* (possible bug in CIMPL or mCODE 0.9 spec)
     Laterality 0..1 and
     AnatomicalOrientation 0..* and
     RelationToLandmark 0..*
@@ -47,7 +72,7 @@ Conformance note: For the code attribute, to be compliant with [US Core Profiles
     HistologyMorphologyBehavior 0..1 and
     AssertedDate 0..1
 * code from PrimaryOrUncertainBehaviorCancerDisorderVS (extensible)
-* stage.assessment only Reference(CancerStageGroup)
+* stage.assessment only Reference(CancerStageGroupParent)
 
 Profile: SecondaryCancerCondition
 Parent: CancerCondition

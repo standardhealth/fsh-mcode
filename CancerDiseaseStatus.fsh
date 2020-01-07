@@ -1,3 +1,28 @@
+Alias:   LNC = http://loinc.org
+Alias:   SCT = http://snomed.info/sct
+Alias:   UCUM = http://unitsofmeasure.org
+Alias:   MTH = http://ncimeta.nci.nih.gov
+Alias:   ICD10CM = http://hl7.org/fhir/sid/icd-10-cm 
+Alias:   RXN = http://www.nlm.nih.gov/research/umls/rxnorm
+Alias:   CPT = http://www.ama-assn.org/go/cpt
+Alias:   ICD10PCS = http://www.nlm.nih.gov/research/umls/icd10pcs
+Alias:   AJCC = http://cancerstaging.org
+Alias:   GTR = http://www.ncbi.nlm.nih.gov/gtr
+Alias:   CLINVAR = http://www.ncbi.nlm.nih.gov/clinvar
+Alias:   IDTYPE = http://terminology.hl7.org/CodeSystem/v2-0203
+Alias:   HGNC = http://www.genenames.org/geneId
+Alias:   HGVS = http://varnomen.hgvs.org
+Alias:   SPTY = http://terminology.hl7.org/CodeSystem/v2-0487
+Alias:   USCoreCondition = http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition
+Alias:   USCoreDocumentReference = http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentReference
+Alias:   USCoreEncounter = http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
+Alias:   USCoreLocation = http://hl7.org/fhir/us/core/StructureDefinition/us-core-location
+Alias:   USCoreMedicationRequest = http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest
+Alias:   USCoreMedicationStatement = http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationstatement
+Alias:   USCorePatient = http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+Alias:   USCorePractitioner = http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+Alias:   USCoreObservationLab = http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
+
 Profile:  CancerDiseaseStatus
 Parent:   Observation
 Id:       CancerDiseaseStatus
@@ -35,7 +60,6 @@ Description:    "A clinician's qualitative judgment on the current trend of the 
 * performer only Reference(USCorePractitioner)
 * value[x] only CodeableConcept
 * valueCodeableConcept from ConditionStatusTrendVS (required)
-* derivedFrom only 	Reference(USCoreDocumentReference | Media | QuestionnaireResponse | Observation | ImagingStudy | MolecularSequence)
 
 
 Extension: EvidenceType

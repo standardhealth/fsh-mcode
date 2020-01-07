@@ -1,3 +1,28 @@
+Alias:   LNC = http://loinc.org
+Alias:   SCT = http://snomed.info/sct
+Alias:   UCUM = http://unitsofmeasure.org
+Alias:   MTH = http://ncimeta.nci.nih.gov
+Alias:   ICD10CM = http://hl7.org/fhir/sid/icd-10-cm 
+Alias:   RXN = http://www.nlm.nih.gov/research/umls/rxnorm
+Alias:   CPT = http://www.ama-assn.org/go/cpt
+Alias:   ICD10PCS = http://www.nlm.nih.gov/research/umls/icd10pcs
+Alias:   AJCC = http://cancerstaging.org
+Alias:   GTR = http://www.ncbi.nlm.nih.gov/gtr
+Alias:   CLINVAR = http://www.ncbi.nlm.nih.gov/clinvar
+Alias:   IDTYPE = http://terminology.hl7.org/CodeSystem/v2-0203
+Alias:   HGNC = http://www.genenames.org/geneId
+Alias:   HGVS = http://varnomen.hgvs.org
+Alias:   SPTY = http://terminology.hl7.org/CodeSystem/v2-0487
+Alias:   USCoreCondition = http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition
+Alias:   USCoreDocumentReference = http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentReference
+Alias:   USCoreEncounter = http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
+Alias:   USCoreLocation = http://hl7.org/fhir/us/core/StructureDefinition/us-core-location
+Alias:   USCoreMedicationRequest = http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest
+Alias:   USCoreMedicationStatement = http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationstatement
+Alias:   USCorePatient = http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+Alias:   USCorePractitioner = http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+Alias:   USCoreObservationLab = http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
+
 
 Profile:  CancerRelatedRadiationProcedure
 Parent:   Procedure // USCoreProcedure
@@ -35,8 +60,7 @@ Conformance note: If an ICD-10-PCS code is used in the code attribute, and there
 * reasonCode from CancerDisorderVS (extensible)
 * reasonReference only Reference(PrimaryCancerCondition | SecondaryCancerCondition)
 * bodySite from RadiationTargetBodySiteVS (extensible)
-* bodySite.extension contains 
-// Laterality changed from 0..* to 0..1 (possible bug in CIMPL or mCODE 0.9 spec)
+* bodySite.extension contains
     Laterality 0..1 and
     AnatomicalOrientation 0..* and
     RelationToLandmark 0..*
@@ -47,6 +71,7 @@ Extension: RadiationDose
 Id: RadiationDose
 Title:  "Radiation Dose"
 Description: "Information related to the dose of radiation received in a RadiationProcedure, including the dose per fraction, the number of fractions delivered, and the total radiation dose delivered."
+* value[x] 0..0
 * extension contains 
     RadiationDosePerFraction 0..1 and
     RadiationFractionsDelivered 0..1 and

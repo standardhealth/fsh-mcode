@@ -1,3 +1,13 @@
+Alias:   USCoreCondition = http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition
+Alias:   USCoreDocumentReference = http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentReference
+Alias:   USCoreEncounter = http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
+Alias:   USCoreLocation = http://hl7.org/fhir/us/core/StructureDefinition/us-core-location
+Alias:   USCoreMedicationRequest = http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest
+Alias:   USCoreMedicationStatement = http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationstatement
+Alias:   USCorePatient = http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+Alias:   USCorePractitioner = http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+Alias:   USCoreObservationLab = http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
+
 Profile:  CancerRelatedMedicationStatement
 Parent:   MedicationStatement // USCoreMedicationStatement
 Id:       CancerRelatedMedicationStatement
@@ -15,7 +25,7 @@ Description:    "A record of the use of a medication (individual administration 
 * extension contains 
     TreatmentIntent 0..1 MS and 
     TerminationReason 0..* MS 
-* reasonReference only Reference(PrimaryCancerCondition | SecondaryCancerCondition | Observation | DiagnosticReport | ComorbidCondition)
+//* reasonReference only Reference(PrimaryCancerCondition | SecondaryCancerCondition | Observation | DiagnosticReport | ComorbidCondition)
 * effective[x] 1..1  // change from 0..1 to 1..1
 * reasonCode 0..1 
 * dosage 0..1

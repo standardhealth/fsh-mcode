@@ -1,3 +1,28 @@
+Alias:   LNC = http://loinc.org
+Alias:   SCT = http://snomed.info/sct
+Alias:   UCUM = http://unitsofmeasure.org
+Alias:   MTH = http://ncimeta.nci.nih.gov
+Alias:   ICD10CM = http://hl7.org/fhir/sid/icd-10-cm 
+Alias:   RXN = http://www.nlm.nih.gov/research/umls/rxnorm
+Alias:   CPT = http://www.ama-assn.org/go/cpt
+Alias:   ICD10PCS = http://www.nlm.nih.gov/research/umls/icd10pcs
+Alias:   AJCC = http://cancerstaging.org
+Alias:   GTR = http://www.ncbi.nlm.nih.gov/gtr
+Alias:   CLINVAR = http://www.ncbi.nlm.nih.gov/clinvar
+Alias:   IDTYPE = http://terminology.hl7.org/CodeSystem/v2-0203
+Alias:   HGNC = http://www.genenames.org/geneId
+Alias:   HGVS = http://varnomen.hgvs.org
+Alias:   SPTY = http://terminology.hl7.org/CodeSystem/v2-0487
+Alias:   USCoreCondition = http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition
+Alias:   USCoreDocumentReference = http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentReference
+Alias:   USCoreEncounter = http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
+Alias:   USCoreLocation = http://hl7.org/fhir/us/core/StructureDefinition/us-core-location
+Alias:   USCoreMedicationRequest = http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest
+Alias:   USCoreMedicationStatement = http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationstatement
+Alias:   USCorePatient = http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+Alias:   USCorePractitioner = http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+Alias:   USCoreObservationLab = http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
+
 Profile:    KarnofskyPerformanceStatus
 Parent:     Observation
 Id:         KarnofskyPerformanceStatus
@@ -36,18 +61,18 @@ Description:    "The Eastern Cooperative Oncology Group (ECOG) Performance Statu
 * subject 1..1
 * value[x] 1..1
 * dataAbsentReason 0..0
-* bodysite 0..0
+* bodySite 0..0
 * specimen 0..0
 * device 0..0
 * referenceRange 0..0
 * hasMember 0..0
 * component 0..0
-* basedOn only Reference((ServiceRequest | CarePlan)
+* basedOn only Reference(ServiceRequest | CarePlan)
 * partOf only Reference(Procedure)
 * category from ObservationCategoryCodes (extensible)
 * code = LNC#89262-0 "ECOG Performance Status [Interpretation]"
 * subject only Reference(Patient)
 * effective[x] only dateTime or Period 
 * performer only Reference(Practitioner)
-* value[x] only valueCodeableConcept
+* value[x] only CodeableConcept
 * valueCodeableConcept from ECOGPerformanceStatusVS (required)
