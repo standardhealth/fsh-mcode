@@ -1,0 +1,84 @@
+
+Instance: mCODEPrimaryCancerConditionExample01
+InstanceOf: PrimaryCancerCondition
+//* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-PrimaryCancerCondition"
+* clinicalStatus = #active "Active"
+* verificationStatus = #confirmed "Confirmed"
+// category is inherited, does not need to be set
+* code = SCT#254637007 "Non-small cell lung cancer (disorder)"
+* bodySite = SCT#39607008 "Lung structure (body structure)"
+* subject = Reference(mCODEPatientExample01)
+* onsetDateTime = "2019-04-01"
+* asserter = Reference(mCODEPractitionerExample01)
+* stage.summary = AJCC#3C "IIIC"
+* stage.assessment = Reference(mCODETNMClinicalStageGroupExample01)
+
+
+Instance: mCODEPatientExample01
+InstanceOf: CancerPatient
+//* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Patient"
+* identifier.use = #usual
+* identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#MR "Medical Record Number"
+* identifier.system = "http://hospital.example.org"
+* identifier.value = "m123"
+* name.family = "Anyperson"
+* name.given[0] = "John"
+* name.given[1] = "B."
+* contact.telecom[0].system = #phone
+* contact.telecom[0].value = "555-555-5555"
+* contact.telecom[0].use = #home 
+* contact.telecom[1].system = #email
+* contact.telecom[1].value = "john.anyperson@example.com"
+* gender = #male
+* birthDate = "1951-01-20"
+* address.line = "123 Main St"
+* address.city = "Anytown"
+* address.postalCode = "12345"
+* address.country = "US"
+* communication.language = urn:ietf:bcp:47#en-US "English (Region=United States)"
+* communication.language.text = "English"
+
+Instance: mCODEECOGPerformanceStatusExample01 
+InstanceOf: ECOGPerformanceStatus
+//* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-ECOGPerformanceStatus" 
+* status = #final "final"
+* method = SCT#5880005 "Clinical examination"
+* subject = Reference(mCODEPatientExample01)
+* effectiveDateTime = "2019-04-01"
+* performer = Reference(mCODEPractitionerExample01) 
+* valueCodeableConcept = SCT#422512005 "ECOG Performance Status - grade 1"
+
+
+Instance: mCODEKarnofskyPerformanceStatusExample01
+InstanceOf: KarnofskyPerformanceStatus
+//* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-KarnofskyPerformanceStatus"
+* status = #final "final"
+* method = SCT#5880005 "Clinical examination"
+* subject = Reference(mCODEPatientExample01)
+* effectiveDateTime = "2019-04-01"
+* performer = Reference(mCODEPractitionerExample01)
+* valueCodeableConcept = LNC#LA29177-5 "Normal activity with effort; some signs or symptoms of disease"
+
+Instance: mCODECancerRelatedMedicationStatementExample01
+InstanceOf: CancerRelatedMedicationStatement
+//* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-CancerRelatedMedicationStatement"
+* status = #active "active"
+* medicationCodeableConcept = RXN#93698 "Carboplatin Injectable Solution [Paraplatin]"
+* subject = Reference(mCODEPatientExample01)
+* effectiveDateTime = "2019-04-01"
+* dateAsserted = "2019-04-01"
+* extension.valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
+* extension[TreatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
+
+
+Instance: mCODECancerRelatedSurgicalProcedureExample01
+InstanceOf: CancerRelatedSurgicalProcedure
+//* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-CancerRelatedSurgicalProcedure"
+* status = #completed "completed"
+* code = SCT#359615001 "Partial lobectomy of lung (procedure)"
+* subject = Reference(mCODEPatientExample01)
+* asserter = Reference(mCODEPractitionerExample01)
+* performedDateTime = "2019-03-01"
+* extension[TreatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
+* reasonReference = Reference(mCODEPrimaryCancerConditionExample01)
+* bodySite = SCT#41224006 "Structure of lower lobe of left lung (body structure)"
