@@ -1,7 +1,7 @@
 
 Instance: mCODEPrimaryCancerConditionExample01
 InstanceOf: PrimaryCancerCondition
-//* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-PrimaryCancerCondition"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/PrimaryCancerCondition"
 * clinicalStatus = #active "Active"
 * verificationStatus = #confirmed "Confirmed"
 // category is inherited, does not need to be set
@@ -16,7 +16,7 @@ InstanceOf: PrimaryCancerCondition
 
 Instance: mCODEPatientExample01
 InstanceOf: CancerPatient
-//* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Patient"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerPatient"
 * identifier.use = #usual
 * identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#MR "Medical Record Number"
 * identifier.system = "http://hospital.example.org"
@@ -40,7 +40,7 @@ InstanceOf: CancerPatient
 
 Instance: mCODEECOGPerformanceStatusExample01 
 InstanceOf: ECOGPerformanceStatus
-//* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-ECOGPerformanceStatus" 
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/ECOGPerformanceStatus" 
 * status = #final "final"
 * method = SCT#5880005 "Clinical examination"
 * subject = Reference(mCODEPatientExample01)
@@ -51,7 +51,7 @@ InstanceOf: ECOGPerformanceStatus
 
 Instance: mCODEKarnofskyPerformanceStatusExample01
 InstanceOf: KarnofskyPerformanceStatus
-//* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-KarnofskyPerformanceStatus"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/KarnofskyPerformanceStatus"
 * status = #final "final"
 * method = SCT#5880005 "Clinical examination"
 * subject = Reference(mCODEPatientExample01)
@@ -61,7 +61,7 @@ InstanceOf: KarnofskyPerformanceStatus
 
 Instance: mCODECancerRelatedMedicationStatementExample01
 InstanceOf: CancerRelatedMedicationStatement
-//* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-CancerRelatedMedicationStatement"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerRelatedMedicationStatement"
 * status = #active "active"
 * medicationCodeableConcept = RXN#93698 "Carboplatin Injectable Solution [Paraplatin]"
 * subject = Reference(mCODEPatientExample01)
@@ -73,7 +73,7 @@ InstanceOf: CancerRelatedMedicationStatement
 
 Instance: mCODECancerRelatedSurgicalProcedureExample01
 InstanceOf: CancerRelatedSurgicalProcedure
-//* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-CancerRelatedSurgicalProcedure"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerRelatedSurgicalProcedure"
 * status = #completed "completed"
 * code = SCT#359615001 "Partial lobectomy of lung (procedure)"
 * subject = Reference(mCODEPatientExample01)
