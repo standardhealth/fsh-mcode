@@ -78,7 +78,8 @@ Description: "The primary cancer related to this secondary cancer."
 * value[x] only Reference
 * valueReference only Reference(PrimaryCancerCondition)
 
-// Tumor profile was in mCODE, but not primary (hidden). The way we have used the CancerConditionParent, it is not necessary to list Tumor explicitly in TumorMarkerTest and CancerDiseaseStatus. 
+// Tumor profile was in mCODE, but not primary (hidden). The way we have used the CancerConditionParent, it is not necessary to list Tumor explicitly in TumorMarkerTest and CancerDiseaseStatus. For example, we have `* focus only Reference(CancerConditionParent)` and not (in CIMPL) `Value only PrimaryCancerCondition or SecondaryCancerCondition or Tumor`
+/*
 Profile: Tumor
 Parent: CancerConditionParent
 Id: Tumor
@@ -94,3 +95,4 @@ Conformance note: For the HistologyMorphologyBehavior attribute, to be compliant
 * IsPrimaryTumor ^short = "Whether the tumor is the original or first tumor in the body, for a particular cancer."
 * IsPrimaryTumor.value[x] only CodeableConcept
 * IsPrimaryTumor.valueCodeabeConcept from YesNoUnknownVS
+*/
