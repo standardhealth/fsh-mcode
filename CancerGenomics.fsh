@@ -1,30 +1,11 @@
 Alias:   LNC = http://loinc.org
-Alias:   SCT = http://snomed.info/sct
-Alias:   UCUM = http://unitsofmeasure.org
-Alias:   MTH = http://ncimeta.nci.nih.gov
-Alias:   ICD10CM = http://hl7.org/fhir/sid/icd-10-cm 
-Alias:   RXN = http://www.nlm.nih.gov/research/umls/rxnorm
-Alias:   CPT = http://www.ama-assn.org/go/cpt
-Alias:   ICD10PCS = http://www.nlm.nih.gov/research/umls/icd10pcs
-Alias:   AJCC = http://cancerstaging.org
-Alias:   GTR = http://www.ncbi.nlm.nih.gov/gtr
-Alias:   CLINVAR = http://www.ncbi.nlm.nih.gov/clinvar
-Alias:   IDTYPE = http://terminology.hl7.org/CodeSystem/v2-0203
-Alias:   HGNC = http://www.genenames.org/geneId
 Alias:   HGVS = http://varnomen.hgvs.org
-Alias:   SPTY = http://terminology.hl7.org/CodeSystem/v2-0487
-Alias:   USCoreCondition = http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition
-Alias:   USCoreDocumentReference = http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentReference
-Alias:   USCoreEncounter = http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
-Alias:   USCoreLocation = http://hl7.org/fhir/us/core/StructureDefinition/us-core-location
-Alias:   USCoreMedicationRequest = http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest
-Alias:   USCoreMedicationStatement = http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationstatement
-Alias:   USCorePatient = http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
-Alias:   USCorePractitioner = http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+Alias:   GTR = http://www.ncbi.nlm.nih.gov/gtr
+Alias:   IDTYPE = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias:   USCoreObservationLab = http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
 
 Profile:    CancerGeneticVariant
-Parent:     Observation     // based on US Core Observation Result Profile
+Parent:     Observation // USCoreObservationLab
 Id:         CancerGeneticVariant
 Title:      "Cancer Genetic Variant"
 Description:    "Records an alteration in the most common DNA nucleotide sequence. The term variant can be used to describe an alteration that may be benign, pathogenic, or of unknown significance. The term variant is increasingly being used in place of the term mutation."
@@ -43,7 +24,6 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * identifier[AccessionIdentifier].type = IDTYPE#ACSN
 * identifier[FillerOrderNumber].type = UNK0#FILL
 * identifier[PlacerOrderNumber].type = UNK0#PLAC
-
 * code = LNC#69548-6 "Genetic variant assessment"
 * specimen only Reference(GeneticSpecimen) 
 * value[x] only CodeableConcept    // constrain since Observation is value[x]
@@ -62,6 +42,7 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
     AminoAcidChangeType 0..1 MS and
     CytogeneticLocation 0..* MS and
     CytogeneticNomenclature 0..1 MS
+/*
 * component[GeneStudied] ^short = "Gene studied [ID]"
 * component[GeneStudied].code = LNC#48018-6
 * component[GeneStudied].value[x] only CodeableConcept
@@ -99,8 +80,88 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * component[CytogeneticNomenclature].code = LNC#81291-7
 * component[CytogeneticNomenclature].value[x] 1..1 // CG Reporting IG does not constrain the CytogeneticLocation value type.
 
+// alternate way of defining slices (not yet supported)
+
+Slice:     GeneStudied
+Parent:    ObservationComponent
+Id:        GeneStudied
+Title:     "Gene Studied"
+Description: "Gene studied [ID]"
+* code = LNC#48018-6
+* value[x] only CodeableConcept
+* valueCodeableConcept 1..1
+* valueCodeableConcept from http://www.genenames.org/geneId (extensible)
+
+Slice:     VariationCode
+Parent:    ObservationComponent
+Id:        VariationCode
+Title:     "Variation Code"
+Description: "Discrete genetic variant"
+* code = LNC#81252-9
+* value[x] only CodeableConcept
+* valueCodeableConcept 1..1
+* valueCodeableConcept from http://www.ncbi.nlm.nih.gov/clinvar (preferred)
+
+Slice:     GenomicDNAChange
+Parent:    ObservationComponent
+Id:        GenomicDNAChange
+Title:     "Genomic DNA Change"
+Description: "Genomic DNA change (gHGVS)"
+* code = LNC#81290-9
+* value[x] only CodeableConcept
+* valueCodeableConcept 1..1
+* valueCodeableConcept from http://varnomen.hgvs.org (required)
+
+Slice:     GenomicSourceClass
+Parent:    ObservationComponent
+Id:        GenomicSourceClass
+Title:     "Genomic Source Class"
+Description: "Genomic source class [Type]"
+* code = LNC#48002-0
+* value[x] only CodeableConcept
+* valueCodeableConcept 1..1
+* valueCodeableConcept from https://fhir.loinc.org/ValueSet/LL378-1 (required)
+
+Slice:     AminoAcidChange
+Parent:    ObservationComponent
+Id:        AminoAcidChange
+Title:     "Amino Acid Change"
+Description: "Amino acid change (pHGVS)"
+* code = LNC#48005-3
+* value[x] only CodeableConcept
+* valueCodeableConcept 1..1
+* valueCodeableConcept from http://varnomen.hgvs.org (required)
+
+Slice:     AminoAcidChangeType
+Parent:    ObservationComponent
+Id:        AminoAcidChangeType
+Title:     "Amino Acid Change Type"
+Description: "Amino acid change [Type]"
+* code = LNC#48006-1
+* value[x] only CodeableConcept
+* valueCodeableConcept 1..1
+* valueCodeableConcept from https://fhir.loinc.org/ValueSet/LL380-7 (required)
+
+Slice:     CytogeneticLocation
+Parent:    ObservationComponent
+Id:        CytogeneticLocation
+Title:     "Cytogenetic Location"
+Description: "Cytogenetic (chromosome) location"
+* code = LNC#48001-2
+* value[x] 1..1 // CG Reporting IG does not constrain the CytogeneticLocation value type.
+
+Slice:     CytogeneticNomenclature
+Parent:    ObservationComponent
+Id:        CytogeneticNomenclature
+Title:     "Cytogenetic Nomenclature"
+Description: "Variant ISCN"
+* code = LNC#81291-7
+* value[x] 1..1 // CG Reporting IG does not constrain the CytogeneticLocation value type.
+*/
+
+
 Profile:        TumorMarkerTest
-Parent:         Observation     // based on US Core Observation Result Profile
+Parent:         Observation // USCoreObservationLab
 Id:             TumorMarker
 Title:          "Tumor Marker"
 Description:    "The result of a tumor marker test. Tumor marker tests are generally used to guide cancer treatment decisions and monitor treatment, as well as to predict the chance of recovery and cancer recurrence. A tumor marker is a substance found in tissue or blood or other body fluids that may be a sign of cancer or certain benign (noncancer) conditions. Most tumor markers are made by both normal cells and cancer cells, but they are made in larger amounts by cancer cells. A tumor marker may help to diagnose cancer, plan treatment, or find out how well treatment is working or if cancer has come back. Examples of tumor markers include CA-125 (in ovarian cancer), CA 15-3 (in breast cancer), CEA (in colon cancer), and PSA (in prostate cancer). Tumor markers differ from genetic markers in that they are measured at the levels of the protein and substance post-RNA protein synthesis. (Definition adapted from: [NCI Dictionary of Cancer Terms](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/tumor-marker-test) and [Cancer.Net](https://www.cancer.net/navigating-cancer-care/diagnosing-cancer/tests-and-procedures/tumor-marker-tests)).
@@ -136,11 +197,11 @@ Title:      "Genetic Specimen"
 Description:    "A small sample of blood, hair, skin, amniotic fluid (the fluid that surrounds a fetus during pregnancy), or other tissue which is excised from a subject for the purposes of genomics testing or analysis."
 * type 1..1 MS
 * type from GeneticSpecimenTypeVS
-* bodySite.extension contains 
+* collection.bodySite.extension contains 
     Laterality 0..1 and
     AnatomicalOrientation 0..* and
     RelationToLandmark 0..*
-* bodySite, bodySite.extension[Laterality] MS 
+* collection.bodySite, collection.bodySite.extension[Laterality] MS 
 
 // ****** TO BE ADDED: CancerGenomicsReport ******
 /*

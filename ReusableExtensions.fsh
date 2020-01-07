@@ -1,28 +1,3 @@
-Alias:   LNC = http://loinc.org
-Alias:   SCT = http://snomed.info/sct
-Alias:   UCUM = http://unitsofmeasure.org
-Alias:   MTH = http://ncimeta.nci.nih.gov
-Alias:   ICD10CM = http://hl7.org/fhir/sid/icd-10-cm 
-Alias:   RXN = http://www.nlm.nih.gov/research/umls/rxnorm
-Alias:   CPT = http://www.ama-assn.org/go/cpt
-Alias:   ICD10PCS = http://www.nlm.nih.gov/research/umls/icd10pcs
-Alias:   AJCC = http://cancerstaging.org
-Alias:   GTR = http://www.ncbi.nlm.nih.gov/gtr
-Alias:   CLINVAR = http://www.ncbi.nlm.nih.gov/clinvar
-Alias:   IDTYPE = http://terminology.hl7.org/CodeSystem/v2-0203
-Alias:   HGNC = http://www.genenames.org/geneId
-Alias:   HGVS = http://varnomen.hgvs.org
-Alias:   SPTY = http://terminology.hl7.org/CodeSystem/v2-0487
-Alias:   USCoreCondition = http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition
-Alias:   USCoreDocumentReference = http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentReference
-Alias:   USCoreEncounter = http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
-Alias:   USCoreLocation = http://hl7.org/fhir/us/core/StructureDefinition/us-core-location
-Alias:   USCoreMedicationRequest = http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest
-Alias:   USCoreMedicationStatement = http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationstatement
-Alias:   USCorePatient = http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
-Alias:   USCorePractitioner = http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
-Alias:   USCoreObservationLab = http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
-
 Extension: TreatmentIntent
 Id:  TreatmentIntent
 Title: "Treatment Intent"
@@ -66,6 +41,7 @@ The relationship between a landmark that helps determine a body location and the
 * Specifying the direction from the landmark to the body location, and
 * Specifying the distance from the landmark to the body location.
 """
+* value[x] 0..0
 * extension contains
     LandmarkType 0..1 and
     LandmarkLocation 0..1 and
@@ -81,11 +57,11 @@ Description: "The type of feature that constitutes the landmark, particularly if
 
 Extension: LandmarkLocation
 Id:  LandmarkLocation
-
 Title: "Landmark Location"
 Description: "The body location of the landmark, specified by a location code and optional laterality and orientation."
 // change from `code` to BodySiteCode and bind the code to a value set
 // Also change BodySiteCode from 0..1 to 1..1
+* value[x] 0..0
 * extension contains
     BodySiteCode 1..1 and
     Laterality 0..1 and
