@@ -22,11 +22,11 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
     FillerOrderNumber 0..1 MS and
     PlacerOrderNumber 0..1 MS
 * identifier[AccessionIdentifier].type = IDTYPE#ACSN
-* identifier[FillerOrderNumber].type = UNK0#FILL
-* identifier[PlacerOrderNumber].type = UNK0#PLAC
+* identifier[FillerOrderNumber].type = IDTYPE#FILL
+* identifier[PlacerOrderNumber].type = IDTYPE#PLAC
 * code = LNC#69548-6 "Genetic variant assessment"
 * specimen only Reference(GeneticSpecimen) 
-* value[x] only CodeableConcept    // constrain since Observation is value[x]
+* value[x] only CodeableConcept
 * valueCodeableConcept from https://fhir.loinc.org/ValueSet/LL1971-2 (required)
 * component ^slicing.discriminator.type = #pattern
 * component ^slicing.discriminator.path = "code"
@@ -186,7 +186,7 @@ Implementation note: The data value for TumorMarkerTest has cardinality is 0..1 
 * partOf only Reference(MedicationAdministration | MedicationStatement | Procedure)
 * code from TumorMarkerTestVS (extensible)
 * subject only Reference(CancerPatient)
-* focus only Reference(PrimaryCancerCondition | SecondaryCancerCondition | Tumor)
+* focus only Reference(CancerConditionParent)
 * effective[x] only dateTime or Period
 * performer only Reference(Practitioner) 
 
