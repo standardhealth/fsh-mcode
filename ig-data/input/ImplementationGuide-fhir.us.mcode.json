@@ -358,7 +358,7 @@
     "page": {
       "nameUrl": "toc.html",
       "title": "Table of Contents",
-      "generation": "xml",
+      "generation": "html",
       "page": [
         {
           "nameUrl": "index.html",
