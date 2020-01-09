@@ -13,9 +13,8 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * bodySite 0..0
 * referenceRange 0..0
 * hasMember 0..0
-* identifier ^slicing.discriminator.type = #pattern
-* identifier ^slicing.discriminator.path = "code"
-* identifier ^slicing.ordered = false
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "type.coding.code"
 * identifier ^slicing.rules = #open
 * identifier contains
     AccessionIdentifier 0..1 MS and
@@ -28,7 +27,7 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * specimen only Reference(GeneticSpecimen) 
 * value[x] only CodeableConcept
 * valueCodeableConcept from https://fhir.loinc.org/ValueSet/LL1971-2 (required)
-* component ^slicing.discriminator.type = #pattern
+* component ^slicing.discriminator.type = #value
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.ordered = false
 * component ^slicing.rules = #open
@@ -174,9 +173,8 @@ Implementation note: The data value for TumorMarkerTest has cardinality is 0..1 
 * component 0..0
 * interpretation 0..1
 * subject 1..1
-* identifier ^slicing.discriminator.type = #pattern
-* identifier ^slicing.discriminator.path = "code"
-* identifier ^slicing.ordered = false
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "type.coding.code"
 * identifier ^slicing.rules = #open
 * identifier contains
     AccessionIdentifier 0..1 MS and
