@@ -358,32 +358,32 @@
     "page": {
       "nameUrl": "toc.html",
       "title": "Table of Contents",
-      "generation": "html",
+      "generation": "xml",
       "page": [
         {
           "nameUrl": "index.html",
           "title": "mCODE IG",
-          "generation": "html"
+          "generation": "markdown"
         },
         {
           "nameUrl": "changelog.html",
           "title": "Change Log",
-          "generation": "html"
+          "generation": "markdown"
         },
         {
           "nameUrl": "downloads.html",
           "title": "Downloads",
-          "generation": "html"
+          "generation": "markdown"
         },
         {
           "nameUrl": "examples.html",
           "title": "Examples",
-          "generation": "html"
+          "generation": "markdown"
         },
         {
           "nameUrl": "implementation.html",
           "title": "Implementation",
-          "generation": "html"
+          "generation": "markdown"
         }
       ]
     }
