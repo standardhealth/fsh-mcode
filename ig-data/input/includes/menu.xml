@@ -9,7 +9,7 @@
     <li><a href="examples.html">Examples</a></li>
     </ul>
   </li>
-  <li><a href="artifacts.html">Artifact Summary</a></li>
+  <li><a href="artifacts.html">Artifacts Summary</a></li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret"> </b></a>
     <ul class="dropdown-menu">
