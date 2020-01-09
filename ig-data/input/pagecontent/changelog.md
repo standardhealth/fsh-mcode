@@ -1,16 +1,18 @@
-<h1><a name="ReleaseNotes"></a>mCODE Release Notes / Change Log</h1>
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd">
 
-<h2>mCODE 0.9.2 STU1 Pre-Release 1</h2>
+<h3><a name="ReleaseNotes"></a>mCODE Release Notes / Change Log</h3>
+
+<h4>mCODE 0.9.2 STU1 Pre-Release 1</h4>
 <p>The following are changes made to the <a href="http://hl7.org/fhir/us/mcode/2019Sep/">mCODE 0.9.1 September 2019 Ballot Release.</a></p>
 
-<h3>Enhancements</h3>
+<h5>Enhancements</h5>
 <ul>
     <li>The following profiles have been added: <em>GeneticSpecimen, RegionStudied</em> to support greater alignment between mCODE and the <a href="http://hl7.org/fhir/uv/genomics-reporting/index.html">Clinical Genomics Reporting FHIR IG STU1.</a>.</li>
     <li>The GeneticVariant profile has additional components which conform to equivalent components in the CG Reporting IG Variant profile: GeneStudied, VariationCode, GenomicDNAChange, GenomicSourceClass, AminoAcidChange, AminoAcidChangeType, CytogeneticLocation, and CytogeneticNomenclature.</li>
     <li>The MedicationStatement profile name has changed to <em>CancerRelatedMedicationStatement</em>. This profile now constrains the reason reference to only primary and secondary cancer conditions.</li>
 </ul>
 
-<h3>Corrections and Modifications to Existing Content</h3>
+<h5>Corrections and Modifications to Existing Content</h5>
 <ul>
     <li>The following mCODE profiles no longer appear and instead document preferred use of FHIR base profiles: <em>BloodPressure</em>, <em>BodyWeight</em>, <em>BodyHeight</em>, <em>CBCWAutoDifferentialPanel</em>, <em>ComprehensiveMetabolic2000SerumOrPlasmaPanel</em>.</li>
     <li>Genomics-related profiles GeneticVariantTested and GeneticVariantFound are combined into one profile, GeneticVariant.</li>
@@ -20,10 +22,10 @@
 </ul>
 
 
-<h2>mCODE 0.9.1 September 2019 Ballot Release</h2>
+<h4>mCODE 0.9.1 September 2019 Ballot Release</h4>
 <p>The following are changes relative to <a href="https://mcodeinitiative.github.io/index.html">mCODE 0.9.0.</a></p>
 
-<h3>Enhancements</h3>
+<h5>Enhancements</h5>
 <ul>
     <li>Updated to FHIR Release 4 from DSTU 2.</li>
     <li>Changed base class of mCODE laboratory panels (CBC and CMP) from Observation to DiagnosticReport.</li>
@@ -32,7 +34,7 @@
     <li>Changed HistologyMorphologyBehaviorVS value set to descendants of SCT#367651003 (Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)), from descendants of SCT#108369006 (Neoplasm (morphologic abnormality)), because the latter brought in some concepts that do not represent malignant neoplasms.</li>
 </ul>
 
-<h3>Corrections and Modifications to Existing Content</h3>
+<h5>Corrections and Modifications to Existing Content</h5>
 <ul>
     <li>Updated code systems to new FHIR R4 base URL, http://terminology.hl7.org (previously was http://hl7.org/fhir)</li>
     <li>Changed profile name from GeneticMutationTested to GeneticVariant.</li>
@@ -70,8 +72,4 @@
 
 </ul>
 
-<br/>
-<hr/>
-<footer>
-    <p><font color="#BEBEBD"><small>Approved for Public Release. Distribution Unlimited. Case Number 16-1988</small></font></p>
-</footer>
+</div>

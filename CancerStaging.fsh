@@ -26,8 +26,7 @@ Profile: CancerStageGroupParent
 Id: CancerStageGroupParent
 Parent: CancerStageParent
 * hasMember ^slicing.discriminator.type = #value
-* hasMember ^slicing.discriminator.path = "url"
-* hasMember ^slicing.ordered = false
+* hasMember ^slicing.discriminator.path = "code.coding.code"
 * hasMember ^slicing.rules = #open
 
 Profile: TNMClinicalStageGroup
@@ -36,7 +35,7 @@ Parent: CancerStageGroupParent
 Title: "TNM Clinical Stage Group"
 Description: "The extent of the cancer in the body, according to the TNM classification system, based on information obtained prior to neoadjuvant treatment and surgery, e.g. based on evidence such as physical examination, imaging, and/or biopsy."
 * code = LNC#21908-9 "Stage group.clinical Cancer"
-*hasMember contains 
+* hasMember contains 
     TNMClinicalPrimaryTumorCategory 0..1 and
     TNMClinicalRegionalNodesCategory 0..1 and
     TNMClinicalDistantMetastasesCategory 0..1

@@ -1,4 +1,6 @@
-<h1><a name="Implementation"></a>Implementation Notes</h1>
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd">
+
+<h3><a name="Implementation"></a>Implementation Notes</h3>
 <p>This page contains miscellaneous information on modeling and FHIR implementation. The content is primarily directed at informaticists and implementers of mCODE. The following topics are addressed: </p>
 
 <ul>
@@ -11,9 +13,9 @@
     <li><a href="#RepresentingProvenance">Representing Provenance of mCODE Information</a></li>
 </ul>
 
-<h2><a name="Conformance"></a>Conformance Requirements</h2>
+<h4><a name="Conformance"></a>Conformance Requirements</h4>
 
-<h3>Relationship to US Core</h3>
+<h5>Relationship to US Core</h5>
 <p>With one exception (see <a href="#exception">below</a>), the profiles presented in this guide conform to <a href="http://hl7.org/fhir/us/core/" target="_blank">US Core Implementation Guide (v3.0.0)</a>. Each mCODE Profile uses a corresponding US Core profiles as its base profile, and thus, cannot break the rules established by that profile in US Core. For example, if US Core has a required element, by virtue of profile inheritance, mCODE cannot make that element optional. However, <em>it is not true that any instance that conforms to an mCODE profile will automatically conform to US Core</em>. In particular, the use of <a href="https://www.hl7.org/fhir/valueset-binding-strength.html" target="_blank">extensible value sets</a> requires caution. Extensibility is only allowed when an appropriate concept is not available in the US Core value set. Please note:</p>
 <ul>
     <li>In ComorbidCondition, if an ICD-10-CM code is used, and a semantically equivalent SNOMED-CT code is available, the resulting instance will not conform to US Core.</li>
@@ -23,10 +25,10 @@
     <li>In PrimaryCancerCondition and SecondaryCancerCondition, if an ICD-10-CM code is used, and a semantically equivalent SNOMED-CT code is available, the resulting instance will not conform to US Core.</li>
 </ul>
 
-<h3>International Version of mCODE</h3>
+<h5>International Version of mCODE</h5>
 <p>Although the current version of mCODE is US-specific, there is a potential for an international version of mCODE. If interested, please contact one of the authors.</p>
 
-<h3>mCODE Roles</h3>
+<h5>mCODE Roles</h5>
 <p>At present, two roles are defined:</p>
 <ul>
     <li><strong>mCODE Data Sender</strong> - a participant in exchange of mCODE data who provides mCODE data in response to a data query or autonomously pushes mCODE data to an mCODE receiver. The data sender does not have to be the originator of the data it possesses.</li>
@@ -34,7 +36,7 @@
 </ul>
 <p>In the future, additional roles may be defined.</p>
 
-<h3>"Must Support" Interpretation</h3>
+<h5>"Must Support" Interpretation</h5>
 <p>In FHIR, the <a href="https://www.hl7.org/fhir/conformance-rules.html#mustSupport" target="_blank">MustSupport</a> flag indicates that implementation shall provide "meaningful support" for the element, as defined by its implementation guide. In mCODE, there are two sources of MustSupport elements: those inherited from US Core, and those defined in mCODE. To conform to US Core, the MustSupport elements inherited from US Core must follow <a href="http://hl7.org/fhir/us/core/STU3/general-guidance.html#must-support" target="_blank">the interpretation of MustSupport defined in US Core</a>.</p>
 <p> Elements defined as MustSupport in mCODE do not follow the US Core rules. MustSupport elements defined in mCODE shall be interpreted as follows:</p>
 <ul>
@@ -44,7 +46,7 @@
     
 <p>Unfortunately, FHIR does not have the ability to track the source of MustSupport flags, and the only way to know where a MustSupport flag is defined is by direct comparison of US Core and mCODE profiles.</p>
 
-<h3>Required Elements</h3>
+<h5>Required Elements</h5>
 <p>An mCODE data element is required if any of the following criteria are met:</p>
 <ul>
     <li>The element is a top-level element (a first-level property of the resource) and its minimum cardinality is &gt; 0 in the profile.</li>
@@ -55,13 +57,13 @@
 
 <p>mCODE's rules regarding required data elements are the same as <a href="http://hl7.org/fhir/us/core/STU3/general-guidance.html#missing-data">US Core's rules</a>. To paraphrase those rules, a Data Sender must provide each required element or an explicit data absent reason for each missing data item.</p>
 
-<h3>Minimum Requirement for "mCODE Conformance"</h3>
+<h5>Minimum Requirement for "mCODE Conformance"</h5>
 <p>The mCODE IG outlines conformance requirements and expectations for individual mCODE instances in terms of structural constraints and terminology bindings. Any FHIR resources claiming to conform to mCODE must <a href="https://www.hl7.org/fhir/validation.html" target="_blank">validate</a> against the declared mCODE profile.</p>
 
 <p>At present, there are no additional conformance rules on what mCODE data is to be collected, by whom, and when, or when that data is to be exchanged. mCODE Data Senders and Data Receivers may choose the subset of mCODE resources they support, according to their business needs. For example, a Genomics Laboratory may support GenomicsReport, but not vital signs or staging.</p>  
 <p><a href="http://hl7.org/fhir/R4/capabilitystatement.html" target="_blank">FHIR capability statements</a> describe the capabilities of actual implementation or requirements of a desired solution. This IG does not include sample capability statements. The expectation is to use implementation experience collected during the STU period to model the different types of actors (such as medical oncologist, radiologist, genomics laboratory, etc.), and define appropriate capability statements for each, including search parameters and operations.</p>
 
-<h2><a name="Terminology"></a>Terminology Preferences</h2>
+<h4><a name="Terminology"></a>Terminology Preferences</h4>
 
 <p>This implementation guide supplies terminology bindings drawn primarily from LOINC for "observables", and SNOMED-CT for values, results and findings. When appropriate codes are not available in the preferred vocabulary, alternative vocabularies are used, in the following order of preference: SNOMED-CT (if the element is an observable), NCI Thesaurus and Metathesaurus, and local codes. </p>
 
@@ -73,10 +75,10 @@
 
 <p>mCODE genomics-related elements in the GenomicsReport and GeneticVariant profiles will support the acceptable code systems stated in the <a href="http://hl7.org/fhir/uv/genomics-reporting/codings.html" target="_blank">HL7 Clinical Genomics Reporting FHIR IG, STU1 Release</a>.</p>
 
-<h2><a name="Patient"></a>Patient</h2>
+<h4><a name="Patient"></a>Patient</h4>
 <p>FHIR (and mCODE) allows multiple addresses for a patient. The zip code reported in mCODE should be the one specified by Address.use of "home" and Address.type of "physical".</p>
 
-<h2><a name="BodyLocations"></a>Body Locations</h2>
+<h4><a name="BodyLocations"></a>Body Locations</h4>
 <p>A single code is often insufficient to precisely determine a body site for the purpose of describing where a tumor is located, where a surgery is targeted, or where a radiation treatment is focused. For example, in breast cancer, the location of a tumor can be described in terms of the radial position (clock face direction) and distance relative to the left or right nipple.</p>
 <p>In FHIR, Condition, Procedure, and other resources represent body sites using a single code. In addition, FHIR provides a standard extension, <a href="http://hl7.org/fhir/StructureDefinition/bodySite" target="_blank">BodyStructure Reference</a> that can be used when a single code is insufficient. However, this approach has not been adopted, for the following reasons:</p>
 <ul>
@@ -96,11 +98,11 @@
     </li>
 </ul>
 
-<h2><a name="VitalSigns"></a>Vital Sign Profiles</h2>
+<h4><a name="VitalSigns"></a>Vital Sign Profiles</h4>
 <p>The vital sign profiles defined by mCODE are consistent with the <a href="http://hl7.org/fhir/R4/observation-vitalsigns.html" target="_blank">FHIR vital sign profiles</a>, which are incorporated by reference into <a href="http://hl7.org/fhir/us/core/" target="_blank">US Core v3</a>. The difference between FHIR and mCODE vital signs is that mCODE provides for reporting of preconditions, body positions, blood pressure method, and blood pressure body location, with appropriate value sets. The vital signs model in mCODE is aligned with the Vital Signs Implementation Guide being developed in cooperation with the <a href="https://www.hl7.org/Special/Committees/cimi/index.cfm" target="_blank">Clinical Information Modeling Initiative (CIMI) Work Group</a>.</p> 
  <p>Although mCODE defines its own vital signs profiles, if and when detailed vital signs profiles are standardized in a widely-accepted FHIR IG, mCODE will likely switch over to those profiles.</p>
 
-<h2><a name="LaboratoryProfiles"></a>Laboratory Profiles</h2> 
+<h4><a name="LaboratoryProfiles"></a>Laboratory Profiles</h4> 
 
 <p><p>Reporting of individual laboratory results must conform to the <a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html">US Core Laboratory Result Profile</a>. Several examples of laboratory result reporting are given in the <a href="http://hl7.org/fhir/us/core/index.html">US Core IG</a>. For example, see this <a href="http://hl7.org/fhir/us/core/Observation-erythrocytes.html">erythrocytes laboratory reporting example</a>.</p>
 
@@ -113,7 +115,7 @@
 </ul>
 </p>
 
-<h2><a name="RepresentingProvenance"></a>Representing Provenance of mCODE Information</h2> 
+<h4><a name="RepresentingProvenance"></a>Representing Provenance of mCODE Information</h4> 
 <p>
 Provenance information includes the "who, what, when, where, why" associated with collection, transfer, and updating of clinical information. As a FHIR application, mCODE relies FHIR's native mechanisms for recording and tracking provenance. As such, mCODE shares all the capabilities and limitations of FHIR provenance tracking. The user should refer to the <a href="https://www.hl7.org/fhir/provenance.html">FHIR specification</a> for more information. Only a brief summary is presented here.</p>
 <p>FHIR provenance tracking has three parts:</p>
@@ -124,8 +126,4 @@ Provenance information includes the "who, what, when, where, why" associated wit
 </ul>
 </p>In summary, mCODE defers to these FHIR mechanisms for recording and tracking provenance.</p>
 
-<br/>
-<footer>
-<hr/>
-    <p><font color="#BEBEBD"><small>Approved for Public Release. Distribution Unlimited. Case Number 16-1988</small></font></p>
-</footer>
+</div>
