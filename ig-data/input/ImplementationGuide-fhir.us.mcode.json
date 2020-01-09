@@ -366,13 +366,8 @@
           "generation": "markdown"
         },
         {
-          "nameUrl": "changelog.html",
-          "title": "Change Log",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "downloads.html",
-          "title": "Downloads",
+          "nameUrl": "implementation.html",
+          "title": "Implementation",
           "generation": "markdown"
         },
         {
@@ -381,8 +376,13 @@
           "generation": "markdown"
         },
         {
-          "nameUrl": "implementation.html",
-          "title": "Implementation",
+          "nameUrl": "changelog.html",
+          "title": "Change Log",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "downloads.html",
+          "title": "Downloads",
           "generation": "markdown"
         }
       ]
