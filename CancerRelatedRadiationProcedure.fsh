@@ -4,7 +4,7 @@ Alias:   USCoreProcedure = http://hl7.org/fhir/us/core/StructureDefinition/us-co
 Profile:  CancerRelatedRadiationProcedure
 Parent:   Procedure  // USCoreProcedure
 Id:       CancerRelatedRadiationProcedure
-Title:    "Cancer Related Radiation Procedure"
+Title:    "Cancer-Related Radiation Procedure"
 Description: """
 A radiological treatment addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the ReasonReference and ReasonCode to cancer conditions. 
 
