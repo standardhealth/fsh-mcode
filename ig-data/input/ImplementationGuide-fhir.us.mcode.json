@@ -100,6 +100,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/CancerRelatedSurgicalProcedure"
+        },
+        "name": "Cancer-Related Surgical Procedure",
+        "description": "A surgical action addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the ReasonReference and ReasonCode to cancer conditions. Conformance note: If an ICD-10-PCS code is used in the code attribute, and there is a semantically equivalent SNOMED CT or CPT code, the resulting Procedure instance will not be compliant with US Core Profiles.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/CancerStageGroupParent"
         },
         "name": "Cancer Stage Group Parent",
@@ -112,6 +120,14 @@
         },
         "name": "Cancer Stage Parent",
         "description": "Abstract parent class for members of cancer staging panels. Cancer panel members must include a timing element and staging system, and focus on a cancer disorder. Specific realizations will have value sets specific to certain staging systems.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ComorbidCondition"
+        },
+        "name": "Comorbid Condition",
+        "description": "A comorbidity refers to one or more diseases or conditions that occur along with another condition in the same person at the same time. Conditions considered comorbidities are often long-term or chronic conditions. Comorbidities are defined relative to an index disease and may be categorical, rather than described in full detail. The comorbid condition class provides comorbidity codes corresponding the Elixhauser Comorbidity Index. Conformance note: If an ICD-10-CM code is used for the code attribute, and a semantically equivalent SNOMED code is available, the resulting instance will not be compliant with US Core Profiles.",
         "exampleBoolean": false
       },
       {
