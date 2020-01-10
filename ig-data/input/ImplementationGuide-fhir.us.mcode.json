@@ -9,14 +9,14 @@
   "publisher": "HL7 International Clinical Interoperability Council",
   "contact": [
     {
-      "name": "Mark Kramer",
       "telecom": [
         {
-          "system": "email",
-          "value": "mkramer@mitre.org"
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/cic"
         }
       ]
     }
+
   ],
   "description": "Gives an example of how FSH can be used to create the mCODE IG",
   "packageId": "fhir.us.mcode",
@@ -102,7 +102,7 @@
         "reference": {
           "reference": "StructureDefinition/CancerStageGroupParent"
         },
-        "name": "Cancer Stage Parent",
+        "name": "Cancer Stage Group Parent",
         "description": "Abstract parent class for members of cancer staging panels. Cancer panel members must include a timing element and staging system, and focus on a cancer disorder. Specific realizations will have value sets specific to certain staging systems.",
         "exampleBoolean": false
       },
@@ -262,7 +262,7 @@
         "reference": {
           "reference": "StructureDefinition/TNMClinicalDistantMetastasesCategory"
         },
-        "name": "TNM Clinical Regional Nodes Category",
+        "name": "TNM Clinical Distant Metastases Category",
         "description": "Category describing the presence or absence of metastases in remote anatomical locations, assessed through pathologic analysis of a specimen.",
         "exampleBoolean": false
       },
@@ -294,7 +294,7 @@
         "reference": {
           "reference": "StructureDefinition/TNMPathologicalDistantMetastasesCategory"
         },
-        "name": "TNM Pathological Regional Nodes Category",
+        "name": "TNM Pathological Distant Metastases Category",
         "description": "Category describing the presence or absence of metastases in remote anatomical locations, assessed through pathologic analysis of a specimen.",
         "exampleBoolean": false
       },
