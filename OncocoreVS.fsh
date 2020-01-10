@@ -2,7 +2,7 @@ Alias:   LNC = http://loinc.org
 Alias:   SCT = http://snomed.info/sct
 Alias:   UCUM = http://unitsofmeasure.org
 Alias:   MTH = http://ncimeta.nci.nih.gov
-Alias:   ICD10CM = http://hl7.org/fhir/sid/icd-10-cm 
+Alias:   ICD10CM = http://hl7.org/fhir/sid/icd-10-cm
 Alias:   RXN = http://www.nlm.nih.gov/research/umls/rxnorm
 Alias:   CPT = http://www.ama-assn.org/go/cpt
 Alias:   ICD10PCS = http://www.nlm.nih.gov/research/umls/icd10pcs
@@ -16,9 +16,9 @@ Alias:   SPTY = http://terminology.hl7.org/CodeSystem/v2-0487
 
 ValueSet: 				YesNoUnknownVS
 Description:			"A value set containing yes, no, and unknown."
-SCT#373066001			"Yes"
-SCT#373067005			"No"
-SCT#261665006			"Unknown"
+* SCT#373066001			"Yes"
+* SCT#373067005			"No"
+* SCT#261665006			"Unknown"
 
 ValueSet:    GeneticTestVS
 Title: "Genetic Test Value Set"
@@ -43,9 +43,9 @@ Description:  "Codes describing the location(s) of primary or secondary cancer. 
 ValueSet:   HistologyMorphologyBehaviorVS
 Title: "Histology Morphology Behavior Value Set"
 Description: "Codes representing the structure, arrangement, and behavioral characteristics of malignant neoplasms, and cancer cells. Inclusion criteria: in situ neoplasms and malignant neoplasms. Exclusion criteria: benign neoplasms and neoplasms of unspecified behavior. Note: As the vocabulary binding is extensible within this IG, ICD-O-3 morphology codes (including behavior suffix) may also be used; they are not included in the value set for intellectual property reasons. For primary cancers, the ICD-O-3 behavior suffix should be /1, /2, or /3. For secondary cancers, the ICD-O-3 behavior suffix should be /6. Only SNOMED CT and ICD-O-3 are considered conformant to the specification. However, to be compliant with US Core Profiles, ICD-O-3 may only be used if there is no suitable code in SNOMED CT."
-* codes from system SCT where code is-a SCT#367651003 "Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)" 
+* codes from system SCT where code is-a SCT#367651003 "Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)"
 * codes from system SCT where code is-a SCT#399919001 "Carcinoma in situ - category (morphologic abnormality)"
-* codes from system SCT where 
+* codes from system SCT where
     code is-a SCT#399983006 "In situ adenomatous neoplasm - category (morphologic abnormality)" and
     code is-not-a SCT#399983006 "Papillary neoplasm, pancreatobiliary-type, with high grade intraepithelial neoplasia (morphologic abnormality)" and
     code is-not-a SCT#128640002 "Glandular intraepithelial neoplasia, grade III (morphologic abnormality)" and
@@ -81,7 +81,7 @@ Description:  "The type of evidence backing up the clinical determination of can
 * SCT#386344002 "Laboratory data interpretation (procedure)"
 //MTH#C0005516	"Biological markers"
 
-ValueSet:   CancerStagingSystemVS 
+ValueSet:   CancerStagingSystemVS
 Title: "Cancer Staging System Value Set"
 Description:    "System used for staging. Because SNOMED CT does not currently have a code representing AJCC Version 8, specify the exact text 'AJCC Version 8' in the text sub-field of the code structure, and omit the code."
 * SCT#444256004 "American Joint Commission on Cancer, Cancer Staging Manual, 6th edition neoplasm staging system (tumor staging)"
@@ -309,7 +309,7 @@ Conformance note: If an ICD-10-PCS code is used, and a semantically equivalent S
 * SCT#15463004    "Operation on thyroid gland [NOS]"
 
 ValueSet:       TumorMarkerTestVS
-Description:    "Codes representing tests for tumor markers. This value set of LOINC codes is not comprehensive and can be extended. LOINC codes are preferred. Other vocabularies can be used only if the test of interest is not covered by LOINC. 
+Description:    "Codes representing tests for tumor markers. This value set of LOINC codes is not comprehensive and can be extended. LOINC codes are preferred. Other vocabularies can be used only if the test of interest is not covered by LOINC.
 
 FHIR implementation note: At the current time, profiles for the specific LOINC tests mentioned here do not exist."
 * LNC#1695-6		"5-Hydroxyindoleacetate [Mass/time] in 24 hour Urine"
@@ -473,7 +473,7 @@ FHIR implementation note: At the current time, profiles for the specific LOINC t
 * LNC#15323-9       "Prostate specific Ag/Prostate volume calculated from height, width and length"
 * LNC#15324-7       "Prostate specific Ag/Prostate volume calculated from planimetry"
 
-ValueSet:   GeneticSpecimenTypeVS 
+ValueSet:   GeneticSpecimenTypeVS
 Title: "Genetic Specimen Type Value Set"
 Description:    "The type of specimen analyzed in a genetic test. The values are taken from code system http://terminology.hl7.org/CodeSystem/v2-0487, and represent a subset of HL7 Version 2 Table 0487 (http://hl7.org/fhir/v2/0487)."
 * SPTY#AMN       "Amniotic fluid"
