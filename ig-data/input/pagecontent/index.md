@@ -1,5 +1,10 @@
-<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd">
 
+<!--style>
+        p.padding {
+          padding-right: 20px;
+        }
+</style-->
+<h1>Contents of this Implementation Guide</h1>
 
 <ul>
     <li><a href="#Background">Background</a></li>
@@ -13,7 +18,7 @@
     <li><a href="#Contacts">Contact Information</a></li>
 </ul>
 
-<h3><a name="Background">Background</a></h3>
+<h1><a name="Background"></a>Background</h1>
 <p>According to the National Cancer Institute, 38.5 percent of men and women will be diagnosed with cancer at some point during their lifetimes. In 2014, an estimated 14.7M people were living with cancer in the United States. While these numbers are staggering, the silver lining in the wide prevalence of cancer is the potential to learn from treatment of millions of patients. If we had research-quality data from all cancer patients, it would enable higher quality health outcomes. Today, we lack the data models, technologies, and methods to capture that data.</p>
 
 <p><a href="https://mcodeinitiative.org/" target="_blank">mCODE™</a> (short for Minimal Common Oncology Data Elements) is an initiative intended to assemble a core set of structured data elements for oncology electronic health records (EHRs). mCODE is a step towards capturing research-quality data from the treatment of all cancer patients. This would enable the treatment of every cancer patient to contribute to <a href="https://en.wikipedia.org/wiki/Comparative_effectiveness_research" target="_blank">comparative effectiveness analysis (CEA)</a> of cancer treatments by allowing for easier methods of data exchange between health systems. mCODE has been created and is being supported by the <a href="https://www.asco.org/" target="_blank">American Society of Clinical Oncology (ASCO&#174;)</a>in collaboration with the MITRE Corporation.</p>
@@ -26,21 +31,21 @@
 <p>While mCODE ultimately is meant to be applicable to across all types of cancer, the initial focus (and both use cases) has been on solid tumors.</p>
 
 <p>In addition to information obtained from subject matter experts, several pre-existing standards, nomenclatures, and guidelines were consulted in the development of this specification, including:</p>
-<ul>
-    <li><a href="https://cancerstaging.org/references-tools/deskreferences/Pages/Breast-Cancer-Staging.aspx" target="_blank">American Joint Committee on Cancer (AJCC) Staging Manual (8th Edition) Breast Cancer Chapter</a></li>
-    <li><a href="https://www.cap.org/protocols-and-guidelines" target="_blank">College of American Pathologists (CAP) Cancer Protocols</a></li>
-    <li><a href="https://www.naaccr.org/SSDI/SSDI-Manual.pdf?v=1531675132" target="_blank">North American Association of Central Cancer Registries (NAACCR) 2018 Site-Specific Data Items Manual</a></li>
-    <li><a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=383" target="_blank">HL7 CDA R2 IG: Reporting to Public Health Cancer Registries from Ambulatory Healthcare Providers</a></li>
-    <li><a href="https://www.nccn.org/professionals/physician_gls/default.aspx#site" target="_blank">National Comprehensive Cancer Network (NCCN) Clinical Practice Guidelines in Oncology</a></li>
-    <li><a href="https://project.eortc.org/recist/wp-content/uploads/sites/4/2015/03/RECISTGuidelines.pdf" target="_blank">RECIST Guidelines v1.1</a></li>
-    <li><a href="http://hl7.org/fhir/uv/genomics-reporting/index.html" target="_blank">HL7 FHIR Genomics Reporting Implementation Guidance (STU1)</a></li>
-    <li><a href="https://www.ncbi.nlm.nih.gov/gtr" target="_blank">The National Center for Biotechnology Genetic Test Registry (GTR)</a></li>
-    <li><a href="https://varnomen.hgvs.org/" target="_blank">The Human Genome Variation Society nomenclature for defining genetic variants</a>.</li>
-     <li><a href="https://www.genenames.org/" target="_blank">The Human Genome Organization (HUGO) Gene Nomenclature Committee</a></li>
-    <li><a href="https://www.cdisc.org/standards/therapeutic-areas/disease-area/oncology/" target="_blank">The CDISC Therapeutic Area User Guides (TAUG) </a></li>
-</ul>
+    <ul>
+        <li><a href="https://cancerstaging.org/references-tools/deskreferences/Pages/Breast-Cancer-Staging.aspx" target="_blank">American Joint Committee on Cancer (AJCC) Staging Manual (8th Edition) Breast Cancer Chapter</a></li>
+        <li><a href="https://www.cap.org/protocols-and-guidelines" target="_blank">College of American Pathologists (CAP) Cancer Protocols</a></li>
+        <li><a href="https://www.naaccr.org/SSDI/SSDI-Manual.pdf?v=1531675132" target="_blank">North American Association of Central Cancer Registries (NAACCR) 2018 Site-Specific Data Items Manual</a></li>
+        <li><a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=383" target="_blank">HL7 CDA R2 IG: Reporting to Public Health Cancer Registries from Ambulatory Healthcare Providers</a></li>
+        <li><a href="https://www.nccn.org/professionals/physician_gls/default.aspx#site" target="_blank">National Comprehensive Cancer Network (NCCN) Clinical Practice Guidelines in Oncology</a></li>
+        <li><a href="https://project.eortc.org/recist/wp-content/uploads/sites/4/2015/03/RECISTGuidelines.pdf" target="_blank">RECIST Guidelines v1.1</a></li>
+        <li><a href="http://hl7.org/fhir/uv/genomics-reporting/index.html" target="_blank">HL7 FHIR Genomics Reporting Implementation Guidance (STU1)</a></li>
+        <li><a href="https://www.ncbi.nlm.nih.gov/gtr" target="_blank">The National Center for Biotechnology Genetic Test Registry (GTR)</a></li>
+        <li><a href="https://varnomen.hgvs.org/" target="_blank">The Human Genome Variation Society nomenclature for defining genetic variants</a>.</li>
+        <li><a href="https://www.genenames.org/" target="_blank">The Human Genome Organization (HUGO) Gene Nomenclature Committee</a></li>
+        <li><a href="https://www.cdisc.org/standards/therapeutic-areas/disease-area/oncology/" target="_blank">The CDISC Therapeutic Area User Guides (TAUG) </a></li>
+     </ul>
 
-<p>After initial development, in early 2019, an open survey was conducted to validate and prioritize the data elements from these use cases. Further down-scoping was done based on whether the data would be stored or capture in an electronic health record (EHR), and if it would place undue documentation burden on clinicians.</p>
+<p>After initial development, in early 2019, an open survey was conducted to validate and prioritize the data elements from these use cases. Further down-scoping was done based on whether the data would be stored or capture in an electronic health record (EHR), and if it would place undue documentation burden on clinicians.</p> 
 
 <p>The data elements identified in this process were modeled using the <a href="http://standardhealthrecord.org/cimpl-doc/" target="_blank">Clinical Information Modeling and Profiling Language (CIMPL)</a> and exported as FHIR Profiles. <a href="profiles.html">The profiles</a>, related FHIR artifacts, and other <a href="implementation.html">technical implementation information</a>, constitute the bulk of this IG. What follows is an overview of mCODE, directed primarily at clinical readers. Readers should also take note of the <a href="mCODEDataDictionary.xlsx">Data Dictionary (Excel download)</a>, a simplified, flattened list of mCODE elements.</p>
 
@@ -55,7 +60,7 @@
 
 <p>This implementation guide is a Domain of Knowledge IG. The purpose of this IG is to show how to represent clinical concepts generally, not to have a complete set of agreements for interoperable exchanges.</p>
 
-<h3><a name="Modeling">Scope and Conceptual Model</a></h3>
+<h1><a name="Modeling"></a>Scope and Conceptual Model</h1>
 <p>mCODE consists of data elements divided into six groups, illustrated in the following diagram:</p>
 <ul>
     <li><a href="#Patient">Patient Group</a></li>
@@ -67,8 +72,9 @@
 </ul>
 
 <img src="mCodeDiagram.png" alt="mCODE Logical Model" width="1100" />
+<p>&nbsp;</p>
 
-<h4><a name="Patient">Patient Group</a></h4>
+<h2><a name="Patient"></a>Patient Group</h2>
 <p>The mCODE <b>Patient</b> group contains the following basic information about the patient:</p>
 <ul>
     <li><b>Demographics</b> - including date of birth, gender, zip code, race, and ethnicity.</li>
@@ -78,7 +84,7 @@
 
 <p><a href="StructureDefinition-obf-Patient.html">Patient</a> is the most essential FHIR profile, as all other mCODE major elements reference it. The mCODE Patient profile differs only slightly from the <a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html" target="_blank">US Core Patient Profile</a>. Most significantly, Patient.deceased is a <a href="https://www.hl7.org/fhir/profiling.html#mustsupport" target="_blank">must-support</a> element in mCODE.</p>
 
-<h4><a name="Disease">Disease Characterization Group</a></h4>
+<h2><a name="Disease"></a>Disease Characterization Group</h2>
 
 <p>The mCODE <b>Disease Characterization</b> group includes data elements specific to the diagnosis and staging of cancer. This includes:</p>
 <ul>
@@ -87,7 +93,7 @@
     <li><b>Cancer stage</b> - describes the severity of an individual's cancer based on the magnitude of the original (primary) tumor as well as on the extent cancer has spread in the body. Understanding the stage of the cancer helps doctors to develop a prognosis and design a treatment plan for individual patients. Staging calculations leverage results from the previous two categories, along with prognostic factors relevant to the cancer type, in order to assess an overall cancer stage group (source: <a href="https://cancerstaging.org/references-tools/Pages/What-is-Cancer-Staging.aspx" target="_blank">AJCC</a>).</li>
 </ul>
 
-<h5>Representing Cancer Diagnosis</h5>
+<h3>Representing Cancer Diagnosis</h3>
 <p>The cancer diagnosis combines the type, site, and certain characteristics of the cancer. Depending on the EHR and provider organization, different code systems may be used, such as:</p>
 <ul>
     <li><a href="https://www.snomed.org/" target="_blank">Systematized Nomenclature of Medicine - Clinical Terms (SNOMED CT)</a></li>
@@ -129,7 +135,7 @@
 
 <p>Implementers should reference the <a href="StructureDefinition-onco-core-PrimaryCancerCondition.html">PrimaryCancerCondition</a> and <a href="StructureDefinition-onco-core-SecondaryCancerCondition.html">Secondary Cancer Condition</a> profiles for details on the use of these terminologies and associated value sets.</p>
 
-<h5>Representing Cancer Staging Information</h5>
+<h3>Representing Cancer Staging Information</h3>
 <p>Cancer stage information is contained in a set of profiles, representing <a href="https://www.cancer.gov/publications/dictionaries/cancer-terms/def/clinical-staging" target="_blank">clinical stage group</a> and <a href="https://www.cancer.gov/publications/dictionaries/cancer-terms/def/pathological-staging" target="_blank">pathologic stage group</a> panels with members representing the primary tumor (T) category, the regional nodes (N) category, and the distant metastases (M) category. </p>
 
 <p>TNM staging systems are specified in the <em>CancerStagingSystemVS</em> extensible value set of SNOMED CT terms. SNOMED CT does not have a concept code to denote AJCC version 8, the most current version used for AJCC for cancer staging. AJCC is actively requesting the addition of new SNOMED CT concept code, although the process to approve and publish the new code could take several months. Until one is available in the SNOMED CT US Edition, we recommend the NCI thesaurus code <em>C146985 (AJCC Cancer Staging Manual 8th Edition)</em>.</p>
@@ -146,21 +152,21 @@
 <p>mCODE recommends that the implementers align with AJCC's convention of representing the staging category value with the <em>prepended classification</em> in both <a href="StructureDefinition-onco-core-TNMClinicalStageGroup.html">TNMClinicalStageGroup</a> and <a href="StructureDefinition-onco-core-TNMPathologicStageGroup.html">TNMPathologicStageGroup</a> profiles. This code convention is aligned with the AJCC's digital data and clearly distinguishes the staging classification as clinical, pathologic, or neoadjuvant without having to retrieve further context from the model. Nonetheless, separate profiles for clinical and pathological staging were developed, with an eye toward future extensibility, in particular, the ability to additional prognostic factors relevant to particular types of cancers in the <a href="StructureDefinition-onco-core-TNMPathologicStageGroup.html">TNMPathologicStageGroup</a>.</p>
 
 
-<h4><a name="LabsVitals">Laboratory Results and Vital Signs Group</a></h4>
-<h5>Core Laboratory Results</h5>
+<h2><a name="LabsVitals"></a>Laboratory Results and Vital Signs Group</h2>
+<h3>Core Laboratory Results</h3>
 <p>Many laboratory tests could be relevant to an individual with cancer. The initial mCODE release calls for results from two core laboratory panels, the Complete Blood Count (CBC) (Automatic or Manual Differential) and Comprehensive Metabolic Panel (CMP). CBC and CMP results can be reported as individual laboratory observations or as grouped panels, using the DiagnosticReport resource. If DiagnosticReports are submitted, they must conform to <a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-diagnosticreport-lab.html">US Core DiagnosticReport Profile for Laboratory Results Reporting</a>. Examples of <a href="http://hl7.org/fhir/us/core/DiagnosticReport-cbc.html">CBC reporting</a> and <a href="http://hl7.org/fhir/us/core/DiagnosticReport-metabolic-panel.html">CMP reporting</a> are given in the <a href="http://hl7.org/fhir/us/core/index.html">US Core IG</a>.</p>
 
 
-<h5><a name="TumorMarkers">Tumor Marker Tests</a></h5>
+<h3><a name="TumorMarkers"></a>Tumor Marker Tests</h3>
 <p>Tumor markers are key prognostic factors in calculating cancer staging, identifying treatment options, and monitoring progression of disease. For example, an abnormal increase in prostate-specific antigen (PSA) levels is a prognostic factor for prostate cancer. Other tumor markers include estrogen receptor (ER) status, progresterone receptor (PR) status, carcinoembryonic antigen (CEA) levels, among others. See the profile <a href="StructureDefinition-onco-core-TumorMarkerTest.html">TumorMarkerTest</a> for full details.</p>
 
 <p>We distinguish Tumor Marker Tests from genetic tests that are measured at the DNA, RNA, or chromosomal level, addressed in the <a href="#Genomics">Genomics</a> section.
 </p>
 
-<h5>Vital Signs</h5>
+<h3>Vital Signs</h3>
 <p>Vital signs are measurements of the most essential, or "vital" body functions. Traditionally, <a href="https://medlineplus.gov/vitalsigns.html" target="_blank">vital signs include</a> blood pressure, heart rate, respiratory rate, and temperature. More recently, height and weight have been included. For mCODE, blood pressure, body height, and body weight are believed to be most critical to assessment and treatment. mCODE uses the <a href="http://hl7.org/fhir/R4/observation-vitalsigns.html" target="_blank">FHIR vital sign profiles</a>, which are incorporated by reference into <a href="http://hl7.org/fhir/us/core/" target="_blank">US Core v3</a>. </p>
 
-<h4><a name="Treatment">Treatments Group</a></h4>
+<h2><a name="Treatment"></a>Treatments Group</h2>
 <p>The <strong>Treatment</strong> group includes reporting of procedures and medications used to treat a cancer patient, or relevant to that treatment. Treatments are captured using the following profiles:</p>
 <ul>
     <li><a href="StructureDefinition-onco-core-CancerRelatedSurgicalProcedure.html">CancerRelatedSurgicalProcedure</a> - representing surgical procedures that involve the removal of cancer tumors from the body. </li>
@@ -174,7 +180,7 @@
 </ul>
 <p>Like US Core, mCODE gives preference to representing medications using the National Library of Medicine (NLM) <a href = "https://www.nlm.nih.gov/research/umls/rxnorm/" target="_blank">RxNorm</a> terminology - a coding standard established by the Office of the National Coordinator (ONC) for the exchange of drugs. However, RxNorm is restricted to FDA-approved drugs and does not include clinical trial drugs. To address this limitation, mCODE allows for the inclusion of other coding systems like the <a href="https://ncit.nci.nih.gov/ncitbrowser/" target="_blank">NCI Thesaurus (NCIT)</a> to represent clinical trial oncology drugs.</p>
 
-<h4><a name="Genomics">Genomics Group</a></h4>
+<h2><a name="Genomics"></a>Genomics Group</h2>
 <p>mCODE includes the minimal set of genomics related elements relevant to capture in an EHR to inform cancer assessment and treatment options. The approach is based on the <a href="http://hl7.org/fhir/uv/genomics-reporting/index.html" target="_blank">HL7 CGWG Clinical Genomics Reporting Implementation Guide</a>. However, mCODE simplifies genomics reporting to single discrete variants or to variants that were found in a given DNA region. Three profiles relate to the capture of clinical genomics data:</p>
 <ul>
     <li><a href="StructureDefinition-onco-core-GenomicsReport.html">Genomics Report</a> - contain results of genomic analyses. Genomic reports vary in complexity and content, as simple as the results for a single discrete variant to complex sequences that are found in exome and genome-wide association studies (GWAS).</li>
@@ -183,20 +189,20 @@
 </ul>
 <p>The identity of non-genomic laboratory tests is typically represented by a <a href="https://loinc.org/" target="_blank">Logical Observation Identifiers and Names (LOINC)</a> code. However, many genetic tests and panels do not have LOINC codes, although some might have an identifier in the <a href="https://www.ncbi.nlm.nih.gov/gtr/" target="_blank">NCBI Genetic Testing Registry (GTR)</a>, a central location for voluntary submission of genetic test information by providers. While GTR is a viable source for identifying many genetic tests, the user should be aware that the GTR is not single authoritative source since the test data is voluntarily updated. Standardization of codes for genetic tests is essential to facilitate data analysis of genetic tests, and should be a priority for the genomics testing community in the near future. Implementers should also note that, to conform to the requirements of the <a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html" target="_blank">US Core Laboratory Result Profile</a>, LOINC must be used, if a suitable code is available. If there is no suitable code in LOINC, then a code from an alternative code system such as GTR can be used.</p>
 
-<h4><a name="Outcomes">Outcomes Group</a></h4>
+<h2><a name="Outcomes"></a>Outcomes Group</h2>
 <p>Recording outcomes of cancer treatment in mCODE involves two data elements: disease status and date of death. Other common outcome measures, such as progression-free survival, time to recurrence, and overall survival, can be derived from time-indexed observations of disease status. The date of diagnosis is also required for some derived measures (see <a href="#Disease">Disease Characterization</a>). At this time, mCODE does not include patient reported outcomes.</p>
 
-<h5>Disease Status</h5>
+<h3>Disease Status</h3>
 <p>Formal recording of disease status is often limited to clinical trials, involving precise criteria such as <a href="https://ctep.cancer.gov/protocolDevelopment/docs/recist_guideline.pdf" target="_blank">RECIST</a>. The lack of outcome data outside of trials greatly limits the application of real-world data. Disease status information is rarely found in structured form in EHRs. If recorded at all, the information is found in clinical notes, which is of limited usefulness.</p>
 <p>mCODE asks for disease progression to be recorded in structured form as part of patient encounters. In mCODE, disease status is defined as "A clinician's qualitative judgment on the current trend of the cancer, e.g., whether it is stable, worsening (progressing), or improving (responding). The judgment may be based a single type or multiple kinds of evidence, such as imaging data, assessment of symptoms, tumor markers, laboratory data, etc." In other words, the disease status is an assessment by the oncologist that synthesizes all currently available information about the patient. The <a href="http://icaredata.org/" target="_blank">ICAREdata™ Project</a> is conducting a study in association with a randomized controlled trial (RCT), which aims to demonstrate the ability to calculate equivalent clinical trial endpoints using computable clinical treatment data.
 </p>
 
-<h5>Date of Death</h5>
+<h3>Date of Death</h3>
 <p>Date of death data can be obtained from several sources outside of the clinical setting. If available in the EHR, it can be reported through via mCODE, but more likely, it will be filled in from vital records, after the last clinical interaction.</p>
 
 
 
-<h3><a name="Disclaimers">Disclaimers and Known Limitations</a></h3>
+<h1><a name="Disclaimers"></a>Disclaimers and Known Limitations</h1>
 <p></p>
 <ul>
     <li>Several proprietary terminologies, including ICD-O-3 and the American Joint Commission on Cancer (AJCC) Staging Systems are widely used in the cancer domain. Others, such as Current Procedural Terminology (CPT&#174;), while not cancer-specific, are relevant for the representation of cancer-related procedures, such as surgeries or radiation procedures. Consequently, this guide does not include content from these terminologies due to licensing restrictions. As such, <i><strong>elements related to staging may not currently include required terminology codes for assessing the cancer stage</strong></i>. The guide does, however, indicate where it is appropriate to use codes from such terminologies.</li>
@@ -211,11 +217,11 @@
     <li>The authors are considering NCI Thesaurus as a source vocabulary for <a href="ValueSet-onco-core-CancerStagingSystemVS.html">CancerStagingSystemVS</a>, since SNOMED CT lacks the necessary terms (AJCC Version 8, in particular).</li>
 </ul>
 
-<h3><a name="Credits">Credits</a></h3>
+<h1><a name="Credits"></a>Credits</h1>
 <p>The authors recognize the leadership and sponsorship of Dr. Monica Bertagnolli, President, ASCO and Dr. Jay Schnitzer, MITRE Chief Technology Officer. Dr. Steven Piantadosi and the Alliance for Clinical Trials in Oncology coordinated real-world data collection in clinical trials, as part of this project. The ASCO/CancerLinQ team was led by Dr. Robert Miller and Dr. Wendy Rubinstein. Lead MITRE contributors were Mark Kramer, Rute Martins, Chris Moesel, Caroline Potteiger, and May Terry. Andre Quina and Dr. Brian Anderson guide the overall mCODE effort at MITRE. HL7 sponsorship and input from <a href="http://www.hl7.org/Special/committees/cic/index.cfm" target="_blank">Clinical Interoperability Council</a> and <a href="https://www.hl7.org/Special/Committees/cimi/index.cfm" target="_blank">Clinical Information Modeling Initiative</a> is gratefully acknowledged, with special thanks to Richard Esmond and Laura Heermann Langford.</p>
 <p>This IG was authored by the MITRE Corporation using the <a href="http://standardhealthrecord.org/cimpl-doc/" target="_blank">Clinical Information Modeling and Profiling Language (CIMPL)</a>, a free, open source toolchain from <a href="https://www.mitre.org/" target="_blank">MITRE Corporation</a>.</p>
 
-<h3><a name="Contacts">Contact Information</a></h3>
+<h1><a name="Contacts"></a>Contact Information</h1>
 <table width="100%">
     <tbody>
     <tr>
@@ -249,6 +255,8 @@
     </tbody>
     </table>
 
-MITRE: Approved for Public Release. Distribution Unlimited. Case Number 16-1988
-
-</div>
+<p>&nbsp;</p>
+<footer>
+    <hr/>
+    <p><font color="#BEBEBD"><small>Approved for Public Release. Distribution Unlimited. Case Number 16-1988</small></font></p>
+</footer>
