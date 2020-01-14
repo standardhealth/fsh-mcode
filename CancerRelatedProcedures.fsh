@@ -89,3 +89,7 @@ Description: "A surgical action addressing a cancer condition. The scope of this
 * partOf only Reference(Procedure)
 * recorder only Reference(Practitioner | PractitionerRole)
 * performer.actor only Reference(Practitioner | PractitionerRole | Organization)
+* bodySite.extension contains
+    Laterality 0..1 and
+    AnatomicalOrientation 0..* and
+    RelationToLandmark 0..*
