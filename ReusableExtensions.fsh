@@ -8,7 +8,7 @@ Description: "The purpose of a treatment."
 Extension: TerminationReason
 Id:  TerminationReason
 Title: "Termination Reason"
-Description: "A code explaning an unplanned or premature termination of a plan of treatment, course of medication, or research study."
+Description: "A code explaining an unplanned or premature termination of a plan of treatment, course of medication, or research study."
 * value[x] only CodeableConcept
 * valueCodeableConcept from TreatmentTerminationReasonVS (required)
 

@@ -2,14 +2,12 @@ Alias:   UCUM = http://unitsofmeasure.org
 Alias:   USCoreProcedure = http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure
 
 Profile:  CancerRelatedRadiationProcedure
-Parent:   Procedure  // USCoreProcedure
+Parent:   USCoreProcedure
 Id:       CancerRelatedRadiationProcedure
-Title:    "Cancer Related Radiation Procedure"
-Description: """
-A radiological treatment addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the ReasonReference and ReasonCode to cancer conditions. 
+Title:    "Cancer-Related Radiation Procedure"
+Description: "A radiological treatment addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the ReasonReference and ReasonCode to cancer conditions. 
 
-Conformance note: If an ICD-10-PCS code is used in the code attribute, and there is a semantically equivalent SNOMED CT or CPT code, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html)
-"""
+Conformance note: If an ICD-10-PCS code is used in the code attribute, and there is a semantically equivalent SNOMED CT or CPT code, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html)"
 /* Issues relative to mCODE 0.9.x
 1) basedOn should not include ProcedureRequest. No such class in R4.
 2) basedOn should include CarePlan
@@ -23,7 +21,6 @@ Conformance note: If an ICD-10-PCS code is used in the code attribute, and there
 10) Encounter should not be constrained to US Core Encounter -- US Core doesn't have this constraint
 11) report should allow Reference(DiagnosticReport | DocumentReference | Composition) -- currently mCODE constrains to DiagnosticReport only.
 */
-// We should be able to remove the next four lines after 0.4.0 release
 * extension contains 
     RadiationDose 0..1 and 
     TreatmentIntent 0..1 and 
@@ -35,7 +32,7 @@ Conformance note: If an ICD-10-PCS code is used in the code attribute, and there
 * recorder only Reference(Practitioner | PractitionerRole)
 * performer.actor only Reference(Practitioner | PractitionerRole | Organization)  // include Device?
 * reasonCode from CancerDisorderVS (extensible)
-* reasonReference only Reference(PrimaryCancerCondition | SecondaryCancerCondition)
+* reasonReference only Reference(CancerConditionParent)
 * bodySite from RadiationTargetBodySiteVS (extensible)
 * bodySite.extension contains
     Laterality 0..1 and
@@ -76,6 +73,23 @@ Description: "The total amount of radiation dose delivered for the course of the
 * valueQuantity = UCUM#cGy
 
 
-
-
-
+Profile:  CancerRelatedSurgicalProcedure
+Parent:   USCoreProcedure
+Id:       CancerRelatedSurgicalProcedure
+Title:    "Cancer-Related Surgical Procedure"
+Description: "A surgical action addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the ReasonReference and ReasonCode to cancer conditions. Conformance note: If an ICD-10-PCS code is used in the code attribute, and there is a semantically equivalent SNOMED CT or CPT code, the resulting Procedure instance will not be compliant with US Core Profiles."
+* code from CancerRelatedSurgicalProcedureVS (extensible)
+* extension contains 
+    TreatmentIntent 0..1 and 
+    StatementDateTime 0..1
+* reasonCode, reasonReference, extension[TreatmentIntent] MS  // other MS will be inherited from USCoreProcedure
+* subject only Reference(USCorePatient)
+* reasonCode from CancerDisorderVS (extensible)
+* reasonReference only Reference(CancerConditionParent)  // rather than Primary, Secondary, Tumor
+* partOf only Reference(Procedure)
+* recorder only Reference(Practitioner | PractitionerRole)
+* performer.actor only Reference(Practitioner | PractitionerRole | Organization)
+* bodySite.extension contains
+    Laterality 0..1 and
+    AnatomicalOrientation 0..* and
+    RelationToLandmark 0..*
