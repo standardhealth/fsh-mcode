@@ -163,6 +163,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/CancerGenomicsReport"
+        },
+        "name": "Cancer Genomics Report",
+        "description": "Genetic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/HistologyMorphologyBehavior"
         },
         "name": "Histology-Morphology-Behavior",
@@ -247,6 +255,14 @@
         },
         "name": "Radiation Fractions Delivered",
         "description": "Records the total number of treatment sessions (fractions) administered during the first course of therapy. Corresponds to LOINC 21950-2 'Number of radiation treatment' [sic].",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/RegionStudied"
+        },
+        "name": "Genetic Region Studied",
+        "description": "The area of the genome region referenced in testing for variants.",
         "exampleBoolean": false
       },
       {
