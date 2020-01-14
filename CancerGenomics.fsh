@@ -202,7 +202,6 @@ Description:    "A small sample of blood, hair, skin, amniotic fluid (the fluid 
     RelationToLandmark 0..*
 * collection.bodySite, collection.bodySite.extension[Laterality] MS 
 
-
 Profile:    CancerGenomicsReport
 Parent:     USCoreDiagnosticReportLab
 Id:         CancerGenomicsReport
