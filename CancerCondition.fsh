@@ -11,7 +11,7 @@ Description: "Date when the condition was asserted"
 * value[x] only dateTime
 
 Profile: CancerConditionParent
-Parent:  Condition  // USCoreCondition
+Parent:  USCoreCondition
 Id: CancerConditionParent
 Title: "Cancer Condition Parent"
 Description:  "Abstract parent class for describing a primary or secondary metastatic neoplastic diseases, or individual tumors."
@@ -79,7 +79,7 @@ Description: "The primary cancer related to this secondary cancer."
 
 
 Profile: ComorbidCondition
-Parent:  Condition  // USCoreCondition
+Parent:  USCoreCondition
 Id: ComorbidCondition
 Title: "Comorbid Condition"
 Description:  "A comorbidity refers to one or more diseases or conditions that occur along with another condition in the same person at the same time. Conditions considered comorbidities are often long-term or chronic conditions. Comorbidities are defined relative to an index disease and may be categorical, rather than described in full detail. The comorbid condition class provides comorbidity codes corresponding the Elixhauser Comorbidity Index. Conformance note: If an ICD-10-CM code is used for the code attribute, and a semantically equivalent SNOMED code is available, the resulting instance will not be compliant with US Core Profiles."
@@ -91,7 +91,7 @@ Description:  "A comorbidity refers to one or more diseases or conditions that o
     Laterality 0..1 and
     AnatomicalOrientation 0..* and
     RelationToLandmark 0..*
-* subject only Reference(Patient)
+* subject only Reference(USCorePatient)
 
 
 

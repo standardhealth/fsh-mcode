@@ -1,7 +1,7 @@
 Alias:   USCorePatient = http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
 
 Profile: CancerPatient
-Parent: Patient // USCorePatient
+Parent: USCorePatient
 Id: CancerPatient
 Title: "Cancer Patient"
 /* There seem to be several unnecessary or unintended diffs in mCODE Patient:

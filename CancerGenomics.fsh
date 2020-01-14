@@ -5,7 +5,7 @@ Alias:   IDTYPE = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias:   USCoreObservationLab = http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
 
 Profile:    CancerGeneticVariant
-Parent:     Observation // USCoreObservationLab
+Parent:     USCoreObservationLab
 Id:         CancerGeneticVariant
 Title:      "Cancer Genetic Variant"
 Description:    "Records an alteration in the most common DNA nucleotide sequence. The term variant can be used to describe an alteration that may be benign, pathogenic, or of unknown significance. The term variant is increasingly being used in place of the term mutation."
@@ -160,7 +160,7 @@ Description: "Variant ISCN"
 
 
 Profile:        TumorMarkerTest
-Parent:         Observation // USCoreObservationLab
+Parent:         USCoreObservationLab
 Id:             TumorMarker
 Title:          "Tumor Marker"
 Description:    "The result of a tumor marker test. Tumor marker tests are generally used to guide cancer treatment decisions and monitor treatment, as well as to predict the chance of recovery and cancer recurrence. A tumor marker is a substance found in tissue or blood or other body fluids that may be a sign of cancer or certain benign (noncancer) conditions. Most tumor markers are made by both normal cells and cancer cells, but they are made in larger amounts by cancer cells. A tumor marker may help to diagnose cancer, plan treatment, or find out how well treatment is working or if cancer has come back. Examples of tumor markers include CA-125 (in ovarian cancer), CA 15-3 (in breast cancer), CEA (in colon cancer), and PSA (in prostate cancer). Tumor markers differ from genetic markers in that they are measured at the levels of the protein and substance post-RNA protein synthesis. (Definition adapted from: [NCI Dictionary of Cancer Terms](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/tumor-marker-test) and [Cancer.Net](https://www.cancer.net/navigating-cancer-care/diagnosing-cancer/tests-and-procedures/tumor-marker-tests)).
@@ -204,7 +204,7 @@ Description:    "A small sample of blood, hair, skin, amniotic fluid (the fluid 
 // ****** TO BE ADDED: CancerGenomicsReport ******
 /*
 Profile:    CancerGenomicsReport
-Parent:     DiagnosticReport     // based on US Core Diagnostic Report Profile
+Parent:     US Core Diagnostic Report Profile
 Id:         CancerGenomicsReport
 Title:      "Cancer Genomics Report"
 Description:    "Genetic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome.

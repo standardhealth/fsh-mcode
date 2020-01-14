@@ -2,7 +2,7 @@ Alias:   UCUM = http://unitsofmeasure.org
 Alias:   USCoreProcedure = http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure
 
 Profile:  CancerRelatedRadiationProcedure
-Parent:   Procedure  // USCoreProcedure
+Parent:   USCoreProcedure
 Id:       CancerRelatedRadiationProcedure
 Title:    "Cancer-Related Radiation Procedure"
 Description: "A radiological treatment addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the ReasonReference and ReasonCode to cancer conditions. 
@@ -74,7 +74,7 @@ Description: "The total amount of radiation dose delivered for the course of the
 
 
 Profile:  CancerRelatedSurgicalProcedure
-Parent:   Procedure  // USCoreProcedure
+Parent:   USCoreProcedure
 Id:       CancerRelatedSurgicalProcedure
 Title:    "Cancer-Related Surgical Procedure"
 Description: "A surgical action addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the ReasonReference and ReasonCode to cancer conditions. Conformance note: If an ICD-10-PCS code is used in the code attribute, and there is a semantically equivalent SNOMED CT or CPT code, the resulting Procedure instance will not be compliant with US Core Profiles."
@@ -83,7 +83,7 @@ Description: "A surgical action addressing a cancer condition. The scope of this
     TreatmentIntent 0..1 and 
     StatementDateTime 0..1
 * reasonCode, reasonReference, extension[TreatmentIntent] MS  // other MS will be inherited from USCoreProcedure
-* subject only Reference(Patient)
+* subject only Reference(USCorePatient)
 * reasonCode from CancerDisorderVS (extensible)
 * reasonReference only Reference(CancerConditionParent)  // rather than Primary, Secondary, Tumor
 * partOf only Reference(Procedure)
