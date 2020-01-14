@@ -95,7 +95,7 @@
     <li><a href="https://codes.iarc.fr/" target="_blank">International Classification of Diseases for Oncology, 3rd version (ICD-O-3)</a></li>
 </ul>
 
-<p>Because the use of these coding systems vary in different institutions, mCODE supports all three. Implementers should be aware, however, that how the cancer diagnosis is coded can affect compliance with <a href="http://hl7.org/fhir/us/core/" target="_blank">US Core</a> (see <a href="implementation.html">Implementation Notes</a> for details). Two attributes and one <a href="https://www.hl7.org/fhir/extensibility.html" target="_blank">FHIR extension</a> of the <a href="https://www.hl7.org/fhir/condition.html" target="_blank">FHIR Condition Resource</a> are involved with coding the cancer diagnosis: the Code, the <a href="StructureDefinition-onco-core-HistologyMorphologyBehavior-extension.html">HistologyMorphologyBehavior</a> extension, and the Body Site. How these attributes are used, depending on the coding system, is captured in the table below:</p>
+<p>Because the use of these coding systems vary in different institutions, mCODE supports all three. Implementers should be aware, however, that how the cancer diagnosis is coded can affect compliance with <a href="http://hl7.org/fhir/us/core/" target="_blank">US Core</a> (see <a href="implementation.html">Implementation Notes</a> for details). Two attributes and one <a href="https://www.hl7.org/fhir/extensibility.html" target="_blank">FHIR extension</a> of the <a href="https://www.hl7.org/fhir/condition.html" target="_blank">FHIR Condition Resource</a> are involved with coding the cancer diagnosis: the Code, the <a href="StructureDefinition-HistologyMorphologyBehavior.html">HistologyMorphologyBehavior</a> extension, and the Body Site. How these attributes are used, depending on the coding system, is captured in the table below:</p>
 <!--
 <table class="tg">
     <tr>
@@ -127,7 +127,7 @@
 
 <img src="CancerDxCodingSystems.png" alt="mCODE Logical Model" width="80%" align="middle"/>
 
-<p>Implementers should reference the <a href="StructureDefinition-onco-core-PrimaryCancerCondition.html">PrimaryCancerCondition</a> and <a href="StructureDefinition-onco-core-SecondaryCancerCondition.html">Secondary Cancer Condition</a> profiles for details on the use of these terminologies and associated value sets.</p>
+<p>Implementers should reference the <a href="StructureDefinition-PrimaryCancerCondition.html">PrimaryCancerCondition</a> and <a href="StructureDefinition-SecondaryCancerCondition.html">Secondary Cancer Condition</a> profiles for details on the use of these terminologies and associated value sets.</p>
 
 <h5>Representing Cancer Staging Information</h5>
 <p>Cancer stage information is contained in a set of profiles, representing <a href="https://www.cancer.gov/publications/dictionaries/cancer-terms/def/clinical-staging" target="_blank">clinical stage group</a> and <a href="https://www.cancer.gov/publications/dictionaries/cancer-terms/def/pathological-staging" target="_blank">pathologic stage group</a> panels with members representing the primary tumor (T) category, the regional nodes (N) category, and the distant metastases (M) category. </p>
@@ -143,7 +143,7 @@
     <li>without a prepended staging classification abbreviation (e.g.: <em>T3</em>).</li>
 </ul>
 
-<p>mCODE recommends that the implementers align with AJCC's convention of representing the staging category value with the <em>prepended classification</em> in both <a href="StructureDefinition-onco-core-TNMClinicalStageGroup.html">TNMClinicalStageGroup</a> and <a href="StructureDefinition-onco-core-TNMPathologicStageGroup.html">TNMPathologicStageGroup</a> profiles. This code convention is aligned with the AJCC's digital data and clearly distinguishes the staging classification as clinical, pathologic, or neoadjuvant without having to retrieve further context from the model. Nonetheless, separate profiles for clinical and pathological staging were developed, with an eye toward future extensibility, in particular, the ability to additional prognostic factors relevant to particular types of cancers in the <a href="StructureDefinition-onco-core-TNMPathologicStageGroup.html">TNMPathologicStageGroup</a>.</p>
+<p>mCODE recommends that the implementers align with AJCC's convention of representing the staging category value with the <em>prepended classification</em> in both <a href="StructureDefinition-TNMClinicalStageGroup.html">TNMClinicalStageGroup</a> and <a href="StructureDefinition-TNMPathologicStageGroup.html">TNMPathologicStageGroup</a> profiles. This code convention is aligned with the AJCC's digital data and clearly distinguishes the staging classification as clinical, pathologic, or neoadjuvant without having to retrieve further context from the model. Nonetheless, separate profiles for clinical and pathological staging were developed, with an eye toward future extensibility, in particular, the ability to additional prognostic factors relevant to particular types of cancers in the <a href="StructureDefinition-TNMPathologicStageGroup.html">TNMPathologicStageGroup</a>.</p>
 
 
 <h4><a name="LabsVitals">Laboratory Results and Vital Signs Group</a></h4>
@@ -152,7 +152,7 @@
 
 
 <h5><a name="TumorMarkers">Tumor Marker Tests</a></h5>
-<p>Tumor markers are key prognostic factors in calculating cancer staging, identifying treatment options, and monitoring progression of disease. For example, an abnormal increase in prostate-specific antigen (PSA) levels is a prognostic factor for prostate cancer. Other tumor markers include estrogen receptor (ER) status, progresterone receptor (PR) status, carcinoembryonic antigen (CEA) levels, among others. See the profile <a href="StructureDefinition-onco-core-TumorMarkerTest.html">TumorMarkerTest</a> for full details.</p>
+<p>Tumor markers are key prognostic factors in calculating cancer staging, identifying treatment options, and monitoring progression of disease. For example, an abnormal increase in prostate-specific antigen (PSA) levels is a prognostic factor for prostate cancer. Other tumor markers include estrogen receptor (ER) status, progresterone receptor (PR) status, carcinoembryonic antigen (CEA) levels, among others. See the profile <a href="StructureDefinition-TumorMarkerTest.html">TumorMarkerTest</a> for full details.</p>
 
 <p>We distinguish Tumor Marker Tests from genetic tests that are measured at the DNA, RNA, or chromosomal level, addressed in the <a href="#Genomics">Genomics</a> section.
 </p>
@@ -163,12 +163,12 @@
 <h4><a name="Treatment">Treatments Group</a></h4>
 <p>The <strong>Treatment</strong> group includes reporting of procedures and medications used to treat a cancer patient, or relevant to that treatment. Treatments are captured using the following profiles:</p>
 <ul>
-    <li><a href="StructureDefinition-onco-core-CancerRelatedSurgicalProcedure.html">CancerRelatedSurgicalProcedure</a> - representing surgical procedures that involve the removal of cancer tumors from the body. </li>
-    <li><a href="StructureDefinition-onco-core-CancerRelatedRadiationProcedure.html">CancerRelatedRadiationProcedure</a> - to document the use of high-energy radiation from x-rays, gamma rays, neutrons, protons, and other sources to all cancer cells and shrink tumors.</li>
-    <li><a href="StructureDefinition-obf-MedicationStatement.html">MedicationStatement</a> - recording treatments involving chemotherapy agents, targeted therapy agents, and hormone therapy agents. The mCODE profile of MedicationStatement includes two extensions that distinguish it from FHIR's base resource of the same name:
+    <li><a href="StructureDefinition-CancerRelatedSurgicalProcedure.html">CancerRelatedSurgicalProcedure</a> - representing surgical procedures that involve the removal of cancer tumors from the body. </li>
+    <li><a href="StructureDefinition-CancerRelatedRadiationProcedure.html">CancerRelatedRadiationProcedure</a> - to document the use of high-energy radiation from x-rays, gamma rays, neutrons, protons, and other sources to all cancer cells and shrink tumors.</li>
+    <li><a href="StructureDefinition-CancerRelatedMedicationStatement.html">MedicationStatement</a> - recording treatments involving chemotherapy agents, targeted therapy agents, and hormone therapy agents. The mCODE profile of MedicationStatement includes two extensions that distinguish it from FHIR's base resource of the same name:
         <ul>
-            <li><a href="StructureDefinition-obf-TreatmentIntent-extension.html">TreatmentIntent</a> - to record the purpose of the treatment, whether curative or palliative</li>
-            <li><a href="StructureDefinition-obf-TerminationReason-extension.html">TerminationReason</a> - to document the reason for unplanned or premature termination of the medication. </li>
+            <li><a href="StructureDefinition-TreatmentIntent.html">TreatmentIntent</a> - to record the purpose of the treatment, whether curative or palliative</li>
+            <li><a href="StructureDefinition-TerminationReason.html">TerminationReason</a> - to document the reason for unplanned or premature termination of the medication. </li>
         </ul>
     </li>
 </ul>
@@ -177,9 +177,9 @@
 <h4><a name="Genomics">Genomics Group</a></h4>
 <p>mCODE includes the minimal set of genomics related elements relevant to capture in an EHR to inform cancer assessment and treatment options. The approach is based on the <a href="http://hl7.org/fhir/uv/genomics-reporting/index.html" target="_blank">HL7 CGWG Clinical Genomics Reporting Implementation Guide</a>. However, mCODE simplifies genomics reporting to single discrete variants or to variants that were found in a given DNA region. Three profiles relate to the capture of clinical genomics data:</p>
 <ul>
-    <li><a href="StructureDefinition-onco-core-GenomicsReport.html">Genomics Report</a> - contain results of genomic analyses. Genomic reports vary in complexity and content, as simple as the results for a single discrete variant to complex sequences that are found in exome and genome-wide association studies (GWAS).</li>
-    <li><a href="StructureDefinition-onco-core-GeneticVariant.html">Genetic Variant</a> - used to record variants that could be found from tests that broadly analyze genetic regions (e.g.: exome tests) and stores results for any variants that could have been found.  The region in which the variant was found could be specified in the RegionStudied attribute of the GenomicsReport profile.</li>
-    <li><a href="StructureDefinition-onco-core-GeneticSpecimen.html">Genetic Specimen</a> - used to further specify the specimen collected for a genomics test.</li>
+    <li><a href="StructureDefinition-GenomicsReport.html">Genomics Report</a> - contain results of genomic analyses. Genomic reports vary in complexity and content, as simple as the results for a single discrete variant to complex sequences that are found in exome and genome-wide association studies (GWAS).</li>
+    <li><a href="StructureDefinition-GeneticVariant.html">Genetic Variant</a> - used to record variants that could be found from tests that broadly analyze genetic regions (e.g.: exome tests) and stores results for any variants that could have been found.  The region in which the variant was found could be specified in the RegionStudied attribute of the GenomicsReport profile.</li>
+    <li><a href="StructureDefinition-GeneticSpecimen.html">Genetic Specimen</a> - used to further specify the specimen collected for a genomics test.</li>
 </ul>
 <p>The identity of non-genomic laboratory tests is typically represented by a <a href="https://loinc.org/" target="_blank">Logical Observation Identifiers and Names (LOINC)</a> code. However, many genetic tests and panels do not have LOINC codes, although some might have an identifier in the <a href="https://www.ncbi.nlm.nih.gov/gtr/" target="_blank">NCBI Genetic Testing Registry (GTR)</a>, a central location for voluntary submission of genetic test information by providers. While GTR is a viable source for identifying many genetic tests, the user should be aware that the GTR is not single authoritative source since the test data is voluntarily updated. Standardization of codes for genetic tests is essential to facilitate data analysis of genetic tests, and should be a priority for the genomics testing community in the near future. Implementers should also note that, to conform to the requirements of the <a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html" target="_blank">US Core Laboratory Result Profile</a>, LOINC must be used, if a suitable code is available. If there is no suitable code in LOINC, then a code from an alternative code system such as GTR can be used.</p>
 
@@ -194,8 +194,6 @@
 <h5>Date of Death</h5>
 <p>Date of death data can be obtained from several sources outside of the clinical setting. If available in the EHR, it can be reported through via mCODE, but more likely, it will be filled in from vital records, after the last clinical interaction.</p>
 
-
-
 <h3><a name="Disclaimers">Disclaimers and Known Limitations</a></h3>
 <p></p>
 <ul>
@@ -205,10 +203,10 @@
     </li>
     <li>The Data Dictionary includes a subset of must-support elements in the mCODE specification, intentionally omitting certain elements including in this implementation guide. When there are differences between the Data Dictionary and content of the FHIR implementation guide, the profiles and value sets in the guide should be taken as the source of truth.</li>
     <li>Under <a href="https://www.cms.gov/Regulations-and-Guidance/Legislation/CLIA/index.html?redirect=/clia" target="_blank">Clinical Laboratory Improvement Amendments (CLIA)</a> regulations, laboratory tests must include information on the performing technologist, performing laboratory, and performing laboratory medical director. These three roles would ideally appear as <a href="https://www.hl7.org/fhir/profiling.html#slicing" target="_blank">slices</a> on Observation.performer and/or DiagnosticReport.performer. However, slicing requires a <a href="https://www.hl7.org/fhir/profiling.html#discriminator" target="_blank">discriminator</a>, a field that can be checked to determine whether a resource found in Observation.performer or DiagnosticReport.performer corresponds to the performing technologist or the performing laboratory medical director. While the performing laboratory can be determined by its resource type, in the current design of FHIR, there is no indicator that would discriminate the roles of the two Practitioner participants.</li>
-    <li>mCODE includes a dedicated FHIR profile, <a href="StructureDefinition-onco-core-TumorMarkerTest.html">TumorMarkerTest</a>, for labs involving serum and tissue-based tumor markers. Unlike other laboratory profiles in mCODE, one profile has been created to handle the entire class of tumor marker tests, primarily because of the large number of laboratory tests involved. A value set of approximately 150 tumor marker tests was developed and bound to the Code attribute, using an extensible binding to account for new and overlooked tests and code updates. The <a href="ValueSet-onco-core-TumorMarkerTestVS.html">TumorMarkerTestVS</a> lists some common tests for tumor markers but does not further align by cancer type. The approach of using a single profile for multiple tests is less than ideal, since without specifying units of measure or answer sets on a per-test basis, reporting could vary.</li>
+    <li>mCODE includes a dedicated FHIR profile, <a href="StructureDefinition-TumorMarkerTest.html">TumorMarkerTest</a>, for labs involving serum and tissue-based tumor markers. Unlike other laboratory profiles in mCODE, one profile has been created to handle the entire class of tumor marker tests, primarily because of the large number of laboratory tests involved. A value set of approximately 150 tumor marker tests was developed and bound to the Code attribute, using an extensible binding to account for new and overlooked tests and code updates. The <a href="ValueSet-TumorMarkerTestVS.html">TumorMarkerTestVS</a> lists some common tests for tumor markers but does not further align by cancer type. The approach of using a single profile for multiple tests is less than ideal, since without specifying units of measure or answer sets on a per-test basis, reporting could vary.</li>
     <li>Not all vocabularies used in mCODE are currently supported by the <a href="http://wiki.hl7.org/index.php?title=IG_Publisher_Documentation" target="_blank">FHIR Implementation Guide Publishing Tool</a>. The <a href="qa.html">error report on this IG</a> reports these references as errors. In truth, they reflect limitations of the FHIR terminology server. Unsupported vocabularies include ClinVar and AJCC.</li>
     <li>The authors are considering whether it might be more accurate to represent Clinical and Pathologic Staging Groups as DiagnosticReports, rather than Observations. Feedback is welcome.</li>
-    <li>The authors are considering NCI Thesaurus as a source vocabulary for <a href="ValueSet-onco-core-CancerStagingSystemVS.html">CancerStagingSystemVS</a>, since SNOMED CT lacks the necessary terms (AJCC Version 8, in particular).</li>
+    <li>The authors are considering NCI Thesaurus as a source vocabulary for <a href="ValueSet-CancerStagingSystemVS.html">CancerStagingSystemVS</a>, since SNOMED CT lacks the necessary terms (AJCC Version 8, in particular).</li>
 </ul>
 
 <h3><a name="Credits">Credits</a></h3>

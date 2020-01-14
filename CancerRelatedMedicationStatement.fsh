@@ -1,11 +1,8 @@
-Alias:   USCoreMedicationStatement = http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationstatement
-
-
 Profile:  CancerRelatedMedicationStatement
-Parent:   MedicationStatement // USCoreMedicationStatement
+Parent:   MedicationStatement
 Id:       CancerRelatedMedicationStatement
 Title:    "Cancer-Related Medication Statement"
-Description:    "A record of the use of a medication (individual administration or entire course) for a condition that is related to a primary or secondary cancer condition condition. The use may be reported by the patient or clinician and adminstration does not have to be directly observed."
+Description:    "A record of the use of a medication (individual administration or entire course) for a condition that is related to a primary or secondary cancer condition. The use may be reported by the patient or clinician and adminstration does not have to be directly observed."
 /* Notes on mCODE 0.9.x:
 1) basedOn is missing Reference(CarePlan)
 2) partOf is missing  Reference(MedicationDispense)
@@ -22,4 +19,3 @@ Description:    "A record of the use of a medication (individual administration 
 * effective[x] 1..1  // change from 0..1 to 1..1
 * reasonCode 0..1 
 * dosage 0..1
-
