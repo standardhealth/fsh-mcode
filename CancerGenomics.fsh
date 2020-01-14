@@ -3,6 +3,8 @@ Alias:   HGVS = http://varnomen.hgvs.org
 Alias:   GTR = http://www.ncbi.nlm.nih.gov/gtr
 Alias:   IDTYPE = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias:   USCoreObservationLab = http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
+Alias:   USCoreDiagnosticReportLab = http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab
+
 
 Profile:    CancerGeneticVariant
 Parent:     USCoreObservationLab
@@ -29,7 +31,6 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * valueCodeableConcept from https://fhir.loinc.org/ValueSet/LL1971-2 (required)
 * component ^slicing.discriminator.type = #value
 * component ^slicing.discriminator.path = "code"
-* component ^slicing.ordered = false
 * component ^slicing.rules = #open
 * component ^slicing.description = "Slice based on the component.code pattern"
 * component contains
@@ -202,23 +203,19 @@ Description:    "A small sample of blood, hair, skin, amniotic fluid (the fluid 
 * collection.bodySite, collection.bodySite.extension[Laterality] MS 
 
 Profile:    CancerGenomicsReport
-Parent:     US Core Diagnostic Report Profile
+Parent:     USCoreDiagnosticReportLab
 Id:         CancerGenomicsReport
 Title:      "Cancer Genomics Report"
 Description:    "Genetic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome.
 
 The identity of non-genomic laboratory tests is typically represented by a LOINC code. However, many genetic tests and panels do not have LOINC codes, although some might have an identifier in NCBI Genetic Testing Registry (GTR), a central location for voluntary submission of genetic test information by providers. To identify the diagnostic report, the name of the report must be in the text sub-field of the code structure. If there is a coded identifier from GTR, LOINC, or other source, then it should be included into the the code sub-field of the code structure. If there is no suitable code, the code can be omitted."
-* status, code, category, subject, encounter, effective[x], issued, performer, specimen, result MS
+* encounter, specimen MS  // the other MS elements are already in US Core. Do we want encounter here?
 * basedOn only Reference (ServiceRequest | CarePlan)
 * subject only Reference(CancerPatient)
-* effective[x] only dateTime or Period
-* performer only Reference(Practitioner | Organization) 
-* resultsInterpreter only Reference(Practitioner | Organization) 
 * code = LNC#81247-9 "Master HL7 genetic variant reporting panel"
 * specimen only Reference(GeneticSpecimen)
 * result ^slicing.discriminator.type = #value
 * result ^slicing.discriminator.path = "$this.resolve().code.coding.code"
-* result ^slicing.ordered = false
 * result ^slicing.rules = #open
 * result ^slicing.description = "Slice based on the reference profile and code pattern"
 * result contains
@@ -226,7 +223,7 @@ The identity of non-genomic laboratory tests is typically represented by a LOINC
     RegionStudied 0..1 MS
 
 Profile:    RegionStudied
-Parent:     Observation // USCoreObservationLab
+Parent:     USCoreObservationLab
 Id:         RegionStudied
 Title:      "Genetic Region Studied"
 Description:    "The area of the genome region referenced in testing for variants."
@@ -234,7 +231,6 @@ Description:    "The area of the genome region referenced in testing for variant
 * code = LNC#53041-0 "DNA region of interest panel"
 * component ^slicing.discriminator.type = #value
 * component ^slicing.discriminator.path = "code"
-* component ^slicing.ordered = false
 * component ^slicing.rules = #open
 * component ^slicing.description = "Slice based on the component.code pattern"
 * component contains
