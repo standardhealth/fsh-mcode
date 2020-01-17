@@ -18,9 +18,18 @@ Instance: mCODECancerGenomicsReportExample01
 InstanceOf: mCODECancerGenomicsReportExample01
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/GenomicsReport"
 * status = #final "Final"
-* category = OBSCAT#GE "Genetics"
-* code = LNC#81247-9 "Master HL7 genetic variant reporting panel"
+// * category = OBSCAT#GE "Genetics"  // mlt: supposedly, fixed values are inherited and does not need to be specified.
+// * code = LNC#81247-9 "Master HL7 genetic variant reporting panel"  // ditto on inheritance
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * issued = "2019-04-01T11:45:33+11:00"
-* result = Reference(mCODECancerGeneticVariantExample01)
+* Result[CancerGeneticVariant] = mCODECancerGeneticVariantExample01)
+* Result[GenomicRegionStudied] = mCODEGenomicRegionStudiedExample01)
+
+
+Instance: mCODEGenomicRegionStudiedExample01
+InstanceOf: GenomicRegionStudied
+* subject = Reference(mCODEPatientExample01)
+* effectiveDateTime = "2019-04-01"
+* issued = "2019-04-01T11:45:33+11:00"
+* component[GeneStudied].valueCodeableConcept = HGNC#619728 "STK11"
