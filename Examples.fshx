@@ -1,4 +1,3 @@
-
 Instance: mCODEPrimaryCancerConditionExample01
 InstanceOf: PrimaryCancerCondition
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/PrimaryCancerCondition"
@@ -114,7 +113,6 @@ Instance: mCODEECOGPerformanceStatusExample01
 InstanceOf: ECOGPerformanceStatus
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/ECOGPerformanceStatus" 
 * status = #final "final"
-* category = #survey "survey"
 * method = SCT#5880005 "Clinical examination"
 * code = LNC#89262-0 "ECOG Performance Status [Interpretation]"
 * subject = Reference(mCODEPatientExample01)
@@ -156,7 +154,6 @@ Instance: mCODECancerRelatedSurgicalProcedureExample01
 InstanceOf: CancerRelatedSurgicalProcedure
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerRelatedSurgicalProcedure"
 * status = #completed "completed"
-* category = SCT#387713003 "Surgical procedure"
 * code = SCT#359615001 "Partial lobectomy of lung (procedure)"
 * subject = Reference(mCODEPatientExample01)
 * asserter = Reference(mCODEPractitionerExample01)
@@ -170,7 +167,6 @@ Instance: mCODECancerRelatedRadiationProcedureExample01
 InstanceOf: CancerRelatedRadiationProcedure 
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerRelatedRadiationProcedure"
 * status = #completed "completed" 
-* category = SCT#53438000 "Radiation therapy procedure or service (procedure)"
 * code = SCT#152198000 "Brachytherapy (procedure)"
 * subject = Reference(mCODEPatientExample01)
 * asserter = Reference(mCODEPractitionerExample01)
@@ -182,52 +178,62 @@ InstanceOf: CancerRelatedRadiationProcedure
 * bodySite = SCT#41224006 "Structure of lower lobe of left lung (body structure)"
 
 
+Instance: mCODETNMClinicalStageGroupExample01
+InstanceOf: TNMClinicalStageGroup
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMClinicalStageGroup"
+* status = #final "final" 
+* category = #survey "Survey"
+* method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
+* subject = Reference(mCODEPatientExample01)
+* effectiveDateTime = "2019-04-01"
+* valueCodeableConcept = AJCC#3C "IIIC"
+* hasMember[TNMClinicalPrimaryTumorCategory] = Reference(mCODETNMClinicalPrimaryTumorCategoryExample01)
+* hasMember[TNMClinicalRegionalNodesCategory] = Reference(mCODETNMClinicalRegionalNodesCategoryExample01)
+* hasMember[TNMClinicalDistantMetastasesCategory] = Reference(mCODETNMClinicalRegionalNodesCategoryExample01)
+
 Instance: mCODETNMClinicalDistantMetastasesCategoryExample01
 InstanceOf: TNMClinicalDistantMetastasesCategory
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMClinicalDistantMetastasesCategory"
 * status = #final "final" 
-* category = #laboratory "laboratory"
+* category = #survey "Survey"
 * method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#cM0 "M0"
 
-
 Instance: mCODETNMClinicalPrimaryTumorCategoryExample01
 InstanceOf: TNMClinicalPrimaryTumorCategory
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMClinicalPrimaryTumorCategory"
 * status = #final "final" 
-* category = #laboratory "laboratory"
+* category = #survey "Survey"
 * method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#cT3 "T3"
 
-
 Instance: mCODETNMClinicalRegionalNodesCategoryExample01
 InstanceOf: TNMClinicalRegionalNodesCategory
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMClinicalRegionalNodesCategory"
 * status = #final "final" 
-* category = #laboratory "laboratory"
+* category = #survey "Survey"
 * method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#cN3 "N3"
 
 
-Instance: mCODETNMClinicalStageGroupExample01
-InstanceOf: TNMClinicalStageGroup
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMClinicalStageGroup"
+Instance: mCODETNMPathologicStageGroupExample01
+InstanceOf: TNMPathologicStageGroup
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMPathologicStageGroup"
 * status = #final "final" 
 * category = #laboratory "laboratory"
 * method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#3C "IIIC"
-* hasMember[mCODETNMClinicalPrimaryTumorCategoryExample01] = Reference(mCODETNMClinicalPrimaryTumorCategoryExample01)
-* hasMember[mCODETNMClinicalRegionalNodesCategoryExample01] = Reference(mCODETNMClinicalRegionalNodesCategoryExample01)
-* hasMember[mCODETNMClinicalDistantMetastasesCategoryExample01] = Reference(mCODETNMClinicalDistantMetastasesCategoryExample01)
-
+* hasMember[TNMPathologicPrimaryTumorCategory] = Reference(mCODETNMPathologicPrimaryTumorCategoryExample01)
+* hasMember[TNMPathologicRegionalNodesCategory] = Reference(mCODETNMPathologicRegionalNodesCategoryExample01)
+* hasMember[TNMPathologicDistantMetastasesCategory] = Reference(mCODETNMPathologicDistantMetastasesCategoryExample01)
 
 Instance: mCODETNMPathologicDistantMetastasesCategoryExample01
 InstanceOf: TNMPathologicDistantMetastasesCategory
@@ -239,7 +245,6 @@ InstanceOf: TNMPathologicDistantMetastasesCategory
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#pM0 "M0"
 
-
 Instance: mCODETNMPathologicPrimaryTumorCategoryExample01
 InstanceOf: TNMPathologicPrimaryTumorCategory
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMPathologicPrimaryTumorCategory"
@@ -249,7 +254,6 @@ InstanceOf: TNMPathologicPrimaryTumorCategory
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#pT3 "T3"
-
 
 Instance: mCODETNMPathologicRegionalNodesCategoryExample01
 InstanceOf: TNMPathologicRegionalNodesCategory
@@ -262,15 +266,3 @@ InstanceOf: TNMPathologicRegionalNodesCategory
 * valueCodeableConcept = AJCC#pN3 "N3"
 
 
-Instance: mCODETNMPathologicStageGroupExample01
-InstanceOf: TNMPathologicStageGroup
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMPathologicStageGroup"
-* status = #final "final" 
-* category = #laboratory "laboratory"
-* method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
-* subject = Reference(mCODEPatientExample01)
-* effectiveDateTime = "2019-04-01"
-* valueCodeableConcept = AJCC#3C "IIIC"
-* hasMember[mCODETNMPathologicPrimaryTumorCategoryExample01] = Reference(mCODETNMPathologicPrimaryTumorCategoryExample01)
-* hasMember[mCODETNMPathologicRegionalNodesCategoryExample01] = Reference(mCODETNMPathologicRegionalNodesCategoryExample01)
-* hasMember[mCODETNMPathologicDistantMetastasesCategoryExample01] = Reference(mCODETNMPathologicDistantMetastasesCategoryExample01)
