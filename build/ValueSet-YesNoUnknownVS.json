@@ -1,0 +1,30 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "YesNoUnknownVS",
+  "id": "YesNoUnknownVS",
+  "description": "A value set containing yes, no, and unknown.",
+  "version": "0.9.5",
+  "url": "http://hl7.org/fhir/us/mcode/ValueSet/YesNoUnknownVS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "373066001",
+            "display": "Yes"
+          },
+          {
+            "code": "373067005",
+            "display": "No"
+          },
+          {
+            "code": "261665006",
+            "display": "Unknown"
+          }
+        ]
+      }
+    ]
+  }
+}

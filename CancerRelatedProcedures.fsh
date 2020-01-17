@@ -28,6 +28,7 @@ Conformance note: If an ICD-10-PCS code is used in the code attribute, and there
     StatementDateTime 0..1
 * bodySite, extension[TreatmentIntent], extension[RadiationDose] MS    
 * partOf only Reference(Procedure)
+* category = SCT#53438000 "Radiation therapy procedure or service (procedure)"
 * code from RadiationProcedureVS (extensible)
 * recorder only Reference(Practitioner | PractitionerRole)
 * performer.actor only Reference(Practitioner | PractitionerRole | Organization)  // include Device?
@@ -84,6 +85,7 @@ Description: "A surgical action addressing a cancer condition. The scope of this
     StatementDateTime 0..1
 * reasonCode, reasonReference, extension[TreatmentIntent] MS  // other MS will be inherited from USCoreProcedure
 * subject only Reference(USCorePatient)
+* category = SCT#387713003 "Surgical procedure"
 * reasonCode from CancerDisorderVS (extensible)
 * reasonReference only Reference(CancerConditionParent)  // rather than Primary, Secondary, Tumor
 * partOf only Reference(Procedure)

@@ -7,7 +7,7 @@
 
 <h5>Enhancements</h5>
 <ul>
-    <li>The following profiles have been added: <em>GeneticSpecimen, GenomicRegionStudied</em> to support greater alignment between mCODE and the <a href="http://hl7.org/fhir/uv/genomics-reporting/index.html">Clinical Genomics Reporting FHIR IG STU1.</a>.</li>
+    <li>The following profiles have been added: <em>GeneticSpecimen, RegionStudied</em> to support greater alignment between mCODE and the <a href="http://hl7.org/fhir/uv/genomics-reporting/index.html">Clinical Genomics Reporting FHIR IG STU1.</a>.</li>
     <li>The GeneticVariant profile has additional components which conform to equivalent components in the CG Reporting IG Variant profile: GeneStudied, VariationCode, GenomicDNAChange, GenomicSourceClass, AminoAcidChange, AminoAcidChangeType, CytogeneticLocation, and CytogeneticNomenclature.</li>
     <li>The MedicationStatement profile name has changed to <em>CancerRelatedMedicationStatement</em>. This profile now constrains the reason reference to only primary and secondary cancer conditions.</li>
 </ul>
@@ -16,7 +16,7 @@
 <ul>
     <li>The following mCODE profiles no longer appear and instead document preferred use of FHIR base profiles: <em>BloodPressure</em>, <em>BodyWeight</em>, <em>BodyHeight</em>, <em>CBCWAutoDifferentialPanel</em>, <em>ComprehensiveMetabolic2000SerumOrPlasmaPanel</em>.</li>
     <li>Genomics-related profiles GeneticVariantTested and GeneticVariantFound are combined into one profile, GeneticVariant.</li>
-    <li>GenomicsReport onco-core-RegionStudied-extension is migrated to a slice under DiagnosticReport.result with a reference to a new profile, GenomicRegionStudied.</li>
+    <li>GenomicsReport onco-core-RegionStudied-extension is migrated to a slice under DiagnosticReport.result with a reference to a new profile, RegionStudied.</li>
     <li>GenomicsReport obf-SpecimenType-extension is migrated to a slice under DiagnosticReport.result with a reference to a new profile, GeneticSpecimen.</li>
     <li>DiagnosticReport.category cardinality changed from 0..1 to 0..*</li>
 </ul>

@@ -13,4 +13,5 @@ Alias:   IDTYPE = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias:   HGNC = http://www.genenames.org/geneId
 Alias:   HGVS = http://varnomen.hgvs.org
 Alias:   SPTY = http://terminology.hl7.org/CodeSystem/v2-0487
-Alias:  OBSCAT = http://terminology.hl7.org/CodeSystem/v2-0074
+Alias:   GENDER = http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender 
+Alias:   USCoreRace = http://hl7.org/fhir/us/core/ValueSet/omb-race-category
