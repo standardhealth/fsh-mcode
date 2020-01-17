@@ -1,4 +1,3 @@
-
 Instance: mCODEPrimaryCancerConditionExample01
 InstanceOf: PrimaryCancerCondition
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/PrimaryCancerCondition"
@@ -12,6 +11,17 @@ InstanceOf: PrimaryCancerCondition
 * asserter = Reference(mCODEPractitionerExample01)
 * stage.summary = AJCC#3C "IIIC"
 * stage.assessment = Reference(mCODETNMClinicalStageGroupExample01)
+
+
+Instance: mCODEComorbidConditionExample01
+InstanceOf: ComorbidCondition
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/ComorbidCondition"
+* clinicalStatus = #active "Active"
+* verificationStatus = #confirmed "Confirmed"
+* code = SCT#44054006 "Type 2 diabetes mellitus"
+* subject = Reference(mCODEPatientExample01)
+* asserter = Reference(mCODEPractitionerExample01)
+* onsetDateTime = "2018-04-01"
 
 
 Instance: mCODEPatientExample01
@@ -38,6 +48,67 @@ InstanceOf: CancerPatient
 * communication.language = urn:ietf:bcp:47#en-US "English (Region=United States)"
 * communication.language.text = "English"
 
+
+Instance: mCODEPatientExample02
+InstanceOf: CancerPatient
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerPatient"
+* extension[us-core-race].extension[ombCategory].valueCoding = USCoreRace#2186-5 "Not Hispanic or Latino"
+* extension[us-core-birthsex] = GENDER#F 
+* identifier.use = #usual
+* identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#MR "Medical Record Number"
+* identifier.system = "http://hospital.example.org"
+* identifier.value = "m456"
+* name.family = "Anyperson"
+* name.given[0] = "Eve"
+* name.given[1] = "A."
+* contact.telecom[0].system = #phone
+* contact.telecom[0].value = "999-999-9999"
+* contact.telecom[0].use = #home 
+* contact.telecom[1].system = #email
+* contact.telecom[1].value = "eve.anyperson@example.com"
+* gender = #female
+* birthDate = "1955-05-20"
+* address.line = "456 Smith Lane"
+* address.city = "Anytown"
+* address.state = "MA"
+* address.postalCode = "12345"
+* address.country = "US"
+* communication.language = urn:ietf:bcp:47#en-US "English (Region=United States)"
+* communication.language.text = "English"
+
+
+Instance: mCODEOrganizationExample01
+InstanceOf: Organization
+* identifier.system = "http://hl7.org.fhir/sid/us-npi"
+* identifier.value = "1265714091"
+* active = #true 
+* extension[Status].valueCodeableConcept = SCT#55561003 "Active"
+* name = "Foundation Medicine"
+* contact.telecom.system = #phone
+* contact.telecom.value = "617-418-2200"
+* address.line = "150 Second Street"
+* address.city = "Cambridge"
+* address.state = "MA"
+* address.postalCode = "02141"
+* address.country = "USA"
+
+
+Instance: mCODEPractitionerExample01
+InstanceOf: Practitioner
+* identifier[NPI].value = "9988776655"
+* name.family = "Anydoc"
+* name.given = "Kyle"
+* name.prefix = "Dr."
+* gender = #male
+* address.use = "home"
+* address.line = "567 Healthcare Drive"
+* address.city = "Anytown"
+* address.state = "MA"
+* address.postalCode = "12345"
+* address.country = "US"
+* qualification.code = http://terminology.hl7.org/CodeSystem/v2-0360|2.7#MD "Doctor of Medicine"
+
+
 Instance: mCODEECOGPerformanceStatusExample01 
 InstanceOf: ECOGPerformanceStatus
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/ECOGPerformanceStatus" 
@@ -53,22 +124,28 @@ Instance: mCODEKarnofskyPerformanceStatusExample01
 InstanceOf: KarnofskyPerformanceStatus
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/KarnofskyPerformanceStatus"
 * status = #final "final"
+* category = #survey "survey"
 * method = SCT#5880005 "Clinical examination"
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * performer = Reference(mCODEPractitionerExample01)
 * valueCodeableConcept = LNC#LA29177-5 "Normal activity with effort; some signs or symptoms of disease"
 
+
 Instance: mCODECancerRelatedMedicationStatementExample01
 InstanceOf: CancerRelatedMedicationStatement
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerRelatedMedicationStatement"
 * status = #active "active"
-* medicationCodeableConcept = RXN#93698 "Carboplatin Injectable Solution [Paraplatin]"
+* category = #community "community"
+* medicationCodeableConcept = RXN#349472 "gefitinib 250 MG Oral Tablet"
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * dateAsserted = "2019-04-01"
-* extension.valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 * extension[TreatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
+* dosage.text = "250mg orally once daily with or without food"
+* dosage.route = SCT#26643006 "Oral use"
+* dosage.doseAndRate.doseQuantity.value = 250.0
+* dosage.doseAndRate.doseQuantity = UCUM#mg "mg"
 
 
 Instance: mCODECancerRelatedSurgicalProcedureExample01
@@ -82,3 +159,108 @@ InstanceOf: CancerRelatedSurgicalProcedure
 * extension[TreatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 * reasonReference = Reference(mCODEPrimaryCancerConditionExample01)
 * bodySite = SCT#41224006 "Structure of lower lobe of left lung (body structure)"
+
+
+Instance: mCODECancerRelatedRadiationProcedureExample01
+InstanceOf: CancerRelatedRadiationProcedure 
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerRelatedRadiationProcedure"
+* status = #completed "completed" 
+* code = SCT#152198000 "Brachytherapy (procedure)"
+* subject = Reference(mCODEPatientExample01)
+* asserter = Reference(mCODEPractitionerExample01)
+* performedDateTime = "2019-03-01"
+* extension[TreatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
+* extension[RadiationDose].extension[totalRadiationDoseDelivered].valueQuantity = UCUM#cGy 
+* extension[RadiationDose].extension[totalRadiationDoseDelivered].valueQuantity.value = "1200"
+* reasonReference = Reference(mCODEPrimaryCancerConditionExample01)
+* bodySite = SCT#41224006 "Structure of lower lobe of left lung (body structure)"
+
+
+Instance: mCODETNMClinicalStageGroupExample01
+InstanceOf: TNMClinicalStageGroup
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMClinicalStageGroup"
+* status = #final "final" 
+* category = #survey "Survey"
+* method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
+* subject = Reference(mCODEPatientExample01)
+* effectiveDateTime = "2019-04-01"
+* valueCodeableConcept = AJCC#3C "IIIC"
+* hasMember[TNMClinicalPrimaryTumorCategory] = Reference(mCODETNMClinicalPrimaryTumorCategoryExample01)
+* hasMember[TNMClinicalRegionalNodesCategory] = Reference(mCODETNMClinicalRegionalNodesCategoryExample01)
+* hasMember[TNMClinicalDistantMetastasesCategory] = Reference(mCODETNMClinicalRegionalNodesCategoryExample01)
+
+Instance: mCODETNMClinicalDistantMetastasesCategoryExample01
+InstanceOf: TNMClinicalDistantMetastasesCategory
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMClinicalDistantMetastasesCategory"
+* status = #final "final" 
+* category = #survey "Survey"
+* method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
+* subject = Reference(mCODEPatientExample01)
+* effectiveDateTime = "2019-04-01"
+* valueCodeableConcept = AJCC#cM0 "M0"
+
+Instance: mCODETNMClinicalPrimaryTumorCategoryExample01
+InstanceOf: TNMClinicalPrimaryTumorCategory
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMClinicalPrimaryTumorCategory"
+* status = #final "final" 
+* category = #survey "Survey"
+* method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
+* subject = Reference(mCODEPatientExample01)
+* effectiveDateTime = "2019-04-01"
+* valueCodeableConcept = AJCC#cT3 "T3"
+
+Instance: mCODETNMClinicalRegionalNodesCategoryExample01
+InstanceOf: TNMClinicalRegionalNodesCategory
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMClinicalRegionalNodesCategory"
+* status = #final "final" 
+* category = #survey "Survey"
+* method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
+* subject = Reference(mCODEPatientExample01)
+* effectiveDateTime = "2019-04-01"
+* valueCodeableConcept = AJCC#cN3 "N3"
+
+
+Instance: mCODETNMPathologicStageGroupExample01
+InstanceOf: TNMPathologicStageGroup
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMPathologicStageGroup"
+* status = #final "final" 
+* category = #laboratory "laboratory"
+* method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
+* subject = Reference(mCODEPatientExample01)
+* effectiveDateTime = "2019-04-01"
+* valueCodeableConcept = AJCC#3C "IIIC"
+* hasMember[TNMPathologicPrimaryTumorCategory] = Reference(mCODETNMPathologicPrimaryTumorCategoryExample01)
+* hasMember[TNMPathologicRegionalNodesCategory] = Reference(mCODETNMPathologicRegionalNodesCategoryExample01)
+* hasMember[TNMPathologicDistantMetastasesCategory] = Reference(mCODETNMPathologicDistantMetastasesCategoryExample01)
+
+Instance: mCODETNMPathologicDistantMetastasesCategoryExample01
+InstanceOf: TNMPathologicDistantMetastasesCategory
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMPathologicDistantMetastasesCategory"
+* status = #final "final" 
+* category = #laboratory "laboratory"
+* method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
+* subject = Reference(mCODEPatientExample01)
+* effectiveDateTime = "2019-04-01"
+* valueCodeableConcept = AJCC#pM0 "M0"
+
+Instance: mCODETNMPathologicPrimaryTumorCategoryExample01
+InstanceOf: TNMPathologicPrimaryTumorCategory
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMPathologicPrimaryTumorCategory"
+* status = #final "final" 
+* category = #laboratory "laboratory"
+* method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
+* subject = Reference(mCODEPatientExample01)
+* effectiveDateTime = "2019-04-01"
+* valueCodeableConcept = AJCC#pT3 "T3"
+
+Instance: mCODETNMPathologicRegionalNodesCategoryExample01
+InstanceOf: TNMPathologicRegionalNodesCategory
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMPathologicNodesCategory"
+* status = #final "final" 
+* category = #laboratory "laboratory"
+* method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
+* subject = Reference(mCODEPatientExample01)
+* effectiveDateTime = "2019-04-01"
+* valueCodeableConcept = AJCC#pN3 "N3"
+
+
