@@ -259,7 +259,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/RegionStudied"
+          "reference": "StructureDefinition/GenomicRegionStudied"
         },
         "name": "Genetic Region Studied",
         "description": "The area of the genome region referenced in testing for variants.",

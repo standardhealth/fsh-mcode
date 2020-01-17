@@ -220,12 +220,12 @@ The identity of non-genomic laboratory tests is typically represented by a LOINC
 * result ^slicing.description = "Slice based on the reference profile and code pattern"
 * result contains
     CancerGeneticVariant 0..1 MS and
-    RegionStudied 0..1 MS
+    GenomicRegionStudied 0..1 MS
 
-Profile:    RegionStudied
+Profile:    GenomicRegionStudied
 Parent:     USCoreObservationLab
-Id:         RegionStudied
-Title:      "Genetic Region Studied"
+Id:         GenomicRegionStudied
+Title:      "Genomic Region Studied"
 Description:    "The area of the genome region referenced in testing for variants."
 * code MS
 * code = LNC#53041-0 "DNA region of interest panel"

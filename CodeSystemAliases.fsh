@@ -13,3 +13,4 @@ Alias:   IDTYPE = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias:   HGNC = http://www.genenames.org/geneId
 Alias:   HGVS = http://varnomen.hgvs.org
 Alias:   SPTY = http://terminology.hl7.org/CodeSystem/v2-0487
+Alias:  OBSCAT = http://terminology.hl7.org/CodeSystem/v2-0074

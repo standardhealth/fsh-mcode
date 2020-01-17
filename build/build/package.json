@@ -1,0 +1,36 @@
+{
+  "name": "fhir.us.mcode",
+  "version": "0.1.0",
+  "canonical": "http://hl7.org/fhir/us/mcode",
+  "url": "http://hl7.org/fhir/us/mcode/Draft1",
+  "title": "mCODE IG",
+  "description": "Gives an example of how FSH can be used to create the mCODE IG",
+  "dependencies": {
+    "hl7.fhir.r4.core": "4.0.1",
+    "hl7.fhir.us.core": "3.1.0"
+  },
+  "keywords": [
+    "us",
+    "FSH"
+  ],
+  "language": "en",
+  "author": "HL7 International Clinical Interoperability Council",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/cic"
+        }
+      ]
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Mark Kramer",
+      "organization": "The MITRE Corporation",
+      "email": "mkramer@mitre.org"
+    }
+  ],
+  "license": "CC0-1.0"
+}
