@@ -8,6 +8,7 @@ _genonce.sh
 _updatePublisher.bat
 _updatePublisher.sh
 build/StructureDefinition*
+build/ValueSet*
 build/input/.DS_Store
 build/input/ignoreWarnings.txt
 

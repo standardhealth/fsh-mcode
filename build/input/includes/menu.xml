@@ -11,7 +11,7 @@
   </li-->
   <li><a href="artifacts.html#2">Profiles</a></li>
   <li><a href="artifacts.html#3">Extensions</a></li>
-  <!--li><a href="artifacts.html#4">Value Sets</a></li-->
+  <li><a href="artifacts.html#4">Value Sets</a></li>
   <li><a href="downloads.html">Downloads</a></li>
   <li><a href="examples.html">Examples</a></li>
   <li><a href="http://hl7.org/fhir/us/mcode/history.html">History</a></li>
