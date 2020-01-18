@@ -1,9 +1,7 @@
 build/input/resources/**
-build/input-cache/**
 build/output/**
 build/temp/**
 build/template/**
 build/StructureDefinition*
 build/input/.DS_Store
-build/input/ignoreWarnings.txt
 

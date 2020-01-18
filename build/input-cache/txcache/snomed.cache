@@ -1,0 +1,3931 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "64572001"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false"}####
+v: {
+  "display" : "Disease",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "398192003"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false"}####
+v: {
+  "display" : "Co-morbid conditions (finding)",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "64572001"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Disease",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "398192003"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Co-morbid conditions (finding)",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "53438000"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Radiation therapy procedure or service",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "387713003"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Surgical procedure (procedure)",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "363679005",
+        "display" : "Imaging (procedure)"
+      },
+      {
+        "code" : "252416005",
+        "display" : "Histopathology test (procedure)"
+      },
+      {
+        "code" : "711015009",
+        "display" : "Assessment of symptom control (procedure)"
+      },
+      {
+        "code" : "5880005",
+        "display" : "Physical examination procedure (procedure)"
+      },
+      {
+        "code" : "250724005",
+        "display" : "Tumor marker measurement (procedure)"
+      },
+      {
+        "code" : "386344002",
+        "display" : "Laboratory data interpretation (procedure)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "expansion" : {
+    "identifier" : "urn:uuid:2bd6219a-cacb-4dbd-aabe-802db630a32d",
+    "timestamp" : "2020-01-17T23:21:36.614Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "excludeNested",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20190731"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "363679005",
+      "display" : "Imaging (procedure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "252416005",
+      "display" : "Histopathology test (procedure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "711015009",
+      "display" : "Assessment of symptom control (procedure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "5880005",
+      "display" : "Physical examination procedure (procedure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "250724005",
+      "display" : "Tumor marker measurement (procedure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "386344002",
+      "display" : "Laboratory data interpretation (procedure)"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "54102005",
+        "display" : "G1 grade (finding)"
+      },
+      {
+        "code" : "1663004",
+        "display" : "G2 grade (finding)"
+      },
+      {
+        "code" : "61026006",
+        "display" : "G3 grade (finding)"
+      },
+      {
+        "code" : "258245003",
+        "display" : "G4 grade (finding)"
+      },
+      {
+        "code" : "60815008",
+        "display" : "Grade not determined (finding)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "expansion" : {
+    "identifier" : "urn:uuid:14dd7194-d0e5-47c4-9807-f163f88adff5",
+    "timestamp" : "2020-01-17T23:21:36.817Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "excludeNested",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20190731"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "54102005",
+      "display" : "G1 grade (finding)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1663004",
+      "display" : "G2 grade (finding)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "61026006",
+      "display" : "G3 grade (finding)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "258245003",
+      "display" : "G4 grade (finding)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "60815008",
+      "display" : "Grade not determined (finding)"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "174337000",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "49264007",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "119894003",
+        "display" : "Anus excision"
+      },
+      {
+        "code" : "24265000",
+        "display" : "Operation on anus [NOS]"
+      },
+      {
+        "code" : "48185007",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "108034003",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "112902005",
+        "display" : "Partial cystectomy"
+      },
+      {
+        "code" : "63016009",
+        "display" : "Total Cystectomy"
+      },
+      {
+        "code" : "64063003",
+        "display" : "Radical Cystectomy"
+      },
+      {
+        "code" : "287716007",
+        "display" : "Urinary bladder reconstruction"
+      },
+      {
+        "code" : "52224004",
+        "display" : "Pelvic exenteration"
+      },
+      {
+        "code" : "149649000",
+        "display" : "Cystectomy dome of bladder"
+      },
+      {
+        "code" : "14861000",
+        "display" : "Operation on bladder [NOS]"
+      },
+      {
+        "code" : "18734000",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "68471001",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "112705001",
+        "display" : "Amputation"
+      },
+      {
+        "code" : "57168000",
+        "display" : "Operation on bone [NOS]"
+      },
+      {
+        "code" : "68829005",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "64368001",
+        "display" : "Partial mastectomy"
+      },
+      {
+        "code" : "70183006",
+        "display" : "Subcutaneous mastectomy"
+      },
+      {
+        "code" : "172043006",
+        "display" : "Total mastectomy"
+      },
+      {
+        "code" : "406505007",
+        "display" : "Modified radical mastectomy"
+      },
+      {
+        "code" : "384723003",
+        "display" : "Radical mastectomy"
+      },
+      {
+        "code" : "359740003",
+        "display" : "Extended radical mastectomy"
+      },
+      {
+        "code" : "69031006",
+        "display" : "Mastectomy"
+      },
+      {
+        "code" : "392090004",
+        "display" : "Operation on breast [NOS]"
+      },
+      {
+        "code" : "31197001",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "36384005",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "116140006",
+        "display" : "Total hysterctomy"
+      },
+      {
+        "code" : "236886002",
+        "display" : "Hysterectomy"
+      },
+      {
+        "code" : "116142003",
+        "display" : "Radical hysterectomy"
+      },
+      {
+        "code" : "406044008",
+        "display" : "Pelvic exentration "
+      },
+      {
+        "code" : "112916000",
+        "display" : "Operation on cervix [NOS]"
+      },
+      {
+        "code" : "176871003",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "236884004",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "387643005",
+        "display" : "Partial hysterectomy"
+      },
+      {
+        "code" : "116140006",
+        "display" : "Total hysterctomy"
+      },
+      {
+        "code" : "116142003",
+        "display" : "Radical hysterectomy"
+      },
+      {
+        "code" : "236886002",
+        "display" : "Hysterectomy"
+      },
+      {
+        "code" : "406044008",
+        "display" : "Pelvic exentration "
+      },
+      {
+        "code" : "79876008",
+        "display" : "Operation on uterus  [NOS]"
+      },
+      {
+        "code" : "18243008",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "386553005",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "3980006",
+        "display" : "Partial esophagectomy"
+      },
+      {
+        "code" : "14072009",
+        "display" : "Total esophagectomy"
+      },
+      {
+        "code" : "76443003",
+        "display" : "Total esophagectomy with gastropharyngostomy"
+      },
+      {
+        "code" : "45900003",
+        "display" : "Esophagectomy"
+      },
+      {
+        "code" : "48114000",
+        "display" : "Operation on esophagus [NOS]"
+      },
+      {
+        "code" : "52785004",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "69762004",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "81516001",
+        "display" : "Partial nephrectomy"
+      },
+      {
+        "code" : "175905003",
+        "display" : "Total nephrectomy"
+      },
+      {
+        "code" : "116033007",
+        "display" : "Radical nephrectomy"
+      },
+      {
+        "code" : "175898006",
+        "display" : "Kidney operation  [NOS]"
+      },
+      {
+        "code" : "78923006",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "88623004",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "80513001",
+        "display" : "Partial laryngectomy"
+      },
+      {
+        "code" : "66478002",
+        "display" : "Total laryngectomy"
+      },
+      {
+        "code" : "60041003",
+        "display" : "Laryngopharyngectomy"
+      },
+      {
+        "code" : "72791001",
+        "display" : "Laryngectomy"
+      },
+      {
+        "code" : "387636004",
+        "display" : "Operation on larynx [NOS]"
+      },
+      {
+        "code" : "5415002",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "174431000",
+        "display" : "Wedge resecton of liver"
+      },
+      {
+        "code" : "85946004",
+        "display" : "Lobectomy of liver"
+      },
+      {
+        "code" : "15257006",
+        "display" : "Lobectomy w/ partial excision of adjacent lobes"
+      },
+      {
+        "code" : "107963000",
+        "display" : "Hepatectomy"
+      },
+      {
+        "code" : "13580001000004101",
+        "display" : "Excision of tumor of liver"
+      },
+      {
+        "code" : "27280000",
+        "display" : "Liver transplant w/recipient hepatectomy"
+      },
+      {
+        "code" : "4974007",
+        "display" : "Operation on liver [NOS]"
+      },
+      {
+        "code" : "450608000",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "119746007",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "173170008",
+        "display" : "Bilobectomy of lung"
+      },
+      {
+        "code" : "359623004",
+        "display" : "Total lobectomy of lung"
+      },
+      {
+        "code" : "49795001",
+        "display" : "Total pneumonectomy"
+      },
+      {
+        "code" : "91596000",
+        "display" : "Complete excision of lung with mediastinal dissection"
+      },
+      {
+        "code" : "119746007",
+        "display" : "Operation on lung [NOS]"
+      },
+      {
+        "code" : "230859007",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "230810008",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "446103006",
+        "display" : "Partial excision of lesion of brain "
+      },
+      {
+        "code" : "17537007",
+        "display" : "Resection of spinal cord"
+      },
+      {
+        "code" : "447115003",
+        "display" : "Total excision of lesion of brain"
+      },
+      {
+        "code" : "67402009",
+        "display" : "Partial lobectomy"
+      },
+      {
+        "code" : "171443003",
+        "display" : "Total lobectomy"
+      },
+      {
+        "code" : "70586009",
+        "display" : "Operation on brain [NOS]"
+      },
+      {
+        "code" : "177018009",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "35887003",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "116028008",
+        "display" : "Salpingo-oophorectomy"
+      },
+      {
+        "code" : "29827000",
+        "display" : "Bilateral salpingectomy w/oophorectomy"
+      },
+      {
+        "code" : "78698008",
+        "display" : "Unilateral salpingo-oophorectomy"
+      },
+      {
+        "code" : "446526009",
+        "display" : "Debulking of neoplasm of ovary"
+      },
+      {
+        "code" : "55853002",
+        "display" : "Pelvic exenteraion, female"
+      },
+      {
+        "code" : "64887002",
+        "display" : "Operation on ovary [NOS]"
+      },
+      {
+        "code" : "414158004",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "287847009",
+        "display" : "Partial pancreatectomy"
+      },
+      {
+        "code" : "69036001",
+        "display" : "Total pancreaticoduodenectomy"
+      },
+      {
+        "code" : "9524002",
+        "display" : "Total pancreatectomy"
+      },
+      {
+        "code" : "265459006",
+        "display" : "Total pancreaticodudoenectomy with distal gastrectomy"
+      },
+      {
+        "code" : "33149006",
+        "display" : "Pancreatectomy"
+      },
+      {
+        "code" : "29630005",
+        "display" : "Operation on pancreas [NOS]"
+      },
+      {
+        "code" : "10522005",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "37804007",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "81870009",
+        "display" : "Parotidectomy"
+      },
+      {
+        "code" : "11150009",
+        "display" : "Partial parotidectomy"
+      },
+      {
+        "code" : "13358001",
+        "display" : "Total parotidectomy"
+      },
+      {
+        "code" : "173486005",
+        "display" : "Radical parotidectomy"
+      },
+      {
+        "code" : "58456002",
+        "display" : "Operation on parotid gland [NOS]"
+      },
+      {
+        "code" : "107923001",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "3786007",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "51265002",
+        "display" : "Pharyngectomy"
+      },
+      {
+        "code" : "232546000",
+        "display" : "Total pharyngolaryngectomy w/ laryngectomy"
+      },
+      {
+        "code" : "303621003",
+        "display" : "Total pharyngectomy"
+      },
+      {
+        "code" : "23136006",
+        "display" : "Operation on pharynx [NOS]"
+      },
+      {
+        "code" : "450514003",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "90199006",
+        "display" : "Transurethral prostactomy"
+      },
+      {
+        "code" : "30426000",
+        "display" : "Subtotal prostactomy"
+      },
+      {
+        "code" : "26294005",
+        "display" : "Radical prostatectomy "
+      },
+      {
+        "code" : "65111004",
+        "display" : "Pelvic exenteration"
+      },
+      {
+        "code" : "90470006",
+        "display" : "Prostactomy"
+      },
+      {
+        "code" : "741007",
+        "display" : "Operation on prostate [NOS]"
+      },
+      {
+        "code" : "177975003",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "87279008",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "43075005",
+        "display" : "Segmental colectomy"
+      },
+      {
+        "code" : "307656000",
+        "display" : "Subtotal colectomy with ileosigmoid anastomosis"
+      },
+      {
+        "code" : "26390003",
+        "display" : "Total  colectomy"
+      },
+      {
+        "code" : "174059005",
+        "display" : "Proctocolectomy"
+      },
+      {
+        "code" : "82874003",
+        "display" : "Operation on colon [NOS]"
+      },
+      {
+        "code" : "52838002",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "79764004",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "82035006",
+        "display" : "Resection of polyp"
+      },
+      {
+        "code" : "116237003",
+        "display" : "Excision of lesion of rectum "
+      },
+      {
+        "code" : "307009004",
+        "display" : "Wedge resection"
+      },
+      {
+        "code" : "86789002",
+        "display" : "Abdominoperineal pull through"
+      },
+      {
+        "code" : "235364003",
+        "display" : "Total Proctectomy"
+      },
+      {
+        "code" : "26390003",
+        "display" : "Total  colectomy"
+      },
+      {
+        "code" : "174059005",
+        "display" : "Proctocolectomy"
+      },
+      {
+        "code" : "118841000",
+        "display" : "Operation on rectosigmoid [NOS]"
+      },
+      {
+        "code" : "52838002",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "79764004",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "82035006",
+        "display" : "Resection of polyp"
+      },
+      {
+        "code" : "116237003",
+        "display" : "Excision of lesion of rectum "
+      },
+      {
+        "code" : "307009004",
+        "display" : "Wedge resection"
+      },
+      {
+        "code" : "86789002",
+        "display" : "Abdominoperineal pull through"
+      },
+      {
+        "code" : "235364003",
+        "display" : "Total Proctectomy"
+      },
+      {
+        "code" : "174059005",
+        "display" : "Proctocolectomy"
+      },
+      {
+        "code" : "74971002",
+        "display" : "Operation on rectum [NOS]"
+      },
+      {
+        "code" : "87031008",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "67373001",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "35646002",
+        "display" : "Excision of lesion of skin"
+      },
+      {
+        "code" : "177302005",
+        "display" : "Wide excision of skin lesion"
+      },
+      {
+        "code" : "81723002",
+        "display" : "Amputaion"
+      },
+      {
+        "code" : "392011001",
+        "display" : "Operation on skin [NOS]"
+      },
+      {
+        "code" : "31468007",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "67097003",
+        "display" : "Partial splenectomy"
+      },
+      {
+        "code" : "174776001",
+        "display" : "Total splenectomy"
+      },
+      {
+        "code" : "234319005",
+        "display" : "Splenectomy"
+      },
+      {
+        "code" : "59300005",
+        "display" : "Operation on spleen [NOS]"
+      },
+      {
+        "code" : "45189000",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "32327002",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "49209004",
+        "display" : "Subtotal gastrectomy"
+      },
+      {
+        "code" : "26452005",
+        "display" : "Total gastrectomy"
+      },
+      {
+        "code" : "24431004",
+        "display" : "Esophagoduodenostomy w/complete gastrectomy"
+      },
+      {
+        "code" : "287816003",
+        "display" : "Radical gastrectomy"
+      },
+      {
+        "code" : "438338008",
+        "display" : "Total gastrecomy w/extended lymphadencectomy "
+      },
+      {
+        "code" : "53442002",
+        "display" : "Gastrectomy"
+      },
+      {
+        "code" : "16453004",
+        "display" : "Operation on stomach [NOS]"
+      },
+      {
+        "code" : "12807004",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "176430002",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "120001005",
+        "display" : "Testis excision"
+      },
+      {
+        "code" : "396692006",
+        "display" : "Radical Orchiectomy "
+      },
+      {
+        "code" : "236334001",
+        "display" : "Total Orchiectomy"
+      },
+      {
+        "code" : "71657006",
+        "display" : "Operation on testis [NOS]"
+      },
+      {
+        "code" : "20470003",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "171988007",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "13619001",
+        "display" : "Thyroidectomy"
+      },
+      {
+        "code" : "24443003",
+        "display" : "Total thyroidectomy"
+      },
+      {
+        "code" : "30956003",
+        "display" : "Subtotal thyroidectomy"
+      },
+      {
+        "code" : "15463004",
+        "display" : "Operation on thyroid gland [NOS]"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "expansion" : {
+    "identifier" : "urn:uuid:0e491bd3-b0f4-4a7f-91ec-83e19874afa4",
+    "timestamp" : "2020-01-17T23:21:37.052Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "excludeNested",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20190731"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "174337000",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "49264007",
+      "display" : "Excision of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "119894003",
+      "display" : "Anus excision"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "24265000",
+      "display" : "Operation on anus [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "48185007",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "108034003",
+      "display" : "Excision of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "112902005",
+      "display" : "Partial cystectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "63016009",
+      "display" : "Total Cystectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "64063003",
+      "display" : "Radical Cystectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "287716007",
+      "display" : "Urinary bladder reconstruction"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "52224004",
+      "display" : "Pelvic exenteration"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "149649000",
+      "display" : "Cystectomy dome of bladder"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "14861000",
+      "display" : "Operation on bladder [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "18734000",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "68471001",
+      "display" : "Excision of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "112705001",
+      "display" : "Amputation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "57168000",
+      "display" : "Operation on bone [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "68829005",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "64368001",
+      "display" : "Partial mastectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "70183006",
+      "display" : "Subcutaneous mastectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "172043006",
+      "display" : "Total mastectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "406505007",
+      "display" : "Modified radical mastectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "384723003",
+      "display" : "Radical mastectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "359740003",
+      "display" : "Extended radical mastectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "69031006",
+      "display" : "Mastectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "392090004",
+      "display" : "Operation on breast [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "31197001",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "36384005",
+      "display" : "Excision of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "116140006",
+      "display" : "Total hysterctomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "236886002",
+      "display" : "Hysterectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "116142003",
+      "display" : "Radical hysterectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "406044008",
+      "display" : "Pelvic exentration"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "112916000",
+      "display" : "Operation on cervix [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "176871003",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "236884004",
+      "display" : "Excision of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "387643005",
+      "display" : "Partial hysterectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "79876008",
+      "display" : "Operation on uterus  [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "18243008",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "386553005",
+      "display" : "Excision of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "3980006",
+      "display" : "Partial esophagectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "14072009",
+      "display" : "Total esophagectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "76443003",
+      "display" : "Total esophagectomy with gastropharyngostomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "45900003",
+      "display" : "Esophagectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "48114000",
+      "display" : "Operation on esophagus [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "52785004",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "69762004",
+      "display" : "Excision of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "81516001",
+      "display" : "Partial nephrectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "175905003",
+      "display" : "Total nephrectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "116033007",
+      "display" : "Radical nephrectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "175898006",
+      "display" : "Kidney operation  [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "78923006",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "88623004",
+      "display" : "Excision of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "80513001",
+      "display" : "Partial laryngectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "66478002",
+      "display" : "Total laryngectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "60041003",
+      "display" : "Laryngopharyngectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "72791001",
+      "display" : "Laryngectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "387636004",
+      "display" : "Operation on larynx [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "5415002",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "174431000",
+      "display" : "Wedge resecton of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "85946004",
+      "display" : "Lobectomy of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "15257006",
+      "display" : "Lobectomy w/ partial excision of adjacent lobes"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "107963000",
+      "display" : "Hepatectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "13580001000004101",
+      "display" : "Excision of tumor of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "27280000",
+      "display" : "Liver transplant w/recipient hepatectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4974007",
+      "display" : "Operation on liver [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450608000",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "119746007",
+      "display" : "Excision of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "173170008",
+      "display" : "Bilobectomy of lung"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "359623004",
+      "display" : "Total lobectomy of lung"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "49795001",
+      "display" : "Total pneumonectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "91596000",
+      "display" : "Complete excision of lung with mediastinal dissection"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "119746007",
+      "display" : "Operation on lung [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "230859007",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "230810008",
+      "display" : "Excision of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "446103006",
+      "display" : "Partial excision of lesion of brain"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "17537007",
+      "display" : "Resection of spinal cord"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "447115003",
+      "display" : "Total excision of lesion of brain"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "67402009",
+      "display" : "Partial lobectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "171443003",
+      "display" : "Total lobectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "70586009",
+      "display" : "Operation on brain [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "177018009",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "35887003",
+      "display" : "Excision of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "116028008",
+      "display" : "Salpingo-oophorectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "29827000",
+      "display" : "Bilateral salpingectomy w/oophorectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "78698008",
+      "display" : "Unilateral salpingo-oophorectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "446526009",
+      "display" : "Debulking of neoplasm of ovary"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "55853002",
+      "display" : "Pelvic exenteraion, female"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "64887002",
+      "display" : "Operation on ovary [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "414158004",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "287847009",
+      "display" : "Partial pancreatectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "69036001",
+      "display" : "Total pancreaticoduodenectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "9524002",
+      "display" : "Total pancreatectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "265459006",
+      "display" : "Total pancreaticodudoenectomy with distal gastrectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "33149006",
+      "display" : "Pancreatectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "29630005",
+      "display" : "Operation on pancreas [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "10522005",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "37804007",
+      "display" : "Excision of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "81870009",
+      "display" : "Parotidectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "11150009",
+      "display" : "Partial parotidectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "13358001",
+      "display" : "Total parotidectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "173486005",
+      "display" : "Radical parotidectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "58456002",
+      "display" : "Operation on parotid gland [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "107923001",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "3786007",
+      "display" : "Excision of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "51265002",
+      "display" : "Pharyngectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "232546000",
+      "display" : "Total pharyngolaryngectomy w/ laryngectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "303621003",
+      "display" : "Total pharyngectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "23136006",
+      "display" : "Operation on pharynx [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450514003",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "90199006",
+      "display" : "Transurethral prostactomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "30426000",
+      "display" : "Subtotal prostactomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "26294005",
+      "display" : "Radical prostatectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "65111004",
+      "display" : "Pelvic exenteration"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "90470006",
+      "display" : "Prostactomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "741007",
+      "display" : "Operation on prostate [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "177975003",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "87279008",
+      "display" : "Excision of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "43075005",
+      "display" : "Segmental colectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "307656000",
+      "display" : "Subtotal colectomy with ileosigmoid anastomosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "26390003",
+      "display" : "Total  colectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "174059005",
+      "display" : "Proctocolectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "82874003",
+      "display" : "Operation on colon [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "52838002",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "79764004",
+      "display" : "Excision of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "82035006",
+      "display" : "Resection of polyp"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "116237003",
+      "display" : "Excision of lesion of rectum"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "307009004",
+      "display" : "Wedge resection"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "86789002",
+      "display" : "Abdominoperineal pull through"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235364003",
+      "display" : "Total Proctectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "118841000",
+      "display" : "Operation on rectosigmoid [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "74971002",
+      "display" : "Operation on rectum [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "87031008",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "67373001",
+      "display" : "Excision of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "35646002",
+      "display" : "Excision of lesion of skin"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "177302005",
+      "display" : "Wide excision of skin lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "81723002",
+      "display" : "Amputaion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "392011001",
+      "display" : "Operation on skin [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "31468007",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "67097003",
+      "display" : "Partial splenectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "174776001",
+      "display" : "Total splenectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "234319005",
+      "display" : "Splenectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "59300005",
+      "display" : "Operation on spleen [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "45189000",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "32327002",
+      "display" : "Excision of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "49209004",
+      "display" : "Subtotal gastrectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "26452005",
+      "display" : "Total gastrectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "24431004",
+      "display" : "Esophagoduodenostomy w/complete gastrectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "287816003",
+      "display" : "Radical gastrectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "438338008",
+      "display" : "Total gastrecomy w/extended lymphadencectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "53442002",
+      "display" : "Gastrectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "16453004",
+      "display" : "Operation on stomach [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "12807004",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "176430002",
+      "display" : "Excision of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "120001005",
+      "display" : "Testis excision"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "396692006",
+      "display" : "Radical Orchiectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "236334001",
+      "display" : "Total Orchiectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "71657006",
+      "display" : "Operation on testis [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "20470003",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "171988007",
+      "display" : "Excision of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "13619001",
+      "display" : "Thyroidectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "24443003",
+      "display" : "Total thyroidectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "30956003",
+      "display" : "Subtotal thyroidectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "15463004",
+      "display" : "Operation on thyroid gland [NOS]"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "444256004",
+        "display" : "American Joint Commission on Cancer, Cancer Staging Manual, 6th edition neoplasm staging system (tumor staging)"
+      },
+      {
+        "code" : "443830009",
+        "display" : "American Joint Commission on Cancer, Cancer Staging Manual, 7th edition neoplasm staging system (tumor staging)"
+      },
+      {
+        "code" : "258235000",
+        "display" : "International Union Against Cancer (tumor staging)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "expansion" : {
+    "identifier" : "urn:uuid:186bd48b-58f6-4821-a308-6036d8049eba",
+    "timestamp" : "2020-01-17T23:21:37.536Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "excludeNested",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20190731"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "444256004",
+      "display" : "American Joint Commission on Cancer, Cancer Staging Manual, 6th edition neoplasm staging system (tumor staging)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "443830009",
+      "display" : "American Joint Commission on Cancer, Cancer Staging Manual, 7th edition neoplasm staging system (tumor staging)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "258235000",
+      "display" : "International Union Against Cancer (tumor staging)"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "399878004",
+        "display" : "Malignant neoplasm with pilar differentiation (morphologic abnormality)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "expansion" : {
+    "identifier" : "urn:uuid:aa868389-1056-417c-b277-e9c48edc8496",
+    "timestamp" : "2020-01-17T23:21:37.739Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "excludeNested",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20190731"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "399878004",
+      "display" : "Malignant neoplasm with pilar differentiation (morphologic abnormality)"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "55182004",
+        "display" : "Surgical margin uninvolved by tumor (finding)"
+      },
+      {
+        "code" : "370109009",
+        "display" : "Surgical margin involved by tumor (finding)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "expansion" : {
+    "identifier" : "urn:uuid:7deeb16f-2a1f-4c43-afa7-0cfcc5fa9e33",
+    "timestamp" : "2020-01-17T23:21:37.942Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "excludeNested",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20190731"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "55182004",
+      "display" : "Surgical margin uninvolved by tumor (finding)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "370109009",
+      "display" : "Surgical margin involved by tumor (finding)"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "373066001",
+        "display" : "Yes"
+      },
+      {
+        "code" : "373067005",
+        "display" : "No"
+      },
+      {
+        "code" : "261665006",
+        "display" : "Unknown"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "expansion" : {
+    "identifier" : "urn:uuid:fc952348-59c7-4350-984b-ac12f0d5a78c",
+    "timestamp" : "2020-01-17T23:21:39.208Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "excludeNested",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20190731"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "373066001",
+      "display" : "Yes"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "373067005",
+      "display" : "No"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "261665006",
+      "display" : "Unknown"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "code",
+        "op" : "is-a",
+        "value" : "123037004"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: The filter \"code is-a 123037004\" was not understood in the context of http://snomed.info/sct"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "363679005",
+        "display" : "Imaging (procedure)"
+      },
+      {
+        "code" : "252416005",
+        "display" : "Histopathology test (procedure)"
+      },
+      {
+        "code" : "711015009",
+        "display" : "Assessment of symptom control (procedure)"
+      },
+      {
+        "code" : "5880005",
+        "display" : "Physical examination procedure (procedure)"
+      },
+      {
+        "code" : "250724005",
+        "display" : "Tumor marker measurement (procedure)"
+      },
+      {
+        "code" : "386344002",
+        "display" : "Laboratory data interpretation (procedure)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "expansion" : {
+    "identifier" : "urn:uuid:ede7b342-816e-480e-93f8-4a993246cd6c",
+    "timestamp" : "2020-01-17T23:22:19.349Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20190731"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "363679005",
+      "display" : "Imaging (procedure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "252416005",
+      "display" : "Histopathology test (procedure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "711015009",
+      "display" : "Assessment of symptom control (procedure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "5880005",
+      "display" : "Physical examination procedure (procedure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "250724005",
+      "display" : "Tumor marker measurement (procedure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "386344002",
+      "display" : "Laboratory data interpretation (procedure)"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "54102005",
+        "display" : "G1 grade (finding)"
+      },
+      {
+        "code" : "1663004",
+        "display" : "G2 grade (finding)"
+      },
+      {
+        "code" : "61026006",
+        "display" : "G3 grade (finding)"
+      },
+      {
+        "code" : "258245003",
+        "display" : "G4 grade (finding)"
+      },
+      {
+        "code" : "60815008",
+        "display" : "Grade not determined (finding)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "expansion" : {
+    "identifier" : "urn:uuid:4ed63bc4-d1e2-4427-a5ef-77f26fef71f5",
+    "timestamp" : "2020-01-17T23:22:19.692Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20190731"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "54102005",
+      "display" : "G1 grade (finding)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1663004",
+      "display" : "G2 grade (finding)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "61026006",
+      "display" : "G3 grade (finding)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "258245003",
+      "display" : "G4 grade (finding)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "60815008",
+      "display" : "Grade not determined (finding)"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "174337000",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "49264007",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "119894003",
+        "display" : "Anus excision"
+      },
+      {
+        "code" : "24265000",
+        "display" : "Operation on anus [NOS]"
+      },
+      {
+        "code" : "48185007",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "108034003",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "112902005",
+        "display" : "Partial cystectomy"
+      },
+      {
+        "code" : "63016009",
+        "display" : "Total Cystectomy"
+      },
+      {
+        "code" : "64063003",
+        "display" : "Radical Cystectomy"
+      },
+      {
+        "code" : "287716007",
+        "display" : "Urinary bladder reconstruction"
+      },
+      {
+        "code" : "52224004",
+        "display" : "Pelvic exenteration"
+      },
+      {
+        "code" : "149649000",
+        "display" : "Cystectomy dome of bladder"
+      },
+      {
+        "code" : "14861000",
+        "display" : "Operation on bladder [NOS]"
+      },
+      {
+        "code" : "18734000",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "68471001",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "112705001",
+        "display" : "Amputation"
+      },
+      {
+        "code" : "57168000",
+        "display" : "Operation on bone [NOS]"
+      },
+      {
+        "code" : "68829005",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "64368001",
+        "display" : "Partial mastectomy"
+      },
+      {
+        "code" : "70183006",
+        "display" : "Subcutaneous mastectomy"
+      },
+      {
+        "code" : "172043006",
+        "display" : "Total mastectomy"
+      },
+      {
+        "code" : "406505007",
+        "display" : "Modified radical mastectomy"
+      },
+      {
+        "code" : "384723003",
+        "display" : "Radical mastectomy"
+      },
+      {
+        "code" : "359740003",
+        "display" : "Extended radical mastectomy"
+      },
+      {
+        "code" : "69031006",
+        "display" : "Mastectomy"
+      },
+      {
+        "code" : "392090004",
+        "display" : "Operation on breast [NOS]"
+      },
+      {
+        "code" : "31197001",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "36384005",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "116140006",
+        "display" : "Total hysterctomy"
+      },
+      {
+        "code" : "236886002",
+        "display" : "Hysterectomy"
+      },
+      {
+        "code" : "116142003",
+        "display" : "Radical hysterectomy"
+      },
+      {
+        "code" : "406044008",
+        "display" : "Pelvic exentration "
+      },
+      {
+        "code" : "112916000",
+        "display" : "Operation on cervix [NOS]"
+      },
+      {
+        "code" : "176871003",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "236884004",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "387643005",
+        "display" : "Partial hysterectomy"
+      },
+      {
+        "code" : "116140006",
+        "display" : "Total hysterctomy"
+      },
+      {
+        "code" : "116142003",
+        "display" : "Radical hysterectomy"
+      },
+      {
+        "code" : "236886002",
+        "display" : "Hysterectomy"
+      },
+      {
+        "code" : "406044008",
+        "display" : "Pelvic exentration "
+      },
+      {
+        "code" : "79876008",
+        "display" : "Operation on uterus  [NOS]"
+      },
+      {
+        "code" : "18243008",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "386553005",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "3980006",
+        "display" : "Partial esophagectomy"
+      },
+      {
+        "code" : "14072009",
+        "display" : "Total esophagectomy"
+      },
+      {
+        "code" : "76443003",
+        "display" : "Total esophagectomy with gastropharyngostomy"
+      },
+      {
+        "code" : "45900003",
+        "display" : "Esophagectomy"
+      },
+      {
+        "code" : "48114000",
+        "display" : "Operation on esophagus [NOS]"
+      },
+      {
+        "code" : "52785004",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "69762004",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "81516001",
+        "display" : "Partial nephrectomy"
+      },
+      {
+        "code" : "175905003",
+        "display" : "Total nephrectomy"
+      },
+      {
+        "code" : "116033007",
+        "display" : "Radical nephrectomy"
+      },
+      {
+        "code" : "175898006",
+        "display" : "Kidney operation  [NOS]"
+      },
+      {
+        "code" : "78923006",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "88623004",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "80513001",
+        "display" : "Partial laryngectomy"
+      },
+      {
+        "code" : "66478002",
+        "display" : "Total laryngectomy"
+      },
+      {
+        "code" : "60041003",
+        "display" : "Laryngopharyngectomy"
+      },
+      {
+        "code" : "72791001",
+        "display" : "Laryngectomy"
+      },
+      {
+        "code" : "387636004",
+        "display" : "Operation on larynx [NOS]"
+      },
+      {
+        "code" : "5415002",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "174431000",
+        "display" : "Wedge resecton of liver"
+      },
+      {
+        "code" : "85946004",
+        "display" : "Lobectomy of liver"
+      },
+      {
+        "code" : "15257006",
+        "display" : "Lobectomy w/ partial excision of adjacent lobes"
+      },
+      {
+        "code" : "107963000",
+        "display" : "Hepatectomy"
+      },
+      {
+        "code" : "13580001000004101",
+        "display" : "Excision of tumor of liver"
+      },
+      {
+        "code" : "27280000",
+        "display" : "Liver transplant w/recipient hepatectomy"
+      },
+      {
+        "code" : "4974007",
+        "display" : "Operation on liver [NOS]"
+      },
+      {
+        "code" : "450608000",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "119746007",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "173170008",
+        "display" : "Bilobectomy of lung"
+      },
+      {
+        "code" : "359623004",
+        "display" : "Total lobectomy of lung"
+      },
+      {
+        "code" : "49795001",
+        "display" : "Total pneumonectomy"
+      },
+      {
+        "code" : "91596000",
+        "display" : "Complete excision of lung with mediastinal dissection"
+      },
+      {
+        "code" : "119746007",
+        "display" : "Operation on lung [NOS]"
+      },
+      {
+        "code" : "230859007",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "230810008",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "446103006",
+        "display" : "Partial excision of lesion of brain "
+      },
+      {
+        "code" : "17537007",
+        "display" : "Resection of spinal cord"
+      },
+      {
+        "code" : "447115003",
+        "display" : "Total excision of lesion of brain"
+      },
+      {
+        "code" : "67402009",
+        "display" : "Partial lobectomy"
+      },
+      {
+        "code" : "171443003",
+        "display" : "Total lobectomy"
+      },
+      {
+        "code" : "70586009",
+        "display" : "Operation on brain [NOS]"
+      },
+      {
+        "code" : "177018009",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "35887003",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "116028008",
+        "display" : "Salpingo-oophorectomy"
+      },
+      {
+        "code" : "29827000",
+        "display" : "Bilateral salpingectomy w/oophorectomy"
+      },
+      {
+        "code" : "78698008",
+        "display" : "Unilateral salpingo-oophorectomy"
+      },
+      {
+        "code" : "446526009",
+        "display" : "Debulking of neoplasm of ovary"
+      },
+      {
+        "code" : "55853002",
+        "display" : "Pelvic exenteraion, female"
+      },
+      {
+        "code" : "64887002",
+        "display" : "Operation on ovary [NOS]"
+      },
+      {
+        "code" : "414158004",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "287847009",
+        "display" : "Partial pancreatectomy"
+      },
+      {
+        "code" : "69036001",
+        "display" : "Total pancreaticoduodenectomy"
+      },
+      {
+        "code" : "9524002",
+        "display" : "Total pancreatectomy"
+      },
+      {
+        "code" : "265459006",
+        "display" : "Total pancreaticodudoenectomy with distal gastrectomy"
+      },
+      {
+        "code" : "33149006",
+        "display" : "Pancreatectomy"
+      },
+      {
+        "code" : "29630005",
+        "display" : "Operation on pancreas [NOS]"
+      },
+      {
+        "code" : "10522005",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "37804007",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "81870009",
+        "display" : "Parotidectomy"
+      },
+      {
+        "code" : "11150009",
+        "display" : "Partial parotidectomy"
+      },
+      {
+        "code" : "13358001",
+        "display" : "Total parotidectomy"
+      },
+      {
+        "code" : "173486005",
+        "display" : "Radical parotidectomy"
+      },
+      {
+        "code" : "58456002",
+        "display" : "Operation on parotid gland [NOS]"
+      },
+      {
+        "code" : "107923001",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "3786007",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "51265002",
+        "display" : "Pharyngectomy"
+      },
+      {
+        "code" : "232546000",
+        "display" : "Total pharyngolaryngectomy w/ laryngectomy"
+      },
+      {
+        "code" : "303621003",
+        "display" : "Total pharyngectomy"
+      },
+      {
+        "code" : "23136006",
+        "display" : "Operation on pharynx [NOS]"
+      },
+      {
+        "code" : "450514003",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "90199006",
+        "display" : "Transurethral prostactomy"
+      },
+      {
+        "code" : "30426000",
+        "display" : "Subtotal prostactomy"
+      },
+      {
+        "code" : "26294005",
+        "display" : "Radical prostatectomy "
+      },
+      {
+        "code" : "65111004",
+        "display" : "Pelvic exenteration"
+      },
+      {
+        "code" : "90470006",
+        "display" : "Prostactomy"
+      },
+      {
+        "code" : "741007",
+        "display" : "Operation on prostate [NOS]"
+      },
+      {
+        "code" : "177975003",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "87279008",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "43075005",
+        "display" : "Segmental colectomy"
+      },
+      {
+        "code" : "307656000",
+        "display" : "Subtotal colectomy with ileosigmoid anastomosis"
+      },
+      {
+        "code" : "26390003",
+        "display" : "Total  colectomy"
+      },
+      {
+        "code" : "174059005",
+        "display" : "Proctocolectomy"
+      },
+      {
+        "code" : "82874003",
+        "display" : "Operation on colon [NOS]"
+      },
+      {
+        "code" : "52838002",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "79764004",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "82035006",
+        "display" : "Resection of polyp"
+      },
+      {
+        "code" : "116237003",
+        "display" : "Excision of lesion of rectum "
+      },
+      {
+        "code" : "307009004",
+        "display" : "Wedge resection"
+      },
+      {
+        "code" : "86789002",
+        "display" : "Abdominoperineal pull through"
+      },
+      {
+        "code" : "235364003",
+        "display" : "Total Proctectomy"
+      },
+      {
+        "code" : "26390003",
+        "display" : "Total  colectomy"
+      },
+      {
+        "code" : "174059005",
+        "display" : "Proctocolectomy"
+      },
+      {
+        "code" : "118841000",
+        "display" : "Operation on rectosigmoid [NOS]"
+      },
+      {
+        "code" : "52838002",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "79764004",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "82035006",
+        "display" : "Resection of polyp"
+      },
+      {
+        "code" : "116237003",
+        "display" : "Excision of lesion of rectum "
+      },
+      {
+        "code" : "307009004",
+        "display" : "Wedge resection"
+      },
+      {
+        "code" : "86789002",
+        "display" : "Abdominoperineal pull through"
+      },
+      {
+        "code" : "235364003",
+        "display" : "Total Proctectomy"
+      },
+      {
+        "code" : "174059005",
+        "display" : "Proctocolectomy"
+      },
+      {
+        "code" : "74971002",
+        "display" : "Operation on rectum [NOS]"
+      },
+      {
+        "code" : "87031008",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "67373001",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "35646002",
+        "display" : "Excision of lesion of skin"
+      },
+      {
+        "code" : "177302005",
+        "display" : "Wide excision of skin lesion"
+      },
+      {
+        "code" : "81723002",
+        "display" : "Amputaion"
+      },
+      {
+        "code" : "392011001",
+        "display" : "Operation on skin [NOS]"
+      },
+      {
+        "code" : "31468007",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "67097003",
+        "display" : "Partial splenectomy"
+      },
+      {
+        "code" : "174776001",
+        "display" : "Total splenectomy"
+      },
+      {
+        "code" : "234319005",
+        "display" : "Splenectomy"
+      },
+      {
+        "code" : "59300005",
+        "display" : "Operation on spleen [NOS]"
+      },
+      {
+        "code" : "45189000",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "32327002",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "49209004",
+        "display" : "Subtotal gastrectomy"
+      },
+      {
+        "code" : "26452005",
+        "display" : "Total gastrectomy"
+      },
+      {
+        "code" : "24431004",
+        "display" : "Esophagoduodenostomy w/complete gastrectomy"
+      },
+      {
+        "code" : "287816003",
+        "display" : "Radical gastrectomy"
+      },
+      {
+        "code" : "438338008",
+        "display" : "Total gastrecomy w/extended lymphadencectomy "
+      },
+      {
+        "code" : "53442002",
+        "display" : "Gastrectomy"
+      },
+      {
+        "code" : "16453004",
+        "display" : "Operation on stomach [NOS]"
+      },
+      {
+        "code" : "12807004",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "176430002",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "120001005",
+        "display" : "Testis excision"
+      },
+      {
+        "code" : "396692006",
+        "display" : "Radical Orchiectomy "
+      },
+      {
+        "code" : "236334001",
+        "display" : "Total Orchiectomy"
+      },
+      {
+        "code" : "71657006",
+        "display" : "Operation on testis [NOS]"
+      },
+      {
+        "code" : "20470003",
+        "display" : "Destruction of lesion"
+      },
+      {
+        "code" : "171988007",
+        "display" : "Excision of lesion"
+      },
+      {
+        "code" : "13619001",
+        "display" : "Thyroidectomy"
+      },
+      {
+        "code" : "24443003",
+        "display" : "Total thyroidectomy"
+      },
+      {
+        "code" : "30956003",
+        "display" : "Subtotal thyroidectomy"
+      },
+      {
+        "code" : "15463004",
+        "display" : "Operation on thyroid gland [NOS]"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "expansion" : {
+    "identifier" : "urn:uuid:74201de0-32b9-48fc-b5c2-3f686f759b18",
+    "timestamp" : "2020-01-17T23:22:20.021Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20190731"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "174337000",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "49264007",
+      "display" : "Excision of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "119894003",
+      "display" : "Anus excision"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "24265000",
+      "display" : "Operation on anus [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "48185007",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "108034003",
+      "display" : "Excision of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "112902005",
+      "display" : "Partial cystectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "63016009",
+      "display" : "Total Cystectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "64063003",
+      "display" : "Radical Cystectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "287716007",
+      "display" : "Urinary bladder reconstruction"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "52224004",
+      "display" : "Pelvic exenteration"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "149649000",
+      "display" : "Cystectomy dome of bladder"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "14861000",
+      "display" : "Operation on bladder [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "18734000",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "68471001",
+      "display" : "Excision of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "112705001",
+      "display" : "Amputation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "57168000",
+      "display" : "Operation on bone [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "68829005",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "64368001",
+      "display" : "Partial mastectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "70183006",
+      "display" : "Subcutaneous mastectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "172043006",
+      "display" : "Total mastectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "406505007",
+      "display" : "Modified radical mastectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "384723003",
+      "display" : "Radical mastectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "359740003",
+      "display" : "Extended radical mastectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "69031006",
+      "display" : "Mastectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "392090004",
+      "display" : "Operation on breast [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "31197001",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "36384005",
+      "display" : "Excision of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "116140006",
+      "display" : "Total hysterctomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "236886002",
+      "display" : "Hysterectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "116142003",
+      "display" : "Radical hysterectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "406044008",
+      "display" : "Pelvic exentration"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "112916000",
+      "display" : "Operation on cervix [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "176871003",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "236884004",
+      "display" : "Excision of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "387643005",
+      "display" : "Partial hysterectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "79876008",
+      "display" : "Operation on uterus  [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "18243008",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "386553005",
+      "display" : "Excision of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "3980006",
+      "display" : "Partial esophagectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "14072009",
+      "display" : "Total esophagectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "76443003",
+      "display" : "Total esophagectomy with gastropharyngostomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "45900003",
+      "display" : "Esophagectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "48114000",
+      "display" : "Operation on esophagus [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "52785004",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "69762004",
+      "display" : "Excision of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "81516001",
+      "display" : "Partial nephrectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "175905003",
+      "display" : "Total nephrectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "116033007",
+      "display" : "Radical nephrectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "175898006",
+      "display" : "Kidney operation  [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "78923006",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "88623004",
+      "display" : "Excision of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "80513001",
+      "display" : "Partial laryngectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "66478002",
+      "display" : "Total laryngectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "60041003",
+      "display" : "Laryngopharyngectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "72791001",
+      "display" : "Laryngectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "387636004",
+      "display" : "Operation on larynx [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "5415002",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "174431000",
+      "display" : "Wedge resecton of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "85946004",
+      "display" : "Lobectomy of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "15257006",
+      "display" : "Lobectomy w/ partial excision of adjacent lobes"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "107963000",
+      "display" : "Hepatectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "13580001000004101",
+      "display" : "Excision of tumor of liver"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "27280000",
+      "display" : "Liver transplant w/recipient hepatectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4974007",
+      "display" : "Operation on liver [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450608000",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "119746007",
+      "display" : "Excision of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "173170008",
+      "display" : "Bilobectomy of lung"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "359623004",
+      "display" : "Total lobectomy of lung"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "49795001",
+      "display" : "Total pneumonectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "91596000",
+      "display" : "Complete excision of lung with mediastinal dissection"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "119746007",
+      "display" : "Operation on lung [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "230859007",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "230810008",
+      "display" : "Excision of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "446103006",
+      "display" : "Partial excision of lesion of brain"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "17537007",
+      "display" : "Resection of spinal cord"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "447115003",
+      "display" : "Total excision of lesion of brain"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "67402009",
+      "display" : "Partial lobectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "171443003",
+      "display" : "Total lobectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "70586009",
+      "display" : "Operation on brain [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "177018009",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "35887003",
+      "display" : "Excision of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "116028008",
+      "display" : "Salpingo-oophorectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "29827000",
+      "display" : "Bilateral salpingectomy w/oophorectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "78698008",
+      "display" : "Unilateral salpingo-oophorectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "446526009",
+      "display" : "Debulking of neoplasm of ovary"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "55853002",
+      "display" : "Pelvic exenteraion, female"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "64887002",
+      "display" : "Operation on ovary [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "414158004",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "287847009",
+      "display" : "Partial pancreatectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "69036001",
+      "display" : "Total pancreaticoduodenectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "9524002",
+      "display" : "Total pancreatectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "265459006",
+      "display" : "Total pancreaticodudoenectomy with distal gastrectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "33149006",
+      "display" : "Pancreatectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "29630005",
+      "display" : "Operation on pancreas [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "10522005",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "37804007",
+      "display" : "Excision of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "81870009",
+      "display" : "Parotidectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "11150009",
+      "display" : "Partial parotidectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "13358001",
+      "display" : "Total parotidectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "173486005",
+      "display" : "Radical parotidectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "58456002",
+      "display" : "Operation on parotid gland [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "107923001",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "3786007",
+      "display" : "Excision of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "51265002",
+      "display" : "Pharyngectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "232546000",
+      "display" : "Total pharyngolaryngectomy w/ laryngectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "303621003",
+      "display" : "Total pharyngectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "23136006",
+      "display" : "Operation on pharynx [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450514003",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "90199006",
+      "display" : "Transurethral prostactomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "30426000",
+      "display" : "Subtotal prostactomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "26294005",
+      "display" : "Radical prostatectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "65111004",
+      "display" : "Pelvic exenteration"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "90470006",
+      "display" : "Prostactomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "741007",
+      "display" : "Operation on prostate [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "177975003",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "87279008",
+      "display" : "Excision of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "43075005",
+      "display" : "Segmental colectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "307656000",
+      "display" : "Subtotal colectomy with ileosigmoid anastomosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "26390003",
+      "display" : "Total  colectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "174059005",
+      "display" : "Proctocolectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "82874003",
+      "display" : "Operation on colon [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "52838002",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "79764004",
+      "display" : "Excision of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "82035006",
+      "display" : "Resection of polyp"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "116237003",
+      "display" : "Excision of lesion of rectum"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "307009004",
+      "display" : "Wedge resection"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "86789002",
+      "display" : "Abdominoperineal pull through"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "235364003",
+      "display" : "Total Proctectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "118841000",
+      "display" : "Operation on rectosigmoid [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "74971002",
+      "display" : "Operation on rectum [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "87031008",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "67373001",
+      "display" : "Excision of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "35646002",
+      "display" : "Excision of lesion of skin"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "177302005",
+      "display" : "Wide excision of skin lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "81723002",
+      "display" : "Amputaion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "392011001",
+      "display" : "Operation on skin [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "31468007",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "67097003",
+      "display" : "Partial splenectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "174776001",
+      "display" : "Total splenectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "234319005",
+      "display" : "Splenectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "59300005",
+      "display" : "Operation on spleen [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "45189000",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "32327002",
+      "display" : "Excision of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "49209004",
+      "display" : "Subtotal gastrectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "26452005",
+      "display" : "Total gastrectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "24431004",
+      "display" : "Esophagoduodenostomy w/complete gastrectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "287816003",
+      "display" : "Radical gastrectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "438338008",
+      "display" : "Total gastrecomy w/extended lymphadencectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "53442002",
+      "display" : "Gastrectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "16453004",
+      "display" : "Operation on stomach [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "12807004",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "176430002",
+      "display" : "Excision of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "120001005",
+      "display" : "Testis excision"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "396692006",
+      "display" : "Radical Orchiectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "236334001",
+      "display" : "Total Orchiectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "71657006",
+      "display" : "Operation on testis [NOS]"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "20470003",
+      "display" : "Destruction of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "171988007",
+      "display" : "Excision of lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "13619001",
+      "display" : "Thyroidectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "24443003",
+      "display" : "Total thyroidectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "30956003",
+      "display" : "Subtotal thyroidectomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "15463004",
+      "display" : "Operation on thyroid gland [NOS]"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "444256004",
+        "display" : "American Joint Commission on Cancer, Cancer Staging Manual, 6th edition neoplasm staging system (tumor staging)"
+      },
+      {
+        "code" : "443830009",
+        "display" : "American Joint Commission on Cancer, Cancer Staging Manual, 7th edition neoplasm staging system (tumor staging)"
+      },
+      {
+        "code" : "258235000",
+        "display" : "International Union Against Cancer (tumor staging)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "expansion" : {
+    "identifier" : "urn:uuid:ed35fd55-900e-4cc1-8586-058791bf76de",
+    "timestamp" : "2020-01-17T23:22:20.411Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20190731"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "444256004",
+      "display" : "American Joint Commission on Cancer, Cancer Staging Manual, 6th edition neoplasm staging system (tumor staging)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "443830009",
+      "display" : "American Joint Commission on Cancer, Cancer Staging Manual, 7th edition neoplasm staging system (tumor staging)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "258235000",
+      "display" : "International Union Against Cancer (tumor staging)"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "code",
+        "op" : "is-a",
+        "value" : "367651003"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: The filter \"code is-a 367651003\" was not understood in the context of http://snomed.info/sct"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "code",
+        "op" : "is-a",
+        "value" : "367651003"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "code",
+        "op" : "is-a",
+        "value" : "399919001"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "code",
+        "op" : "is-a",
+        "value" : "399983006"
+      },
+      {
+        "property" : "code",
+        "op" : "is-not-a",
+        "value" : "399983006"
+      },
+      {
+        "property" : "code",
+        "op" : "is-not-a",
+        "value" : "128640002"
+      },
+      {
+        "property" : "code",
+        "op" : "is-not-a",
+        "value" : "450890000"
+      },
+      {
+        "property" : "code",
+        "op" : "is-not-a",
+        "value" : "703548001"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "399878004",
+        "display" : "Malignant neoplasm with pilar differentiation (morphologic abnormality)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: The filter \"code is-a 367651003\" was not understood in the context of http://snomed.info/sct"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "55182004",
+        "display" : "Surgical margin uninvolved by tumor (finding)"
+      },
+      {
+        "code" : "370109009",
+        "display" : "Surgical margin involved by tumor (finding)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "expansion" : {
+    "identifier" : "urn:uuid:21dc2a6e-2ceb-47df-b3f7-db7ab5b2fedb",
+    "timestamp" : "2020-01-17T23:22:23.630Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20190731"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "55182004",
+      "display" : "Surgical margin uninvolved by tumor (finding)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "370109009",
+      "display" : "Surgical margin involved by tumor (finding)"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "373066001",
+        "display" : "Yes"
+      },
+      {
+        "code" : "373067005",
+        "display" : "No"
+      },
+      {
+        "code" : "261665006",
+        "display" : "Unknown"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "expansion" : {
+    "identifier" : "urn:uuid:b89feb04-97cc-4a1c-8b60-40cb11958ddf",
+    "timestamp" : "2020-01-17T23:22:25.489Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20190731"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "373066001",
+      "display" : "Yes"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "373067005",
+      "display" : "No"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "261665006",
+      "display" : "Unknown"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
