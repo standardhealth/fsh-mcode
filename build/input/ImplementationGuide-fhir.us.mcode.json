@@ -16,9 +16,8 @@
         }
       ]
     }
-
   ],
-  "description": "Gives an example of how FSH can be used to create the mCODE IG",
+  "description": "mCODE™ (short for Minimal Common Oncology Data Elements) is an initiative intended to assemble a core set of structured data elements for oncology electronic health records.",
   "packageId": "fhir.us.mcode",
   "license": "CC0-1.0",
   "fhirVersion": [
@@ -26,7 +25,7 @@
   ],
   "dependsOn": [
     {
-      "uri": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core-3.1.0",
+      "uri": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core|3.1.0",
       "packageId": "hl7.fhir.us.core",
       "version": "3.1.0"
     }
@@ -83,10 +82,18 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/CancerGenomicsReport"
+        },
+        "name": "Cancer Genomics Report",
+        "description": "Genetic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome. The identity of non-genomic laboratory tests is typically represented by a LOINC code. However, many genetic tests and panels do not have LOINC codes, although some might have an identifier in NCBI Genetic Testing Registry (GTR), a central location for voluntary submission of genetic test information by providers. To identify the diagnostic report, the name of the report must be in the text sub-field of the code structure. If there is a coded identifier from GTR, LOINC, or other source, then it should be included into the the code sub-field of the code structure. If there is no suitable code, the code can be omitted.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/CancerPatient"
         },
         "name": "Cancer Patient",
-        "description": "Demographics and other administrative information about an individual or animal receiving care or other health-related services.",
+        "description": "Defines constraints and extensions on the patient resource for the minimal set of data to query and retrieve patient demographic information.",
         "exampleBoolean": false
       },
       {
@@ -102,7 +109,7 @@
           "reference": "StructureDefinition/CancerRelatedRadiationProcedure"
         },
         "name": "Cancer-Related Radiation Procedure",
-        "description": "A radiological treatment addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the ReasonReference and ReasonCode to cancer conditions. Conformance note: If an ICD-10-PCS code is used in the code attribute, and there is a semantically equivalent SNOMED CT or CPT code, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html).",
+        "description": "A radiological treatment addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the ReasonReference and ReasonCode to cancer conditions. Conformance note: If an ICD-10-PCS code is used in the code attribute, and there is a semantically equivalent SNOMED CT or CPT code, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html)",
         "exampleBoolean": false
       },
       {
@@ -159,14 +166,6 @@
         },
         "name": "Genetic Specimen",
         "description": "A small sample of blood, hair, skin, amniotic fluid (the fluid that surrounds a fetus during pregnancy), or other tissue which is excised from a subject for the purposes of genomics testing or analysis.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/CancerGenomicsReport"
-        },
-        "name": "Cancer Genomics Report",
-        "description": "Genetic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome.",
         "exampleBoolean": false
       },
       {
@@ -230,7 +229,7 @@
           "reference": "StructureDefinition/PrimaryCancerCondition"
         },
         "name": "Primary Cancer Condition",
-        "description": "Records the history of the primary cancer condition, the original or first tumor in the body (Definition from: [NCI Dictionary of Cancer Terms](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor)). Cancers that are not clearly secondary (i.e., of uncertain origin or behavior) should be documented as primary. Cancer staging information summarized in this profile should reflect the most recent staging assessment on the patient, and should be updated if and when there is a new staging assessment. Past staging assessments will be preserved in instances of the TNMClinicalStageGroup and/or TNMPathologicalStageGroup, which refer back to PrimaryCancerCondition. Conformance note: For the code attribute, to be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.",
+        "description": "Records the history of the primary cancer condition, the original or first tumor in the body (Definition from: [NCI Dictionary of Cancer Terms](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor)). Cancers that are not clearly secondary (i.e., of uncertain origin or behavior) should be documented as primary.\r\n\r\nCancer staging information summarized in this profile should reflect the most recent staging assessment on the patient, and should be updated if and when there is a new staging assessment. Past staging assessments will be preserved in instances of the TNMClinicalStageGroup and/or TNMPathologicalStageGroup, which refer back to PrimaryCancerCondition.\r\n\r\nConformance note: For the code attribute, to be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.",
         "exampleBoolean": false
       },
       {
@@ -278,7 +277,7 @@
           "reference": "StructureDefinition/RelationToLandmark"
         },
         "name": "Relation to Landmark",
-        "description": "The relationship between a landmark that helps determine a body location and the body location itself. The location relative to a landmark is specified by specifying the location and type of landmark using a body site code and optional laterality/orientation, specifying the direction from the landmark to the body location, and specifying the distance from the landmark to the body location.",
+        "description": "The relationship between a landmark that helps determine a body location and the body location itself. The location relative to a landmark is specified by:\r\n* Specifying the location and type of landmark using a body site code and optional laterality/orientation,\r\n* Specifying the direction from the landmark to the body location, and\r\n* Specifying the distance from the landmark to the body location.",
         "exampleBoolean": false
       },
       {
@@ -286,7 +285,7 @@
           "reference": "StructureDefinition/SecondaryCancerCondition"
         },
         "name": "Secondary Cancer Condition",
-        "description": "Records the history of secondary neoplasms, including location(s) and the date of onset of metastases. A secondary cancer results from the spread (metastasization) of cancer from its original site (Definition from: NCI Dictionary of Cancer Terms). Conformance note: For the code attribute, to be compliant with US Core Profiles, SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.",
+        "description": "Records the history of secondary neoplasms, including location(s) and the date of onset of metastases. A secondary cancer results from the spread (metastasization) of cancer from its original site (Definition from: NCI Dictionary of Cancer Terms).\r\n\r\nConformance note: For the code attribute, to be compliant with US Core Profiles, SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.",
         "exampleBoolean": false
       },
       {
@@ -390,8 +389,121 @@
           "reference": "StructureDefinition/TumorMarker"
         },
         "name": "Tumor Marker",
-        "description": "The result of a tumor marker test. Tumor marker tests are generally used to guide cancer treatment decisions and monitor treatment, as well as to predict the chance of recovery and cancer recurrence. A tumor marker is a substance found in tissue or blood or other body fluids that may be a sign of cancer or certain benign (non-cancer) conditions. Most tumor markers are made by both normal cells and cancer cells, but they are made in larger amounts by cancer cells. A tumor marker may help to diagnose cancer, plan treatment, or find out how well treatment is working or if cancer has come back. Examples of tumor markers include CA-125 (in ovarian cancer), CA 15-3 (in breast cancer), CEA (in colon cancer), and PSA (in prostate cancer). Tumor markers differ from genetic markers in that they are measured at the levels of the protein and substance post-RNA protein synthesis. (Definition adapted from: [NCI Dictionary of Cancer Terms](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/tumor-marker-test) and [Cancer.Net](https://www.cancer.net/navigating-cancer-care/diagnosing-cancer/tests-and-procedures/tumor-marker-tests)). Implementation note: The data value for TumorMarkerTest has cardinality is 0..1 (required if known) because when the test result is indeterminate, no quantitative data value will be reported. Instead, the reason for the null value will be reported in the DataAbsentReason field.",
+        "description": "The result of a tumor marker test. Tumor marker tests are generally used to guide cancer treatment decisions and monitor treatment, as well as to predict the chance of recovery and cancer recurrence. A tumor marker is a substance found in tissue or blood or other body fluids that may be a sign of cancer or certain benign (noncancer) conditions. Most tumor markers are made by both normal cells and cancer cells, but they are made in larger amounts by cancer cells. A tumor marker may help to diagnose cancer, plan treatment, or find out how well treatment is working or if cancer has come back. Examples of tumor markers include CA-125 (in ovarian cancer), CA 15-3 (in breast cancer), CEA (in colon cancer), and PSA (in prostate cancer). Tumor markers differ from genetic markers in that they are measured at the levels of the protein and substance post-RNA protein synthesis. (Definition adapted from: [NCI Dictionary of Cancer Terms](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/tumor-marker-test) and [Cancer.Net](https://www.cancer.net/navigating-cancer-care/diagnosing-cancer/tests-and-procedures/tumor-marker-tests)). Implementation note: The data value for TumorMarkerTest has cardinality is 0..1 (required if known) because when the test result is indeterminate, no quantitative data value will be reported. Instead, the reason for the null value will be reported in the DataAbsentReason field.",
         "exampleBoolean": false
+      },
+     
+      {
+        "reference": {
+          "reference": "ValueSet/CancerBodyLocationVS"
+        },
+        "name": "Cancer Body Location Value Set",
+        "description": "Codes describing the location(s) of primary or secondary cancer. The value set includes all codes from the SNOMED CT body structure hierarchy (codes descending from 123037004 'Body Structure'). The cancer body location may also be expressed using ICD-O-3 topography codes, however, those codes are not included here due to intellectual property restrictions. No other code systems are considered conformant."
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/CancerDiseaseStatusEvidenceTypeVS"
+        },
+        "name": "Cancer Disease Status Evidence Type Value Set",
+        "description": "The type of evidence backing up the clinical determination of cancer progression. The code 'SCT#252416005 Histopathology test (procedure)' is intended to be used when there is a biopsy that contributes evidence of the cancer disease status."
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/CancerHistologicGradeVS"
+        },
+        "name": "Cancer Histologic Grade Value Set",
+        "description": "The grade of the tumor. This is a subset of the LOINC answer list LL213-0, which represents allowable values for NAACCR data item #440. The original answer list is outdated, as it includes terms pointing to the lineage of hematopoietic/lymphoid neoplasms, which have been retired by NAACCR as of version 18 Data Standards and Data Dictionary."
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/CancerRelatedSurgicalProcedureVS"
+        },
+        "name": "Cancer-Related Surgical Procedure Value Set",
+        "description": "Includes selected SNOMED CT codes that may be used in the treatment of cancer tumors. Codes from ICD-10-PCS and CPT are acceptable. CPT codes are not listed here due to intellectual property restrictions. ICD-10-PCS codes are not listed because of a limitation in the FHIR Implementation Guide publisher. For CPT and ICD-10-PCS, only codes representing surgical procedures should be used. \r\n\r\nConformance note: If an ICD-10-PCS code is used, and a semantically equivalent SNOMED CT code is available, the resulting FHIR Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html)."
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/CancerStagingSystemVS"
+        },
+        "name": "Cancer Staging System Value Set",
+        "description": "System used for staging. Because SNOMED CT does not currently have a code representing AJCC Version 8, specify the exact text 'AJCC Version 8' in the text sub-field of the code structure, and omit the code."
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/ClinVarVS"
+        },
+        "name": "ClinVar Value Set",
+        "description": "Value set of human genetic variants, drawn from [ClinVar](https://www.ncbi.nlm.nih.gov/clinvar/). The codes in this value set refer to the ClinVar Variation ID, or the identifier for the variant or set of variants that were interpreted. [Source: NCBI ClinVar Data Dictionary](https://www.ncbi.nlm.nih.gov/projects/clinvar/ClinVarDataDictionary.pdf)"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/GeneticSpecimenTypeVS"
+        },
+        "name": "Genetic Specimen Type Value Set",
+        "description": "The type of specimen analyzed in a genetic test. The values are taken from code system http://terminology.hl7.org/CodeSystem/v2-0487, and represent a subset of HL7 Version 2 Table 0487 (http://hl7.org/fhir/v2/0487)."
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/GeneticTestVS"
+        },
+        "name": "Genetic Test Value Set",
+        "description": "Value set containing codes representing genetic tests. Currently the best source of codes is the [Genetic Test Registry](http://www.ncbi.nlm.nih.gov/gtr). The user should be aware that the GTR cannot be a sole reliable source since the test data is voluntarily updated and there is no overarching data steward. This value set contains all codes from http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-lab-codes (namely, the subset of LOINC codes with CLASSTYPE = 1), plus all codes in GTR.  Implementation note: Although only a subset of LOINC codes is formally part of this value set, the value set itself contains all codes in LOINC, because FHIR cannot create an implicitly-defined value set based on LOINC's CLASSTYPE property. Conformance note: To be conformant to US Core, a LOINC code must be used, if available. Only if there is no suitable code in LOINC may other codes (such as those from GTR) be used."
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/HistologyMorphologyBehaviorVS"
+        },
+        "name": "Histology Morphology Behavior Value Set",
+        "description": "Codes representing the structure, arrangement, and behavioral characteristics of malignant neoplasms, and cancer cells. Inclusion criteria: in situ neoplasms and malignant neoplasms. Exclusion criteria: benign neoplasms and neoplasms of unspecified behavior. Note: As the vocabulary binding is extensible within this IG, ICD-O-3 morphology codes (including behavior suffix) may also be used; they are not included in the value set for intellectual property reasons. For primary cancers, the ICD-O-3 behavior suffix should be /1, /2, or /3. For secondary cancers, the ICD-O-3 behavior suffix should be /6. Only SNOMED CT and ICD-O-3 are considered conformant to the specification. However, to be compliant with US Core Profiles, ICD-O-3 may only be used if there is no suitable code in SNOMED CT."
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/SurgicalMarginInvolvementVS"
+        },
+        "name": "Surgical Margin Involvement Value Set",
+        "description": "Indication of whether the tumor was involved at the edge of resection."
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/TNMDistantMetastasesCategoryVS"
+        },
+        "name": "TNM Distant Metastases Category Value Set",
+        "description": "This value set is intended to contain allowable values for the M category, according to TNM staging rules. SNOMED CT codes or AJCC codes (preferrably, version 8 for current cancers) are allowed, but are not listed here due to AJCC intellectual property restrictions.\r\n\r\n* AJCC terminology: examples of M categories include 'cM0', denoting there is no evidence of distant metastases, and 'pM1', an indication that the cancer has metasticized. The full set of allowable clinical and pathologic M categories, along with its current descriptions, can be accessed through the AJCC Staging Manual and any applicable updates and corrections, as well as the AJCC API.\r\n\r\n* SNOMED CT: The SNOMED CT US Edition has content related to the M category under the hierarchy of 385380006 'Metastasis category finding', such as 30893008 'M0 category' and 443841006 'pM1a category'. If using SNOMED CT to store M category findings, the use of codes that do not contain descriptions of the categories, such as the examples provided, is encouraged, as stage finding codes in SNOMED CT may not be up-to-date with current AJCC guidance. Note that SNOMED CT codes do not always make a distinction between clinical and pathological classifications (e.g. 'cM0' and 'pM0' may be represented by the same SNOMED CT code 30893008 'M0 category'). In addition, SNOMED CT may not have complete TNM staging terminology and may require supplementation with codes from another controlled vocabulary (e.g. NCI Thesaurus)."
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/TNMPrimaryTumorCategoryVS"
+        },
+        "name": "TNM Primary Tumor Category Value Set",
+        "description": "This value set is intended to contain allowable values for the T category, according to TNM staging rules. SNOMED CT codes or AJCC codes (preferrably, version 8 for current cancers) are allowed, but are not listed here due to AJCC intellectual property restrictions.\r\n\r\n* AJCC terminology: examples of T categories include 'cTX', used when the tumor primary tumor cannot be evaluated, 'pT0', denoting there is no evidence of a primary tumor, and 'pTis', referencing carcinoma in situ (with some cancer-specific exceptions). Other T categories refer to increasing size of the primary tumor. Please note allowable T categories may vary between clinical and pathologic classifications. The full set of allowable clinical and pathologic T categories, along with its current descriptions, can be accessed through the AJCC Staging Manual and any applicable updates and corrections, as well as the AJCC API. * SNOMED CT has content related to the T category under the hierarchy of 385356007 'Tumor stage finding', such as 23351008 'T1 category' and 261650005 'Tumor stage T1c'. If using SNOMED CT to store T category findings, the use of codes that do not contain descriptions of the categories, such as the examples provided, is encouraged, as stage finding codes in SNOMED CT may not be up-to-date with current AJCC guidance. Note that SNOMED CT codes do not always make a distinction between clinical and pathological classifications (e.g. cT1 and pT1 may be represented by the same SNOMED CT code 23351008 'T1 category'). In addition, SNOMED CT may not have complete TNM staging terminology and may require supplementation with codes from another controlled vocabulary (e.g. NCI Thesaurus)."
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/TNMRegionalNodesCategoryVS"
+        },
+        "name": "TNM Regional Nodes Category Value Set",
+        "description": "This value set is intended to contain allowable values for the N category, according to TNM staging rules. SNOMED CT codes or AJCC codes (preferrably, version 8 for current cancers) are allowed, but are not listed here due to AJCC intellectual property restrictions.\r\n\r\n* AJCC terminology: examples of N categories include 'cN0', indicating no evidence of lymph node involvement, and 'pN1', indicating regional lymph node involvement to a small extent, with specific thresholds for the lymph node groups and number of lymph nodes involved. Other N categories refer to increasing lymph node involvement. Please note allowable N categories may vary between clinical and pathologic classifications. The full set of allowable clinical and pathologic N categories, along with its current descriptions, can be accessed through the AJCC Staging Manual and any applicable updates and corrections, as well as the AJCC API. * SNOMED CT has content related to the N category under the hierarchy of 385382003 'Node category finding', such as 5856006 'N3 category' and 277672002 'Node stage N1a'. If using SNOMED CT to store N category findings, the use of codes that do not contain descriptions of the categories, such as the examples provided, is encouraged, as stage finding codes in SNOMED CT may not be up-to-date with current AJCC guidance. Note that SNOMED CT codes do not always make a distinction between clinical and pathological classifications (e.g. 'cN1' and 'pN1' may be represented by the same SNOMED CT code 53623008 'N1 category'). In addition, SNOMED CT may not have complete TNM staging terminology and may require supplementation with codes from another controlled vocabulary (e.g. NCI Thesaurus)."
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/TNMStageGroupVS"
+        },
+        "name": "TNM Stage Group Value Set",
+        "description": "This value set is intended to contain allowable values for Stage Group, according to TNM staging rules. SNOMED CT codes or AJCC codes (preferrably, version 8 for current cancers) are allowed, but are not listed here due to AJCC intellectual property restrictions. *AJCC terminology: examples of stage groups include 'Stage 0' and 'Stage IIA'. The full set of stage groups, as well rules on how to assign a stage group, can be accessed through the AJCC Staging Manual and any applicable updates and corrections, as well as the AJCC API. * SNOMED CT has content representing stage group under the hierarchy of 261612004 'Stages', such as 258215001 'Stage 1' and 261614003 'Stage2A'. In addition, SNOMED CT may not have complete TNM staging terminology and may require supplementation with codes from another controlled vocabulary (e.g. NCI Thesaurus)."
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/TumorMarkerTestVS"
+        },
+        "name": "TumorMarkerTestVS",
+        "description": "Codes representing tests for tumor markers. This value set of LOINC codes is not comprehensive and can be extended. LOINC codes are preferred. Other vocabularies can be used only if the test of interest is not covered by LOINC. FHIR implementation note: At the current time, profiles for the specific LOINC tests mentioned here do not exist."
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/YesNoUnknownVS"
+        },
+        "name": "YesNoUnknownVS",
+        "description": "A value set containing yes, no, and unknown."
       }
     ],
     "page": {

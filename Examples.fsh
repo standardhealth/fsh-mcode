@@ -1,3 +1,6 @@
+Alias:   USCoreRace = http://hl7.org/fhir/us/core/StructureDefinition/us-core-race
+Alias:   USCoreBirthSex = http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex
+
 Instance: mCODEPrimaryCancerConditionExample01
 InstanceOf: PrimaryCancerCondition
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/PrimaryCancerCondition"
@@ -52,8 +55,8 @@ InstanceOf: CancerPatient
 Instance: mCODEPatientExample02
 InstanceOf: CancerPatient
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerPatient"
-* extension[us-core-race].extension[ombCategory].valueCoding = USCoreRace#2186-5 "Not Hispanic or Latino"
-* extension[us-core-birthsex] = GENDER#F 
+* extension[USCoreRace].extension[ombCategory].valueCoding = USCoreRace#2186-5 "Not Hispanic or Latino"
+* extension[USCoreBirthSex] = GENDER#F 
 * identifier.use = #usual
 * identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#MR "Medical Record Number"
 * identifier.system = "http://hospital.example.org"
@@ -78,11 +81,10 @@ InstanceOf: CancerPatient
 
 
 Instance: mCODEOrganizationExample01
-InstanceOf: Organization
+InstanceOf: USCoreOrganization
 * identifier.system = "http://hl7.org.fhir/sid/us-npi"
 * identifier.value = "1265714091"
-* active = #true 
-* extension[Status].valueCodeableConcept = SCT#55561003 "Active"
+* active = true
 * name = "Foundation Medicine"
 * contact.telecom.system = #phone
 * contact.telecom.value = "617-418-2200"
@@ -94,13 +96,13 @@ InstanceOf: Organization
 
 
 Instance: mCODEPractitionerExample01
-InstanceOf: Practitioner
+InstanceOf: USCorePractitioner
 * identifier[NPI].value = "9988776655"
 * name.family = "Anydoc"
 * name.given = "Kyle"
 * name.prefix = "Dr."
 * gender = #male
-* address.use = "home"
+* address.use = #home
 * address.line = "567 Healthcare Drive"
 * address.city = "Anytown"
 * address.state = "MA"
@@ -170,8 +172,8 @@ InstanceOf: CancerRelatedRadiationProcedure
 * asserter = Reference(mCODEPractitionerExample01)
 * performedDateTime = "2019-03-01"
 * extension[TreatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
-* extension[RadiationDose].extension[totalRadiationDoseDelivered].valueQuantity = UCUM#cGy 
-* extension[RadiationDose].extension[totalRadiationDoseDelivered].valueQuantity.value = "1200"
+* extension[RadiationDose].extension[TotalRadiationDoseDelivered].valueQuantity = UCUM#cGy 
+* extension[RadiationDose].extension[TotalRadiationDoseDelivered].valueQuantity.value = 1200.0
 * reasonReference = Reference(mCODEPrimaryCancerConditionExample01)
 * bodySite = SCT#41224006 "Structure of lower lobe of left lung (body structure)"
 
@@ -220,22 +222,22 @@ InstanceOf: TNMClinicalRegionalNodesCategory
 * valueCodeableConcept = AJCC#cN3 "N3"
 
 
-Instance: mCODETNMPathologicStageGroupExample01
-InstanceOf: TNMPathologicStageGroup
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMPathologicStageGroup"
+Instance: mCODETNMPathologicalStageGroupExample01
+InstanceOf: TNMPathologicalStageGroup
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMPathologicalStageGroup"
 * status = #final "final" 
 * category = #laboratory "laboratory"
 * method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#3C "IIIC"
-* hasMember[TNMPathologicPrimaryTumorCategory] = Reference(mCODETNMPathologicPrimaryTumorCategoryExample01)
-* hasMember[TNMPathologicRegionalNodesCategory] = Reference(mCODETNMPathologicRegionalNodesCategoryExample01)
-* hasMember[TNMPathologicDistantMetastasesCategory] = Reference(mCODETNMPathologicDistantMetastasesCategoryExample01)
+* hasMember[TNMPathologicalPrimaryTumorCategory] = Reference(mCODETNMPathologicalPrimaryTumorCategoryExample01)
+* hasMember[TNMPathologicalRegionalNodesCategory] = Reference(mCODETNMPathologicalRegionalNodesCategoryExample01)
+* hasMember[TNMPathologicalDistantMetastasesCategory] = Reference(mCODETNMPathologicalDistantMetastasesCategoryExample01)
 
-Instance: mCODETNMPathologicDistantMetastasesCategoryExample01
-InstanceOf: TNMPathologicDistantMetastasesCategory
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMPathologicDistantMetastasesCategory"
+Instance: mCODETNMPathologicalDistantMetastasesCategoryExample01
+InstanceOf: TNMPathologicalDistantMetastasesCategory
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMPathologicalDistantMetastasesCategory"
 * status = #final "final" 
 * category = #laboratory "laboratory"
 * method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
@@ -243,9 +245,9 @@ InstanceOf: TNMPathologicDistantMetastasesCategory
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#pM0 "M0"
 
-Instance: mCODETNMPathologicPrimaryTumorCategoryExample01
-InstanceOf: TNMPathologicPrimaryTumorCategory
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMPathologicPrimaryTumorCategory"
+Instance: mCODETNMPathologicalPrimaryTumorCategoryExample01
+InstanceOf: TNMPathologicalPrimaryTumorCategory
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMPathologicalPrimaryTumorCategory"
 * status = #final "final" 
 * category = #laboratory "laboratory"
 * method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
@@ -253,9 +255,9 @@ InstanceOf: TNMPathologicPrimaryTumorCategory
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#pT3 "T3"
 
-Instance: mCODETNMPathologicRegionalNodesCategoryExample01
-InstanceOf: TNMPathologicRegionalNodesCategory
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMPathologicNodesCategory"
+Instance: mCODETNMPathologicalRegionalNodesCategoryExample01
+InstanceOf: TNMPathologicalRegionalNodesCategory
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMPathologicalNodesCategory"
 * status = #final "final" 
 * category = #laboratory "laboratory"
 * method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
