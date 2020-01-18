@@ -1,5 +1,6 @@
 Instance: mCODECancerGeneticVariantExample01
 InstanceOf: CancerGeneticVariant
+//Id: mCODECancerGeneticVariantExample01
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerGeneticVariant"
 * status = #final "Final"
 // category is inherited, does not need to be set

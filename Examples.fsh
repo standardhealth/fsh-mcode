@@ -3,6 +3,7 @@ Alias:   USCoreBirthSex = http://hl7.org/fhir/us/core/StructureDefinition/us-cor
 
 Instance: mCODEPrimaryCancerConditionExample01
 InstanceOf: PrimaryCancerCondition
+//Id: mCODEPrimaryCancerConditionExample01
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/PrimaryCancerCondition"
 * clinicalStatus = #active "Active"
 * verificationStatus = #confirmed "Confirmed"
@@ -18,6 +19,7 @@ InstanceOf: PrimaryCancerCondition
 
 Instance: mCODEComorbidConditionExample01
 InstanceOf: ComorbidCondition
+//Id: mCODEComorbidConditionExample01
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/ComorbidCondition"
 * clinicalStatus = #active "Active"
 * verificationStatus = #confirmed "Confirmed"
@@ -29,6 +31,7 @@ InstanceOf: ComorbidCondition
 
 Instance: mCODEPatientExample01
 InstanceOf: CancerPatient
+//Id: mCODEPatientExample01
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerPatient"
 * identifier.use = #usual
 * identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#MR "Medical Record Number"
@@ -54,6 +57,7 @@ InstanceOf: CancerPatient
 
 Instance: mCODEPatientExample02
 InstanceOf: CancerPatient
+//Id: mCODEPatientExample02
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerPatient"
 * extension[USCoreRace].extension[ombCategory].valueCoding = USCoreRace#2186-5 "Not Hispanic or Latino"
 * extension[USCoreBirthSex] = GENDER#F 
@@ -82,6 +86,7 @@ InstanceOf: CancerPatient
 
 Instance: mCODEOrganizationExample01
 InstanceOf: USCoreOrganization
+//Id: mCODEOrganizationExample01
 * identifier.system = "http://hl7.org.fhir/sid/us-npi"
 * identifier.value = "1265714091"
 * active = true
@@ -97,6 +102,7 @@ InstanceOf: USCoreOrganization
 
 Instance: mCODEPractitionerExample01
 InstanceOf: USCorePractitioner
+//Id: mCODEPractitionerExample01
 * identifier[NPI].value = "9988776655"
 * name.family = "Anydoc"
 * name.given = "Kyle"
@@ -113,6 +119,7 @@ InstanceOf: USCorePractitioner
 
 Instance: mCODEECOGPerformanceStatusExample01 
 InstanceOf: ECOGPerformanceStatus
+//Id: mCODEECOGPerformanceStatusExample01 
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/ECOGPerformanceStatus" 
 * status = #final "final"
 * method = SCT#5880005 "Clinical examination"
@@ -124,6 +131,7 @@ InstanceOf: ECOGPerformanceStatus
 
 Instance: mCODEKarnofskyPerformanceStatusExample01
 InstanceOf: KarnofskyPerformanceStatus
+//Id: mCODEKarnofskyPerformanceStatusExample01
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/KarnofskyPerformanceStatus"
 * status = #final "final"
 * category = #survey "survey"
@@ -136,6 +144,7 @@ InstanceOf: KarnofskyPerformanceStatus
 
 Instance: mCODECancerRelatedMedicationStatementExample01
 InstanceOf: CancerRelatedMedicationStatement
+//Id: mCODECancerRelatedMedicationStatementExample01
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerRelatedMedicationStatement"
 * status = #active "active"
 * category = #community "community"
@@ -152,6 +161,7 @@ InstanceOf: CancerRelatedMedicationStatement
 
 Instance: mCODECancerRelatedSurgicalProcedureExample01
 InstanceOf: CancerRelatedSurgicalProcedure
+//Id: mCODECancerRelatedSurgicalProcedureExample01
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerRelatedSurgicalProcedure"
 * status = #completed "completed"
 * code = SCT#359615001 "Partial lobectomy of lung (procedure)"
@@ -165,6 +175,7 @@ InstanceOf: CancerRelatedSurgicalProcedure
 
 Instance: mCODECancerRelatedRadiationProcedureExample01
 InstanceOf: CancerRelatedRadiationProcedure 
+//Id: mCODECancerRelatedRadiationProcedureExample01
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerRelatedRadiationProcedure"
 * status = #completed "completed" 
 * code = SCT#152198000 "Brachytherapy (procedure)"
@@ -180,6 +191,7 @@ InstanceOf: CancerRelatedRadiationProcedure
 
 Instance: mCODETNMClinicalStageGroupExample01
 InstanceOf: TNMClinicalStageGroup
+//Id: mCODETNMClinicalStageGroupExample01
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMClinicalStageGroup"
 * status = #final "final" 
 * category = #survey "Survey"
@@ -193,6 +205,7 @@ InstanceOf: TNMClinicalStageGroup
 
 Instance: mCODETNMClinicalDistantMetastasesCategoryExample01
 InstanceOf: TNMClinicalDistantMetastasesCategory
+//Id: mCODETNMClinicalDistantMetastasesCategoryExample01
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMClinicalDistantMetastasesCategory"
 * status = #final "final" 
 * category = #survey "Survey"
@@ -203,6 +216,7 @@ InstanceOf: TNMClinicalDistantMetastasesCategory
 
 Instance: mCODETNMClinicalPrimaryTumorCategoryExample01
 InstanceOf: TNMClinicalPrimaryTumorCategory
+//Id: mCODETNMClinicalPrimaryTumorCategoryExample01
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMClinicalPrimaryTumorCategory"
 * status = #final "final" 
 * category = #survey "Survey"
@@ -213,6 +227,7 @@ InstanceOf: TNMClinicalPrimaryTumorCategory
 
 Instance: mCODETNMClinicalRegionalNodesCategoryExample01
 InstanceOf: TNMClinicalRegionalNodesCategory
+//Id: mCODETNMClinicalRegionalNodesCategoryExample01
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMClinicalRegionalNodesCategory"
 * status = #final "final" 
 * category = #survey "Survey"
@@ -224,6 +239,7 @@ InstanceOf: TNMClinicalRegionalNodesCategory
 
 Instance: mCODETNMPathologicalStageGroupExample01
 InstanceOf: TNMPathologicalStageGroup
+//Id: mCODETNMPathologicalStageGroupExample01
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMPathologicalStageGroup"
 * status = #final "final" 
 * category = #laboratory "laboratory"
@@ -237,6 +253,7 @@ InstanceOf: TNMPathologicalStageGroup
 
 Instance: mCODETNMPathologicalDistantMetastasesCategoryExample01
 InstanceOf: TNMPathologicalDistantMetastasesCategory
+//Id: mCODETNMPathologicalDistantMetastasesCategoryExample01
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMPathologicalDistantMetastasesCategory"
 * status = #final "final" 
 * category = #laboratory "laboratory"
@@ -247,6 +264,7 @@ InstanceOf: TNMPathologicalDistantMetastasesCategory
 
 Instance: mCODETNMPathologicalPrimaryTumorCategoryExample01
 InstanceOf: TNMPathologicalPrimaryTumorCategory
+//Id: mCODETNMPathologicalPrimaryTumorCategoryExample01
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMPathologicalPrimaryTumorCategory"
 * status = #final "final" 
 * category = #laboratory "laboratory"
@@ -257,6 +275,7 @@ InstanceOf: TNMPathologicalPrimaryTumorCategory
 
 Instance: mCODETNMPathologicalRegionalNodesCategoryExample01
 InstanceOf: TNMPathologicalRegionalNodesCategory
+//Id: mCODETNMPathologicalRegionalNodesCategoryExample01
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMPathologicalNodesCategory"
 * status = #final "final" 
 * category = #laboratory "laboratory"
