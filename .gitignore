@@ -2,6 +2,7 @@ build/input/resources/**
 build/output/**
 build/temp/**
 build/template/**
-build/StructureDefinition*
 build/input/.DS_Store
+build/StructureDefinition*
+build/ValueSet*
 
