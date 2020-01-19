@@ -47,7 +47,7 @@ Description: "Codes representing the structure, arrangement, and behavioral char
 * codes from system SCT where concept is-a #399919001 "Carcinoma in situ - category (morphologic abnormality)"
 * codes from system SCT where
     concept is-a #399983006 "In situ adenomatous neoplasm - category (morphologic abnormality)" and
-    concept is-not-a #399983006 "Papillary neoplasm, pancreatobiliary-type, with high grade intraepithelial neoplasia (morphologic abnormality)" and
+    concept is-not-a #450893003 "Papillary neoplasm, pancreatobiliary-type, with high grade intraepithelial neoplasia (morphologic abnormality)" and
     concept is-not-a #128640002 "Glandular intraepithelial neoplasia, grade III (morphologic abnormality)" and
     concept is-not-a #450890000 "Glandular intraepithelial neoplasia, low grade (morphologic abnormality)" and
     concept is-not-a #703548001 "Endometrioid intraepithelial neoplasia (morphologic abnormality)"
