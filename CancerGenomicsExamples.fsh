@@ -14,3 +14,23 @@ InstanceOf: CancerGeneticVariant
 * component[VariationCode].valueCodeableConcept = CLINVAR#619728 "NC_000019.8:g.1171707G>A"
 * component[GenomicDNAChange].valueCodeableConcept = HGVS#NC_000019.8:g.1171707G>A "NC_000019.8:g.1171707G>A"
 * component[GenomicSourceClass].valueCodeableConcept = LNC#LA6684-0 "Somatic"
+
+Instance: mCODECancerGenomicsReportExample01
+InstanceOf: CancerGenomicsReport
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/GenomicsReport"
+* status = #final "Final"
+// * category = OBSCAT#GE "Genetics"  // mlt: supposedly, fixed values are inherited and does not need to be specified.
+// * code = LNC#81247-9 "Master HL7 genetic variant reporting panel"  // ditto on inheritance
+* subject = Reference(mCODEPatientExample01)
+* effectiveDateTime = "2019-04-01"
+* issued = "2019-04-01T11:45:33+11:00"
+* result[CancerGeneticVariant] = Reference(mCODECancerGeneticVariantExample01)
+* result[GenomicRegionStudied] = Reference(mCODEGenomicRegionStudiedExample01)
+
+
+Instance: mCODEGenomicRegionStudiedExample01
+InstanceOf: GenomicRegionStudied
+* subject = Reference(mCODEPatientExample01)
+* effectiveDateTime = "2019-04-01"
+* issued = "2019-04-01T11:45:33+11:00"
+* component[GeneStudied].valueCodeableConcept = HGNC#619728 "STK11" 
