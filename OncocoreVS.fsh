@@ -38,19 +38,19 @@ Description: "Value set of human genetic variants, drawn from [ClinVar](https://
 ValueSet:     CancerBodyLocationVS
 Title: "Cancer Body Location Value Set"
 Description:  "Codes describing the location(s) of primary or secondary cancer. The value set includes all codes from the SNOMED CT body structure hierarchy (codes descending from 123037004 'Body Structure'). The cancer body location may also be expressed using ICD-O-3 topography codes, however, those codes are not included here due to intellectual property restrictions. No other code systems are considered conformant."
-* codes from system SCT where code is-a SCT#123037004  "Body Structure"
+* codes from system SCT where concept is-a #123037004  "Body Structure"
 
 ValueSet:   HistologyMorphologyBehaviorVS
 Title: "Histology Morphology Behavior Value Set"
 Description: "Codes representing the structure, arrangement, and behavioral characteristics of malignant neoplasms, and cancer cells. Inclusion criteria: in situ neoplasms and malignant neoplasms. Exclusion criteria: benign neoplasms and neoplasms of unspecified behavior. Note: As the vocabulary binding is extensible within this IG, ICD-O-3 morphology codes (including behavior suffix) may also be used; they are not included in the value set for intellectual property reasons. For primary cancers, the ICD-O-3 behavior suffix should be /1, /2, or /3. For secondary cancers, the ICD-O-3 behavior suffix should be /6. Only SNOMED CT and ICD-O-3 are considered conformant to the specification. However, to be compliant with US Core Profiles, ICD-O-3 may only be used if there is no suitable code in SNOMED CT."
-* codes from system SCT where code is-a SCT#367651003 "Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)"
-* codes from system SCT where code is-a SCT#399919001 "Carcinoma in situ - category (morphologic abnormality)"
+* codes from system SCT where concept is-a #367651003 "Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)"
+* codes from system SCT where concept is-a #399919001 "Carcinoma in situ - category (morphologic abnormality)"
 * codes from system SCT where
-    code is-a SCT#399983006 "In situ adenomatous neoplasm - category (morphologic abnormality)" and
-    code is-not-a SCT#399983006 "Papillary neoplasm, pancreatobiliary-type, with high grade intraepithelial neoplasia (morphologic abnormality)" and
-    code is-not-a SCT#128640002 "Glandular intraepithelial neoplasia, grade III (morphologic abnormality)" and
-    code is-not-a SCT#450890000 "Glandular intraepithelial neoplasia, low grade (morphologic abnormality)" and
-    code is-not-a SCT#703548001 "Endometrioid intraepithelial neoplasia (morphologic abnormality)"
+    concept is-a #399983006 "In situ adenomatous neoplasm - category (morphologic abnormality)" and
+    concept is-not-a #450893003 "Papillary neoplasm, pancreatobiliary-type, with high grade intraepithelial neoplasia (morphologic abnormality)" and
+    concept is-not-a #128640002 "Glandular intraepithelial neoplasia, grade III (morphologic abnormality)" and
+    concept is-not-a #450890000 "Glandular intraepithelial neoplasia, low grade (morphologic abnormality)" and
+    concept is-not-a #703548001 "Endometrioid intraepithelial neoplasia (morphologic abnormality)"
 * SCT#399878004 "Malignant neoplasm with pilar differentiation (morphologic abnormality)"
 
 ValueSet:   CancerHistologicGradeVS

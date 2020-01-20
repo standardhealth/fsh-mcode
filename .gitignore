@@ -1,13 +1,8 @@
 build/input/resources/**
-build/input-cache/**
 build/output/**
 build/temp/**
 build/template/**
-_genonce.bat
-_genonce.sh
-_updatePublisher.bat
-_updatePublisher.sh
-build/StructureDefinition*
 build/input/.DS_Store
-build/input/ignoreWarnings.txt
+build/StructureDefinition*
+build/ValueSet*
 
