@@ -220,12 +220,12 @@ The identity of non-genomic laboratory tests is typically represented by a LOINC
 * result ^slicing.description = "Slice based on the reference profile and code pattern"
 * result contains
     CancerGeneticVariant 0..1 MS and
-    RegionStudied 0..1 MS
+    GenomicRegionStudied 0..1 MS
 
-Profile:    RegionStudied
+Profile:    GenomicRegionStudied
 Parent:     USCoreObservationLab
-Id:         RegionStudied
-Title:      "Genetic Region Studied"
+Id:         GenomicRegionStudied
+Title:      "Genomic Region Studied"
 Description:    "The area of the genome region referenced in testing for variants."
 * code MS
 * code = LNC#53041-0 "DNA region of interest panel"
@@ -234,10 +234,19 @@ Description:    "The area of the genome region referenced in testing for variant
 * component ^slicing.rules = #open
 * component ^slicing.description = "Slice based on the component.code pattern"
 * component contains
-    GeneMutations 0..* MS 
+    GeneMutations 0..* MS 	    GeneStudied 0..* MS and
+    GeneMutations 0..* MS and
+    DNARegionDescription 0..* MS and
+    DNARangesExamined 0..* MS and
+    GenomicRegionCoordinateSystem 0..1 MS and
+    GenomicReferenceSequenceId 0..1 MS
 
-/*
-// MLT_20200112: commented out GeneMutations due to lack of current support for components.
+/// MLT_20200117: The CG Reporting IG contains a component named 'region-coverage'. This was omitted on purpose since the profile specified a non-existing code system and code "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes". mCODE to omit until there is something substantial there.
+// MLT_20200112: commented out GeneMutations due to lack of current support for components.	
+/*   // MLT_start of block comment
+// ******* GenomicRegionStudied Components ******
+// MLT_20200112: All components commented out due to lack of support as of SUSHI 0.5.0.
+// MLT_20200117: This is only one way to represent components.  See below on the alternate (and likely recommended way of representing slices once it's supported). Given that, only the first component is shown with this method.  The rest are represented in the 'Slice:' keyword.
 
 * component[GeneMutations] ^short = "Gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal"
 * component[GeneMutations].code = LNC#36908-2
@@ -245,9 +254,11 @@ Description:    "The area of the genome region referenced in testing for variant
 * component[GeneMutations].valueCodeableConcept 1..1
 * component[GeneMutations].valueCodeableConcept from from http://varnomen.hgvs.org (required)
  */
+ 
+ */  // MLT_end of block comment
 
- // alternate way of defining slices (not yet supported)
-/*
+/*  // MLT_start of block comment
+ // *** alternate way of defining slices (not yet supported)***
 Slice:     GeneMutations
 Parent:    ObservationComponent
 Id:        GeneMutations
@@ -257,4 +268,41 @@ Description: "ene mutations tested for in Blood or Tissue by Molecular genetics 
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1
 * valueCodeableConcept from http://www.genenames.org/geneId (extensible)
-*/
+
+Slice:     DNARegionDescription
+Parent:    ObservationComponent
+Id:        DNARegionDescription
+Title:     "DNA Region Description"
+Description: "Description for the DNA region studied in the genomics report"
+* code = LNC#81293-3
+* value[x] 1..1
+* value[x] only String
+
+Slice:     DNARangesExamined
+Parent:    ObservationComponent
+Id:        DNARangesExamined
+Title:     "DNA Ranges Examined"
+Description: "Range(s) of DNA sequence examined"
+* code = LNC#51959-5
+* value[x] 1..1
+* value[x] only Range
+
+Slice:     GenomicRegionCoordinateSystem
+Parent:    ObservationComponent
+Id:        GenomicRegionCoordinateSystem
+Title:     "Genomic Region Coordinate System"
+Description: "A genomic coordinate is a position along a sequence."
+* code = LNC#92822-6
+* value[x] only CodeableConcept
+* valueCodeableConcept 1..1
+* valueCodeableConcept from https://fhir.loinc.org/ValueSet/LL5323-2 (preferred)
+
+Slice:     GenomicReferenceSequenceId
+Parent:    ObservationComponent
+Id:        GenomicReferenceSequenceId
+Title:     "Genomic reference sequence identifier"
+Description: "Range(s) of DNA sequence examined. The genomic reference sequence is a contiguous stretch of chromosome DNA that spans all of the exons of the gene and includes transcribed and non transcribed stretches. For this ID use either the NCBI genomic nucleotide RefSeq IDs with their version number (see: NCBI.NLM.NIH.Gov/RefSeq) or use the LRG identifiers, without transcript (t or p) extensions -- when they become available. (source: LOINC)"
+* code = LNC#48013-7
+* value[x] 1..1  // MLT_20200117: CG Reporting IG does not bind the value.
+*/  // MLT_end of block comment
+
