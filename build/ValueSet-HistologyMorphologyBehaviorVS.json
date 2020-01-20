@@ -13,7 +13,7 @@
         "system": "http://snomed.info/sct",
         "filter": [
           {
-            "property": "code",
+            "property": "concept",
             "op": "is-a",
             "value": "367651003"
           }
@@ -23,7 +23,7 @@
         "system": "http://snomed.info/sct",
         "filter": [
           {
-            "property": "code",
+            "property": "concept",
             "op": "is-a",
             "value": "399919001"
           }
@@ -33,27 +33,27 @@
         "system": "http://snomed.info/sct",
         "filter": [
           {
-            "property": "code",
+            "property": "concept",
             "op": "is-a",
             "value": "399983006"
           },
           {
-            "property": "code",
+            "property": "concept",
             "op": "is-not-a",
-            "value": "399983006"
+            "value": "450893003"
           },
           {
-            "property": "code",
+            "property": "concept",
             "op": "is-not-a",
             "value": "128640002"
           },
           {
-            "property": "code",
+            "property": "concept",
             "op": "is-not-a",
             "value": "450890000"
           },
           {
-            "property": "code",
+            "property": "concept",
             "op": "is-not-a",
             "value": "703548001"
           }

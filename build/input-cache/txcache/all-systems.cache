@@ -11,25 +11,6 @@
       "system" : "http://hl7.org/fhir/resource-types"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code system \"\" is not known (encountered paired with code = \"http://hl7.org/fhirpath/System.String\"); The code provided (#http://hl7.org/fhirpath/System.String) is not  valid in the value set FHIRDefinedType"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "code" : "http://hl7.org/fhirpath/System.String"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://hl7.org/fhir/data-types"
-    },
-    {
-      "system" : "http://hl7.org/fhir/resource-types"
-    }]
-  }
 }, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "",
@@ -57,14 +38,14 @@ e: {
   "name" : "GeneticTestVS",
   "title" : "Genetic Test Value Set",
   "status" : "active",
-  "date" : "2020-01-17T18:21:32-05:00",
+  "date" : "2020-01-17T17:21:58-05:00",
   "expansion" : {
     "extension" : [{
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-toocostly",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:eff1e06b-3bbb-4eaa-b3e3-673217cbc440",
-    "timestamp" : "2020-01-17T23:22:22.380Z",
+    "identifier" : "urn:uuid:3d14aded-f759-4d46-a124-856cabe568e1",
+    "timestamp" : "2020-01-17T22:22:34.425Z",
     "parameter" : [{
       "name" : "expansion-source",
       "valueString" : "ValueSet/GeneticTestVS"

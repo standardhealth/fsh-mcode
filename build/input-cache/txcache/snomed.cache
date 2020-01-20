@@ -2,26 +2,6 @@
 {"code" : {
   "system" : "http://snomed.info/sct",
   "code" : "64572001"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false"}####
-v: {
-  "display" : "Disease",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "398192003"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false"}####
-v: {
-  "display" : "Co-morbid conditions (finding)",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "64572001"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "Disease",
@@ -35,26 +15,6 @@ v: {
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "Co-morbid conditions (finding)",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "53438000"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "Radiation therapy procedure or service",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "387713003"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "Surgical procedure (procedure)",
   "severity" : null,
   "error" : ""
 }
@@ -95,8 +55,8 @@ e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
   "expansion" : {
-    "identifier" : "urn:uuid:2bd6219a-cacb-4dbd-aabe-802db630a32d",
-    "timestamp" : "2020-01-17T23:21:36.614Z",
+    "identifier" : "urn:uuid:83cd5bf4-573b-41f0-ad47-927e988ffec9",
+    "timestamp" : "2020-01-17T22:22:03.957Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueString" : "-1"
@@ -176,8 +136,8 @@ e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
   "expansion" : {
-    "identifier" : "urn:uuid:14dd7194-d0e5-47c4-9807-f163f88adff5",
-    "timestamp" : "2020-01-17T23:21:36.817Z",
+    "identifier" : "urn:uuid:981c2b47-8147-46d9-8768-2af8592cebf4",
+    "timestamp" : "2020-01-17T22:22:04.129Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueString" : "-1"
@@ -940,8 +900,8 @@ e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
   "expansion" : {
-    "identifier" : "urn:uuid:0e491bd3-b0f4-4a7f-91ec-83e19874afa4",
-    "timestamp" : "2020-01-17T23:21:37.052Z",
+    "identifier" : "urn:uuid:3e29110e-01fd-4ca7-97c1-1d87298b70dc",
+    "timestamp" : "2020-01-17T22:22:04.347Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueString" : "-1"
@@ -1798,8 +1758,8 @@ e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
   "expansion" : {
-    "identifier" : "urn:uuid:186bd48b-58f6-4821-a308-6036d8049eba",
-    "timestamp" : "2020-01-17T23:21:37.536Z",
+    "identifier" : "urn:uuid:8a13c051-9637-44db-960c-96036ead87de",
+    "timestamp" : "2020-01-17T22:22:04.769Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueString" : "-1"
@@ -1848,8 +1808,8 @@ e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
   "expansion" : {
-    "identifier" : "urn:uuid:aa868389-1056-417c-b277-e9c48edc8496",
-    "timestamp" : "2020-01-17T23:21:37.739Z",
+    "identifier" : "urn:uuid:159ce055-9104-44fe-9343-35c280c4ab49",
+    "timestamp" : "2020-01-17T22:22:04.941Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueString" : "-1"
@@ -1892,8 +1852,8 @@ e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
   "expansion" : {
-    "identifier" : "urn:uuid:7deeb16f-2a1f-4c43-afa7-0cfcc5fa9e33",
-    "timestamp" : "2020-01-17T23:21:37.942Z",
+    "identifier" : "urn:uuid:2e60d282-295d-4e4c-8f74-9d0e3390db3f",
+    "timestamp" : "2020-01-17T22:22:05.097Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueString" : "-1"
@@ -1945,8 +1905,8 @@ e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
   "expansion" : {
-    "identifier" : "urn:uuid:fc952348-59c7-4350-984b-ac12f0d5a78c",
-    "timestamp" : "2020-01-17T23:21:39.208Z",
+    "identifier" : "urn:uuid:61da50c0-3be1-40b0-bddd-511e93e1c8a2",
+    "timestamp" : "2020-01-17T22:22:05.894Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueString" : "-1"
@@ -2032,8 +1992,8 @@ e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
   "expansion" : {
-    "identifier" : "urn:uuid:ede7b342-816e-480e-93f8-4a993246cd6c",
-    "timestamp" : "2020-01-17T23:22:19.349Z",
+    "identifier" : "urn:uuid:53463de2-06e7-4414-ba55-a3ed3f8e6c15",
+    "timestamp" : "2020-01-17T22:22:31.738Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueString" : "-1"
@@ -2109,8 +2069,8 @@ e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
   "expansion" : {
-    "identifier" : "urn:uuid:4ed63bc4-d1e2-4427-a5ef-77f26fef71f5",
-    "timestamp" : "2020-01-17T23:22:19.692Z",
+    "identifier" : "urn:uuid:f84fad9c-7fea-4ec5-b6fa-207a27ec3ebe",
+    "timestamp" : "2020-01-17T22:22:31.941Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueString" : "-1"
@@ -2869,8 +2829,8 @@ e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
   "expansion" : {
-    "identifier" : "urn:uuid:74201de0-32b9-48fc-b5c2-3f686f759b18",
-    "timestamp" : "2020-01-17T23:22:20.021Z",
+    "identifier" : "urn:uuid:ac35a47b-7cae-422a-b688-09e424c595bd",
+    "timestamp" : "2020-01-17T22:22:32.175Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueString" : "-1"
@@ -3723,8 +3683,8 @@ e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
   "expansion" : {
-    "identifier" : "urn:uuid:ed35fd55-900e-4cc1-8586-058791bf76de",
-    "timestamp" : "2020-01-17T23:22:20.411Z",
+    "identifier" : "urn:uuid:a156edde-1c59-4d02-96de-3782c571030d",
+    "timestamp" : "2020-01-17T22:22:32.441Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueString" : "-1"
@@ -3850,8 +3810,8 @@ e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
   "expansion" : {
-    "identifier" : "urn:uuid:21dc2a6e-2ceb-47df-b3f7-db7ab5b2fedb",
-    "timestamp" : "2020-01-17T23:22:23.630Z",
+    "identifier" : "urn:uuid:de1d6799-fa4d-4700-a556-9d1477fdf0e2",
+    "timestamp" : "2020-01-17T22:22:35.488Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueString" : "-1"
@@ -3899,8 +3859,8 @@ e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
   "expansion" : {
-    "identifier" : "urn:uuid:b89feb04-97cc-4a1c-8b60-40cb11958ddf",
-    "timestamp" : "2020-01-17T23:22:25.489Z",
+    "identifier" : "urn:uuid:22cd8656-826d-48c6-8611-8b1b6b67bc82",
+    "timestamp" : "2020-01-17T22:22:36.629Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueString" : "-1"

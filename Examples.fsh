@@ -59,8 +59,8 @@ Instance: mCODEPatientExample02
 InstanceOf: CancerPatient
 //Id: mCODEPatientExample02
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerPatient"
-* extension[USCoreRace].extension[ombCategory].valueCoding = USCoreRace#2186-5 "Not Hispanic or Latino"
-* extension[USCoreBirthSex] = GENDER#F 
+// * extension[USCoreRace].extension[ombCategory].valueCoding = USCoreRace#2054-5 "Black or African American"
+//* extension[USCoreBirthSex] = GENDER#F 
 * identifier.use = #usual
 * identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#MR "Medical Record Number"
 * identifier.system = "http://hospital.example.org"

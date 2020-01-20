@@ -16,7 +16,7 @@ InstanceOf: CancerGeneticVariant
 * component[GenomicSourceClass].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 
 Instance: mCODECancerGenomicsReportExample01
-InstanceOf: mCODECancerGenomicsReportExample01
+InstanceOf: CancerGenomicsReport
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/GenomicsReport"
 * status = #final "Final"
 // * category = OBSCAT#GE "Genetics"  // mlt: supposedly, fixed values are inherited and does not need to be specified.
@@ -24,8 +24,8 @@ InstanceOf: mCODECancerGenomicsReportExample01
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * issued = "2019-04-01T11:45:33+11:00"
-* Result[CancerGeneticVariant] = mCODECancerGeneticVariantExample01)
-* Result[GenomicRegionStudied] = mCODEGenomicRegionStudiedExample01)
+* result[CancerGeneticVariant] = Reference(mCODECancerGeneticVariantExample01)
+* result[GenomicRegionStudied] = Reference(mCODEGenomicRegionStudiedExample01)
 
 
 Instance: mCODEGenomicRegionStudiedExample01
