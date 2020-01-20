@@ -5,4 +5,14 @@ build/template/**
 build/input/.DS_Store
 build/StructureDefinition*
 build/ValueSet*
+build/Procedure*
+build/Observation*
+build/Practitioner*
+build/Patient*
+build/Organization*
+build/MedicationStatement*
+build/DiagnosticReport*
+build/Condition*
+build/.DS_Store
+
 
