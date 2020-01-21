@@ -391,8 +391,7 @@
           "name": "Tumor Marker",
           "description": "The result of a tumor marker test. Tumor marker tests are generally used to guide cancer treatment decisions and monitor treatment, as well as to predict the chance of recovery and cancer recurrence. A tumor marker is a substance found in tissue or blood or other body fluids that may be a sign of cancer or certain benign (noncancer) conditions. Most tumor markers are made by both normal cells and cancer cells, but they are made in larger amounts by cancer cells. A tumor marker may help to diagnose cancer, plan treatment, or find out how well treatment is working or if cancer has come back. Examples of tumor markers include CA-125 (in ovarian cancer), CA 15-3 (in breast cancer), CEA (in colon cancer), and PSA (in prostate cancer). Tumor markers differ from genetic markers in that they are measured at the levels of the protein and substance post-RNA protein synthesis. (Definition adapted from: [NCI Dictionary of Cancer Terms](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/tumor-marker-test) and [Cancer.Net](https://www.cancer.net/navigating-cancer-care/diagnosing-cancer/tests-and-procedures/tumor-marker-tests)). Implementation note: The data value for TumorMarkerTest has cardinality is 0..1 (required if known) because when the test result is indeterminate, no quantitative data value will be reported. Instead, the reason for the null value will be reported in the DataAbsentReason field.",
           "exampleBoolean": false
-        },
-        
+        },      
         {
           "reference": {
             "reference": "ValueSet/CancerBodyLocationVS"
@@ -468,14 +467,7 @@
             "reference": "ValueSet/SecondaryCancerDisorderVS"
           },
           "name": "SecondaryCancerDisorderVS",
-          "description": "Types of secondary malignant neoplastic disease, coded in SNOMED CT or ICD-10-CM. 
-
-          Conformance note: To be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.
-          
-          * SNOMED CT coding: Use a code from the disorder hierarchy under secondary malignant neoplastic disease (SNOMED CT 128462008).
-          * ICD-10-CM coding: Use one of the codes given in this value set representing secondary malignant neoplasms and neoplasms of uncertain or unspecified behavior. If body site is not precoordinated (implied by the code), it should be specified separately using the body location.
-          
-          Note that ICD-O-3 specifies morphology and topography, not disorder; in this case that the disorder code must be SNOMED CT 128462008 (Secondary malignant neoplastic disease). The ICD-O-3 morphology and topography codes should be entered in the HistologyMorphologyBehavior and bodySite fields, respectively."
+          "description": "Types of secondary malignant neoplastic disease, coded in SNOMED CT or ICD-10-CM. Conformance note: To be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.  SNOMED CT coding: Use a code from the disorder hierarchy under secondary malignant neoplastic disease (SNOMED CT 128462008). ICD-10-CM coding: Use one of the codes given in this value set  representing secondary malignant neoplasms and neoplasms of uncertain or unspecified behavior. If body site is not precoordinated (implied by the code), it should be specified separately using the body location. Note that ICD-O-3 specifies morphology and topography, not disorder; in this case that the disorder code must be SNOMED CT 128462008 (Secondary malignant neoplastic disease). The ICD-O-3 morphology and topography codes should be entered in the HistologyMorphologyBehavior and bodySite fields, respectively."
         },
         {
           "reference": {
@@ -525,6 +517,90 @@
           },
           "name": "YesNoUnknownVS",
           "description": "A value set containing yes, no, and unknown."
+        },
+        {
+          "reference": {
+            "reference": "ValueSet/RadiationProcedureVS"
+          },
+          "name": "RadiationProcedureVS",
+          "description": "Codes describing radiation therapy procedures. The value set includes a limited set of radiation modality codes from SNOMED CT, however, ICD-10-PCS code from Section D (Radiation Therapy) and appropriate CPT radiation procedure codes are also considered compliant. CPT codes are not explicitly included due to licensing restrictions. ICD-10-PCS codes are not included explicitly because they are not currently supported by the FHIR IG Publishing tool. Conformance note If an ICD-10-PCS code is used, and a semantically equivalent SNOMED CT or CPT code is available, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html)."
+        },
+        {
+          "reference": {
+            "reference": "ValueSet/CancerDisorderVS"
+          },
+          "name": "CancerDisorderVS",
+          "description": "A broad cancer-related value set containing both primary and secondary tumor types, with codes from ICD-10 and SNOMED CT, including both diagnosis and histology/morphology/behavior codes. ICD-O-3 morphology codes may also be used and are considered conformant to the specification. For SNOMED, the value set includes all codes descending from 363346000 'Malignant neoplastic disease (disorder)' and 108369006 'Neoplasm (morphologic abnormality)'."
+        },
+        {
+          "reference": {
+            "reference": "ValueSet/RadiationTargetBodySiteVS"
+          },
+          "name": "RadiationTargetBodySiteVS",
+          "description": "Codes for body sites that can be targets of radiation therapy. This list of sites is based on Commission on Cancer’s 'Standards for Oncology Registry Entry  - STORE 2018'. This value set contains SNOMED CT equivalent terms."
+        },
+        {
+          "reference": {
+            "reference": "ValueSet/ComorbidConditionVS"
+          },
+          "name": "ComorbidConditionVS",
+          "description": "SNOMED and ICD-10-CM codes for common comorbid conditions. Aligns with Elixhauser comorbidity scale. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt. Conformance note: If an ICD-10-CM code is used, and an equivalent SNOMED CT code is available, the resulting instance will not validate against US Core Profiles."
+        },
+        {
+          "reference": {
+            "reference": "ValueSet/KarnofskyPerformanceStatusVS"
+          },
+          "name": "KarnofskyPerformanceStatusVS",
+          "description": "Value set for Karnofsky Performance Status, with codes for each decade from 100 to 0. Higher scores are associated with better functional status, with 100 representing no symptoms or evidence of disease, and 0 representing death. This value set corresponds to LOINC list LL4986-7"
+        },
+        {
+          "reference": {
+            "reference": "ValueSet/ECOGPerformanceStatusVS"
+          },
+          "name": "ECOGPerformanceStatusVS",
+          "description": "Value set for Eastern Cooperative Oncology Group performance status. Values range from grade 0 (Asymptomatic) to grade 5 (Dead)."
+        },
+        {
+          "reference": {
+            "reference": "ValueSet/AnatomicalDirectionVS"
+          },
+          "name": "AnatomicalDirectionVS",
+          "description": "Terms that specify anatomical direction."
+        },
+        {
+          "reference": {
+            "reference": "ValueSet/LandmarkTypeVS"
+          },
+          "name": "LandmarkTypeVS",
+          "description": "The type of feature that constitutes the landmark, for example, particularly if the landmark is an acquired body structure or physical object."
+        },
+        {
+          "reference": {
+            "reference": "ValueSet/LateralityVS"
+          },
+          "name": "LateralityVS",
+          "description": "Body side of the body location, if needed to distinguish from a similar location on the other side of the body."
+        },
+        {
+          "reference": {
+            "reference": "ValueSet/PrimaryOrUncertainBehaviorCancerDisorderVS"
+          },
+          "name": "PrimaryOrUncertainBehaviorCancerDisorderVS",
+          "description": "Types of primary malignant neoplastic disease, coded in SNOMED CT or ICD-10-CM. Conformance note: To be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), ICD-10-CM should only be used if a suitable code is not available from SNOMED. For SNOMED CT coding, use a code from the disorder hierarchy under SNOMED CT 363346000 'Malignant neoplastic disease (disorder)' excluding codes descending from SNOMED CT 128462008 'Secondary malignant neoplastic disease (disorder)'. If body location is not precoordinated (i.e., implied by the code), the site of the primary tumor should be specified in the body site attribute. For ICD-10-CM coding, use one of the codes given in this value set representing primary malignant neoplasms and neoplasms of uncertain or unspecified behavior. Note that ICD-O-3 specifies morphology and topography, not disorder. If ICD-O-3 is used, the primary cancer disorder code must be specifically be SNOMED CT 363346000  'Malignant neoplastic disease (disorder)'. The ICD-O-3 morphology and topography codes should be entered in the HistologyMorphologyBehavior and body location fields, respectively."
+        },
+        {
+          "reference": {
+            "reference": "ValueSet/TreatmentTerminationReasonVS"
+          },
+          "name": "TreatmentTerminationReasonVS",
+          "description": "Values used to describe the reasons for stopping a treatment. Includes code for 'treatment completed' as well as codes for unplanned (early) stoppage. Applies to medications and other treatments that take place over a period of time, such as radiation treatments."
+        },  
+        {
+          "reference": {
+            "reference": "ValueSet/TreatmentIntentVS"
+          },
+          "name": "TreatmentIntentVS",
+          "description": "The purpose of a treatment. The value set includes 'curative' and 'palliative'. Curative is defined as any treatment meant to reduce or control a disease process, even if a 'cure' is not anticipated. Palliative includes treatments meant to reduce symptoms and side effects, such as antiemetics."
         }
       ],
       "page": {
