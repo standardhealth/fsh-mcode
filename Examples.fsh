@@ -3,11 +3,10 @@ Alias:   USCoreBirthSex = http://hl7.org/fhir/us/core/StructureDefinition/us-cor
 
 Instance: mCODEPrimaryCancerConditionExample01
 InstanceOf: PrimaryCancerCondition
-//Id: mCODEPrimaryCancerConditionExample01
+* id = "mCODEPrimaryCancerConditionExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/PrimaryCancerCondition"
 * clinicalStatus = #active "Active"
 * verificationStatus = #confirmed "Confirmed"
-// category is inherited, does not need to be set
 * code = SCT#254637007 "Non-small cell lung cancer (disorder)"
 * bodySite = SCT#39607008 "Lung structure (body structure)"
 * subject = Reference(mCODEPatientExample01)
@@ -19,7 +18,7 @@ InstanceOf: PrimaryCancerCondition
 
 Instance: mCODEComorbidConditionExample01
 InstanceOf: ComorbidCondition
-//Id: mCODEComorbidConditionExample01
+* id = "mCODEComorbidConditionExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/ComorbidCondition"
 * clinicalStatus = #active "Active"
 * verificationStatus = #confirmed "Confirmed"
@@ -31,7 +30,7 @@ InstanceOf: ComorbidCondition
 
 Instance: mCODEPatientExample01
 InstanceOf: CancerPatient
-//Id: mCODEPatientExample01
+* id = "mCODEPatientExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerPatient"
 * identifier.use = #usual
 * identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#MR "Medical Record Number"
@@ -54,13 +53,13 @@ InstanceOf: CancerPatient
 * communication.language = urn:ietf:bcp:47#en-US "English (Region=United States)"
 * communication.language.text = "English"
 
-
 Instance: mCODEPatientExample02
 InstanceOf: CancerPatient
-//Id: mCODEPatientExample02
+* id = "mCODEPatientExample02"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerPatient"
-* extension[USCoreRace].extension[ombCategory].valueCoding = USCoreRace#2186-5 "Not Hispanic or Latino"
-* extension[USCoreBirthSex] = GENDER#F 
+// The following lines trigger an IG publisher crash
+//* extension[USCoreRace].extension[ombCategory].valueCoding = USCoreRace#2186-5 "Not Hispanic or Latino"
+//* extension[USCoreBirthSex] = GENDER#F 
 * identifier.use = #usual
 * identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#MR "Medical Record Number"
 * identifier.system = "http://hospital.example.org"
@@ -83,10 +82,9 @@ InstanceOf: CancerPatient
 * communication.language = urn:ietf:bcp:47#en-US "English (Region=United States)"
 * communication.language.text = "English"
 
-
 Instance: mCODEOrganizationExample01
 InstanceOf: USCoreOrganization
-//Id: mCODEOrganizationExample01
+* id = "mCODEOrganizationExample01"
 * identifier.system = "http://hl7.org.fhir/sid/us-npi"
 * identifier.value = "1265714091"
 * active = true
@@ -99,10 +97,9 @@ InstanceOf: USCoreOrganization
 * address.postalCode = "02141"
 * address.country = "USA"
 
-
 Instance: mCODEPractitionerExample01
 InstanceOf: USCorePractitioner
-//Id: mCODEPractitionerExample01
+* id = "mCODEPractitionerExample01"
 * identifier[NPI].value = "9988776655"
 * name.family = "Anydoc"
 * name.given = "Kyle"
@@ -116,10 +113,9 @@ InstanceOf: USCorePractitioner
 * address.country = "US"
 * qualification.code = http://terminology.hl7.org/CodeSystem/v2-0360|2.7#MD "Doctor of Medicine"
 
-
 Instance: mCODEECOGPerformanceStatusExample01 
 InstanceOf: ECOGPerformanceStatus
-//Id: mCODEECOGPerformanceStatusExample01 
+* id = "mCODEECOGPerformanceStatusExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/ECOGPerformanceStatus" 
 * status = #final "final"
 * method = SCT#5880005 "Clinical examination"
@@ -128,10 +124,9 @@ InstanceOf: ECOGPerformanceStatus
 * performer = Reference(mCODEPractitionerExample01) 
 * valueCodeableConcept = SCT#422512005 "ECOG Performance Status - grade 1"
 
-
 Instance: mCODEKarnofskyPerformanceStatusExample01
 InstanceOf: KarnofskyPerformanceStatus
-//Id: mCODEKarnofskyPerformanceStatusExample01
+* id = "mCODEKarnofskyPerformanceStatusExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/KarnofskyPerformanceStatus"
 * status = #final "final"
 * category = #survey "survey"
@@ -141,10 +136,9 @@ InstanceOf: KarnofskyPerformanceStatus
 * performer = Reference(mCODEPractitionerExample01)
 * valueCodeableConcept = LNC#LA29177-5 "Normal activity with effort; some signs or symptoms of disease"
 
-
 Instance: mCODECancerRelatedMedicationStatementExample01
 InstanceOf: CancerRelatedMedicationStatement
-//Id: mCODECancerRelatedMedicationStatementExample01
+* id = "mCODECancerRelatedMedicationStatementExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerRelatedMedicationStatement"
 * status = #active "active"
 * category = #community "community"
@@ -152,46 +146,46 @@ InstanceOf: CancerRelatedMedicationStatement
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * dateAsserted = "2019-04-01"
-* extension[TreatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
+// The following line triggers an IG publisher crash
+//* extension[TreatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 * dosage.text = "250mg orally once daily with or without food"
 * dosage.route = SCT#26643006 "Oral use"
 * dosage.doseAndRate.doseQuantity.value = 250.0
 * dosage.doseAndRate.doseQuantity = UCUM#mg "mg"
 
-
 Instance: mCODECancerRelatedSurgicalProcedureExample01
 InstanceOf: CancerRelatedSurgicalProcedure
-//Id: mCODECancerRelatedSurgicalProcedureExample01
+* id = "mCODECancerRelatedSurgicalProcedureExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerRelatedSurgicalProcedure"
 * status = #completed "completed"
 * code = SCT#359615001 "Partial lobectomy of lung (procedure)"
 * subject = Reference(mCODEPatientExample01)
 * asserter = Reference(mCODEPractitionerExample01)
 * performedDateTime = "2019-03-01"
-* extension[TreatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
+// The following line triggers an IG publisher crash
+//* extension[TreatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 * reasonReference = Reference(mCODEPrimaryCancerConditionExample01)
 * bodySite = SCT#41224006 "Structure of lower lobe of left lung (body structure)"
 
-
 Instance: mCODECancerRelatedRadiationProcedureExample01
 InstanceOf: CancerRelatedRadiationProcedure 
-//Id: mCODECancerRelatedRadiationProcedureExample01
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerRelatedRadiationProcedure"
+* id = "mCODECancerRelatedRadiationProcedureExample01"
+*meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerRelatedRadiationProcedure"
 * status = #completed "completed" 
 * code = SCT#152198000 "Brachytherapy (procedure)"
 * subject = Reference(mCODEPatientExample01)
 * asserter = Reference(mCODEPractitionerExample01)
 * performedDateTime = "2019-03-01"
-* extension[TreatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
-* extension[RadiationDose].extension[TotalRadiationDoseDelivered].valueQuantity = UCUM#cGy 
-* extension[RadiationDose].extension[TotalRadiationDoseDelivered].valueQuantity.value = 1200.0
+// The following line triggers an IG publisher crash
+//* extension[TreatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
+//* extension[RadiationDose].extension[TotalRadiationDoseDelivered].valueQuantity = UCUM#cGy 
+//* extension[RadiationDose].extension[TotalRadiationDoseDelivered].valueQuantity.value = 1200.0
 * reasonReference = Reference(mCODEPrimaryCancerConditionExample01)
-* bodySite = SCT#41224006 "Structure of lower lobe of left lung (body structure)"
-
+* bodySite = SCT#41224006 "Structure of lower lobe of left lung (body structure)" */
 
 Instance: mCODETNMClinicalStageGroupExample01
 InstanceOf: TNMClinicalStageGroup
-//Id: mCODETNMClinicalStageGroupExample01
+* id = "mCODETNMClinicalStageGroupExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMClinicalStageGroup"
 * status = #final "final" 
 * category = #survey "Survey"
@@ -205,7 +199,7 @@ InstanceOf: TNMClinicalStageGroup
 
 Instance: mCODETNMClinicalDistantMetastasesCategoryExample01
 InstanceOf: TNMClinicalDistantMetastasesCategory
-//Id: mCODETNMClinicalDistantMetastasesCategoryExample01
+* id = "mCODETNMClinicalDistantMetastasesCategoryExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMClinicalDistantMetastasesCategory"
 * status = #final "final" 
 * category = #survey "Survey"
@@ -216,7 +210,7 @@ InstanceOf: TNMClinicalDistantMetastasesCategory
 
 Instance: mCODETNMClinicalPrimaryTumorCategoryExample01
 InstanceOf: TNMClinicalPrimaryTumorCategory
-//Id: mCODETNMClinicalPrimaryTumorCategoryExample01
+* id = "mCODETNMClinicalPrimaryTumorCategoryExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMClinicalPrimaryTumorCategory"
 * status = #final "final" 
 * category = #survey "Survey"
@@ -225,9 +219,10 @@ InstanceOf: TNMClinicalPrimaryTumorCategory
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#cT3 "T3"
 
+
 Instance: mCODETNMClinicalRegionalNodesCategoryExample01
 InstanceOf: TNMClinicalRegionalNodesCategory
-//Id: mCODETNMClinicalRegionalNodesCategoryExample01
+* id = "mCODETNMClinicalRegionalNodesCategoryExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMClinicalRegionalNodesCategory"
 * status = #final "final" 
 * category = #survey "Survey"
@@ -239,7 +234,7 @@ InstanceOf: TNMClinicalRegionalNodesCategory
 
 Instance: mCODETNMPathologicalStageGroupExample01
 InstanceOf: TNMPathologicalStageGroup
-//Id: mCODETNMPathologicalStageGroupExample01
+* id = "mCODETNMPathologicalStageGroupExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMPathologicalStageGroup"
 * status = #final "final" 
 * category = #laboratory "laboratory"
@@ -251,9 +246,10 @@ InstanceOf: TNMPathologicalStageGroup
 * hasMember[TNMPathologicalRegionalNodesCategory] = Reference(mCODETNMPathologicalRegionalNodesCategoryExample01)
 * hasMember[TNMPathologicalDistantMetastasesCategory] = Reference(mCODETNMPathologicalDistantMetastasesCategoryExample01)
 
+
 Instance: mCODETNMPathologicalDistantMetastasesCategoryExample01
 InstanceOf: TNMPathologicalDistantMetastasesCategory
-//Id: mCODETNMPathologicalDistantMetastasesCategoryExample01
+* id = "mCODETNMPathologicalDistantMetastasesCategoryExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMPathologicalDistantMetastasesCategory"
 * status = #final "final" 
 * category = #laboratory "laboratory"
@@ -262,9 +258,10 @@ InstanceOf: TNMPathologicalDistantMetastasesCategory
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#pM0 "M0"
 
+
 Instance: mCODETNMPathologicalPrimaryTumorCategoryExample01
 InstanceOf: TNMPathologicalPrimaryTumorCategory
-//Id: mCODETNMPathologicalPrimaryTumorCategoryExample01
+* id = "mCODETNMPathologicalPrimaryTumorCategoryExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMPathologicalPrimaryTumorCategory"
 * status = #final "final" 
 * category = #laboratory "laboratory"
@@ -273,9 +270,10 @@ InstanceOf: TNMPathologicalPrimaryTumorCategory
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#pT3 "T3"
 
+
 Instance: mCODETNMPathologicalRegionalNodesCategoryExample01
 InstanceOf: TNMPathologicalRegionalNodesCategory
-//Id: mCODETNMPathologicalRegionalNodesCategoryExample01
+* id = "mCODETNMPathologicalRegionalNodesCategoryExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMPathologicalNodesCategory"
 * status = #final "final" 
 * category = #laboratory "laboratory"
