@@ -84,4 +84,4 @@ Id:  LandmarkToBodyLocationDistance
 Title: "Landmark to Body Location Distance"
 Description: "How far the body location of interest is from the given landmark."
 * value[x] only Quantity
-* valueQuantity from UnitsOfLengthVS (required)
+* valueQuantity from HumanScaleLengthUnitsVS (required)

@@ -28,7 +28,7 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * code = LNC#69548-6 "Genetic variant assessment"
 * specimen only Reference(GeneticSpecimen) 
 * value[x] only CodeableConcept
-* valueCodeableConcept from http://fhir.loinc.org/vs/LL1971-2 (required)
+* valueCodeableConcept from http://loinc.org/vs/LL1971-2 (required)
 * component ^slicing.discriminator.type = #value
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open

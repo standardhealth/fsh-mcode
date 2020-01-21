@@ -6807,10 +6807,10 @@ ValueSet:   TreatmentTerminationReasonVS
 Title: "Treatment Termination Reason Value Set"
 Description:  "Values used to describe the reasons for stopping a treatment. Includes code for 'treatment completed' as well as codes for unplanned (early) stoppage. Applies to medications and other treatments that take place over a period of time, such as radiation treatments."
 * SCT#182992009       "Treatment completed (situation)"  // could more generally be 397943006 "Planned (qualifier value)"
-* SCT#58848006        "Lack of drug action (finding)"  // MCODE-106 MK 10-2-2019
-// SCT#435501000124106	"Medication not effective (finding)"
+* SCT#58848006        "Lack of drug action (finding)"  
+// MCODE-106 MK 10-2-2019  replaced SCT#435501000124106 "Medication not effective (finding)"
 * SCT#281647001       "Adverse reaction (disorder)"  // more general than 62014003 Adverse reaction to drug
-* SCT#160932005       "Financial problem" // better than 454061000124102 "Unable to afford medication (finding)" which is medication-specific 
+* SCT#160932005       "Financial problem" // better than 454061000124102 "Unable to afford medication (finding)"
 * SCT#105480006       "Refusal of treatment by patient"  // patient choice or decision
 * SCT#107724000       "Patient transfer"
 * SCT#309846006       "Treatment not available"
@@ -6820,3 +6820,12 @@ Title: "Treatment Intent Value Set"
 Description:	"The purpose of a treatment. The value set includes 'curative' and 'palliative'. Curative is defined as any treatment meant to reduce or control a disease process, even if a 'cure' is not anticipated. Palliative includes treatments meant to reduce symptoms and side effects, such as antiemetics."
 * SCT#373808002   "Curative - procedure intent"
 * SCT#363676003   "Palliative - procedure intent"
+
+ValueSet:			UnitsOfLengthVS
+Title:              "Units of Length Value Set"
+Description:		"Units of measure for length or distance on a human scale."
+UCUM#mm				"Millimeter"
+UCUM#cm				"Centimeter"
+UCUM#m				"Meter"
+UCUM#ft-us			"Foot"
+UCUM#in-us			"Inch"
