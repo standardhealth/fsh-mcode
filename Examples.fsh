@@ -146,7 +146,7 @@ InstanceOf: CancerRelatedMedicationStatement
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * dateAsserted = "2019-04-01"
-// The following line triggers an IG publisher crash
+// The following line triggers an IG publisher crash -- See issue #113 (https://github.com/FHIR/sushi/issues/113)
 //* extension[TreatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 * dosage.text = "250mg orally once daily with or without food"
 * dosage.route = SCT#26643006 "Oral use"
@@ -170,7 +170,7 @@ InstanceOf: CancerRelatedSurgicalProcedure
 Instance: mCODECancerRelatedRadiationProcedureExample01
 InstanceOf: CancerRelatedRadiationProcedure 
 * id = "mCODECancerRelatedRadiationProcedureExample01"
-*meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerRelatedRadiationProcedure"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerRelatedRadiationProcedure"
 * status = #completed "completed" 
 * code = SCT#152198000 "Brachytherapy (procedure)"
 * subject = Reference(mCODEPatientExample01)
@@ -181,7 +181,7 @@ InstanceOf: CancerRelatedRadiationProcedure
 //* extension[RadiationDose].extension[TotalRadiationDoseDelivered].valueQuantity = UCUM#cGy 
 //* extension[RadiationDose].extension[TotalRadiationDoseDelivered].valueQuantity.value = 1200.0
 * reasonReference = Reference(mCODEPrimaryCancerConditionExample01)
-* bodySite = SCT#41224006 "Structure of lower lobe of left lung (body structure)" */
+* bodySite = SCT#41224006 "Structure of lower lobe of left lung (body structure)"
 
 Instance: mCODETNMClinicalStageGroupExample01
 InstanceOf: TNMClinicalStageGroup

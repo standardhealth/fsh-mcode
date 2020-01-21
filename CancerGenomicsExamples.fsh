@@ -28,7 +28,10 @@ InstanceOf: CancerGenomicsReport
 Instance: mCODEGenomicRegionStudiedExample01
 InstanceOf: GenomicRegionStudied
 * id = "mCODEGenomicRegionStudiedExample01"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/GenomicsRegiodStudied"
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * issued = "2019-04-01T11:45:33+11:00"
-* component[GeneStudied].valueCodeableConcept = HGNC#619728 "STK11" 
+// Commented out -- causes SUSHI to not create this example -- see issue https://github.com/FHIR/sushi/issues/112
+//* component[GeneStudied].valueCodeableConcept = HGNC#619728 "STK11" 
+
