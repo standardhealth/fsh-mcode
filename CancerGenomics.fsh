@@ -28,7 +28,7 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * code = LNC#69548-6 "Genetic variant assessment"
 * specimen only Reference(GeneticSpecimen) 
 * value[x] only CodeableConcept
-* valueCodeableConcept from https://fhir.loinc.org/ValueSet/LL1971-2 (required)
+* valueCodeableConcept from http://fhir.loinc.org/vs/LL1971-2 (required)
 * component ^slicing.discriminator.type = #value
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
@@ -62,7 +62,7 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * component[GenomicSourceClass].code = LNC#48002-0
 * component[GenomicSourceClass].value[x] only CodeableConcept
 * component[GenomicSourceClass].valueCodeableConcept 1..1
-* component[GenomicSourceClass].valueCodeableConcept from https://fhir.loinc.org/ValueSet/LL378-1 (required)
+* component[GenomicSourceClass].valueCodeableConcept from http://fhir.loinc.org/vs/LL378-1 (required)
 * component[AminoAcidChange] ^short = "Amino acid change (pHGVS)"
 * component[AminoAcidChange].code = LNC#48005-3
 * component[AminoAcidChange].value[x] only CodeableConcept
@@ -72,7 +72,7 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * component[AminoAcidChangeType].code = LNC#48006-1
 * component[AminoAcidChangeType].value[x] only CodeableConcept
 * component[AminoAcidChangeType].valueCodeableConcept 1..1
-* component[AminoAcidChangeType].valueCodeableConcept from https://fhir.loinc.org/ValueSet/LL380-7 (required)
+* component[AminoAcidChangeType].valueCodeableConcept from http://fhir.loinc.org/vs/LL380-7 (required)
 * component[CytogeneticLocation] ^short = "Cytogenetic (chromosome) location"
 * component[CytogeneticLocation].code = LNC#48001-2
 * component[CytogeneticLocation].value[x] 1..1 // CG Reporting IG does not constrain the CytogeneticLocation value type.
@@ -120,7 +120,7 @@ Description: "Genomic source class [Type]"
 * code = LNC#48002-0
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1
-* valueCodeableConcept from https://fhir.loinc.org/ValueSet/LL378-1 (required)
+* valueCodeableConcept from http://fhir.loinc.org/vs/LL378-1 (required)
 
 Slice:     AminoAcidChange
 Parent:    ObservationComponent
@@ -140,7 +140,7 @@ Description: "Amino acid change [Type]"
 * code = LNC#48006-1
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1
-* valueCodeableConcept from https://fhir.loinc.org/ValueSet/LL380-7 (required)
+* valueCodeableConcept from http://fhir.loinc.org/vs/LL380-7 (required)
 
 Slice:     CytogeneticLocation
 Parent:    ObservationComponent
@@ -295,7 +295,7 @@ Description: "A genomic coordinate is a position along a sequence."
 * code = LNC#92822-6
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1
-* valueCodeableConcept from https://fhir.loinc.org/ValueSet/LL5323-2 (preferred)
+* valueCodeableConcept from http://fhir.loinc.org/vs/LL5323-2 (preferred)
 
 Slice:     GenomicReferenceSequenceId
 Parent:    ObservationComponent

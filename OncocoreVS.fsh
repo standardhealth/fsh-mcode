@@ -40,6 +40,11 @@ Title: "Cancer Body Location Value Set"
 Description:  "Codes describing the location(s) of primary or secondary cancer. The value set includes all codes from the SNOMED CT body structure hierarchy (codes descending from 123037004 'Body Structure'). The cancer body location may also be expressed using ICD-O-3 topography codes, however, those codes are not included here due to intellectual property restrictions. No other code systems are considered conformant."
 * codes from system SCT where concept is-a #123037004  "Body Structure"
 
+ValueSet:  AnatomicalOrientationVS
+Title: "Anatomical Orientation Value Set"
+Description:  "Terms that specify anatomical orientation."
+* codes from system SCT where concept is-a #272424004 "Relative sites (qualifier value)"
+
 ValueSet:   HistologyMorphologyBehaviorVS
 Title: "Histology Morphology Behavior Value Set"
 Description: "Codes representing the structure, arrangement, and behavioral characteristics of malignant neoplasms, and cancer cells. Inclusion criteria: in situ neoplasms and malignant neoplasms. Exclusion criteria: benign neoplasms and neoplasms of unspecified behavior. Note: As the vocabulary binding is extensible within this IG, ICD-O-3 morphology codes (including behavior suffix) may also be used; they are not included in the value set for intellectual property reasons. For primary cancers, the ICD-O-3 behavior suffix should be /1, /2, or /3. For secondary cancers, the ICD-O-3 behavior suffix should be /6. Only SNOMED CT and ICD-O-3 are considered conformant to the specification. However, to be compliant with US Core Profiles, ICD-O-3 may only be used if there is no suitable code in SNOMED CT."
@@ -63,11 +68,15 @@ Description:  "The grade of the tumor. This is a subset of the LOINC answer list
 * SCT#60815008  "Grade not determined (finding)" // synonyms include not applicable, not stated
 //SCT#12619005  "GX grade (finding)" // includes synonym "Grade cannot be assessed", this is the terminology used by AJCC
 
-ValueSet: SurgicalMarginInvolvementVS
-Title: "Surgical Margin Involvement Value Set"
-Description:  "Indication of whether the tumor was involved at the edge of resection."
-* SCT#55182004 "Surgical margin uninvolved by tumor (finding)"
-* SCT#370109009 "Surgical margin involved by tumor (finding)"
+ValueSet:   ConditionStatusTrendVS
+Title: "Condition Status Trend Value Set"
+Description:  "Standardized value set that describes the trend or status of a disease, condition, or ability. Based on LOINC answer lists LL2751-7 and LL4721-8. The value SNOMED CT 260415000 (Not Detected) should be used to express No Evidence of Disease (NED), condition resolved, or full remission."
+* SCT#260415000       "Not detected. Use this term for expressing NED (no evidence of disease), condition resolved, or full remission."   //SCT#723506003 "Resolved" or SCT#103338009 "In full remission"
+* SCT#385633008       "Improving"
+* SCT#58158008        "Stable"
+* SCT#230993007       "Worsening"
+* SCT#42425007	    "Equivocal. Equivocal represents a borderline value, too close to call; for example, a value very close to a cut-off between positive and negative."
+* SCT#82334004        "Indeterminate. Indeterminate means the results were uninterpretable, or cannot be determined; technical issues prevented obtaining a valid result."
 
 ValueSet: CancerDiseaseStatusEvidenceTypeVS
 Title: "Cancer Disease Status Evidence Type Value Set"
@@ -507,3 +516,69 @@ Description:    "The type of specimen analyzed in a genetic test. The values are
 * SPTY#TISS      "Tissue"
 * SPTY#VITF      "Vitreous Fluid"
 * SPTY#WND       "Wound"
+
+ValueSet:   SecondaryCancerDisorderVS
+Title: "Secondary Cancer Disorder Value Set"
+Description:  "Types of secondary malignant neoplastic disease, coded in SNOMED CT or ICD-10-CM. 
+
+Conformance note: To be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.
+
+* SNOMED CT coding: Use a code from the disorder hierarchy under secondary malignant neoplastic disease (SNOMED CT 128462008).
+* ICD-10-CM coding: Use one of the codes given in this value set representing secondary malignant neoplasms and neoplasms of uncertain or unspecified behavior. If body site is not precoordinated (implied by the code), it should be specified separately using the body location.
+
+Note that ICD-O-3 specifies morphology and topography, not disorder; in this case that the disorder code must be SNOMED CT 128462008 (Secondary malignant neoplastic disease). The ICD-O-3 morphology and topography codes should be entered in the HistologyMorphologyBehavior and bodySite fields, respectively."
+* SCT#128462008  "Secondary malignant neoplastic disease (disorder)"
+* codes from system SCT where concept is-a #128462008  "Secondary malignant neoplastic disease (disorder)"
+* ICD10CM#C7B00       "Secondary carcinoid tumors, unspecified site"
+* ICD10CM#C7B01       "Secondary carcinoid tumors of distant lymph nodes"
+* ICD10CM#C7B02       "Secondary carcinoid tumors of liver"
+* ICD10CM#C7B03       "Secondary carcinoid tumors of bone"
+* ICD10CM#C7B04       "Secondary carcinoid tumors of peritoneum"
+* ICD10CM#C7B09       "Secondary carcinoid tumors of other sites"
+* ICD10CM#C7B1       "Secondary Merkel cell carcinoma"
+* ICD10CM#C7B8       "Other secondary neuroendocrine tumors"
+* ICD10CM#C770       "Secondary and unspecified malignant neoplasm of lymph nodes of head, face and neck"
+* ICD10CM#C771       "Secondary and unspecified malignant neoplasm of intrathoracic lymph nodes"
+* ICD10CM#C772       "Secondary and unspecified malignant neoplasm of intra-abdominal lymph nodes"
+* ICD10CM#C773       "Secondary and unspecified malignant neoplasm of axilla and upper limb lymph nodes"
+* ICD10CM#C774       "Secondary and unspecified malignant neoplasm of inguinal and lower limb lymph nodes"
+* ICD10CM#C775       "Secondary and unspecified malignant neoplasm of intrapelvic lymph nodes"
+* ICD10CM#C778       "Secondary and unspecified malignant neoplasm of lymph nodes of multiple regions"
+* ICD10CM#C779       "Secondary and unspecified malignant neoplasm of lymph node, unspecified"
+* ICD10CM#C7800       "Secondary malignant neoplasm of unspecified lung"
+* ICD10CM#C7801       "Secondary malignant neoplasm of right lung"
+* ICD10CM#C7802       "Secondary malignant neoplasm of left lung"
+* ICD10CM#C781       "Secondary malignant neoplasm of mediastinum"
+* ICD10CM#C782       "Secondary malignant neoplasm of pleura"
+* ICD10CM#C7830       "Secondary malignant neoplasm of unspecified respiratory organ"
+* ICD10CM#C7839       "Secondary malignant neoplasm of other respiratory organs"
+* ICD10CM#C784       "Secondary malignant neoplasm of small intestine"
+* ICD10CM#C785       "Secondary malignant neoplasm of large intestine and rectum"
+* ICD10CM#C786       "Secondary malignant neoplasm of retroperitoneum and peritoneum"
+* ICD10CM#C787       "Secondary malignant neoplasm of liver and intrahepatic bile duct"
+* ICD10CM#C7880       "Secondary malignant neoplasm of unspecified digestive organ"
+* ICD10CM#C7889       "Secondary malignant neoplasm of other digestive organs"
+* ICD10CM#C7900       "Secondary malignant neoplasm of unspecified kidney and renal pelvis"
+* ICD10CM#C7901       "Secondary malignant neoplasm of right kidney and renal pelvis"
+* ICD10CM#C7902       "Secondary malignant neoplasm of left kidney and renal pelvis"
+* ICD10CM#C7910       "Secondary malignant neoplasm of unspecified urinary organs"
+* ICD10CM#C7911       "Secondary malignant neoplasm of bladder"
+* ICD10CM#C7919       "Secondary malignant neoplasm of other urinary organs"
+* ICD10CM#C792       "Secondary malignant neoplasm of skin"
+* ICD10CM#C7931       "Secondary malignant neoplasm of brain"
+* ICD10CM#C7932       "Secondary malignant neoplasm of cerebral meninges"
+* ICD10CM#C7940       "Secondary malignant neoplasm of unspecified part of nervous system"
+* ICD10CM#C7949       "Secondary malignant neoplasm of other parts of nervous system"
+* ICD10CM#C7951       "Secondary malignant neoplasm of bone"
+* ICD10CM#C7952       "Secondary malignant neoplasm of bone marrow"
+* ICD10CM#C7960       "Secondary malignant neoplasm of unspecified ovary"
+* ICD10CM#C7961       "Secondary malignant neoplasm of right ovary"
+* ICD10CM#C7962       "Secondary malignant neoplasm of left ovary"
+* ICD10CM#C7970       "Secondary malignant neoplasm of unspecified adrenal gland"
+* ICD10CM#C7971       "Secondary malignant neoplasm of right adrenal gland"
+* ICD10CM#C7972       "Secondary malignant neoplasm of left adrenal gland"
+* ICD10CM#C7981       "Secondary malignant neoplasm of breast"
+* ICD10CM#C7982       "Secondary malignant neoplasm of genital organs"
+* ICD10CM#C7989       "Secondary malignant neoplasm of other specified sites"
+* ICD10CM#C799       "Secondary malignant neoplasm of unspecified site"
+* ICD10CM#C800       "Disseminated malignant neoplasm, unspecified"

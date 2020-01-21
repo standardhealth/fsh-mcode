@@ -590,10 +590,17 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/SurgicalMarginInvolvementVS"
+          "reference": "ValueSet/AnatomicalOrientationVS"
         },
-        "name": "Surgical Margin Involvement Value Set",
-        "description": "Indication of whether the tumor was involved at the edge of resection."
+        "name": "AnatomicalOrientationVS",
+        "description": "Terms that specify anatomical orientation."
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/ConditionStatusTrendVS"
+        },
+        "name": "ConditionStatusTrendVS",
+        "description": "Standardized value set that describes the trend or status of a disease, condition, or ability. Based on LOINC answer lists LL2751-7 and LL4721-8. The value SNOMED CT 260415000 (Not Detected) should be used to express No Evidence of Disease (NED), condition resolved, or full remission."
       },
       {
         "reference": {
