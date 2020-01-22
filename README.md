@@ -14,6 +14,8 @@ To compile mCODE, open a command window and navigate to the directory where mCOD
 
 >**NOTE:** Do **not** omit the `-o` option, because that will destroy certain customizations of the implementation guide (IG) configuration.
 
+Next, change directories to ./build. 
+
 Now run:
 
 Windows:   `$ _genonce`
