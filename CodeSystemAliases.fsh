@@ -18,3 +18,4 @@ Alias:   ClinStatus = http://terminology.hl7.org/CodeSystem/condition-clinical
 Alias:   VerStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status
 Alias:   MedStatus = http://hl7.org/fhir/CodeSystem/medication-statement-status
 Alias:   MedCat = http://terminology.hl7.org/CodeSystem/medication-statement-category
+Alias:   ObsCat = http://terminology.hl7.org/CodeSystem/observation-category
