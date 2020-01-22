@@ -8,11 +8,11 @@ mCODE is developed in [FHIR Shorthand (FSH)](http://build.fhir.org/ig/HL7/fhir-s
 
 After you check out mCODE from Github, install SUSHI (the FSH compiler), [as instructed here](http://build.fhir.org/ig/HL7/fhir-shorthand/sushi.html). 
 
-To compile mCODE, open a command window and change directory to the directory where mCODE has been checked out. Issue the following command:
+To compile mCODE, open a command window and navigate to the directory where mCODE has been checked out. Issue the following command:
 
 `$ sushi . -o ./build/input/resources`
 
->**NOTE:** Do **not** omit the `-o` option, because that will destroy certain customizations of the implementation guide configuration.
+>**NOTE:** Do **not** omit the `-o` option, because that will destroy certain customizations of the implementation guide (IG) configuration.
 
 Now run:
 
@@ -22,3 +22,13 @@ Mac:   `$ sh _genonce.sh`
 
 This will run the HL7 IG Publisher, which will take several minutes to complete. After the publisher is finished, open the file _/build/output/index.html_ to see the resulting IG.
 
+To get a clean build, you may delete the `./build/input/resources` and/or the `./build/output` directories. Do not delete the `./build` directory!
+
+# Further Customization of the IG
+
+Introduce any desired customizations into the following files:
+
+    * **Menus:** Edit the _/build/input/include/menu.xml_ file
+    * **List of pages and artifacts to be included in the IG:** Edit _/build/input/ImplementationGuide-fhir.us.mcode.json_ file. See [ImplementationGuide resource](https://www.hl7.org/fhir/implementationguide.html) for details.
+    * **Additional pages, images, other content:** Add frontmatter files to _/build/input/pagecontent_ directory, and link them to menus or other pages.
+    * **Version history:** Edit _/build/package-list.json_.
