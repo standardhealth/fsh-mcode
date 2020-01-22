@@ -1,5 +1,3 @@
-Alias:   LNC = http://loinc.org
-
 Profile: CancerStageParent
 Id: CancerStageParent
 Parent: Observation
@@ -17,8 +15,7 @@ Description:  "Abstract parent class for members of cancer staging panels. Cance
 * component 0..0
 * partOf only Reference(Procedure)
 * basedOn only Reference(ServiceRequest)
-// The following rule is causing a problem, possibly because of circular references (???). When left in, SUSHI dies silently and slowly.
-//* focus only Reference(PrimaryCancerCondition)
+* focus only Reference(PrimaryCancerCondition)
 * subject only Reference(CancerPatient)
 * method from CancerStagingSystemVS (extensible)
 * performer only Reference(Practitioner)
@@ -27,7 +24,7 @@ Profile: CancerStageGroupParent
 Id: CancerStageGroupParent
 Parent: CancerStageParent
 Title: "Cancer Stage Group Parent"
-* ^abstract = true  // actually unncessary because it is inherited
+* ^abstract = true
 * hasMember ^slicing.discriminator.type = #value
 * hasMember ^slicing.discriminator.path = "code.coding.code"
 * hasMember ^slicing.rules = #open

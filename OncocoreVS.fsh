@@ -1,25 +1,8 @@
-Alias:   LNC = http://loinc.org
-Alias:   SCT = http://snomed.info/sct
-Alias:   UCUM = http://unitsofmeasure.org
-Alias:   MTH = http://ncimeta.nci.nih.gov
-Alias:   ICD10CM = http://hl7.org/fhir/sid/icd-10-cm
-Alias:   RXN = http://www.nlm.nih.gov/research/umls/rxnorm
-Alias:   CPT = http://www.ama-assn.org/go/cpt
-Alias:   ICD10PCS = http://www.nlm.nih.gov/research/umls/icd10pcs
-Alias:   AJCC = http://cancerstaging.org
-Alias:   GTR = http://www.ncbi.nlm.nih.gov/gtr
-Alias:   CLINVAR = http://www.ncbi.nlm.nih.gov/clinvar
-Alias:   IDTYPE = http://terminology.hl7.org/CodeSystem/v2-0203
-Alias:   HGNC = http://www.genenames.org/geneId
-Alias:   HGVS = http://varnomen.hgvs.org
-Alias:   SPTY = http://terminology.hl7.org/CodeSystem/v2-0487
-
 ValueSet: 	YesNoUnknownVS
 Description:	"A value set containing yes, no, and unknown."
 * SCT#373066001			"Yes"
 * SCT#373067005			"No"
 * SCT#261665006			"Unknown"
-
 
 ValueSet:    GeneticTestVS
 Title: "Genetic Test Value Set"
@@ -172,7 +155,7 @@ Conformance note: If an ICD-10-PCS code is used, and a semantically equivalent S
 * SCT#116140006    "Total hysterctomy"
 * SCT#236886002    "Hysterectomy"
 * SCT#116142003    "Radical hysterectomy"
-* SCT#406044008    "Pelvic exentration "
+* SCT#406044008    "Pelvic exentration"
 * SCT#112916000    "Operation on cervix [NOS]"
 * SCT#176871003    "Destruction of lesion"
 * SCT#236884004    "Excision of lesion"
@@ -180,7 +163,7 @@ Conformance note: If an ICD-10-PCS code is used, and a semantically equivalent S
 * SCT#116140006    "Total hysterctomy"
 * SCT#116142003    "Radical hysterectomy"
 * SCT#236886002    "Hysterectomy"
-* SCT#406044008    "Pelvic exentration "
+* SCT#406044008    "Pelvic exentration"
 * SCT#79876008    "Operation on uterus  [NOS]"
 * SCT#18243008    "Destruction of lesion"
 * SCT#386553005    "Excision of lesion"
@@ -219,7 +202,7 @@ Conformance note: If an ICD-10-PCS code is used, and a semantically equivalent S
 * SCT#119746007    "Operation on lung [NOS]"
 * SCT#230859007    "Destruction of lesion"
 * SCT#230810008    "Excision of lesion"
-* SCT#446103006    "Partial excision of lesion of brain "
+* SCT#446103006    "Partial excision of lesion of brain"
 * SCT#17537007    "Resection of spinal cord"
 * SCT#447115003    "Total excision of lesion of brain"
 * SCT#67402009    "Partial lobectomy"
@@ -256,7 +239,7 @@ Conformance note: If an ICD-10-PCS code is used, and a semantically equivalent S
 * SCT#450514003    "Destruction of lesion"
 * SCT#90199006    "Transurethral prostactomy"
 * SCT#30426000    "Subtotal prostactomy"
-* SCT#26294005    "Radical prostatectomy "
+* SCT#26294005    "Radical prostatectomy"
 * SCT#65111004    "Pelvic exenteration"
 * SCT#90470006    "Prostactomy"
 * SCT#741007    "Operation on prostate [NOS]"
@@ -270,7 +253,7 @@ Conformance note: If an ICD-10-PCS code is used, and a semantically equivalent S
 * SCT#52838002    "Destruction of lesion"
 * SCT#79764004    "Excision of lesion"
 * SCT#82035006    "Resection of polyp"
-* SCT#116237003    "Excision of lesion of rectum "
+* SCT#116237003    "Excision of lesion of rectum"
 * SCT#307009004    "Wedge resection"
 * SCT#86789002    "Abdominoperineal pull through"
 * SCT#235364003    "Total Proctectomy"
@@ -280,7 +263,7 @@ Conformance note: If an ICD-10-PCS code is used, and a semantically equivalent S
 * SCT#52838002    "Destruction of lesion"
 * SCT#79764004    "Excision of lesion"
 * SCT#82035006    "Resection of polyp"
-* SCT#116237003    "Excision of lesion of rectum "
+* SCT#116237003    "Excision of lesion of rectum"
 * SCT#307009004    "Wedge resection"
 * SCT#86789002    "Abdominoperineal pull through"
 * SCT#235364003    "Total Proctectomy"
@@ -303,13 +286,13 @@ Conformance note: If an ICD-10-PCS code is used, and a semantically equivalent S
 * SCT#26452005    "Total gastrectomy"
 * SCT#24431004    "Esophagoduodenostomy w/complete gastrectomy"
 * SCT#287816003    "Radical gastrectomy"
-* SCT#438338008    "Total gastrecomy w/extended lymphadencectomy "
+* SCT#438338008    "Total gastrecomy w/extended lymphadencectomy"
 * SCT#53442002    "Gastrectomy"
 * SCT#16453004    "Operation on stomach [NOS]"
 * SCT#12807004    "Destruction of lesion"
 * SCT#176430002    "Excision of lesion"
 * SCT#120001005    "Testis excision"
-* SCT#396692006    "Radical Orchiectomy "
+* SCT#396692006    "Radical Orchiectomy"
 * SCT#236334001    "Total Orchiectomy"
 * SCT#71657006    "Operation on testis [NOS]"
 * SCT#20470003    "Destruction of lesion"
@@ -1958,7 +1941,7 @@ Description:    "Codes for body sites that can be targets of radiation therapy. 
 * SCT#45292006       "Vulval structure (body structure)"
 * SCT#89546000       "Bone structure of cranium (body structure)"
 * SCT#44300000       "Entire vertebral column (body structure)"
-* SCT#16982005       "Shoulder region structure (body structure"
+* SCT#16982005       "Shoulder region structure (body structure)"
 * SCT#113197003       "Bone structure of rib (body structure)"
 * SCT#29836001       "Hip region structure (body structure)"
 * SCT#46633002       "Entire bony pelvis (body structure)"
@@ -5562,7 +5545,8 @@ For SNOMED CT coding, use a code from the disorder hierarchy under SNOMED CT 363
 For ICD-10-CM coding, use one of the codes given in this value set representing primary malignant neoplasms and neoplasms of uncertain or unspecified behavior.
 
 Note that ICD-O-3 specifies morphology and topography, not disorder. If ICD-O-3 is used, the primary cancer disorder code must be specifically be SNOMED CT 363346000  'Malignant neoplastic disease (disorder)'. The ICD-O-3 morphology and topography codes should be entered in the HistologyMorphologyBehavior and body location fields, respectively."
-* codes from system SCT where concept is-a #363346000 "Malignant neoplastic disease (disorder)" and concept is-not-a #128462008  "Secondary malignant neoplastic disease (disorder)"
+* codes from system SCT where concept is-a #363346000 "Malignant neoplastic disease (disorder)" and 
+concept is-not-a #128462008  "Secondary malignant neoplastic disease (disorder)"
 * ICD10CM#C000       "Malignant neoplasm of external upper lip"
 * ICD10CM#C001       "Malignant neoplasm of external lower lip"
 * ICD10CM#C002       "Malignant neoplasm of external lip, unspecified"

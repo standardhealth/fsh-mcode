@@ -1,5 +1,3 @@
-Alias:   USCorePatient = http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
-
 Profile: CancerPatient
 Parent: USCorePatient
 Id: CancerPatient
