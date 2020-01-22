@@ -1,6 +1,3 @@
-Alias:   SCT = http://snomed.info/sct
-Alias:   USCoreCondition = http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition
-
 // restore and remove AssertedDate extension (below)
 // Alias: AssertedDate = http://hl7.org/fhir/StructureDefinition/condition-assertedDate
 // temporary!~

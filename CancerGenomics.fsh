@@ -1,11 +1,3 @@
-Alias:   LNC = http://loinc.org
-Alias:   HGVS = http://varnomen.hgvs.org
-Alias:   GTR = http://www.ncbi.nlm.nih.gov/gtr
-Alias:   IDTYPE = http://terminology.hl7.org/CodeSystem/v2-0203
-Alias:   USCoreObservationLab = http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
-Alias:   USCoreDiagnosticReportLab = http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab
-
-
 Profile:    CancerGeneticVariant
 Parent:     USCoreObservationLab
 Id:         CancerGeneticVariant
@@ -42,7 +34,11 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
     AminoAcidChangeType 0..1 MS and
     CytogeneticLocation 0..* MS and
     CytogeneticNomenclature 0..1 MS
-/*
+/* The following lines that populate the component slices should be ok, but removing the comment causes a Publisher bug:
+
+Caused by: org.hl7.fhir.exceptions.DefinitionException: Attempt to a slice an element that does not repeat: Observation.component.code/Observation.component.code from http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab in http://hl7.org/fhir/us/mcode/StructureDefinition/CancerGeneticVariant
+
+
 * component[GeneStudied] ^short = "Gene studied [ID]"
 * component[GeneStudied].code = LNC#48018-6
 * component[GeneStudied].value[x] only CodeableConcept
@@ -79,7 +75,9 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * component[CytogeneticNomenclature] ^short = "Variant ISCN"
 * component[CytogeneticNomenclature].code = LNC#81291-7
 * component[CytogeneticNomenclature].value[x] 1..1 // CG Reporting IG does not constrain the CytogeneticLocation value type.
+*/
 
+/*
 // alternate way of defining slices (not yet supported)
 
 Slice:     GeneStudied
@@ -187,7 +185,7 @@ Implementation note: The data value for TumorMarkerTest has cardinality is 0..1 
 * subject only Reference(CancerPatient)
 * focus only Reference(CancerConditionParent)
 * effective[x] only dateTime or Period
-* performer only Reference(Practitioner) 
+* performer only Reference(Practitioner)
 
 Profile:    GeneticSpecimen
 Parent:     Specimen

@@ -1,6 +1,3 @@
-Alias:   LNC = http://loinc.org
-Alias:   USCoreCondition = http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition
-
 Profile:  CancerDiseaseStatus
 Parent:   Observation
 Id:       CancerDiseaseStatus
@@ -18,7 +15,6 @@ Description:    "A clinician's qualitative judgment on the current trend of the 
 8) derivedFrom is missing Reference(ImagingStudy | MolecularSequence) choices - I think these were omitted only because they weren't in OBF.
 */
 * extension contains EvidenceType 0..*
-// The following line is correct, but it is generating an error. Nick is looking into it (12/16/2019)
 * extension[EvidenceType].valueCodeableConcept from CancerDiseaseStatusEvidenceTypeVS (required)
 * status, code, subject, effective[x], valueCodeableConcept MS
 * bodySite 0..0
