@@ -29,6 +29,6 @@ To get a clean build, you may delete the _./build/input/resources_ and/or the _.
 Introduce customizations of the IG into the following files:
 
 * **Menus:** Edit the _/build/input/include/menu.xml_ file
-* **List of pages and artifacts to be included in the IG:** Edit _/build/input/ImplementationGuide-fhir.us.mcode.json_ file. See [ImplementationGuide resource](https://www.hl7.org/fhir/implementationguide.html) for details. Note that profiles, value sets and examples are NOT automatically included in the IG; they must be listed in this file. Also note that the IG Publisher will produce an error and halt if an artifact listed in the IG json file is not found in the _/build/input/resources_ directory.
-* **Additional pages, images, other content:** Add frontmatter files to _/build/input/pagecontent_ directory, and link them to menus or other pages.
+* **List of pages and artifacts to be included in the IG:** Edit _/build/input/ImplementationGuide-fhir.us.mcode.json_ file. See [ImplementationGuide resource](https://www.hl7.org/fhir/implementationguide.html) for details. Note that profiles, value sets and examples are NOT automatically included in the IG; they must be listed in this file. Also note that the IG Publisher will produce an error and exit prematurely if an artifact listed in the IG json file is not found in the _/build/input/resources_ directory.
+* **Additional pages, images, other content:** Add files to _/build/input/pagecontent_ directory, and link them to menus or other pages.
 * **Version history:** Edit _/build/package-list.json_.
