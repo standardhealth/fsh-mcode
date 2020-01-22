@@ -4,6 +4,8 @@ mCODE™ (short for Minimal Common Oncology Data Elements) is an initiative inte
 
 # Building mCODE
 
+## Compiling with SUSHI
+
 mCODE is developed in [FHIR Shorthand (FSH)](http://build.fhir.org/ig/HL7/fhir-shorthand/), a domain-specific language (DSL) for defining the content of FHIR Implementation Guides (IG).
 
 After you check out mCODE from Github, install SUSHI (the FSH compiler), [as instructed here](http://build.fhir.org/ig/HL7/fhir-shorthand/sushi.html). 
@@ -13,6 +15,8 @@ To compile mCODE, open a command window and navigate to the directory where mCOD
 `$ sushi . -o ./build/input/resources`
 
 >**NOTE:** Do **not** omit the `-o` option, because that will destroy certain customizations of the implementation guide (IG) configuration.
+
+## Running the IG Publisher
 
 Next, change directories to ./build. 
 
