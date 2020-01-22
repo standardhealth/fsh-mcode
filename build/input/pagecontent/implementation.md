@@ -16,12 +16,12 @@
 <h4><a name="Conformance"></a>Conformance Requirements</h4>
 
 <h5>Relationship to US Core</h5>
-<p>With one exception (see <a href="#exception">below</a>), the profiles presented in this guide conform to <a href="http://hl7.org/fhir/us/core/" target="_blank">US Core Implementation Guide (v3.0.0)</a>. Each mCODE Profile uses a corresponding US Core profiles as its base profile, and thus, cannot break the rules established by that profile in US Core. For example, if US Core has a required element, by virtue of profile inheritance, mCODE cannot make that element optional. However, <em>it is not true that any instance that conforms to an mCODE profile will automatically conform to US Core</em>. In particular, the use of <a href="https://www.hl7.org/fhir/valueset-binding-strength.html" target="_blank">extensible value sets</a> requires caution. Extensibility is only allowed when an appropriate concept is not available in the US Core value set. Please note:</p>
+<p>With one exception (see <a href="#Conformance">below</a>), the profiles presented in this guide conform to <a href="http://hl7.org/fhir/us/core/" target="_blank">US Core Implementation Guide (v3.0.0)</a>. Each mCODE Profile uses a corresponding US Core profiles as its base profile, and thus, cannot break the rules established by that profile in US Core. For example, if US Core has a required element, by virtue of profile inheritance, mCODE cannot make that element optional. However, <em>it is not true that any instance that conforms to an mCODE profile will automatically conform to US Core</em>. In particular, the use of <a href="https://www.hl7.org/fhir/valueset-binding-strength.html" target="_blank">extensible value sets</a> requires caution. Extensibility is only allowed when an appropriate concept is not available in the US Core value set. Please note:</p>
 <ul>
     <li>In ComorbidCondition, if an ICD-10-CM code is used, and a semantically equivalent SNOMED-CT code is available, the resulting instance will not conform to US Core.</li>
     <li>In mCODE Procedures, if an ICD-10-PCS code is used, and a semantically equivalent SNOMED CT or CPT code is available, the resulting instance will not confirm to US Core.</li>
     <li>In GenomicsReport, a LOINC code must be used, if available. If there is no suitable code in LOINC, then a code from an alternative code system (such as a code from the <a href="https://www.ncbi.nlm.nih.gov/gtr/" target="_blank">Genetic Testing Registry</a> or other knowledgebase of genomics tests can be used.</li>
-    <li>GenomicsReport.category is bound to <a href="http://hl7.org/fhir/us/core/STU3/ValueSet-us-core-diagnosticreport-category.html" target="_blank">US Core DiagnosticReport Category (extensible)</a>to align with US Core. The value set however does not include an appropriate term for genomics report.  Subsequently, mCODE implementations will fix the LOINC code <em>GE</em> to align with the value constraing specified in the <a href="http://hl7.org/fhir/uv/genomics-reporting/genomics-report.html" target="_blank">Clinical Genomics Reporting IG GenomicsReport profile.</a></li>
+    <li>GenomicsReport.category is bound to <a href="http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-category" target="_blank">US Core DiagnosticReport Category (extensible)</a>to align with US Core. The value set however does not include an appropriate term for genomics report.  Subsequently, mCODE implementations will fix the LOINC code <em>GE</em> to align with the value constraing specified in the <a href="http://hl7.org/fhir/uv/genomics-reporting/genomics-report.html" target="_blank">Clinical Genomics Reporting IG GenomicsReport profile.</a></li>
     <li>In PrimaryCancerCondition and SecondaryCancerCondition, if an ICD-10-CM code is used, and a semantically equivalent SNOMED-CT code is available, the resulting instance will not conform to US Core.</li>
 </ul>
 
@@ -104,7 +104,7 @@
 
 <h4><a name="LaboratoryProfiles"></a>Laboratory Profiles</h4> 
 
-<p><p>Reporting of individual laboratory results must conform to the <a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html">US Core Laboratory Result Profile</a>. Several examples of laboratory result reporting are given in the <a href="http://hl7.org/fhir/us/core/index.html">US Core IG</a>. For example, see this <a href="http://hl7.org/fhir/us/core/Observation-erythrocytes.html">erythrocytes laboratory reporting example</a>.</p>
+<p>Reporting of individual laboratory results must conform to the <a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html">US Core Laboratory Result Profile</a>. Several examples of laboratory result reporting are given in the <a href="http://hl7.org/fhir/us/core/index.html">US Core IG</a>. For example, see this <a href="http://hl7.org/fhir/us/core/Observation-erythrocytes.html">erythrocytes laboratory reporting example</a>.</p>
 
 <p>In practice, there are different variations on these panels, as exemplified by <a href="https://search.loinc.org/searchLOINC/search.zul?query=CBC">this list of various CBCs</a>. The individual LOINC codes of interest to mCODE are any that are reported as part of the CBC and CMP panels, which include, but are not limited to:</p>
 
@@ -124,6 +124,6 @@ Provenance information includes the "who, what, when, where, why" associated wit
     <li>In addition, each resource contains elements that represent information about how the resource was obtained, and who or what the information applies to. These attributes vary from resource to resource, and may include information such as the subject of care, the author of the information, performer of an action, the date/time of the action, etc.</li>
     <li>Finally, FHIR provides a <a href="https://www.hl7.org/fhir/provenance.html">Provenance Resource</a> that can be used where additional information is required, or explicit record or provenance is desired.</li>
 </ul>
-</p>In summary, mCODE defers to these FHIR mechanisms for recording and tracking provenance.</p>
+<p>In summary, mCODE defers to these FHIR mechanisms for recording and tracking provenance.<p>
 
 </div>

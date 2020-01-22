@@ -260,7 +260,7 @@
           "reference": {
             "reference": "StructureDefinition/GenomicRegionStudied"
           },
-          "name": "Genetic Region Studied",
+          "name": "Genomic Region Studied",
           "description": "The area of the genome region referenced in testing for variants.",
           "exampleBoolean": false
         },
@@ -398,6 +398,20 @@
           },
           "name": "Observation-mCODECancerGeneticVariantExample01",
           "exampleBoolean": true
+        },
+        {
+          "reference": {
+            "reference": "DiagnosticReport/mCODECancerGenomicsReportExample01"
+          },
+          "name": "DiagnosticReport-mCODECancerGenomicsReportExample01",
+          "exampleBooLean": true
+        },
+        {
+          "reference": {
+            "reference": "Observation/mCODEGenomicRegionStudiedExample01"
+          },
+          "name": "Observation-mCODEGenomicRegionStudiedExample01",
+          "exampleBooLean": true
         },
         {
           "reference": {
