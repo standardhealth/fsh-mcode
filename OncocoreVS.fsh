@@ -6808,8 +6808,8 @@ Description:	"The purpose of a treatment. The value set includes 'curative' and 
 ValueSet:			UnitsOfLengthVS
 Title:              "Units of Length Value Set"
 Description:		"Units of measure for length or distance on a human scale."
-UCUM#mm				"Millimeter"
-UCUM#cm				"Centimeter"
-UCUM#m				"Meter"
-UCUM#ft-us			"Foot"
-UCUM#in-us			"Inch"
+* UCUM#mm				"Millimeter"
+* UCUM#cm				"Centimeter"
+* UCUM#m				"Meter"
+* UCUM#ft-us			"Foot"
+* UCUM#in-us			"Inch"
