@@ -1946,7 +1946,7 @@ Description:    "Codes for body sites that can be targets of radiation therapy. 
 * SCT#29836001       "Hip region structure (body structure)"
 * SCT#46633002       "Entire bony pelvis (body structure)"
 * SCT#12921003       "Pelvic structure (body structure)"
-* SCT#48566001       " Bone structure of extremity (body structure)"
+* SCT#48566001       "Bone structure of extremity (body structure)"
 * SCT#39937001       "Skin structure (body structure)"
 * SCT#87784001       "Soft tissues (body structure)"
 * SCT#38266002       "Entire body as a whole (body structure)"

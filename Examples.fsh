@@ -115,6 +115,7 @@ InstanceOf: ECOGPerformanceStatus
 * id = "mCODEECOGPerformanceStatusExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/ECOGPerformanceStatus" 
 * status = #final "final"
+* category = ObsCat#survey "survey"
 * method = SCT#5880005 "Clinical examination"
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
@@ -126,7 +127,7 @@ InstanceOf: KarnofskyPerformanceStatus
 * id = "mCODEKarnofskyPerformanceStatusExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/KarnofskyPerformanceStatus"
 * status = #final "final"
-* category = #survey "survey"
+* category = ObsCat#survey "survey"
 * method = SCT#5880005 "Clinical examination"
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
@@ -177,7 +178,7 @@ InstanceOf: CancerRelatedRadiationProcedure
 * subject = Reference(mCODEPatientExample01)
 * asserter = Reference(mCODEPractitionerExample01)
 * performedDateTime = "2019-03-01"
-// The following workaround are necessasry in 0.6.0 (see https://github.com/FHIR/sushi/issues/113)
+// The following workaround are necessary in 0.6.0 (see https://github.com/FHIR/sushi/issues/113)
 * extension[TreatmentIntent].url = "http://hl7.org/fhir/us/mcode/StructureDefinition/TreatmentIntent"
 * extension[RadiationDose].url = "http://hl7.org/fhir/us/mcode/StructureDefinition/RadiationDose"
 * extension[RadiationDose].extension[TotalRadiationDoseDelivered].url = "http://hl7.org/fhir/us/mcode/StructureDefinition/TotalRadiationDoseDelivered"
@@ -193,7 +194,7 @@ InstanceOf: TNMClinicalStageGroup
 * id = "mCODETNMClinicalStageGroupExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMClinicalStageGroup"
 * status = #final "final" 
-* category = #survey "Survey"
+* category = ObsCat#survey "Survey"
 * method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
@@ -207,7 +208,7 @@ InstanceOf: TNMClinicalDistantMetastasesCategory
 * id = "mCODETNMClinicalDistantMetastasesCategoryExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMClinicalDistantMetastasesCategory"
 * status = #final "final" 
-* category = #survey "Survey"
+* category = ObsCat#survey "Survey"
 * method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
@@ -218,7 +219,7 @@ InstanceOf: TNMClinicalPrimaryTumorCategory
 * id = "mCODETNMClinicalPrimaryTumorCategoryExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMClinicalPrimaryTumorCategory"
 * status = #final "final" 
-* category = #survey "Survey"
+* category = ObsCat#survey "Survey"
 * method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
@@ -230,7 +231,7 @@ InstanceOf: TNMClinicalRegionalNodesCategory
 * id = "mCODETNMClinicalRegionalNodesCategoryExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMClinicalRegionalNodesCategory"
 * status = #final "final" 
-* category = #survey "Survey"
+* category = ObsCat#survey "Survey"
 * method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
@@ -242,7 +243,7 @@ InstanceOf: TNMPathologicalStageGroup
 * id = "mCODETNMPathologicalStageGroupExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMPathologicalStageGroup"
 * status = #final "final" 
-* category = #laboratory "laboratory"
+* category = ObsCat#laboratory "laboratory"
 * method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
@@ -257,7 +258,7 @@ InstanceOf: TNMPathologicalDistantMetastasesCategory
 * id = "mCODETNMPathologicalDistantMetastasesCategoryExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMPathologicalDistantMetastasesCategory"
 * status = #final "final" 
-* category = #laboratory "laboratory"
+* category = ObsCat#laboratory "laboratory"
 * method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
@@ -269,7 +270,7 @@ InstanceOf: TNMPathologicalPrimaryTumorCategory
 * id = "mCODETNMPathologicalPrimaryTumorCategoryExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMPathologicalPrimaryTumorCategory"
 * status = #final "final" 
-* category = #laboratory "laboratory"
+* category = ObsCat#laboratory "laboratory"
 * method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
@@ -279,12 +280,10 @@ InstanceOf: TNMPathologicalPrimaryTumorCategory
 Instance: mCODETNMPathologicalRegionalNodesCategoryExample01
 InstanceOf: TNMPathologicalRegionalNodesCategory
 * id = "mCODETNMPathologicalRegionalNodesCategoryExample01"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMPathologicalNodesCategory"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMPathologicalRegionalNodesCategory"
 * status = #final "final" 
-* category = #laboratory "laboratory"
+* category = ObsCat#laboratory "laboratory"
 * method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#pN3 "N3"
-
-

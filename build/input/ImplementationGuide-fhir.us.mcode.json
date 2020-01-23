@@ -772,6 +772,11 @@
             "nameUrl": "downloads.html",
             "title": "Downloads",
             "generation": "markdown"
+          },
+          {
+            "nameUrl": "versions.html",
+            "title": "Versions",
+            "generation": "markdown"
           }
         ]
       }
