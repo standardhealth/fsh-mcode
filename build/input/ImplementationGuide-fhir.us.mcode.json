@@ -397,7 +397,14 @@
             "reference": "Observation/mCODECancerGeneticVariantExample01"
           },
           "name": "Observation-mCODECancerGeneticVariantExample01",
-          "exampleBoolean": true
+          "exampleCanonical": "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerGeneticVariant"
+        },
+        {
+          "reference": {
+            "reference": "Observation/mCODEGenomicRegionStudiedExample01"
+          },
+          "name": "Observation-mCODEGenomicRegionStudiedExample01",
+          "exampleCanonical": "http://hl7.org/fhir/us/mcode/StructureDefinition/GenomicRegionStudied"
         },
         {
           "reference": {
@@ -418,56 +425,56 @@
             "reference": "MedicationStatement/mCODECancerRelatedMedicationStatementExample01"
           },
           "name": "MedicationStatement-mCODECancerRelatedMedicationStatementExample01",
-          "exampleBoolean": true
+          "exampleCanonical": "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerRelatedMedicationStatement"
         },
         {
           "reference": {
             "reference": "Procedure/mCODECancerRelatedRadiationProcedureExample01"
           },
           "name": "Procedure-mCODECancerRelatedRadiationProcedureExample01",
-          "exampleBoolean": true
+          "exampleCanonical": "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerRelatedRadiationProcedure"
         },
         {
           "reference": {
             "reference": "Procedure/mCODECancerRelatedSurgicalProcedureExample01"
           },
           "name": "Procedure-mCODECancerRelatedSurgicalProcedureExample01",
-          "exampleBoolean": true
+          "exampleCanonical": "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerRelatedSurgicalProcedure"
         },
         {
           "reference": {
             "reference": "Condition/mCODEComorbidConditionExample01"
           },
           "name": "Condition-mCODEComorbidConditionExample01",
-          "exampleBoolean": true
+          "exampleCanonical": "http://hl7.org/fhir/us/mcode/StructureDefinition/ComorbidCondition"
         },
         {
           "reference": {
             "reference": "Observation/mCODEECOGPerformanceStatusExample01"
           },
           "name": "Observation-mCODEECOGPerformanceStatusExample01",
-          "exampleBoolean": true
+          "exampleCanonical": "http://hl7.org/fhir/us/mcode/StructureDefinition/ECOGPerformanceStatus"
         },
         {
           "reference": {
             "reference": "Observation/mCODEKarnofskyPerformanceStatusExample01"
           },
           "name": "Observation-mCODEKarnofskyPerformanceStatusExample01",
-          "exampleBoolean": true
+          "exampleCanonical": "http://hl7.org/fhir/us/mcode/StructureDefinition/KarnofskyPerformanceStatus"
         },
         {
           "reference": {
             "reference": "Organization/mCODEOrganizationExample01"
           },
           "name": "Organization-mCODEOrganizationExample01",
-          "exampleBoolean": true
+          "exampleCanonical": ""
         },
         {
           "reference": {
             "reference": "Patient/mCODEPatientExample01"
           },
           "name": "Patient-mCODEPatientExample01",
-          "exampleBoolean": true
+          "exampleCanonical": "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerPatient"
         },
         {
           "reference": {
@@ -481,63 +488,63 @@
             "reference": "Condition/mCODEPrimaryCancerConditionExample01"
           },
           "name": "Condition-mCODEPrimaryCancerConditionExample01",
-          "exampleBoolean": true
+          "exampleCanonical": "http://hl7.org/fhir/us/mcode/StructureDefinition/PrimaryCancerCondition"
         },
         {
           "reference": {
             "reference": "Observation/mCODETNMClinicalDistantMetastasesCategoryExample01"
           },
           "name": "Observation-mCODETNMClinicalDistantMetastasesCategoryExample01",
-          "exampleBoolean": true
+          "exampleCanonical": "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMClinicalDistantMetastasesCategory"
         },
         {
           "reference": {
             "reference": "Observation/mCODETNMClinicalPrimaryTumorCategoryExample01"
           },
           "name": "Observation-mCODETNMClinicalPrimaryTumorCategoryExample01",
-          "exampleBoolean": true
+          "exampleCanonical": "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMClinicalPrimaryTumorCategory"
         },
         {
           "reference": {
             "reference": "Observation/mCODETNMClinicalRegionalNodesCategoryExample01"
           },
           "name": "Observation-mCODETNMClinicalRegionalNodesCategoryExample01",
-          "exampleBoolean": true
+          "exampleCanonical": "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMClinicalRegionalNodesCategory"
         },
         {
           "reference": {
             "reference": "Observation/mCODETNMClinicalStageGroupExample01"
           },
           "name": "Observation-mCODETNMClinicalStageGroupExample01",
-          "exampleBoolean": true
+          "exampleCanonical": "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMClinicalStageGroup"
         },
         {
           "reference": {
             "reference": "Observation/mCODETNMPathologicalDistantMetastasesCategoryExample01"
           },
           "name": "Observation-mCODETNMPathologicalDistantMetastasesCategoryExample01",
-          "exampleBoolean": true
+          "exampleCanonical": "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMPathologicalDistantMetastasesCategory"
         },
         {
           "reference": {
             "reference": "Observation/mCODETNMPathologicalPrimaryTumorCategoryExample01"
           },
           "name": "Observation-mCODETNMPathologicalPrimaryTumorCategoryExample01",
-          "exampleBoolean": true
+          "exampleCanonical": "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMPathologicalPrimaryTumorCategory"
         },
         {
           "reference": {
             "reference": "Observation/mCODETNMPathologicalRegionalNodesCategoryExample01"
           },
           "name": "Observation-mCODETNMPathologicalRegionalNodesCategoryExample01",
-          "exampleBoolean": true
+          "exampleCanonical": "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMPathologicalRegionalNodesCategory"
         },
         {
           "reference": {
             "reference": "Observation/mCODETNMPathologicalStageGroupExample01"
           },
           "name": "Observation-mCODETNMPathologicalStageGroupExample01",
-          "exampleBoolean": true
+          "exampleCanonical": "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMPathologicalStageGroup"
         },         
         {
           "reference": {
@@ -785,6 +792,11 @@
           {
             "nameUrl": "downloads.html",
             "title": "Downloads",
+            "generation": "markdown"
+          },
+          {
+            "nameUrl": "versions.html",
+            "title": "Versions",
             "generation": "markdown"
           }
         ]

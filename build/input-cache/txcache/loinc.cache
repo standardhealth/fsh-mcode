@@ -8368,3 +8368,243 @@ e: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA9633-4"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Present",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA26398-0"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Sequencing",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA6684-0"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Somatic",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA29177-5"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Normal activity with effort; some signs or symptoms of disease",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "69548-6"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Genetic variant assessment",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "69548-6"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "Genetic variant assessment",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA9633-4"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "LIST",
+        "op" : "=",
+        "value" : "LL1971-2"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Present",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA9633-4"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "LIST",
+        "op" : "=",
+        "value" : "LL1971-2"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "Present",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA29177-5"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "LA29175-9",
+        "display" : "KPS 100: Normal; no complaints; no evidence of disease"
+      },
+      {
+        "code" : "LA29176-7",
+        "display" : "KPS 90: Able to carry on normal activity; minor signs or symptoms of disease"
+      },
+      {
+        "code" : "LA29177-5",
+        "display" : "KPS 80: Normal activity with effort; some signs or symptoms of disease"
+      },
+      {
+        "code" : "LA29178-3",
+        "display" : "KPS 70: Cares for self; unable to carry on normal activity or do active work"
+      },
+      {
+        "code" : "LA29179-1",
+        "display" : "KPS 60: Requires occasional assistance but is able to care for most needs"
+      },
+      {
+        "code" : "LA29180-9",
+        "display" : "KPS 50: Requires considerable assistance and frequent medical care"
+      },
+      {
+        "code" : "LA29181-7",
+        "display" : "KPS 40: Disabled; requires special care and assistance"
+      },
+      {
+        "code" : "LA29182-5",
+        "display" : "KPS 30: Severely disabled; hospitalization is indicated, although death not imminent"
+      },
+      {
+        "code" : "LA29183-3",
+        "display" : "KPS 20: Very sick; hospitalization necessary; active supportive treatment necessary"
+      },
+      {
+        "code" : "LA29184-1",
+        "display" : "KPS 10: Moribund; fatal processes progressing rapidly"
+      },
+      {
+        "code" : "LA9627-6",
+        "display" : "KPS 0: Dead"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Normal activity with effort; some signs or symptoms of disease",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA29177-5"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "LA29175-9",
+        "display" : "KPS 100: Normal; no complaints; no evidence of disease"
+      },
+      {
+        "code" : "LA29176-7",
+        "display" : "KPS 90: Able to carry on normal activity; minor signs or symptoms of disease"
+      },
+      {
+        "code" : "LA29177-5",
+        "display" : "KPS 80: Normal activity with effort; some signs or symptoms of disease"
+      },
+      {
+        "code" : "LA29178-3",
+        "display" : "KPS 70: Cares for self; unable to carry on normal activity or do active work"
+      },
+      {
+        "code" : "LA29179-1",
+        "display" : "KPS 60: Requires occasional assistance but is able to care for most needs"
+      },
+      {
+        "code" : "LA29180-9",
+        "display" : "KPS 50: Requires considerable assistance and frequent medical care"
+      },
+      {
+        "code" : "LA29181-7",
+        "display" : "KPS 40: Disabled; requires special care and assistance"
+      },
+      {
+        "code" : "LA29182-5",
+        "display" : "KPS 30: Severely disabled; hospitalization is indicated, although death not imminent"
+      },
+      {
+        "code" : "LA29183-3",
+        "display" : "KPS 20: Very sick; hospitalization necessary; active supportive treatment necessary"
+      },
+      {
+        "code" : "LA29184-1",
+        "display" : "KPS 10: Moribund; fatal processes progressing rapidly"
+      },
+      {
+        "code" : "LA9627-6",
+        "display" : "KPS 0: Dead"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "Normal activity with effort; some signs or symptoms of disease",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

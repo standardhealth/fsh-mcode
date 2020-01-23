@@ -1,6 +1,3 @@
-Alias:   UCUM = http://unitsofmeasure.org
-Alias:   USCoreProcedure = http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure
-
 Profile:  CancerRelatedRadiationProcedure
 Parent:   USCoreProcedure
 Id:       CancerRelatedRadiationProcedure
