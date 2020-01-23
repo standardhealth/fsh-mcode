@@ -21,8 +21,8 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * specimen only Reference(GeneticSpecimen) 
 * value[x] only CodeableConcept
 * valueCodeableConcept from http://loinc.org/vs/LL1971-2 (required)
-* component ^slicing.discriminator.type = #value
-* component ^slicing.discriminator.path = "code.coding.code"
+* component ^slicing.discriminator.type = #pattern
+* component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
 * component ^slicing.description = "Slice based on the component.code pattern"
 * component contains
@@ -131,8 +131,8 @@ The identity of non-genomic laboratory tests is typically represented by a LOINC
 * subject only Reference(CancerPatient)
 * code = LNC#81247-9 "Master HL7 genetic variant reporting panel"
 * specimen only Reference(GeneticSpecimen)
-* result ^slicing.discriminator.type = #value
-* result ^slicing.discriminator.path = "$this.resolve().code.coding.code"
+* result ^slicing.discriminator.type = #profile // #value
+* result ^slicing.discriminator.path = "$this.resolve()" // "$this.resolve().code.coding.code"
 * result ^slicing.rules = #open
 * result ^slicing.description = "Slice based on the reference profile and code pattern"
 * result contains
@@ -146,8 +146,8 @@ Title:      "Genomic Region Studied"
 Description:    "The area of the genome region referenced in testing for variants."
 * code MS
 * code = LNC#53041-0 "DNA region of interest panel"
-* component ^slicing.discriminator.type = #value
-* component ^slicing.discriminator.path = "code.coding.code"
+* component ^slicing.discriminator.type = #pattern
+* component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
 * component ^slicing.description = "Slice based on the component.code pattern"
 * component contains

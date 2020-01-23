@@ -201,7 +201,7 @@ InstanceOf: TNMClinicalStageGroup
 * valueCodeableConcept = AJCC#3C "IIIC"
 * hasMember[TNMClinicalPrimaryTumorCategory] = Reference(mCODETNMClinicalPrimaryTumorCategoryExample01)
 * hasMember[TNMClinicalRegionalNodesCategory] = Reference(mCODETNMClinicalRegionalNodesCategoryExample01)
-* hasMember[TNMClinicalDistantMetastasesCategory] = Reference(mCODETNMClinicalRegionalNodesCategoryExample01)
+* hasMember[TNMClinicalDistantMetastasesCategory] = Reference(mCODETNMClinicalDistantMetastasesCategoryExample01)
 
 Instance: mCODETNMClinicalDistantMetastasesCategoryExample01
 InstanceOf: TNMClinicalDistantMetastasesCategory
