@@ -19,6 +19,7 @@
     <li>GenomicsReport onco-core-RegionStudied-extension is migrated to a slice under DiagnosticReport.result with a reference to a new profile, RegionStudied.</li>
     <li>GenomicsReport obf-SpecimenType-extension is migrated to a slice under DiagnosticReport.result with a reference to a new profile, GeneticSpecimen.</li>
     <li>DiagnosticReport.category cardinality changed from 0..1 to 0..*</li>
+    <li>Replaced references of CIMPL to references of FHIR Shorthand and SUSHI.</li>
 </ul>
 
 
