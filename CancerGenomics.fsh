@@ -31,7 +31,7 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
     GenomicDNAChange 0..1 MS and
     GenomicSourceClass 0..1 MS and
     AminoAcidChange 0..1 MS and
-    AAChangeType 0..1 MS and
+   AminoAcidChngeType 0..1 MS and
     CytogeneticLocation 0..* MS and
     CytogeneticNomenclature 0..1 MS 
 * component[GeneStudied] ^short = "Gene studied [ID]"
@@ -59,7 +59,7 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * component[AminoAcidChange].value[x] only CodeableConcept
 * component[AminoAcidChange].valueCodeableConcept 1..1
 * component[AminoAcidChange].valueCodeableConcept from http://varnomen.hgvs.org (required)
-// SUSHI Issue #122 -- Temporarily change name from AminoAcidChangeType to AAChangeType
+// SUSHI Issue #122 -- Temporarily change name from AminoAcidChangeType toAminoAcidChngeType
 * component[AAChangeType] ^short = "Amino acid change [Type]"
 * component[AAChangeType].code = LNC#48006-1
 * component[AAChangeType].value[x] only CodeableConcept
