@@ -12,6 +12,6 @@ Alias:   USCoreObservationLab = http://hl7.org/fhir/us/core/StructureDefinition/
 Alias:   USCoreOrganization = http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
 
 // Extensions
-// Alias:   USCoreRace = http://hl7.org/fhir/us/core/StructureDefinition/us-core-race
+Alias:   USCoreRace = http://hl7.org/fhir/us/core/StructureDefinition/us-core-race
 Alias:   USCoreBirthSex = http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex
 
