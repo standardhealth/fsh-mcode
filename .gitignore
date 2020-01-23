@@ -6,3 +6,4 @@ build/input/.DS_Store
 build/StructureDefinition*
 build/ValueSet*
 
+.DS_Store

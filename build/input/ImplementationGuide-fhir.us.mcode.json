@@ -408,6 +408,13 @@
         },
         {
           "reference": {
+            "reference": "DiagnosticReport/mCODECancerGenomicsReportExample01"
+          },
+          "name": "DiagnosticReport-mCODECancerGenomicsReportExample01",
+          "exampleCanonical": "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerGenomicsReport"
+        },
+        {
+          "reference": {
             "reference": "MedicationStatement/mCODECancerRelatedMedicationStatementExample01"
           },
           "name": "MedicationStatement-mCODECancerRelatedMedicationStatementExample01",
