@@ -60,11 +60,11 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * component[AminoAcidChange].valueCodeableConcept 1..1
 * component[AminoAcidChange].valueCodeableConcept from http://varnomen.hgvs.org (required)
 // SUSHI Issue #122 -- Temporarily change name from AminoAcidChangeType toAminoAcidChngeType
-* component[AAChangeType] ^short = "Amino acid change [Type]"
-* component[AAChangeType].code = LNC#48006-1
-* component[AAChangeType].value[x] only CodeableConcept
-* component[AAChangeType].valueCodeableConcept 1..1
-* component[AAChangeType].valueCodeableConcept from http://fhir.loinc.org/vs/LL380-7 (required)
+* component[AminoAcidChngeType] ^short = "Amino acid change [Type]"
+* component[AminoAcidChngeType].code = LNC#48006-1
+* component[AminoAcidChngeType].value[x] only CodeableConcept
+* component[AminoAcidChngeType].valueCodeableConcept 1..1
+* component[AminoAcidChngeType].valueCodeableConcept from http://fhir.loinc.org/vs/LL380-7 (required)
 * component[CytogeneticLocation] ^short = "Cytogenetic (chromosome) location"
 * component[CytogeneticLocation].code = LNC#48001-2
 * component[CytogeneticLocation].value[x] 1..1 
