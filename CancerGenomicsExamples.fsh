@@ -17,7 +17,7 @@ InstanceOf: CancerGeneticVariant
 Instance: mCODECancerGenomicsReportExample01
 InstanceOf: CancerGenomicsReport
 * id = "mCODECancerGenomicsReportExample01"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/GenomicsReport"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerGenomicsReport"
 * status = #final "Final"
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
@@ -28,7 +28,7 @@ InstanceOf: CancerGenomicsReport
 Instance: mCODEGenomicRegionStudiedExample01
 InstanceOf: GenomicRegionStudied
 * id = "mCODEGenomicRegionStudiedExample01"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/GenomicsRegiodStudied"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/GenomicRegionStudied"
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * issued = "2019-04-01T11:45:33+11:00"
