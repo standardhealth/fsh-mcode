@@ -232,7 +232,8 @@ Description:    "The area of the genome region referenced in testing for variant
 * component ^slicing.rules = #open
 * component ^slicing.description = "Slice based on the component.code pattern"
 * component contains
-    GeneMutations 0..* MS 	    GeneStudied 0..* MS and
+    GeneMutations 0..* MS and
+    GeneStudied 0..* MS and
     GeneMutations 0..* MS and
     DNARegionDescription 0..* MS and
     DNARangesExamined 0..* MS and
@@ -253,7 +254,7 @@ Description:    "The area of the genome region referenced in testing for variant
 * component[GeneMutations].valueCodeableConcept from from http://varnomen.hgvs.org (required)
  */
  
- */  // MLT_end of block comment
+// MLT_end of block comment
 
 /*  // MLT_start of block comment
  // *** alternate way of defining slices (not yet supported)***
