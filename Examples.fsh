@@ -82,7 +82,7 @@ InstanceOf: CancerPatient
 * id = "mCODEPatientExample02"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerPatient"
 // The following lines must use the slice names, not the defining URLs
-* extension[race].extension[ombCategory].valueCoding = USCoreRace#2186-5 "Not Hispanic or Latino"
+* extension[race].extension[ombCategory].valueCoding = OmbCat#2186-5 "Not Hispanic or Latino"
 * extension[birthsex].valueCode = #F
 * identifier.use = #usual
 * identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#MR "Medical Record Number"
@@ -228,7 +228,7 @@ InstanceOf: TNMClinicalStageGroup
 * valueCodeableConcept = AJCC#3C "IIIC"
 * hasMember[TNMClinicalPrimaryTumorCategory] = Reference(mCODETNMClinicalPrimaryTumorCategoryExample01)
 * hasMember[TNMClinicalRegionalNodesCategory] = Reference(mCODETNMClinicalRegionalNodesCategoryExample01)
-* hasMember[TNMClinicalDistantMetastasesCategory] = Reference(mCODETNMClinicalRegionalNodesCategoryExample01)
+* hasMember[TNMClinicalDistantMetastasesCategory] = Reference(mCODETNMClinicalDistantMetastasesCategoryExample01)
 
 Instance: mCODETNMClinicalDistantMetastasesCategoryExample01
 InstanceOf: TNMClinicalDistantMetastasesCategory

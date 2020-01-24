@@ -1,4 +1,4 @@
-// Structure Definitions
+// Profiles
 Alias:   USCoreCondition = http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition
 Alias:   USCoreDiagnosticReportLab = http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab
 Alias:   USCoreDocumentReference = http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentReference
@@ -12,6 +12,6 @@ Alias:   USCoreObservationLab = http://hl7.org/fhir/us/core/StructureDefinition/
 Alias:   USCoreOrganization = http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
 
 // Extensions
-// Alias:   USCoreRace = http://hl7.org/fhir/us/core/StructureDefinition/us-core-race
+Alias:   USCoreRace = http://hl7.org/fhir/us/core/StructureDefinition/us-core-race
 Alias:   USCoreBirthSex = http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex
 

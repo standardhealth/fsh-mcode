@@ -25,8 +25,9 @@ Id: CancerStageGroupParent
 Parent: CancerStageParent
 Title: "Cancer Stage Group Parent"
 * ^abstract = true
-* hasMember ^slicing.discriminator.type = #value
-* hasMember ^slicing.discriminator.path = "code.coding.code"
+* hasMember only Reference(CancerStageParent)
+* hasMember ^slicing.discriminator.type = #profile // #pattern
+* hasMember ^slicing.discriminator.path =  "$this.resolve()" // "$this.resolve().code"
 * hasMember ^slicing.rules = #open
 
 Profile: TNMClinicalStageGroup

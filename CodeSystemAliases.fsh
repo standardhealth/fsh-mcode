@@ -1,3 +1,4 @@
+// Code Systems
 Alias:   LNC = http://loinc.org
 Alias:   SCT = http://snomed.info/sct
 Alias:   UCUM = http://unitsofmeasure.org
@@ -13,7 +14,7 @@ Alias:   IDTYPE = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias:   HGNC = http://www.genenames.org/geneId
 Alias:   HGVS = http://varnomen.hgvs.org
 Alias:   SPTY = http://terminology.hl7.org/CodeSystem/v2-0487
-Alias:   USCoreRace = http://hl7.org/fhir/us/core/ValueSet/omb-race-category
+Alias:   OmbCat = http://hl7.org/fhir/us/core/ValueSet/omb-race-category
 Alias:   ClinStatus = http://terminology.hl7.org/CodeSystem/condition-clinical
 Alias:   VerStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status
 Alias:   MedStatus = http://hl7.org/fhir/CodeSystem/medication-statement-status
