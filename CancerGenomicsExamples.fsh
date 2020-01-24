@@ -21,9 +21,9 @@ InstanceOf: CancerGenomicsReport
 * status = #final "Final"
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
-* specimen = Reference(mCODEGeneticSpecimenExample01)
+* specimen = Reference(Specimen/mCODEGeneticSpecimenExample01)
 * issued = "2019-04-01T11:45:33+11:00"
-* result[CancerGeneticVariant] = Reference(mCODECancerGeneticVariantExample01)
+* result[CancerGeneticVariant] = Reference(Observation/mCODECancerGeneticVariantExample01)
 * result[GenomicRegionStudied] = Reference(mCODEGenomicRegionStudiedExample01)
 
 Instance: mCODEGenomicRegionStudiedExample01
@@ -51,9 +51,9 @@ Instance: mCODEGeneticSpecimenExample01
 InstanceOf: GeneticSpecimen
 * id = "mCODEGeneticSpecimenExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/GeneticSpecimen"
-* status = #available "	Available"
+* status = #available "Available"
 * subject = Reference(mCODEPatientExample01)
 * processing.timeDateTime = "2019-03-20"
 * collection.collector = Reference(mCODEPractitionerExample01) 
 * type = SPTY#TISS "Tissue"
-* collection.bodySite.coding = SCT#41224006 "Structure of lower lobe of left lung (body structure)"
+* collection.bodySite = SCT#41224006 "Structure of lower lobe of left lung (body structure)"

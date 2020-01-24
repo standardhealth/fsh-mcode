@@ -408,6 +408,13 @@
         },
         {
           "reference": {
+            "reference": "Specimen/mCODEGeneticSpecimenExample01"
+          },
+          "name": "Specimen-mCODEGeneticSpecimenExample01",
+          "exampleCanonical": "http://hl7.org/fhir/us/mcode/StructureDefinition/GeneticSpecimen"
+        },
+        {
+          "reference": {
             "reference": "DiagnosticReport/mCODECancerGenomicsReportExample01"
           },
           "name": "DiagnosticReport-mCODECancerGenomicsReportExample01",
