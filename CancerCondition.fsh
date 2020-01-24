@@ -43,7 +43,7 @@ Cancer staging information summarized in this profile should reflect the most re
 Conformance note: For the code attribute, to be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used."
 * ^abstract = false
 * code from PrimaryOrUncertainBehaviorCancerDisorderVS (extensible)
-* stage.assessment only Reference(CancerStageGroupParent)
+* stage.assessment only Reference(TNMClinicalStageGroup | TNMPathologicalStageGroup)
 
 Profile: SecondaryCancerCondition
 Parent: CancerConditionParent

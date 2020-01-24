@@ -122,14 +122,6 @@
         },
         {
           "reference": {
-            "reference": "StructureDefinition/CancerStageGroupParent"
-          },
-          "name": "Cancer Stage Group Parent",
-          "description": "Abstract parent class for members of cancer staging panels. Cancer panel members must include a timing element and staging system, and focus on a cancer disorder. Specific realizations will have value sets specific to certain staging systems.",
-          "exampleBoolean": false
-        },
-        {
-          "reference": {
             "reference": "StructureDefinition/CancerStageParent"
           },
           "name": "Cancer Stage Parent",
