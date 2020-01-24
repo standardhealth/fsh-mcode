@@ -97,7 +97,7 @@ Description:  "A comorbidity refers to one or more diseases or conditions that o
 
 
 
-// Tumor profile was in mCODE, but not primary (hidden). The way we have used the CancerConditionParent, it is not necessary to list Tumor explicitly in TumorMarkerTest and CancerDiseaseStatus. For example, we have `* focus only Reference(CancerConditionParent)` and not (in CIMPL) `Value only PrimaryCancerCondition or SecondaryCancerCondition or Tumor`
+// Tumor profile was in mCODE, but not primary (hidden). The way we have used the CancerConditionParent, it is not necessary to list Tumor explicitly in TumorMarker and CancerDiseaseStatus. For example, we have `* focus only Reference(CancerConditionParent)` and not (in CIMPL) `Value only PrimaryCancerCondition or SecondaryCancerCondition or Tumor`
 /*
 Profile: Tumor
 Parent: CancerConditionParent
