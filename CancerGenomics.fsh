@@ -38,33 +38,33 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * component[GeneStudied].code = LNC#48018-6
 * component[GeneStudied].value[x] only CodeableConcept
 * component[GeneStudied].valueCodeableConcept 1..1
-* component[GeneStudied].valueCodeableConcept from http://www.genenames.org/geneId (extensible)
+* component[GeneStudied].valueCodeableConcept from HGNCVS (extensible)
 * component[VariationCode] ^short = "Discrete genetic variant"
 * component[VariationCode].code = LNC#81252-9
 * component[VariationCode].value[x] only CodeableConcept
 * component[VariationCode].valueCodeableConcept 1..1
-* component[VariationCode].valueCodeableConcept from http://www.ncbi.nlm.nih.gov/clinvar (preferred)
+* component[VariationCode].valueCodeableConcept from ClinVarVS (preferred)
 * component[GenomicDNAChange] ^short = "Genomic DNA change (gHGVS)"
 * component[GenomicDNAChange].code = LNC#81290-9
 * component[GenomicDNAChange].value[x] only CodeableConcept
 * component[GenomicDNAChange].valueCodeableConcept 1..1
-* component[GenomicDNAChange].valueCodeableConcept from http://varnomen.hgvs.org (required)
+* component[GenomicDNAChange].valueCodeableConcept from HGVSVS (required)
 * component[GenomicSourceClass] ^short = "Genomic source class [Type]"
 * component[GenomicSourceClass].code = LNC#48002-0
 * component[GenomicSourceClass].value[x] only CodeableConcept
 * component[GenomicSourceClass].valueCodeableConcept 1..1
-* component[GenomicSourceClass].valueCodeableConcept from http://fhir.loinc.org/ValueSet/LL378-1 (required)
+* component[GenomicSourceClass].valueCodeableConcept from http://loinc.org/vs/LL378-1 (required)
 * component[AminoAcidChange] ^short = "Amino acid change (pHGVS)"
 * component[AminoAcidChange].code = LNC#48005-3
 * component[AminoAcidChange].value[x] only CodeableConcept
 * component[AminoAcidChange].valueCodeableConcept 1..1
-* component[AminoAcidChange].valueCodeableConcept from http://varnomen.hgvs.org (required)
+* component[AminoAcidChange].valueCodeableConcept from HGVSVS (required)
 // SUSHI Issue #122 -- Temporarily change name from AminoAcidChangeType toAminoAcidChngeType
 * component[AminoAcidChngeType] ^short = "Amino acid change [Type]"
 * component[AminoAcidChngeType].code = LNC#48006-1
 * component[AminoAcidChngeType].value[x] only CodeableConcept
 * component[AminoAcidChngeType].valueCodeableConcept 1..1
-* component[AminoAcidChngeType].valueCodeableConcept from http://fhir.loinc.org/ValueSet/LL380-7 (required)
+* component[AminoAcidChngeType].valueCodeableConcept from http://loinc.org/vs/LL380-7 (required)
 * component[CytogeneticLocation] ^short = "Cytogenetic (chromosome) location"
 * component[CytogeneticLocation].code = LNC#48001-2
 * component[CytogeneticLocation].value[x] 1..1 
@@ -171,14 +171,14 @@ Description:    "The area of the genome region referenced in testing for variant
 * component[GeneMutations].code = LNC#36908-2
 * component[GeneMutations].value[x] only CodeableConcept
 * component[GeneMutations].valueCodeableConcept 1..1
-* component[GeneMutations].valueCodeableConcept from http://varnomen.hgvs.org (required)
+* component[GeneMutations].valueCodeableConcept from HGVSVS (required)
 // MK 1/23/2020 should this be http://www.genenames.org/geneId (extensible)?
 
 * component[GeneStudied] ^short = "Gene studied [ID]"
 * component[GeneStudied].code = LNC#48018-6
 * component[GeneStudied].value[x] only CodeableConcept
 * component[GeneStudied].valueCodeableConcept 1..1
-* component[GeneStudied].valueCodeableConcept from http://www.genenames.org/geneId (extensible)
+* component[GeneStudied].valueCodeableConcept from HGNCVS (extensible)
 
 * component[DNARegionDescription] ^short = "Description for the DNA region studied in the genomics report"
 * component[DNARegionDescription].code = LNC#81293-3
@@ -194,7 +194,7 @@ Description:    "The area of the genome region referenced in testing for variant
 * component[GenomicRegionCoordinateSystem].code = LNC#92822-6
 * component[GenomicRegionCoordinateSystem].value[x] only CodeableConcept
 * component[GenomicRegionCoordinateSystem].valueCodeableConcept 1..1
-* component[GenomicRegionCoordinateSystem].valueCodeableConcept from http://fhir.loinc.org/ValueSet/LL5323-2 (preferred)
+* component[GenomicRegionCoordinateSystem].valueCodeableConcept from http://loinc.org/vs/LL5323-2 (preferred)
 
 * component[GenomicReferenceSequenceId] ^short = "Range(s) of DNA sequence examined. The genomic reference sequence is a contiguous stretch of chromosome DNA that spans all of the exons of the gene and includes transcribed and non transcribed stretches. For this ID use either the NCBI genomic nucleotide RefSeq IDs with their version number (see: NCBI.NLM.NIH.Gov/RefSeq) or use the LRG identifiers, without transcript (t or p) extensions -- when they become available. (source: LOINC)"
 * component[GenomicReferenceSequenceId].code = LNC#48013-7

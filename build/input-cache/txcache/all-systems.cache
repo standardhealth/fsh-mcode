@@ -10327,3 +10327,18 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://cancerstaging.org"
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/AJCCFairUse"
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://cancerstaging.org"
+}
+-------------------------------------------------------------------------------------

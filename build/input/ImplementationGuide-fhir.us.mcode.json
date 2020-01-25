@@ -761,6 +761,27 @@
           },
           "name": "UnitsOfLengthVS",
           "description": "Units of measure for length or distance on a human scale."
+        },
+        {
+          "reference": {
+            "reference": "ValueSet/HGNCVS"
+          },
+          "name": "HGNCVS",
+          "description": "HUGO Gene Nomenclature Committee Gene Names Value Set"
+        },
+        {
+          "reference": {
+            "reference": "ValueSet/HGVSVS"
+          },
+          "name": "HGVSVS",
+          "description": "HGVS nomenclature is used to report and exchange information regarding variants found in DNA, RNA, and protein sequences."
+        },
+        {
+          "reference": {
+            "reference": "CodeSystem/AJCCfu"
+          },
+          "name": "AJCCfu",
+          "description": "A small local subset of AJCC staging codes for example purposes."
         }
       ],
       "page": {
