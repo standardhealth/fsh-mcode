@@ -31,7 +31,7 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
     GenomicDNAChange 0..1 MS and
     GenomicSourceClass 0..1 MS and
     AminoAcidChange 0..1 MS and
-   AminoAcidChngeType 0..1 MS and
+    AminoAcidChngeType 0..1 MS and
     CytogeneticLocation 0..* MS and
     CytogeneticNomenclature 0..1 MS 
 * component[GeneStudied] ^short = "Gene studied [ID]"
@@ -131,13 +131,22 @@ The identity of non-genomic laboratory tests is typically represented by a LOINC
 * subject only Reference(CancerPatient)
 * code = LNC#81247-9 "Master HL7 genetic variant reporting panel"
 * specimen only Reference(GeneticSpecimen)
-* result ^slicing.discriminator.type = #profile // #value
-* result ^slicing.discriminator.path = "$this.resolve()" // "$this.resolve().code.coding.code"
+* result ^slicing.discriminator.type = #pattern
+* result ^slicing.discriminator.path = "$this.resolve().code"
 * result ^slicing.rules = #open
 * result ^slicing.description = "Slice based on the reference profile and code pattern"
 * result contains
     CancerGeneticVariant 0..1 MS and
     GenomicRegionStudied 0..1 MS
+* result[CancerGeneticVariant] only Reference(CancerGeneticVariant)
+* result[CancerGeneticVariant] ^short = "Cancer Genetic Variant"
+* result[CancerGeneticVariant] ^definition = "Records an alteration in the most common DNA nucleotide sequence. The term variant is increasingly being used in place of the term mutation to describe an alteration that may be benign, pathogenic, or of unknown significance."
+* result[CancerGeneticVariant] ^comment = "When using this element, the Observation must validate against the specified profile."
+* result[GenomicRegionStudied] only Reference(GenomicRegionStudied)
+* result[GenomicRegionStudied] ^short = "Genomic Region Studied"
+* result[GenomicRegionStudied] ^definition = "The area of the genome region referenced in testing for variants."
+* result[GenomicRegionStudied] ^comment = "When using this element, the Observation must validate against the specified profile."
+
 
 Profile:    GenomicRegionStudied
 Parent:     USCoreObservationLab
@@ -191,141 +200,3 @@ Description:    "The area of the genome region referenced in testing for variant
 * component[GenomicReferenceSequenceId].code = LNC#48013-7
 * component[GenomicReferenceSequenceId].value[x] 1..1
 // no value type specified
-
-
-
-
-
-
-
-/// MLT_20200117: The CG Reporting IG contains a component named 'region-coverage'. This was omitted on purpose since the profile specified a non-existing code system and code "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes". mCODE to omit until there is something substantial there.
-
-/*  // MLT_start of block comment
- // *** alternate way of defining slices (not yet supported)***
-Slice:     GeneMutations
-Parent:    ObservationComponent
-Id:        GeneMutations
-Title:     "Gene Mutations"
-Description: "ene mutations tested for in Blood or Tissue by Molecular genetics method Nominal"
-* code = LNC#36908-2
-* value[x] only CodeableConcept
-* valueCodeableConcept 1..1
-* valueCodeableConcept from http://www.genenames.org/geneId (extensible)
-
-Slice:     DNARegionDescription
-Parent:    ObservationComponent
-Id:        DNARegionDescription
-Title:     "DNA Region Description"
-Description: "Description for the DNA region studied in the genomics report"
-* code = LNC#81293-3
-* value[x] 1..1
-* value[x] only string
-
-Slice:     DNARangesExamined
-Parent:    ObservationComponent
-Id:        DNARangesExamined
-Title:     "DNA Ranges Examined"
-Description: "Range(s) of DNA sequence examined"
-* code = LNC#51959-5
-* value[x] 1..1
-* value[x] only Range
-
-Slice:     GenomicRegionCoordinateSystem
-Parent:    ObservationComponent
-Id:        GenomicRegionCoordinateSystem
-Title:     "Genomic Region Coordinate System"
-Description: "A genomic coordinate is a position along a sequence."
-* code = LNC#92822-6
-* value[x] only CodeableConcept
-* valueCodeableConcept 1..1
-* valueCodeableConcept from http://fhir.loinc.org/vs/LL5323-2 (preferred)
-
-Slice:     GenomicReferenceSequenceId
-Parent:    ObservationComponent
-Id:        GenomicReferenceSequenceId
-Title:     "Genomic reference sequence identifier"
-Description: "Range(s) of DNA sequence examined. The genomic reference sequence is a contiguous stretch of chromosome DNA that spans all of the exons of the gene and includes transcribed and non transcribed stretches. For this ID use either the NCBI genomic nucleotide RefSeq IDs with their version number (see: NCBI.NLM.NIH.Gov/RefSeq) or use the LRG identifiers, without transcript (t or p) extensions -- when they become available. (source: LOINC)"
-* code = LNC#48013-7
-* value[x] 1..1  // MLT_20200117: CG Reporting IG does not bind the value.
-
-
-
-
-
-Slice:     GeneStudied
-Parent:    ObservationComponent
-Id:        GeneStudied
-Title:     "Gene Studied"
-Description: "Gene studied [ID]"
-* code = LNC#48018-6
-* value[x] only CodeableConcept
-* valueCodeableConcept 1..1
-* valueCodeableConcept from http://www.genenames.org/geneId (extensible)
-
-Slice:     VariationCode
-Parent:    ObservationComponent
-Id:        VariationCode
-Title:     "Variation Code"
-Description: "Discrete genetic variant"
-* code = LNC#81252-9
-* value[x] only CodeableConcept
-* valueCodeableConcept 1..1
-* valueCodeableConcept from http://www.ncbi.nlm.nih.gov/clinvar (preferred)
-
-Slice:     GenomicDNAChange
-Parent:    ObservationComponent
-Id:        GenomicDNAChange
-Title:     "Genomic DNA Change"
-Description: "Genomic DNA change (gHGVS)"
-* code = LNC#81290-9
-* value[x] only CodeableConcept
-* valueCodeableConcept 1..1
-* valueCodeableConcept from http://varnomen.hgvs.org (required)
-
-Slice:     GenomicSourceClass
-Parent:    ObservationComponent
-Id:        GenomicSourceClass
-Title:     "Genomic Source Class"
-Description: "Genomic source class [Type]"
-* code = LNC#48002-0
-* value[x] only CodeableConcept
-* valueCodeableConcept 1..1
-* valueCodeableConcept from http://fhir.loinc.org/vs/LL378-1 (required)
-
-Slice:     AminoAcidChange
-Parent:    ObservationComponent
-Id:        AminoAcidChange
-Title:     "Amino Acid Change"
-Description: "Amino acid change (pHGVS)"
-* code = LNC#48005-3
-* value[x] only CodeableConcept
-* valueCodeableConcept 1..1
-* valueCodeableConcept from http://varnomen.hgvs.org (required)
-
-Slice:     AminoAcidChangeType
-Parent:    ObservationComponent
-Id:        AminoAcidChangeType
-Title:     "Amino Acid Change Type"
-Description: "Amino acid change [Type]"
-* code = LNC#48006-1
-* value[x] only CodeableConcept
-* valueCodeableConcept 1..1
-* valueCodeableConcept from http://fhir.loinc.org/vs/LL380-7 (required)
-
-Slice:     CytogeneticLocation
-Parent:    ObservationComponent
-Id:        CytogeneticLocation
-Title:     "Cytogenetic Location"
-Description: "Cytogenetic (chromosome) location"
-* code = LNC#48001-2
-* value[x] 1..1 // CG Reporting IG does not constrain the CytogeneticLocation value type.
-
-Slice:     CytogeneticNomenclature
-Parent:    ObservationComponent
-Id:        CytogeneticNomenclature
-Title:     "Cytogenetic Nomenclature"
-Description: "Variant ISCN"
-* code = LNC#81291-7
-* value[x] 1..1 // CG Reporting IG does not constrain the CytogeneticLocation value type.
-*/
-

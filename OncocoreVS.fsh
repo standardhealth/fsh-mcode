@@ -35,13 +35,13 @@ Title: "Histology Morphology Behavior Value Set"
 Description: "Codes representing the structure, arrangement, and behavioral characteristics of malignant neoplasms, and cancer cells. Inclusion criteria: in situ neoplasms and malignant neoplasms. Exclusion criteria: benign neoplasms and neoplasms of unspecified behavior. Note: As the vocabulary binding is extensible within this IG, ICD-O-3 morphology codes (including behavior suffix) may also be used; they are not included in the value set for intellectual property reasons. For primary cancers, the ICD-O-3 behavior suffix should be /1, /2, or /3. For secondary cancers, the ICD-O-3 behavior suffix should be /6. Only SNOMED CT and ICD-O-3 are considered conformant to the specification. However, to be compliant with US Core Profiles, ICD-O-3 may only be used if there is no suitable code in SNOMED CT."
 * codes from system SCT where concept is-a #367651003 "Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)"
 * codes from system SCT where concept is-a #399919001 "Carcinoma in situ - category (morphologic abnormality)"
-* codes from system SCT where
-    concept is-a #399983006 "In situ adenomatous neoplasm - category (morphologic abnormality)" and
-    concept is-not-a #450893003 "Papillary neoplasm, pancreatobiliary-type, with high grade intraepithelial neoplasia (morphologic abnormality)" and
-    concept is-not-a #128640002 "Glandular intraepithelial neoplasia, grade III (morphologic abnormality)" and
-    concept is-not-a #450890000 "Glandular intraepithelial neoplasia, low grade (morphologic abnormality)" and
-    concept is-not-a #703548001 "Endometrioid intraepithelial neoplasia (morphologic abnormality)"
+* codes from system SCT where concept is-a #399983006 "In situ adenomatous neoplasm - category (morphologic abnormality)"
 * SCT#399878004 "Malignant neoplasm with pilar differentiation (morphologic abnormality)"
+* exclude codes from system SCT where concept is-a #450893003 "Papillary neoplasm, pancreatobiliary-type, with high grade intraepithelial neoplasia (morphologic abnormality)"
+* exclude codes from system SCT where concept is-a #128640002 "Glandular intraepithelial neoplasia, grade III (morphologic abnormality)"
+* exclude codes from system SCT where concept is-a #450890000 "Glandular intraepithelial neoplasia, low grade (morphologic abnormality)"
+* exclude codes from system SCT where concept is-a #703548001 "Endometrioid intraepithelial neoplasia (morphologic abnormality)"
+
 
 ValueSet:   CancerHistologicGradeVS
 Title:  "Cancer Histologic Grade Value Set"
@@ -5545,8 +5545,8 @@ For SNOMED CT coding, use a code from the disorder hierarchy under SNOMED CT 363
 For ICD-10-CM coding, use one of the codes given in this value set representing primary malignant neoplasms and neoplasms of uncertain or unspecified behavior.
 
 Note that ICD-O-3 specifies morphology and topography, not disorder. If ICD-O-3 is used, the primary cancer disorder code must be specifically be SNOMED CT 363346000  'Malignant neoplastic disease (disorder)'. The ICD-O-3 morphology and topography codes should be entered in the HistologyMorphologyBehavior and body location fields, respectively."
-* codes from system SCT where concept is-a #363346000 "Malignant neoplastic disease (disorder)" and 
-concept is-not-a #128462008  "Secondary malignant neoplastic disease (disorder)"
+* codes from system SCT where concept is-a #363346000 "Malignant neoplastic disease (disorder)"
+* exclude codes from system SCT where concept is-a #128462008  "Secondary malignant neoplastic disease (disorder)"
 * ICD10CM#C000       "Malignant neoplasm of external upper lip"
 * ICD10CM#C001       "Malignant neoplasm of external lower lip"
 * ICD10CM#C002       "Malignant neoplasm of external lip, unspecified"
