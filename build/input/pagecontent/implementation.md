@@ -16,7 +16,7 @@
 <h4><a name="Conformance"></a>Conformance Requirements</h4>
 
 <h5>Relationship to US Core</h5>
-<p>With one exception (see <a href="#Conformance">below</a>), the profiles presented in this guide conform to <a href="http://hl7.org/fhir/us/core/" target="_blank">US Core Implementation Guide (v3.0.0)</a>. Each mCODE Profile uses a corresponding US Core profiles as its base profile, and thus, cannot break the rules established by that profile in US Core. For example, if US Core has a required element, by virtue of profile inheritance, mCODE cannot make that element optional. However, <em>it is not true that any instance that conforms to an mCODE profile will automatically conform to US Core</em>. In particular, the use of <a href="https://www.hl7.org/fhir/valueset-binding-strength.html" target="_blank">extensible value sets</a> requires caution. Extensibility is only allowed when an appropriate concept is not available in the US Core value set. Please note:</p>
+<p>With one exception (see <a href="#Conformance">below</a>), the profiles presented in this guide conform to <a href="http://hl7.org/fhir/us/core/index.html" target="_blank">US Core Implementation Guide (v3.0.0)</a>. Each mCODE Profile uses a corresponding US Core profiles as its base profile, and thus, cannot break the rules established by that profile in US Core. For example, if US Core has a required element, by virtue of profile inheritance, mCODE cannot make that element optional. However, <em>it is not true that any instance that conforms to an mCODE profile will automatically conform to US Core</em>. In particular, the use of <a href="https://www.hl7.org/fhir/valueset-binding-strength.html" target="_blank">extensible value sets</a> requires caution. Extensibility is only allowed when an appropriate concept is not available in the US Core value set. Please note:</p>
 <ul>
     <li>In ComorbidCondition, if an ICD-10-CM code is used, and a semantically equivalent SNOMED-CT code is available, the resulting instance will not conform to US Core.</li>
     <li>In mCODE Procedures, if an ICD-10-PCS code is used, and a semantically equivalent SNOMED CT or CPT code is available, the resulting instance will not confirm to US Core.</li>
@@ -37,7 +37,7 @@
 <p>In the future, additional roles may be defined.</p>
 
 <h5>"Must Support" Interpretation</h5>
-<p>In FHIR, the <a href="https://www.hl7.org/fhir/conformance-rules.html#mustSupport" target="_blank">MustSupport</a> flag indicates that implementation shall provide "meaningful support" for the element, as defined by its implementation guide. In mCODE, there are two sources of MustSupport elements: those inherited from US Core, and those defined in mCODE. To conform to US Core, the MustSupport elements inherited from US Core must follow <a href="http://hl7.org/fhir/us/core/STU3/general-guidance.html#must-support" target="_blank">the interpretation of MustSupport defined in US Core</a>.</p>
+<p>In FHIR, the <a href="https://www.hl7.org/fhir/conformance-rules.html#mustSupport" target="_blank">MustSupport</a> flag indicates that implementation shall provide "meaningful support" for the element, as defined by its implementation guide. In mCODE, there are two sources of MustSupport elements: those inherited from US Core, and those defined in mCODE. To conform to US Core, the MustSupport elements inherited from US Core must follow <a href="http://hl7.org/fhir/us/core/general-guidance.html#must-support" target="_blank">the interpretation of MustSupport defined in US Core</a>.</p>
 <p> Elements defined as MustSupport in mCODE do not follow the US Core rules. MustSupport elements defined in mCODE shall be interpreted as follows:</p>
 <ul>
     <li><strong>mCODE Data Sender</strong> - MustSupport is interpreted as "required to be sent if known" (subject to applicable privacy and security rules). That is, every MustSupport element in a profiled mCODE resource SHALL to be provided to an mCODE Data Receiver, if Data Sender has that data.</li>
@@ -55,7 +55,7 @@
 </ul>
 <p>In other words, a data element may be 1..1, but if it is contained by an optional element, then it is not required unless its containing element is actually present in a given instance of the profile.</p>
 
-<p>mCODE's rules regarding required data elements are the same as <a href="http://hl7.org/fhir/us/core/STU3/general-guidance.html#missing-data">US Core's rules</a>. To paraphrase those rules, a Data Sender must provide each required element or an explicit data absent reason for each missing data item.</p>
+<p>mCODE's rules regarding required data elements are the same as <a href="http://hl7.org/fhir/us/core/general-guidance.html#missing-data">US Core's rules</a>. To paraphrase those rules, a Data Sender must provide each required element or an explicit data absent reason for each missing data item.</p>
 
 <h5>Minimum Requirement for "mCODE Conformance"</h5>
 <p>The mCODE IG outlines conformance requirements and expectations for individual mCODE instances in terms of structural constraints and terminology bindings. Any FHIR resources claiming to conform to mCODE must <a href="https://www.hl7.org/fhir/validation.html" target="_blank">validate</a> against the declared mCODE profile.</p>
@@ -99,7 +99,7 @@
 </ul>
 
 <h4><a name="VitalSigns"></a>Vital Sign Profiles</h4>
-<p>The vital sign profiles defined by mCODE are consistent with the <a href="http://hl7.org/fhir/R4/observation-vitalsigns.html" target="_blank">FHIR vital sign profiles</a>, which are incorporated by reference into <a href="http://hl7.org/fhir/us/core/" target="_blank">US Core v3</a>. The difference between FHIR and mCODE vital signs is that mCODE provides for reporting of preconditions, body positions, blood pressure method, and blood pressure body location, with appropriate value sets. The vital signs model in mCODE is aligned with the Vital Signs Implementation Guide being developed in cooperation with the <a href="https://www.hl7.org/Special/Committees/cimi/index.cfm" target="_blank">Clinical Information Modeling Initiative (CIMI) Work Group</a>.</p> 
+<p>The vital sign profiles defined by mCODE are consistent with the <a href="http://hl7.org/fhir/R4/observation-vitalsigns.html" target="_blank">FHIR vital sign profiles</a>, which are incorporated by reference into <a href="http://hl7.org/fhir/us/core/index.html" target="_blank">US Core v3</a>. The difference between FHIR and mCODE vital signs is that mCODE provides for reporting of preconditions, body positions, blood pressure method, and blood pressure body location, with appropriate value sets. The vital signs model in mCODE is aligned with the Vital Signs Implementation Guide being developed in cooperation with the <a href="https://www.hl7.org/Special/Committees/cimi/index.cfm" target="_blank">Clinical Information Modeling Initiative (CIMI) Work Group</a>.</p> 
  <p>Although mCODE defines its own vital signs profiles, if and when detailed vital signs profiles are standardized in a widely-accepted FHIR IG, mCODE will likely switch over to those profiles.</p>
 
 <h4><a name="LaboratoryProfiles"></a>Laboratory Profiles</h4> 

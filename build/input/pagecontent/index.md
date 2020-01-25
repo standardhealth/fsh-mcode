@@ -95,7 +95,7 @@
     <li><a href="https://codes.iarc.fr/" target="_blank">International Classification of Diseases for Oncology, 3rd version (ICD-O-3)</a></li>
 </ul>
 
-<p>Because the use of these coding systems vary in different institutions, mCODE supports all three. Implementers should be aware, however, that how the cancer diagnosis is coded can affect compliance with <a href="http://hl7.org/fhir/us/core/" target="_blank">US Core</a> (see <a href="implementation.html">Implementation Notes</a> for details). Two attributes and one <a href="https://www.hl7.org/fhir/extensibility.html" target="_blank">FHIR extension</a> of the <a href="https://www.hl7.org/fhir/condition.html" target="_blank">FHIR Condition Resource</a> are involved with coding the cancer diagnosis: the Code, the <a href="StructureDefinition-HistologyMorphologyBehavior.html">HistologyMorphologyBehavior</a> extension, and the Body Site. How these attributes are used, depending on the coding system, is captured in the table below:</p>
+<p>Because the use of these coding systems vary in different institutions, mCODE supports all three. Implementers should be aware, however, that how the cancer diagnosis is coded can affect compliance with <a href="http://hl7.org/fhir/us/core/index.html" target="_blank">US Core</a> (see <a href="implementation.html">Implementation Notes</a> for details). Two attributes and one <a href="https://www.hl7.org/fhir/extensibility.html" target="_blank">FHIR extension</a> of the <a href="https://www.hl7.org/fhir/condition.html" target="_blank">FHIR Condition Resource</a> are involved with coding the cancer diagnosis: the Code, the <a href="StructureDefinition-HistologyMorphologyBehavior.html">HistologyMorphologyBehavior</a> extension, and the Body Site. How these attributes are used, depending on the coding system, is captured in the table below:</p>
 <!--
 <table class="tg">
     <tr>
@@ -158,7 +158,7 @@
 </p>
 
 <h5>Vital Signs</h5>
-<p>Vital signs are measurements of the most essential, or "vital" body functions. Traditionally, <a href="https://medlineplus.gov/vitalsigns.html" target="_blank">vital signs include</a> blood pressure, heart rate, respiratory rate, and temperature. More recently, height and weight have been included. For mCODE, blood pressure, body height, and body weight are believed to be most critical to assessment and treatment. mCODE uses the <a href="http://hl7.org/fhir/R4/observation-vitalsigns.html" target="_blank">FHIR vital sign profiles</a>, which are incorporated by reference into <a href="http://hl7.org/fhir/us/core/" target="_blank">US Core v3</a>. </p>
+<p>Vital signs are measurements of the most essential, or "vital" body functions. Traditionally, <a href="https://medlineplus.gov/vitalsigns.html" target="_blank">vital signs include</a> blood pressure, heart rate, respiratory rate, and temperature. More recently, height and weight have been included. For mCODE, blood pressure, body height, and body weight are believed to be most critical to assessment and treatment. mCODE uses the <a href="http://hl7.org/fhir/R4/observation-vitalsigns.html" target="_blank">FHIR vital sign profiles</a>, which are incorporated by reference into <a href="http://hl7.org/fhir/us/core/index.html" target="_blank">US Core v3</a>. </p>
 
 <h4><a name="Treatment">Treatments Group</a></h4>
 <p>The <strong>Treatment</strong> group includes reporting of procedures and medications used to treat a cancer patient, or relevant to that treatment. Treatments are captured using the following profiles:</p>
