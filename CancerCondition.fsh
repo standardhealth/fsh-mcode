@@ -1,12 +1,4 @@
-// restore and remove AssertedDate extension (below)
 Alias: AssertedDate = http://hl7.org/fhir/StructureDefinition/condition-assertedDate
-/* temporary!~
-Extension: AssertedDate
-Id: AssertedDate
-Title: "Asserted Date"
-Description: "Date when the condition was asserted"
-* value[x] only dateTime
-*/
 
 Profile: CancerConditionParent
 Parent:  USCoreCondition

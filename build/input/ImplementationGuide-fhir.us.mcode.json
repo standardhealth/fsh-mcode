@@ -537,7 +537,14 @@
           },
           "name": "Observation-mCODETNMPathologicalStageGroupExample01",
           "exampleCanonical": "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMPathologicalStageGroup"
-        },         
+        },
+        {
+          "reference": {
+            "reference": "Observation/mCODETumorMarkerExample01"
+          },
+          "name": "Observation-mCODETumorMarkerExample01",
+          "exampleCanonical": "http://hl7.org/fhir/us/mcode/StructureDefinition/TumorMarker"
+        },    
         {
           "reference": {
             "reference": "ValueSet/CancerBodyLocationVS"

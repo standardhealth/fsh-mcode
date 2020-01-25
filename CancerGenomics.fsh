@@ -53,7 +53,7 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * component[GenomicSourceClass].code = LNC#48002-0
 * component[GenomicSourceClass].value[x] only CodeableConcept
 * component[GenomicSourceClass].valueCodeableConcept 1..1
-* component[GenomicSourceClass].valueCodeableConcept from http://fhir.loinc.org/vs/LL378-1 (required)
+* component[GenomicSourceClass].valueCodeableConcept from http://fhir.loinc.org/ValueSet/LL378-1 (required)
 * component[AminoAcidChange] ^short = "Amino acid change (pHGVS)"
 * component[AminoAcidChange].code = LNC#48005-3
 * component[AminoAcidChange].value[x] only CodeableConcept
@@ -64,7 +64,7 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * component[AminoAcidChngeType].code = LNC#48006-1
 * component[AminoAcidChngeType].value[x] only CodeableConcept
 * component[AminoAcidChngeType].valueCodeableConcept 1..1
-* component[AminoAcidChngeType].valueCodeableConcept from http://fhir.loinc.org/vs/LL380-7 (required)
+* component[AminoAcidChngeType].valueCodeableConcept from http://fhir.loinc.org/ValueSet/LL380-7 (required)
 * component[CytogeneticLocation] ^short = "Cytogenetic (chromosome) location"
 * component[CytogeneticLocation].code = LNC#48001-2
 * component[CytogeneticLocation].value[x] 1..1 
@@ -187,16 +187,15 @@ Description:    "The area of the genome region referenced in testing for variant
 
 * component[DNARangesExamined] ^short = "Range(s) of DNA sequence examined"
 * component[DNARangesExamined].code = LNC#51959-5
-* component[DNARangesExamined].value[x] only Range  // This seems wrong, see fsh-mcode issue #32
+* component[DNARangesExamined].value[x] only Range
 * component[DNARangesExamined].valueRange 1..1
 
 * component[GenomicRegionCoordinateSystem] ^short = "A genomic coordinate is a position along a sequence."
 * component[GenomicRegionCoordinateSystem].code = LNC#92822-6
 * component[GenomicRegionCoordinateSystem].value[x] only CodeableConcept
 * component[GenomicRegionCoordinateSystem].valueCodeableConcept 1..1
-* component[GenomicRegionCoordinateSystem].valueCodeableConcept from http://fhir.loinc.org/vs/LL5323-2 (preferred)
+* component[GenomicRegionCoordinateSystem].valueCodeableConcept from http://fhir.loinc.org/ValueSet/LL5323-2 (preferred)
 
 * component[GenomicReferenceSequenceId] ^short = "Range(s) of DNA sequence examined. The genomic reference sequence is a contiguous stretch of chromosome DNA that spans all of the exons of the gene and includes transcribed and non transcribed stretches. For this ID use either the NCBI genomic nucleotide RefSeq IDs with their version number (see: NCBI.NLM.NIH.Gov/RefSeq) or use the LRG identifiers, without transcript (t or p) extensions -- when they become available. (source: LOINC)"
 * component[GenomicReferenceSequenceId].code = LNC#48013-7
-* component[GenomicReferenceSequenceId].value[x] 1..1
-// no value type specified
+* component[GenomicReferenceSequenceId].value[x] 1..1 // no value type specified
