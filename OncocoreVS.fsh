@@ -123,7 +123,7 @@ ValueSet: CancerRelatedSurgicalProcedureVS
 Title: "Cancer-Related Surgical Procedure Value Set"
 Description: "Includes selected SNOMED CT codes that may be used in the treatment of cancer tumors. Codes from ICD-10-PCS and CPT are acceptable. CPT codes are not listed here due to intellectual property restrictions. ICD-10-PCS codes are not listed because of a limitation in the FHIR Implementation Guide publisher. For CPT and ICD-10-PCS, only codes representing surgical procedures should be used. 
 
-Conformance note: If an ICD-10-PCS code is used, and a semantically equivalent SNOMED CT code is available, the resulting FHIR Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html)."
+Conformance note: If an ICD-10-PCS code is used, and a semantically equivalent SNOMED CT code is available, the resulting FHIR Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/index.html)."
 * SCT#174337000    "Destruction of lesion"
 * SCT#49264007    "Excision of lesion"
 * SCT#119894003    "Anus excision"
@@ -506,7 +506,7 @@ ValueSet:   SecondaryCancerDisorderVS
 Title: "Secondary Cancer Disorder Value Set"
 Description:  "Types of secondary malignant neoplastic disease, coded in SNOMED CT or ICD-10-CM. 
 
-Conformance note: To be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.
+Conformance note: To be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.
 
 * SNOMED CT coding: Use a code from the disorder hierarchy under secondary malignant neoplastic disease (SNOMED CT 128462008).
 * ICD-10-CM coding: Use one of the codes given in this value set representing secondary malignant neoplasms and neoplasms of uncertain or unspecified behavior. If body site is not precoordinated (implied by the code), it should be specified separately using the body location.
@@ -572,7 +572,7 @@ ValueSet:       RadiationProcedureVS
 Title: "Radiation Procedure Value Set"
 Description:    "Codes describing radiation therapy procedures. The value set includes a limited set of radiation modality codes from SNOMED CT, however, ICD-10-PCS code from Section D (Radiation Therapy) and appropriate CPT radiation procedure codes are also considered compliant. CPT codes are not explicitly included due to licensing restrictions. ICD-10-PCS codes are not included explicitly because they are not currently supported by the FHIR IG Publishing tool.
 
-Conformance note: If an ICD-10-PCS code is used, and a semantically equivalent SNOMED CT or CPT code is available, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html)."
+Conformance note: If an ICD-10-PCS code is used, and a semantically equivalent SNOMED CT or CPT code is available, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/index.html)."
 * SCT#448385000	"Megavoltage radiation therapy using photons (procedure)"
 * SCT#45643008	"Teleradiotherapy using electrons (procedure)"
 * SCT#10611004    "Teleradiotherapy protons (procedure)"
@@ -5538,7 +5538,7 @@ ValueSet:       PrimaryOrUncertainBehaviorCancerDisorderVS
 Title: "Primary or Uncertain Behavior Cancer Disorder Value Set"
 Description:    "Types of primary malignant neoplastic disease, coded in SNOMED CT or ICD-10-CM. 
 
-Conformance note: To be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), ICD-10-CM should only be used if a suitable code is not available from SNOMED.
+Conformance note: To be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/index.html), ICD-10-CM should only be used if a suitable code is not available from SNOMED.
 
 For SNOMED CT coding, use a code from the disorder hierarchy under SNOMED CT 363346000 'Malignant neoplastic disease (disorder)' excluding codes descending from SNOMED CT 128462008 'Secondary malignant neoplastic disease (disorder)'. If body location is not precoordinated (i.e., implied by the code), the site of the primary tumor should be specified in the body site attribute. 
 

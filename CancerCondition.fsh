@@ -40,7 +40,7 @@ Description: "Records the history of the primary cancer condition, the original 
 
 Cancer staging information summarized in this profile should reflect the most recent staging assessment on the patient, and should be updated if and when there is a new staging assessment. Past staging assessments will be preserved in instances of the TNMClinicalStageGroup and/or TNMPathologicalStageGroup, which refer back to PrimaryCancerCondition.
 
-Conformance note: For the code attribute, to be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used."
+Conformance note: For the code attribute, to be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used."
 * ^abstract = false
 * code from PrimaryOrUncertainBehaviorCancerDisorderVS (extensible)
 * stage.assessment only Reference(TNMClinicalStageGroup | TNMPathologicalStageGroup)
