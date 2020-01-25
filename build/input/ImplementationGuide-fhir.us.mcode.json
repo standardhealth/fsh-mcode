@@ -42,14 +42,6 @@
         },
         {
           "reference": {
-            "reference": "StructureDefinition/AssertedDate"
-          },
-          "name": "Asserted Date",
-          "description": "Date when the condition was asserted",
-          "exampleBoolean": false
-        },
-        {
-          "reference": {
             "reference": "StructureDefinition/BodySiteCode"
           },
           "name": "Body Site Code",
@@ -775,13 +767,6 @@
           },
           "name": "HGVSVS",
           "description": "HGVS nomenclature is used to report and exchange information regarding variants found in DNA, RNA, and protein sequences."
-        },
-        {
-          "reference": {
-            "reference": "CodeSystem/AJCCfu"
-          },
-          "name": "AJCCfu",
-          "description": "A small local subset of AJCC staging codes for example purposes."
         }
       ],
       "page": {
