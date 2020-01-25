@@ -31,7 +31,7 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
     GenomicDNAChange 0..1 MS and
     GenomicSourceClass 0..1 MS and
     AminoAcidChange 0..1 MS and
-    AminoAcidChngeType 0..1 MS and
+    AminoAcidChangeType 0..1 MS and
     CytogeneticLocation 0..* MS and
     CytogeneticNomenclature 0..1 MS 
 * component[GeneStudied] ^short = "Gene studied [ID]"
@@ -59,12 +59,11 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * component[AminoAcidChange].value[x] only CodeableConcept
 * component[AminoAcidChange].valueCodeableConcept 1..1
 * component[AminoAcidChange].valueCodeableConcept from HGVSVS (required)
-// SUSHI Issue #122 -- Temporarily change name from AminoAcidChangeType toAminoAcidChngeType
-* component[AminoAcidChngeType] ^short = "Amino acid change [Type]"
-* component[AminoAcidChngeType].code = LNC#48006-1
-* component[AminoAcidChngeType].value[x] only CodeableConcept
-* component[AminoAcidChngeType].valueCodeableConcept 1..1
-* component[AminoAcidChngeType].valueCodeableConcept from http://loinc.org/vs/LL380-7 (required)
+* component[AminoAcidChangeType] ^short = "Amino acid change [Type]"
+* component[AminoAcidChangeType].code = LNC#48006-1
+* component[AminoAcidChangeType].value[x] only CodeableConcept
+* component[AminoAcidChangeType].valueCodeableConcept 1..1
+* component[AminoAcidChangeType].valueCodeableConcept from http://loinc.org/vs/LL380-7 (required)
 * component[CytogeneticLocation] ^short = "Cytogenetic (chromosome) location"
 * component[CytogeneticLocation].code = LNC#48001-2
 * component[CytogeneticLocation].value[x] 1..1 

@@ -9,7 +9,7 @@ InstanceOf: PrimaryCancerCondition
 * subject = Reference(mCODEPatientExample01)
 * onsetDateTime = "2019-04-01"
 * asserter = Reference(mCODEPractitionerExample01)
-* stage.summary = AJCCfu#3C "IIIC"
+* stage.summary = AJCC#3C "IIIC"
 * stage.assessment = Reference(mCODETNMClinicalStageGroupExample01)
 
 
@@ -191,7 +191,7 @@ InstanceOf: TNMClinicalStageGroup
 * method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
-* valueCodeableConcept = AJCCfu#3C "IIIC"
+* valueCodeableConcept = AJCC#3C "IIIC"
 * hasMember[TNMClinicalPrimaryTumorCategory] = Reference(mCODETNMClinicalPrimaryTumorCategoryExample01)
 * hasMember[TNMClinicalRegionalNodesCategory] = Reference(mCODETNMClinicalRegionalNodesCategoryExample01)
 * hasMember[TNMClinicalDistantMetastasesCategory] = Reference(mCODETNMClinicalDistantMetastasesCategoryExample01)
@@ -205,7 +205,7 @@ InstanceOf: TNMClinicalDistantMetastasesCategory
 * method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
-* valueCodeableConcept = AJCCfu#cM0 "M0"
+* valueCodeableConcept = AJCC#cM0 "M0"
 
 Instance: mCODETNMClinicalPrimaryTumorCategoryExample01
 InstanceOf: TNMClinicalPrimaryTumorCategory
@@ -216,7 +216,7 @@ InstanceOf: TNMClinicalPrimaryTumorCategory
 * method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
-* valueCodeableConcept = AJCCfu#cT3 "T3"
+* valueCodeableConcept = AJCC#cT3 "T3"
 
 
 Instance: mCODETNMClinicalRegionalNodesCategoryExample01
@@ -228,7 +228,7 @@ InstanceOf: TNMClinicalRegionalNodesCategory
 * method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
-* valueCodeableConcept = AJCCfu#cN3 "N3"
+* valueCodeableConcept = AJCC#cN3 "N3"
 
 
 Instance: mCODETNMPathologicalStageGroupExample01
@@ -240,7 +240,7 @@ InstanceOf: TNMPathologicalStageGroup
 * method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
-* valueCodeableConcept = AJCCfu#3C "IIIC"
+* valueCodeableConcept = AJCC#3C "IIIC"
 * hasMember[TNMPathologicalPrimaryTumorCategory] = Reference(mCODETNMPathologicalPrimaryTumorCategoryExample01)
 * hasMember[TNMPathologicalRegionalNodesCategory] = Reference(mCODETNMPathologicalRegionalNodesCategoryExample01)
 * hasMember[TNMPathologicalDistantMetastasesCategory] = Reference(mCODETNMPathologicalDistantMetastasesCategoryExample01)
@@ -255,7 +255,7 @@ InstanceOf: TNMPathologicalDistantMetastasesCategory
 * method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
-* valueCodeableConcept = AJCCfu#pM0 "M0"
+* valueCodeableConcept = AJCC#pM0 "M0"
 
 
 Instance: mCODETNMPathologicalPrimaryTumorCategoryExample01
@@ -267,7 +267,7 @@ InstanceOf: TNMPathologicalPrimaryTumorCategory
 * method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
-* valueCodeableConcept = AJCCfu#pT3 "T3"
+* valueCodeableConcept = AJCC#pT3 "T3"
 
 
 Instance: mCODETNMPathologicalRegionalNodesCategoryExample01
@@ -279,4 +279,4 @@ InstanceOf: TNMPathologicalRegionalNodesCategory
 * method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
-* valueCodeableConcept = AJCCfu#pN3 "N3"
+* valueCodeableConcept = AJCC#pN3 "N3"

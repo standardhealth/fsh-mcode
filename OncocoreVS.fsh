@@ -1,15 +1,3 @@
-CodeSystem:  AJCCFairUse
-Title: "AJCC Fair Use"
-Description: "A small local subset of AJCC staging codes for example purposes."
-* #3C
-* #cM0
-* #cT3
-* #cN3
-* #pM0
-* #pT3
-* #pN3
-
-
 ValueSet: 	YesNoUnknownVS
 Description:	"A value set containing yes, no, and unknown."
 * SCT#373066001	 "Yes"
