@@ -71,7 +71,7 @@ Description:  "Standardized value set that describes the patient trend or status
 * SCT#103337004 "In partial remission (qualifier value)"
 * SCT#359746009 "Patient's condition stable (finding)"
 * SCT#271299001 "Patient's condition worsened (finding)"
-* SCT#42425007 "Equivocal. Equivocal represents a borderline value, too close to call; for example, a value very close to a cut-off between positive and negative."
+* SCT#42425007 "Equivocal (qualifier value)"
 * SCT#709137006 "Patient condition undetermined (finding)"
 
 ValueSet: CancerDiseaseStatusEvidenceTypeVS
