@@ -63,7 +63,7 @@ Description:  "The grade of the tumor. This is a subset of the LOINC answer list
 //* SCT#12619005  "GX grade (finding)" // includes synonym "Grade cannot be assessed", this is the terminology used by AJCC
 
 ValueSet:   CancerStatusTrendVS
-Title: "Condition Status Trend Value Set"
+Title: "Cancer Status Trend Value Set"
 Description:  "Standardized value set that describes the patient trend or status for a given disease, condition, or ability. Based on SNOMED equivalent concepts to LOINC answer lists LL2751-7 and LL4721-8 as well as terms related to cancer remission. The value SNOMED CT 395100000 (No evidence of cancer found) should be used to express No Evidence of Disease (NED)."
 * SCT#395100000 "No evidence of cancer found (situation)"
 * SCT#268910001 "Patient condition improved (finding)"
