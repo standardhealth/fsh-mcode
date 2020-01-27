@@ -18,7 +18,7 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * identifier[FillerOrderNumber].type = IDTYPE#FILL
 * identifier[PlacerOrderNumber].type = IDTYPE#PLAC
 * code = LNC#69548-6 "Genetic variant assessment"
-* method from https://fhir.loinc.org/ValueSet/LL4048-6 (extensible)
+* method from http://loinc.org/vs/LL4048-6 (extensible)
 * specimen only Reference(GeneticSpecimen) 
 * value[x] only CodeableConcept
 * valueCodeableConcept from http://loinc.org/vs/LL1971-2 (required)
