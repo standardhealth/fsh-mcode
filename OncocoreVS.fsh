@@ -65,7 +65,7 @@ Description:  "The grade of the tumor. This is a subset of the LOINC answer list
 ValueSet:   ConditionStatusTrendVS
 Title: "Cancer Status Trend Value Set"
 Description:  "Standardized value set that describes the patient trend or status for a given disease, condition, or ability. Based on SNOMED equivalent concepts to LOINC answer lists LL2751-7 and LL4721-8 as well as terms related to cancer remission. The value SNOMED CT 395100000 (No evidence of cancer found) should be used to express No Evidence of Disease (NED)."
-* SCT#33678008  "No disease found (situation)"
+* SCT#260415000 "Not detected (qualifier)"
 * SCT#268910001 "Patient condition improved (finding)"
 * SCT#359746009 "Patient's condition stable (finding)"
 * SCT#271299001 "Patient's condition worsened (finding)"
