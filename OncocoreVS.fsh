@@ -64,13 +64,15 @@ Description:  "The grade of the tumor. This is a subset of the LOINC answer list
 
 ValueSet:   ConditionStatusTrendVS
 Title: "Condition Status Trend Value Set"
-Description:  "Standardized value set that describes the trend or status of a disease, condition, or ability. Based on LOINC answer lists LL2751-7 and LL4721-8. The value SNOMED CT 260415000 (Not Detected) should be used to express No Evidence of Disease (NED), condition resolved, or full remission."
-* SCT#260415000       "Not detected. Use this term for expressing NED (no evidence of disease), condition resolved, or full remission."   //* SCT#723506003 "Resolved" or * SCT#103338009 "In full remission"
-* SCT#385633008       "Improving"
-* SCT#58158008        "Stable"
-* SCT#230993007       "Worsening"
-* SCT#42425007	    "Equivocal. Equivocal represents a borderline value, too close to call; for example, a value very close to a cut-off between positive and negative."
-* SCT#82334004        "Indeterminate. Indeterminate means the results were uninterpretable, or cannot be determined; technical issues prevented obtaining a valid result."
+Description:  "Standardized value set that describes the patient trend or status for a given disease, condition, or ability. Based on SNOMED equivalent concepts to LOINC answer lists LL2751-7 and LL4721-8 as well as terms related to cancer remission. The value SNOMED CT 395100000 (No evidence of cancer found) should be used to express No Evidence of Disease (NED)."
+* SCT#395100000 "No evidence of cancer found (situation)"
+* SCT#268910001 "Patient condition improved (finding)"
+* SCT#103338009 "In full remission (qualifier value)"
+* SCT#103337004 "In partial remission (qualifier value)"
+* SCT#359746009 "Patient's condition stable (finding)"
+* SCT#271299001 "Patient's condition worsened (finding)"
+* SCT#42425007 "Equivocal. Equivocal represents a borderline value, too close to call; for example, a value very close to a cut-off between positive and negative."
+* SCT#709137006 "Patient condition undetermined (finding)"
 
 ValueSet: CancerDiseaseStatusEvidenceTypeVS
 Title: "Cancer Disease Status Evidence Type Value Set"
