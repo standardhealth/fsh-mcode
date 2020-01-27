@@ -33,7 +33,7 @@ Description:    "A clinician's qualitative judgment on the current trend of the 
 * effective[x] only dateTime or Period
 * performer only Reference(USCorePractitioner)
 * value[x] only CodeableConcept
-* valueCodeableConcept from ConditionStatusTrendVS (required)
+* valueCodeableConcept from CancerStatusTrendVS (required)
 
 
 Extension: EvidenceType
