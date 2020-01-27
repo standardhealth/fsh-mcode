@@ -42,14 +42,6 @@
         },
         {
           "reference": {
-            "reference": "StructureDefinition/AssertedDate"
-          },
-          "name": "Asserted Date",
-          "description": "Date when the condition was asserted",
-          "exampleBoolean": false
-        },
-        {
-          "reference": {
             "reference": "StructureDefinition/BodySiteCode"
           },
           "name": "Body Site Code",
@@ -537,7 +529,14 @@
           },
           "name": "Observation-mCODETNMPathologicalStageGroupExample01",
           "exampleCanonical": "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMPathologicalStageGroup"
-        },         
+        },
+        {
+          "reference": {
+            "reference": "Observation/mCODETumorMarkerExample01"
+          },
+          "name": "Observation-mCODETumorMarkerExample01",
+          "exampleCanonical": "http://hl7.org/fhir/us/mcode/StructureDefinition/TumorMarker"
+        },    
         {
           "reference": {
             "reference": "ValueSet/CancerBodyLocationVS"
@@ -754,6 +753,20 @@
           },
           "name": "UnitsOfLengthVS",
           "description": "Units of measure for length or distance on a human scale."
+        },
+        {
+          "reference": {
+            "reference": "ValueSet/HGNCVS"
+          },
+          "name": "HGNCVS",
+          "description": "HUGO Gene Nomenclature Committee Gene Names Value Set"
+        },
+        {
+          "reference": {
+            "reference": "ValueSet/HGVSVS"
+          },
+          "name": "HGVSVS",
+          "description": "HGVS nomenclature is used to report and exchange information regarding variants found in DNA, RNA, and protein sequences."
         }
       ],
       "page": {

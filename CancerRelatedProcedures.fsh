@@ -4,7 +4,7 @@ Id:       CancerRelatedRadiationProcedure
 Title:    "Cancer-Related Radiation Procedure"
 Description: "A radiological treatment addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the ReasonReference and ReasonCode to cancer conditions. 
 
-Conformance note: If an ICD-10-PCS code is used in the code attribute, and there is a semantically equivalent SNOMED CT or CPT code, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html)"
+Conformance note: If an ICD-10-PCS code is used in the code attribute, and there is a semantically equivalent SNOMED CT or CPT code, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/index.html)"
 /* Issues relative to mCODE 0.9.x
 1) basedOn should not include ProcedureRequest. No such class in R4.
 2) basedOn should include CarePlan

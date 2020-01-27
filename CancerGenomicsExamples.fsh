@@ -13,6 +13,8 @@ InstanceOf: CancerGeneticVariant
 * component[VariationCode].valueCodeableConcept = CLINVAR#619728 "NC_000019.8:g.1171707G>A"
 * component[GenomicDNAChange].valueCodeableConcept = HGVS#NC_000019.8:g.1171707G>A "NC_000019.8:g.1171707G>A"
 * component[GenomicSourceClass].valueCodeableConcept = LNC#LA6684-0 "Somatic"
+// workaround for https://github.com/FHIR/sushi/issues/148: "Pattern in StructureDefinition not reflected in Instance" opened 1-25-2020 by MK
+* category = ObsCat#laboratory "laboratory"
 
 Instance: mCODECancerGenomicsReportExample01
 InstanceOf: CancerGenomicsReport
@@ -25,16 +27,20 @@ InstanceOf: CancerGenomicsReport
 * issued = "2019-04-01T11:45:33+11:00"
 * result[CancerGeneticVariant] = Reference(Observation/mCODECancerGeneticVariantExample01)
 * result[GenomicRegionStudied] = Reference(mCODEGenomicRegionStudiedExample01)
+// workaround for https://github.com/FHIR/sushi/issues/148: "Pattern in StructureDefinition not reflected in Instance" opened 1-25-2020 by MK
+* category = DiagosticService#LAB
 
 Instance: mCODEGenomicRegionStudiedExample01
 InstanceOf: GenomicRegionStudied
 * id = "mCODEGenomicRegionStudiedExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/GenomicRegionStudied"
+* status = #final "final"
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * issued = "2019-04-01T11:45:33+11:00"
-// Commented out -- causes SUSHI to not create this example -- see issue https://github.com/FHIR/sushi/issues/112
-//* component[GeneStudied].valueCodeableConcept = HGNC#619728 "STK11" 
+* component[GeneStudied].valueCodeableConcept = HGNC#619728 "STK11" 
+// workaround for https://github.com/FHIR/sushi/issues/148: "Pattern in StructureDefinition not reflected in Instance" opened 1-25-2020 by MK
+* category = ObsCat#laboratory "laboratory"
 
 Instance: mCODETumorMarkerExample01 
 InstanceOf: TumorMarker
@@ -46,6 +52,8 @@ InstanceOf: TumorMarker
 * effectiveDateTime = "2019-04-01"
 * performer = Reference(mCODEPractitionerExample01) 
 * valueCodeableConcept = SCT#10828004 "Positive (qualifier value)"
+// workaround for https://github.com/FHIR/sushi/issues/148: "Pattern in StructureDefinition not reflected in Instance" opened 1-25-2020 by MK
+* category = ObsCat#laboratory "laboratory"
 
 Instance: mCODEGeneticSpecimenExample01 
 InstanceOf: GeneticSpecimen
