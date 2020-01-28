@@ -16,6 +16,27 @@ InstanceOf: CancerGeneticVariant
 // workaround for https://github.com/FHIR/sushi/issues/148: "Pattern in StructureDefinition not reflected in Instance" opened 1-25-2020 by MK
 * category = ObsCat#laboratory "laboratory"
 
+/* mCODECancerGeneticVariantExample02 is an example of the 
+ * CancerGeneticVariant to represent a single mutation test.
+ * This example demonstrates a test for a single germline mutation, BRCA1 gene.c.185delAG, equivalent to the LOINC test https://loinc.org/21637-4/.
+ */
+Instance: mCODECancerGeneticVariantExample02
+InstanceOf: CancerGeneticVariant
+* id = "mCODECancerGeneticVariantExample02"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerGeneticVariant"
+* status = #final "Final"
+* method = LNC#LA26398-0 "Sequencing"
+// valueCodeableConcept has alternate codings depending on where to place the interpretation of "Positive or Negative".
+* valueCodeableConcept = SCT#10828004 "Positive (qualifier value)"
+* subject = Reference(mCODEPatientExample01)
+* effectiveDateTime = "2019-04-01"
+* valueCodeableConcept = LNC#LA9633-4 "Present"
+* component[GeneStudied].valueCodeableConcept = HGNC#HGNC:1100 "BRCA1" // NOTE: HGNC and HGVS codes have special characters in them so SUSHI needs to handle this.
+* component[GenomicDNAChange].valueCodeableConcept = HGVS#NG_005905.2:g.126148_126152GTAAA[1] "NG_005905.2:g.126148_126152GTAAA[1]"
+* component[GenomicSourceClass].valueCodeableConcept = LNC#LA6683-2 "Germline"
+// workaround for https://github.com/FHIR/sushi/issues/148: "Pattern in StructureDefinition not reflected in Instance" opened 1-25-2020 by MK
+* category = ObsCat#laboratory "laboratory"
+
 Instance: mCODECancerGenomicsReportExample01
 InstanceOf: CancerGenomicsReport
 * id = "mCODECancerGenomicsReportExample01"
