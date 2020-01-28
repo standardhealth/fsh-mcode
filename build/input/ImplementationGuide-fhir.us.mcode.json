@@ -392,6 +392,13 @@
         },
         {
           "reference": {
+            "reference": "Observation/mCODECancerGeneticVariantExample02"
+          },
+          "name": "Observation-mCODECancerGeneticVariantExample02",
+          "exampleCanonical": "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerGeneticVariant"
+        },
+        {
+          "reference": {
             "reference": "Observation/mCODEGenomicRegionStudiedExample01"
           },
           "name": "Observation-mCODEGenomicRegionStudiedExample01",
