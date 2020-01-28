@@ -18,7 +18,7 @@
     <li><b>Tumor Marker</b>: <a href="Observation-mCODETumorMarkerExample01.html">mCODETumorMarkerExample01</a> shows a simple example of an EGFR tumor marker status as positive.</li>
     <li><b>Genomics Report</b>: <a href="DiagnosticReport-mCODECancerGenomicsReportExample01.html">mCODECancerGenomicsReportExample01</a> shows a very small subset elements found in a genomics report which include the test service and test name.</li>
     <li><b>Genetic Variant</b>: <a href="Observation-mCODECancerGeneticVariantExample01.html">mCODECancerGeneticVariantFoundExample01</a> extends the contents of the Genomics Report by showing the results of a variant found for a specific gene, STK-11. This example differs from the mutation test result in that there was no preconceived test for a specific variant ahead of time.  Rather, it is the result of any variants found for a given DNA region.</li>
-    <li><b>Genetic Variant - single somatic mutation</b>: <a href="Observation-mCODECancerGeneticVariantExample02.html">mCODECancerGeneticVariantExample02</a> extends the contents of the Genomic Report example showing whether a test for a specific mutation for BRCA1 was present.</li-->
+    <li><b>Genetic Variant - single somatic mutation</b>: <a href="Observation-mCODECancerGeneticVariantExample02.html">mCODECancerGeneticVariantExample02</a> extends the contents of the Genomic Report example showing whether a test for a specific mutation for BRCA1 was present.</li>
 </ul>
 
 <h4>Additional Notes</h4>
