@@ -64,25 +64,21 @@ Description:  "The grade of the tumor. This is a subset of the LOINC answer list
 
 ValueSet:   ConditionStatusTrendVS
 Title: "Condition Status Trend Value Set"
-Description:  "Standardized value set that describes the trend or status of a disease, condition, or ability. Based on LOINC answer lists LL2751-7 and LL4721-8. The value SNOMED CT 260415000 (Not Detected) should be used to express No Evidence of Disease (NED), condition resolved, or full remission."
-* SCT#260415000       "Not detected. Use this term for expressing NED (no evidence of disease), condition resolved, or full remission."   //* SCT#723506003 "Resolved" or * SCT#103338009 "In full remission"
-* SCT#385633008       "Improving"
-* SCT#58158008        "Stable"
-* SCT#230993007       "Worsening"
-* SCT#42425007	    "Equivocal. Equivocal represents a borderline value, too close to call; for example, a value very close to a cut-off between positive and negative."
-* SCT#82334004        "Indeterminate. Indeterminate means the results were uninterpretable, or cannot be determined; technical issues prevented obtaining a valid result."
+Description:  "Standardized value set that describes the patient trend or status for a given disease, condition, or ability. The value SNOMED CT 260415000 'Not detected (qualifier)' should be used to express No Evidence of Disease (NED)."
+* SCT#260415000 "Not detected (qualifier)"
+* SCT#268910001 "Patient condition improved (finding)"
+* SCT#359746009 "Patient's condition stable (finding)"
+* SCT#271299001 "Patient's condition worsened (finding)"
+* SCT#709137006 "Patient condition undetermined (finding)"
 
 ValueSet: CancerDiseaseStatusEvidenceTypeVS
 Title: "Cancer Disease Status Evidence Type Value Set"
 Description:  "The type of evidence backing up the clinical determination of cancer progression. The code '* SCT#252416005 Histopathology test (procedure)' is intended to be used when there is a biopsy that contributes evidence of the cancer disease status."
-//SCT codes are children of * SCT#386053000 "Evaluation procedure (procedure)"
 * SCT#363679005 "Imaging (procedure)"
 * SCT#252416005 "Histopathology test (procedure)"
 * SCT#711015009 "Assessment of symptom control (procedure)"
 * SCT#5880005   "Physical examination procedure (procedure)"
-* SCT#250724005 "Tumor marker measurement (procedure)"
 * SCT#386344002 "Laboratory data interpretation (procedure)"
-//MTH#C0005516	"Biological markers"
 
 ValueSet:   CancerStagingSystemVS
 Title: "Cancer Staging System Value Set"
