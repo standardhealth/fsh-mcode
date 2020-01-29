@@ -234,14 +234,6 @@
         },
         {
           "reference": {
-            "reference": "StructureDefinition/RelationToLandmark"
-          },
-          "name": "Relation to Landmark",
-          "description": "The relationship between a landmark that helps determine a body location and the body location itself. The location relative to a landmark is specified by:\r\n* Specifying the location and type of landmark using a body site code and optional laterality/orientation,\r\n* Specifying the direction from the landmark to the body location, and\r\n* Specifying the distance from the landmark to the body location.",
-          "exampleBoolean": false
-        },
-        {
-          "reference": {
             "reference": "StructureDefinition/SecondaryCancerCondition"
           },
           "name": "Secondary Cancer Condition",
@@ -587,13 +579,6 @@
           },
           "name": "Histology Morphology Behavior Value Set",
           "description": "Codes representing the structure, arrangement, and behavioral characteristics of malignant neoplasms, and cancer cells. Inclusion criteria: in situ neoplasms and malignant neoplasms. Exclusion criteria: benign neoplasms and neoplasms of unspecified behavior. Note: As the vocabulary binding is extensible within this IG, ICD-O-3 morphology codes (including behavior suffix) may also be used; they are not included in the value set for intellectual property reasons. For primary cancers, the ICD-O-3 behavior suffix should be /1, /2, or /3. For secondary cancers, the ICD-O-3 behavior suffix should be /6. Only SNOMED CT and ICD-O-3 are considered conformant to the specification. However, to be compliant with US Core Profiles, ICD-O-3 may only be used if there is no suitable code in SNOMED CT."
-        },
-        {
-          "reference": {
-            "reference": "ValueSet/AnatomicalOrientationVS"
-          },
-          "name": "AnatomicalOrientationVS",
-          "description": "Terms that specify anatomical orientation."
         },
         {
           "reference": {

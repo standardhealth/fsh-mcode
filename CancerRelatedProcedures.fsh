@@ -51,9 +51,7 @@ Description: "A surgical action addressing a cancer condition. The scope of this
 * recorder only Reference(Practitioner | PractitionerRole)
 * performer.actor only Reference(Practitioner | PractitionerRole | Organization)
 * bodySite.extension contains
-    Laterality 0..1 and
-    AnatomicalOrientation 0..* and
-    RelationToLandmark 0..*
+    Laterality 0..1
 
     /* Save for possible later use
 
