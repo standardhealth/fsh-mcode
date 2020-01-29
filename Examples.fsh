@@ -12,6 +12,31 @@ InstanceOf: PrimaryCancerCondition
 * stage.summary = AJCC#3C "IIIC"
 * stage.assessment = Reference(mCODETNMClinicalStageGroupExample01)
 
+Instance: mCODESecondaryCancerConditionExample01
+InstanceOf: SecondaryCancerCondition
+* id = "mCODESecondaryCancerConditionExample01"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/SecondaryCancerCondition"
+* extension[RelatedPrimaryCancerCondition].url = "http://hl7.org/fhir/us/mcode/StructureDefinition/RelatedPrimaryCancerCondition"
+* extension[RelatedPrimaryCancerCondition].valueReference = Reference(mCODEPrimaryCancerConditionExample01)
+* clinicalStatus = ClinStatus#active "Active"
+* verificationStatus = VerStatus#confirmed "Confirmed"
+* code = SCT#94225005 "Secondary malignant neoplasm of brain"
+* subject = Reference(mCODEPatientExample01)
+* onsetDateTime = "2019-05-01"
+* asserter = Reference(mCODEPractitionerExample01)
+
+Instance: mCODECancerDiseaseStatusExample01
+InstanceOf: CancerDiseaseStatus
+* id = "mCODECancerDiseaseStatusExample01"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerDiseaseStatus"
+* extension[EvidenceType].url = "http://hl7.org/fhir/us/mcode/StructureDefinition/EvidenceType"
+* extension[EvidenceType].valueCodeableConcept = SCT#252416005 "Histopathology test (procedure)"
+* status = #final "final"
+* category = ObsCat#laboratory "laboratory"
+* subject = Reference(mCODEPatientExample01)
+* effectiveDateTime = "2019-04-01"
+* performer = Reference(mCODEPractitionerExample01)
+* valueCodeableConcept = SCT#268910001 "Patient condition improved (finding)"
 
 Instance: mCODEComorbidConditionExample01
 InstanceOf: ComorbidCondition
@@ -55,7 +80,11 @@ InstanceOf: CancerPatient
 * id = "mCODEPatientExample02"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerPatient"
 // The following lines must use the slice names, not the defining URLs
-* extension[race].extension[ombCategory].valueCoding = OmbCat#2186-5 "Not Hispanic or Latino"
+* extension[race].url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+* extension[race].extension[ombCategory].url = "ombCategory"
+* extension[race].extension[ombCategory].valueCoding = OmbRaceCat#1002-5 "American Indian or Alaska Native"
+* extension[race].extension[text].url = "text"
+* extension[race].extension[text].valueString = "Lakota and Crow"
 * extension[birthsex].valueCode = #F
 * identifier.use = #usual
 * identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#MR "Medical Record Number"

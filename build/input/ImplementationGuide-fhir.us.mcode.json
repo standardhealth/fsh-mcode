@@ -378,6 +378,13 @@
         },
         {
           "reference": {
+            "reference": "Observation/mCODECancerDiseaseStatusExample01"
+          },
+          "name": "Observation-mCODECancerDiseaseStatusExample01",
+          "exampleCanonical": "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerDiseaseStatus"
+        },
+        {
+          "reference": {
             "reference": "Observation/mCODECancerGeneticVariantExample01"
           },
           "name": "Observation-mCODECancerGeneticVariantExample01",
@@ -469,6 +476,13 @@
         },
         {
           "reference": {
+            "reference": "Patient/mCODEPatientExample02"
+          },
+          "name": "Patient-mCODEPatientExample02",
+          "exampleCanonical": "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerPatient"
+        },
+        {
+          "reference": {
             "reference": "Practitioner/mCODEPractitionerExample01"
           },
           "name": "Practitioner-mCODEPractitionerExample01",
@@ -480,6 +494,13 @@
           },
           "name": "Condition-mCODEPrimaryCancerConditionExample01",
           "exampleCanonical": "http://hl7.org/fhir/us/mcode/StructureDefinition/PrimaryCancerCondition"
+        },
+        {
+          "reference": {
+            "reference": "Condition/mCODESecondaryCancerConditionExample01"
+          },
+          "name": "Condition-mCODESecondaryCancerConditionExample01",
+          "exampleCanonical": "http://hl7.org/fhir/us/mcode/StructureDefinition/SecondaryCancerCondition"
         },
         {
           "reference": {
