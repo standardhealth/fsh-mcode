@@ -40,7 +40,7 @@
     <li>Updated code systems to new FHIR R4 base URL, http://terminology.hl7.org (previously was http://hl7.org/fhir)</li>
     <li>Changed profile name from GeneticMutationTested to GeneticVariant.</li>
     <li>Corrected mapping so the reference to PrimaryCancerCondition in all staging-related observations uses the existing 'focus' attribute.</li>
-    <li>Renamed extension Orientation to AnatomicalOrientation. The associated value set was also renamed to AnatomicalOrientationVS and its enumerated content was replaced by a logical definition.</li>
+    <li>Eliminated AnatomicalOrientation.</li>
     <li>Eliminated ClockDirection as a separate value set because values are incorporated in logically-defined SNOMED-CT AnatomicalOrientationVS.</li>
     <li>Re-wrote the introductory narratives to consolidate multiple pages.</li>
     <li>Changed clinicalStatus on PrimaryCancerCondition and SecondaryCancerCondition from 1..1 to 0..1.</li>

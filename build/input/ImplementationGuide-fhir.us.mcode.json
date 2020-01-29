@@ -34,22 +34,6 @@
       "resource": [
         {
           "reference": {
-            "reference": "StructureDefinition/AnatomicalOrientation"
-          },
-          "name": "Anatomical Orientation",
-          "description": "AnatomicalOrientation of the body location, if needed to distinguish from a similar location in another orientation.",
-          "exampleBoolean": false
-        },
-        {
-          "reference": {
-            "reference": "StructureDefinition/BodySiteCode"
-          },
-          "name": "Body Site Code",
-          "description": "An anatomical location represented as a code.",
-          "exampleBoolean": false
-        },
-        {
-          "reference": {
             "reference": "StructureDefinition/CancerConditionParent"
           },
           "name": "Cancer Condition Parent",
@@ -170,38 +154,6 @@
         },
         {
           "reference": {
-            "reference": "StructureDefinition/LandmarkLocation"
-          },
-          "name": "Landmark Location",
-          "description": "The body location of the landmark, specified by a location code and optional laterality and orientation.",
-          "exampleBoolean": false
-        },
-        {
-          "reference": {
-            "reference": "StructureDefinition/LandmarkToBodyLocationDirection"
-          },
-          "name": "Landmark to Body Location Direction",
-          "description": "The direction from the landmark to the body location of interest, given as a clockface direction or anatomical direction.",
-          "exampleBoolean": false
-        },
-        {
-          "reference": {
-            "reference": "StructureDefinition/LandmarkToBodyLocationDistance"
-          },
-          "name": "Landmark to Body Location Distance",
-          "description": "How far the body location of interest is from the given landmark.",
-          "exampleBoolean": false
-        },
-        {
-          "reference": {
-            "reference": "StructureDefinition/LandmarkType"
-          },
-          "name": "Landmark Type",
-          "description": "The type of feature that constitutes the landmark, particularly if the landmark is an acquired body structure or physical object.",
-          "exampleBoolean": false
-        },
-        {
-          "reference": {
             "reference": "StructureDefinition/Laterality"
           },
           "name": "Laterality",
@@ -230,14 +182,6 @@
           },
           "name": "Related Primary Cancer Condition",
           "description": "The primary cancer related to this secondary cancer.",
-          "exampleBoolean": false
-        },
-        {
-          "reference": {
-            "reference": "StructureDefinition/RelationToLandmark"
-          },
-          "name": "Relation to Landmark",
-          "description": "The relationship between a landmark that helps determine a body location and the body location itself. The location relative to a landmark is specified by:\r\n* Specifying the location and type of landmark using a body site code and optional laterality/orientation,\r\n* Specifying the direction from the landmark to the body location, and\r\n* Specifying the distance from the landmark to the body location.",
           "exampleBoolean": false
         },
         {
@@ -541,13 +485,6 @@
         },
         {
           "reference": {
-            "reference": "ValueSet/CancerHistologicGradeVS"
-          },
-          "name": "Cancer Histologic Grade Value Set",
-          "description": "The grade of the tumor. This is a subset of the LOINC answer list LL213-0, which represents allowable values for NAACCR data item #440. The original answer list is outdated, as it includes terms pointing to the lineage of hematopoietic/lymphoid neoplasms, which have been retired by NAACCR as of version 18 Data Standards and Data Dictionary."
-        },
-        {
-          "reference": {
             "reference": "ValueSet/CancerRelatedSurgicalProcedureVS"
           },
           "name": "Cancer-Related Surgical Procedure Value Set",
@@ -576,24 +513,10 @@
         },
         {
           "reference": {
-            "reference": "ValueSet/GeneticTestVS"
-          },
-          "name": "Genetic Test Value Set",
-          "description": "Value set containing codes representing genetic tests. Currently the best source of codes is the [Genetic Test Registry](http://www.ncbi.nlm.nih.gov/gtr). The user should be aware that the GTR cannot be a sole reliable source since the test data is voluntarily updated and there is no overarching data steward. This value set contains all codes from http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-lab-codes (namely, the subset of LOINC codes with CLASSTYPE = 1), plus all codes in GTR.  Implementation note: Although only a subset of LOINC codes is formally part of this value set, the value set itself contains all codes in LOINC, because FHIR cannot create an implicitly-defined value set based on LOINC's CLASSTYPE property. Conformance note: To be conformant to US Core, a LOINC code must be used, if available. Only if there is no suitable code in LOINC may other codes (such as those from GTR) be used."
-        },
-        {
-          "reference": {
             "reference": "ValueSet/HistologyMorphologyBehaviorVS"
           },
           "name": "Histology Morphology Behavior Value Set",
           "description": "Codes representing the structure, arrangement, and behavioral characteristics of malignant neoplasms, and cancer cells. Inclusion criteria: in situ neoplasms and malignant neoplasms. Exclusion criteria: benign neoplasms and neoplasms of unspecified behavior. Note: As the vocabulary binding is extensible within this IG, ICD-O-3 morphology codes (including behavior suffix) may also be used; they are not included in the value set for intellectual property reasons. For primary cancers, the ICD-O-3 behavior suffix should be /1, /2, or /3. For secondary cancers, the ICD-O-3 behavior suffix should be /6. Only SNOMED CT and ICD-O-3 are considered conformant to the specification. However, to be compliant with US Core Profiles, ICD-O-3 may only be used if there is no suitable code in SNOMED CT."
-        },
-        {
-          "reference": {
-            "reference": "ValueSet/AnatomicalOrientationVS"
-          },
-          "name": "AnatomicalOrientationVS",
-          "description": "Terms that specify anatomical orientation."
         },
         {
           "reference": {
@@ -646,13 +569,6 @@
         },
         {
           "reference": {
-            "reference": "ValueSet/YesNoUnknownVS"
-          },
-          "name": "YesNoUnknownVS",
-          "description": "A value set containing yes, no, and unknown."
-        },
-        {
-          "reference": {
             "reference": "ValueSet/RadiationProcedureVS"
           },
           "name": "RadiationProcedureVS",
@@ -692,20 +608,6 @@
           },
           "name": "ECOGPerformanceStatusVS",
           "description": "Value set for Eastern Cooperative Oncology Group performance status. Values range from grade 0 (Asymptomatic) to grade 5 (Dead)."
-        },
-        {
-          "reference": {
-            "reference": "ValueSet/AnatomicalDirectionVS"
-          },
-          "name": "AnatomicalDirectionVS",
-          "description": "Terms that specify anatomical direction."
-        },
-        {
-          "reference": {
-            "reference": "ValueSet/LandmarkTypeVS"
-          },
-          "name": "LandmarkTypeVS",
-          "description": "The type of feature that constitutes the landmark, for example, particularly if the landmark is an acquired body structure or physical object."
         },
         {
           "reference": {

@@ -18,10 +18,12 @@ Title: "Cancer Body Location Value Set"
 Description:  "Codes describing the location(s) of primary or secondary cancer. The value set includes all codes from the SNOMED CT body structure hierarchy (codes descending from 123037004 'Body Structure'). The cancer body location may also be expressed using ICD-O-3 topography codes, however, those codes are not included here due to intellectual property restrictions. No other code systems are considered conformant."
 * codes from system SCT where concept is-a #123037004  "Body Structure"
 
+/* 
 ValueSet:  AnatomicalOrientationVS
 Title: "Anatomical Orientation Value Set"
 Description:  "Terms that specify anatomical orientation."
 * codes from system SCT where concept is-a #272424004 "Relative sites (qualifier value)"
+*/
 
 ValueSet:   HistologyMorphologyBehaviorVS
 Title: "Histology Morphology Behavior Value Set"
@@ -5487,6 +5489,7 @@ Description:    "Value set for Eastern Cooperative Oncology Group performance st
 * SCT#423237006   "ECOG Grade 4: Bedbound"
 * SCT#423409001   "ECOG Grade 5: Death"
 
+/*
 ValueSet:  AnatomicalDirectionVS
 Title: "Anatomical Direction Value Set"
 Description:       "Terms that specify anatomical direction."
@@ -5502,6 +5505,8 @@ Description:    "The type of feature that constitutes the landmark, for example,
 * SCT#13136005        "Injection site (morphologic abnormality)"
 * SCT#43526002        "Operative site (morphologic abnormality)"
 * codes from system SCT where concept is-a #40388003 "Implant, device (physical object)"
+*/
+
 
 ValueSet: LateralityVS
 Title: "Laterality Value Set"
