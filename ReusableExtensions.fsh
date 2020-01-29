@@ -40,7 +40,7 @@ Description: "The relationship between a landmark that helps determine a body lo
     LandmarkLocation 0..1 and
     LandmarkToBodyLocationDirection 0..1 and
     LandmarkToBodyLocationDistance 0..1
-*/
+
 Extension: LandmarkType
 Id:  LandmarkType
 Title: "Landmark Type"
@@ -80,3 +80,4 @@ Title: "Landmark to Body Location Distance"
 Description: "How far the body location of interest is from the given landmark."
 * value[x] only Quantity
 * valueQuantity from UnitsOfLengthVS (required)
+*/

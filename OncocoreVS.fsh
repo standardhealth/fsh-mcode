@@ -5489,6 +5489,7 @@ Description:    "Value set for Eastern Cooperative Oncology Group performance st
 * SCT#423237006   "ECOG Grade 4: Bedbound"
 * SCT#423409001   "ECOG Grade 5: Death"
 
+/*
 ValueSet:  AnatomicalDirectionVS
 Title: "Anatomical Direction Value Set"
 Description:       "Terms that specify anatomical direction."
@@ -5504,6 +5505,8 @@ Description:    "The type of feature that constitutes the landmark, for example,
 * SCT#13136005        "Injection site (morphologic abnormality)"
 * SCT#43526002        "Operative site (morphologic abnormality)"
 * codes from system SCT where concept is-a #40388003 "Implant, device (physical object)"
+*/
+
 
 ValueSet: LateralityVS
 Title: "Laterality Value Set"
