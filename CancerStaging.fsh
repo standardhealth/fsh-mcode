@@ -28,7 +28,7 @@ Profile: TNMClinicalStageGroup
 Id: TNMClinicalStageGroup
 Parent: CancerStageParent
 Title: "TNM Clinical Stage Group"
-Description: "The extent of the cancer in the body, according to the TNM classification system, based on information obtained prior to neoadjuvant treatment and surgery, e.g. based on evidence such as physical examination, imaging, and/or biopsy."
+Description: "The extent of the cancer in the body, according to the TNM classification system, based on evidence such as physical examination, imaging, and/or biopsy."
 * ^abstract = false
 * code = LNC#21908-9 "Stage group.clinical Cancer"
 * valueCodeableConcept from TNMStageGroupVS (preferred)
@@ -42,23 +42,23 @@ Description: "The extent of the cancer in the body, according to the TNM classif
 // Set metadata attributes that show up in the IG
 * hasMember[TNMClinicalPrimaryTumorCategory] only Reference(TNMClinicalPrimaryTumorCategory)
 * hasMember[TNMClinicalPrimaryTumorCategory] ^short = "TNM Clinical Primary Tumor Category"
-* hasMember[TNMClinicalPrimaryTumorCategory] ^definition = "Category of the primary tumor, based on its size and extent, assessed prior to surgery, based on evidence such as physical examination, imaging, and/or biopsy."
+* hasMember[TNMClinicalPrimaryTumorCategory] ^definition = "Category of the primary tumor, based on its size and extent, and based on evidence such as physical examination, imaging, and/or biopsy."
 * hasMember[TNMClinicalPrimaryTumorCategory] ^comment = "When using this element, the Observation must validate against the specified profile."
 
 * hasMember[TNMClinicalRegionalNodesCategory] only Reference(TNMClinicalRegionalNodesCategory)
 * hasMember[TNMClinicalRegionalNodesCategory] ^short = "TNM Clinical Regional Nodes Category"
-* hasMember[TNMClinicalRegionalNodesCategory] ^definition = "Category of the presence or absence of metastases in regional lymph nodes, assessed using tests that are done before surgery (Definition adapted from: NCI Dictionary of Cancer Terms). These include physical exams, imaging tests, laboratory tests (such as blood tests), and biopsies."
+* hasMember[TNMClinicalRegionalNodesCategory] ^definition = "Category of the presence or absence of metastases in regional lymph nodes, based on evidence such as physical examination, imaging, and/or biopsy."
 * hasMember[TNMClinicalRegionalNodesCategory] ^comment = "When using this element, the Observation must validate against the specified profile."
 * hasMember[TNMClinicalDistantMetastasesCategory] only Reference(TNMClinicalDistantMetastasesCategory)
 * hasMember[TNMClinicalDistantMetastasesCategory] ^short = "TNM Clinical Distant Metastases Category"
-* hasMember[TNMClinicalDistantMetastasesCategory] ^definition = "Category describing the presence or absence of metastases in remote anatomical locations, assessed through pathologic analysis of a specimen."
+* hasMember[TNMClinicalDistantMetastasesCategory] ^definition = "Category describing the presence or absence of metastases in remote anatomical locations, based on evidence such as physical examination, imaging, and/or biopsy."
 * hasMember[TNMClinicalDistantMetastasesCategory] ^comment = "When using this element, the Observation must validate against the specified profile."
 
 Profile:  TNMClinicalPrimaryTumorCategory
 Id: TNMClinicalPrimaryTumorCategory
 Parent: CancerStageParent
 Title: "TNM Clinical Primary Tumor Category"
-Description: "Category of the primary tumor, based on its size and extent, assessed prior to surgery, based on evidence such as physical examination, imaging, and/or biopsy."
+Description: "Category of the primary tumor, based on its size and extent, based on evidence such as physical examination, imaging, and/or biopsy."
 * ^abstract = false
 * code = LNC#21905-5 "Primary tumor.clinical [Class] Cancer"
 * valueCodeableConcept from TNMPrimaryTumorCategoryVS (preferred)
@@ -67,7 +67,7 @@ Profile:  TNMClinicalRegionalNodesCategory
 Id: TNMClinicalRegionalNodesCategory
 Parent: CancerStageParent
 Title: "TNM Clinical Regional Nodes Category"
-Description: "Category of the presence or absence of metastases in regional lymph nodes, assessed using tests that are done before surgery (Definition adapted from: NCI Dictionary of Cancer Terms). These include physical exams, imaging tests, laboratory tests (such as blood tests), and biopsies."
+Description: "Category of the presence or absence of metastases in regional lymph nodes, based on evidence such as physical examination, imaging, and/or biopsy."
 * ^abstract = false
 * code = LNC#21906-3 "Regional lymph nodes.clinical [Class] Cancer"
 * valueCodeableConcept from TNMRegionalNodesCategoryVS (preferred)
@@ -76,7 +76,7 @@ Profile:  TNMClinicalDistantMetastasesCategory
 Id: TNMClinicalDistantMetastasesCategory
 Parent: CancerStageParent
 Title: "TNM Clinical Distant Metastases Category"
-Description: "Category describing the presence or absence of metastases in remote anatomical locations, assessed through pathologic analysis of a specimen."
+Description: "Category describing the extent of a tumor metastasis in remote anatomical locations, based on evidence such as physical examination, imaging, and/or biopsy."
 * ^abstract = false
 * code = LNC#21907-1 "Distant metastases.clinical [Class] Cancer"
 * valueCodeableConcept from TNMDistantMetastasesCategoryVS (preferred)
@@ -87,7 +87,7 @@ Profile: TNMPathologicalStageGroup
 Id: TNMPathologicalStageGroup
 Parent: CancerStageParent
 Title: "TNM Pathological Stage Group"
-Description: "The extent of the cancer in the body, according to the TNM classification system, based on information obtained prior to neoadjuvant treatment and surgery, e.g. based on evidence such as physical examination, imaging, and/or biopsy."
+Description: "The extent of the cancer in the body, according to the TNM classification system, assessed through pathologic analysis of a specimen."
 * ^abstract = false
 * code =  LNC#21902-2 "Stage group.pathology Cancer"
 * valueCodeableConcept from TNMStageGroupVS (preferred)
@@ -101,11 +101,11 @@ Description: "The extent of the cancer in the body, according to the TNM classif
 // Set metadata attributes that show up in the IG
 * hasMember[TNMPathologicalPrimaryTumorCategory] only Reference(TNMPathologicalPrimaryTumorCategory)
 * hasMember[TNMPathologicalPrimaryTumorCategory] ^short = "TNM Pathological Primary Tumor Category"
-* hasMember[TNMPathologicalPrimaryTumorCategory] ^definition = "Category of the primary tumor, based on its size and extent, assessed prior to surgery, based on evidence such as physical examination, imaging, and/or biopsy."
+* hasMember[TNMPathologicalPrimaryTumorCategory] ^definition = "Category of the primary tumor, based on its size and extent, assessed through pathologic analysis of a specimen."
 * hasMember[TNMPathologicalPrimaryTumorCategory] ^comment = "When using this element, the Observation must validate against the specified profile."
 * hasMember[TNMPathologicalRegionalNodesCategory] only Reference(TNMPathologicalRegionalNodesCategory)
 * hasMember[TNMPathologicalRegionalNodesCategory] ^short = "TNM Pathological Regional Nodes Category"
-* hasMember[TNMPathologicalRegionalNodesCategory] ^definition = "Category of the presence or absence of metastases in regional lymph nodes, assessed using tests that are done before surgery (Definition adapted from: NCI Dictionary of Cancer Terms). These include physical exams, imaging tests, laboratory tests (such as blood tests), and biopsies."
+* hasMember[TNMPathologicalRegionalNodesCategory] ^definition = "Category of the presence or absence of metastases in regional lymph nodes, assessed through pathologic analysis of a specimen."
 * hasMember[TNMPathologicalRegionalNodesCategory] ^comment = "When using this element, the Observation must validate against the specified profile."
 * hasMember[TNMPathologicalDistantMetastasesCategory] only Reference(TNMPathologicalDistantMetastasesCategory)
 * hasMember[TNMPathologicalDistantMetastasesCategory] ^short = "TNM Pathological Distant Metastases Category"
@@ -116,7 +116,7 @@ Profile:  TNMPathologicalPrimaryTumorCategory
 Id: TNMPathologicalPrimaryTumorCategory
 Parent: CancerStageParent
 Title: "TNM Pathological Primary Tumor Category"
-Description: "Category of the primary tumor, based on its size and extent, assessed prior to surgery, based on evidence such as physical examination, imaging, and/or biopsy."
+Description: "Category of the primary tumor, based on its size and extent, assessed through pathologic analysis of a specimen."
 * ^abstract = false
 * code = LNC#21899-0 "Primary tumor.pathology Cancer"
 * valueCodeableConcept from TNMPrimaryTumorCategoryVS (preferred)
@@ -125,7 +125,7 @@ Profile:  TNMPathologicalRegionalNodesCategory
 Id: TNMPathologicalRegionalNodesCategory
 Parent: CancerStageParent
 Title: "TNM Pathological Regional Nodes Category"
-Description: "Category of the presence or absence of metastases in regional lymph nodes, assessed using tests that are done before surgery (Definition adapted from: NCI Dictionary of Cancer Terms). These include physical exams, imaging tests, laboratory tests (such as blood tests), and biopsies."
+Description: "Category of the presence or absence of metastases in regional lymph nodes, assessed through pathologic analysis of a specimen."
 * ^abstract = false
 * code = LNC#21900-6 "Regional lymph nodes.pathology [Class] Cancer"
 * valueCodeableConcept from TNMRegionalNodesCategoryVS (preferred)
