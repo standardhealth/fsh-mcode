@@ -468,7 +468,7 @@
           },
           "name": "Observation-mCODETumorMarkerExample01",
           "exampleCanonical": "http://hl7.org/fhir/us/mcode/StructureDefinition/TumorMarker"
-        },    
+        },
         {
           "reference": {
             "reference": "ValueSet/CancerBodyLocationVS"
@@ -629,7 +629,7 @@
           },
           "name": "TreatmentTerminationReasonVS",
           "description": "Values used to describe the reasons for stopping a treatment. Includes code for 'treatment completed' as well as codes for unplanned (early) stoppage. Applies to medications and other treatments that take place over a period of time, such as radiation treatments."
-        },  
+        },
         {
           "reference": {
             "reference": "ValueSet/TreatmentIntentVS"
@@ -695,7 +695,17 @@
             "generation": "markdown"
           }
         ]
-      }
+      },
+      "parameter": [
+        {
+          "code": "copyrightyear",
+          "value": "2019+"
+        },
+        {
+          "code": "releaselabel",
+          "value": "CI Build"
+        }
+      ]
     }
   }
-  
+
