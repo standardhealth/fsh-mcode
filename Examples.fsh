@@ -206,8 +206,8 @@ InstanceOf: CancerRelatedRadiationProcedure
 * asserter = Reference(mCODEPractitionerExample01)
 * performedDateTime = "2019-03-01"
 * extension[TreatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
-* extension[RadiationDose].extension[TotalRadiationDoseDelivered].valueQuantity = UCUM#cGy 
-* extension[RadiationDose].extension[TotalRadiationDoseDelivered].valueQuantity.value = 1200.0
+//* extension[RadiationDose].extension[TotalRadiationDoseDelivered].valueQuantity = UCUM#cGy 
+//* extension[RadiationDose].extension[TotalRadiationDoseDelivered].valueQuantity.value = 1200.0
 * reasonReference = Reference(mCODEPrimaryCancerConditionExample01)
 * bodySite = SCT#41224006 "Structure of lower lobe of left lung (body structure)"
 
