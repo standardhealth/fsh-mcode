@@ -37,7 +37,7 @@ Description: "Codes representing the structure, arrangement, and behavioral char
 
 ValueSet:   ConditionStatusTrendVS
 Title: "Condition Status Trend Value Set"
-Description:  "Standardized value set that describes the patient trend or status for a given disease, condition, or ability. The value SNOMED CT 260415000 'Not detected (qualifier)' should be used to express No Evidence of Disease (NED)."
+Description:  "How patient's given disease, condition, or ability is trending."
 * SCT#281900007 "No abnormality detected (finding)"
 * SCT#268910001 "Patient condition improved (finding)"
 * SCT#359746009 "Patient's condition stable (finding)"
