@@ -25,6 +25,7 @@ Description: "Body side of the body location, if needed to distinguish from a si
 * value[x] only CodeableConcept
 * valueCodeableConcept from LateralityVS (required)
 
+/*
 Extension: AnatomicalOrientation
 Id:  AnatomicalOrientation
 Title: "Anatomical Orientation"
@@ -45,7 +46,7 @@ Description: "The relationship between a landmark that helps determine a body lo
     LandmarkLocation 0..1 and
     LandmarkToBodyLocationDirection 0..1 and
     LandmarkToBodyLocationDistance 0..1
-
+*/
 Extension: LandmarkType
 Id:  LandmarkType
 Title: "Landmark Type"
@@ -62,8 +63,8 @@ Description: "The body location of the landmark, specified by a location code an
 * value[x] 0..0
 * extension contains
     BodySiteCode 1..1 and
-    Laterality 0..1 and
-    AnatomicalOrientation 0..*
+    Laterality 0..1 // and
+//    AnatomicalOrientation 0..*
 
 Extension: BodySiteCode
 Id:  BodySiteCode

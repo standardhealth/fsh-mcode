@@ -33,9 +33,7 @@ Conformance note: If an ICD-10-PCS code is used in the code attribute, and there
 * reasonReference only Reference(CancerConditionParent)
 * bodySite from RadiationTargetBodySiteVS (extensible)
 * bodySite.extension contains
-    Laterality 0..1 and
-    AnatomicalOrientation 0..* and
-    RelationToLandmark 0..*
+    Laterality 0..1
 * focalDevice 0..0
 
 
@@ -89,6 +87,4 @@ Description: "A surgical action addressing a cancer condition. The scope of this
 * recorder only Reference(Practitioner | PractitionerRole)
 * performer.actor only Reference(Practitioner | PractitionerRole | Organization)
 * bodySite.extension contains
-    Laterality 0..1 and
-    AnatomicalOrientation 0..* and
-    RelationToLandmark 0..*
+    Laterality 0..1

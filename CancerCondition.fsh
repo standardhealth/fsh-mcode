@@ -15,9 +15,7 @@ Description:  "Abstract parent class for describing a primary or secondary metas
     AssertedDate 0..1 and 
     HistologyMorphologyBehavior 0..1
 * bodySite.extension contains 
-    Laterality 0..1 and
-    AnatomicalOrientation 0..* and
-    RelationToLandmark 0..*
+    Laterality 0..1
 * extension[AssertedDate], extension[HistologyMorphologyBehavior], bodySite, bodySite.extension[Laterality] MS
 * category = SCT#64572001 "Disease"
 * severity 0..0
@@ -78,9 +76,7 @@ Description:  "A comorbidity refers to one or more diseases or conditions that o
 * code from ComorbidConditionVS
 * bodySite from http://hl7.org/fhir/ValueSet/body-site (preferred)
 * bodySite.extension contains
-    Laterality 0..1 and
-    AnatomicalOrientation 0..* and
-    RelationToLandmark 0..*
+    Laterality 0..1
 * subject only Reference(USCorePatient)
 
 

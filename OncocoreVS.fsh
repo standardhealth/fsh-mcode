@@ -34,10 +34,12 @@ Title: "Cancer Body Location Value Set"
 Description:  "Codes describing the location(s) of primary or secondary cancer. The value set includes all codes from the SNOMED CT body structure hierarchy (codes descending from 123037004 'Body Structure'). The cancer body location may also be expressed using ICD-O-3 topography codes, however, those codes are not included here due to intellectual property restrictions. No other code systems are considered conformant."
 * codes from system SCT where concept is-a #123037004  "Body Structure"
 
+/* 
 ValueSet:  AnatomicalOrientationVS
 Title: "Anatomical Orientation Value Set"
 Description:  "Terms that specify anatomical orientation."
 * codes from system SCT where concept is-a #272424004 "Relative sites (qualifier value)"
+*/
 
 ValueSet:   HistologyMorphologyBehaviorVS
 Title: "Histology Morphology Behavior Value Set"
