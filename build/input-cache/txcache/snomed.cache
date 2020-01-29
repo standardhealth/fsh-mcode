@@ -109794,3 +109794,175 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "268910001"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Patient's condition improved",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "94225005"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Secondary malignant neoplasm of brain",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "363679005",
+        "display" : "Imaging (procedure)"
+      },
+      {
+        "code" : "252416005",
+        "display" : "Histopathology test (procedure)"
+      },
+      {
+        "code" : "711015009",
+        "display" : "Assessment of symptom control (procedure)"
+      },
+      {
+        "code" : "5880005",
+        "display" : "Physical examination procedure (procedure)"
+      },
+      {
+        "code" : "386344002",
+        "display" : "Laboratory data interpretation (procedure)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "expansion" : {
+    "identifier" : "urn:uuid:5737a4a3-f1b1-4471-aa90-d2500066c642",
+    "timestamp" : "2020-01-29T19:48:47.083Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "excludeNested",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20190731"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "363679005",
+      "display" : "Imaging (procedure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "252416005",
+      "display" : "Histopathology test (procedure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "711015009",
+      "display" : "Assessment of symptom control (procedure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "5880005",
+      "display" : "Physical examination procedure (procedure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "386344002",
+      "display" : "Laboratory data interpretation (procedure)"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "281900007",
+        "display" : "No abnormality detected (finding)"
+      },
+      {
+        "code" : "268910001",
+        "display" : "Patient condition improved (finding)"
+      },
+      {
+        "code" : "359746009",
+        "display" : "Patient's condition stable (finding)"
+      },
+      {
+        "code" : "271299001",
+        "display" : "Patient's condition worsened (finding)"
+      },
+      {
+        "code" : "709137006",
+        "display" : "Patient condition undetermined (finding)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "expansion" : {
+    "identifier" : "urn:uuid:870388ad-a126-4920-ae75-18a8b2873f6b",
+    "timestamp" : "2020-01-29T19:48:47.708Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "excludeNested",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20190731"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "281900007",
+      "display" : "No abnormality detected (finding)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "268910001",
+      "display" : "Patient condition improved (finding)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "359746009",
+      "display" : "Patient's condition stable (finding)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "271299001",
+      "display" : "Patient's condition worsened (finding)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "709137006",
+      "display" : "Patient condition undetermined (finding)"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

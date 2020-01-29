@@ -7,6 +7,7 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * bodySite 0..0
 * referenceRange 0..0
 * hasMember 0..0
+/*
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "type.coding.code"
 * identifier ^slicing.rules = #open
@@ -17,6 +18,7 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * identifier[AccessionIdentifier].type = IDTYPE#ACSN
 * identifier[FillerOrderNumber].type = IDTYPE#FILL
 * identifier[PlacerOrderNumber].type = IDTYPE#PLAC
+*/
 * code = LNC#69548-6 "Genetic variant assessment"
 * method from http://loinc.org/vs/LL4048-6 (extensible)
 * specimen only Reference(GeneticSpecimen) 
@@ -90,6 +92,7 @@ Implementation note: The data value for TumorMarker has cardinality is 0..1 (req
 * component 0..0
 * interpretation 0..1
 * subject 1..1
+/*
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "type.coding.code"
 * identifier ^slicing.rules = #open
@@ -97,6 +100,7 @@ Implementation note: The data value for TumorMarker has cardinality is 0..1 (req
     AccessionIdentifier 0..1 MS and
     FillerOrderNumber 0..1 MS and
     PlacerOrderNumber 0..1 MS
+*/
 * basedOn only Reference(ServiceRequest | MedicationRequest)
 * partOf only Reference(MedicationAdministration | MedicationStatement | Procedure)
 * code from TumorMarkerTestVS (extensible)
@@ -113,9 +117,7 @@ Description:    "A small sample of blood, hair, skin, amniotic fluid (the fluid 
 * type 1..1 MS
 * type from GeneticSpecimenTypeVS
 * collection.bodySite.extension contains 
-    Laterality 0..1 and
-    AnatomicalOrientation 0..* and
-    RelationToLandmark 0..*
+    Laterality 0..1
 * collection.bodySite, collection.bodySite.extension[Laterality] MS 
 
 

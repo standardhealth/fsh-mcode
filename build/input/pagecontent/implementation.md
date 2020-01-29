@@ -82,20 +82,12 @@
 <p>A single code is often insufficient to precisely determine a body site for the purpose of describing where a tumor is located, where a surgery is targeted, or where a radiation treatment is focused. For example, in breast cancer, the location of a tumor can be described in terms of the radial position (clock face direction) and distance relative to the left or right nipple.</p>
 <p>In FHIR, Condition, Procedure, and other resources represent body sites using a single code. In addition, FHIR provides a standard extension, <a href="http://hl7.org/fhir/StructureDefinition/bodySite" target="_blank">BodyStructure Reference</a> that can be used when a single code is insufficient. However, this approach has not been adopted, for the following reasons:</p>
 <ul>
-    <li>The bodySite attribute is a terminology concept, but BodyStructure is a resource, representing a body site on a specific patient. Concepts and instances are not analogous and cannot be arbitrarily swapped. For example, "3 cm from left nipple at 2 o'clock position" is a conceptual location, but "3 cm from Jane Doe's left nipple at 2 o'clock position" is not.</li>
+    <li>The bodySite attribute is a terminology concept, but BodyStructure is a resource, representing a body site on a specific patient. Concepts and instances are not analogous and cannot be arbitrarily swapped.</li>
     <li>Even if the difference between a terminology concept and an patient-specific resource is overlooked, the BodyStructure resource is insufficient for mCODE's purposes.</li>
 </ul>
 <p>Instead, mCODE uses an approach that defines body sites conceptually, and has the required specificity, by introducing three optional extensions on bodySite:</p>
 <ul>
-    <li><a href="StructureDefinition-AnatomicalOrientation.html">AnatomicalOrientation</a> - captures the orientation of the body location, if needed to distinguish from a similar location in another orientation.</li>
     <li><a href="StructureDefinition-Laterality.html">Laterality</a> - the side of the body the body location, if needed to distinguish from a similar location on the other side of the body</li>
-    <li><a href="StructureDefinition-RelationToLandmark.html">RelationToLandmark</a> - Zero or more relationships between a landmark and the body location that helps determine the body location itself. RelationToLandmark itself is a structure that:
-        <ul>
-            <li>Specifies the location and type of landmark using a body site code and optional laterality/orientation,</li>
-            <li>Specifies the direction from the landmark to the body location, and</li>
-            <li>Specifies the distance from the landmark to the body location.</li>
-        </ul>
-    </li>
 </ul>
 
 <h4><a name="VitalSigns"></a>Vital Sign Profiles</h4>
