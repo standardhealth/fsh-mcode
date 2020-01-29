@@ -84,7 +84,7 @@ InstanceOf: CancerPatient
 * extension[race].extension[ombCategory].url = "ombCategory"
 * extension[race].extension[ombCategory].valueCoding = OmbRaceCat#1002-5 "American Indian or Alaska Native"
 * extension[race].extension[text].url = "text"
-* extension[race].extension[text].valueString = "American Indian or Alaska Native"
+* extension[race].extension[text].valueString = "Lakota and Crow"
 * extension[birthsex].valueCode = #F
 * identifier.use = #usual
 * identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#MR "Medical Record Number"
