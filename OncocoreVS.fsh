@@ -1,19 +1,3 @@
-ValueSet: 	YesNoUnknownVS
-Description:	"A value set containing yes, no, and unknown."
-* SCT#373066001	 "Yes"
-* SCT#373067005  "No"
-* SCT#261665006  "Unknown"
-
-ValueSet:    GeneticTestVS
-Title: "Genetic Test Value Set"
-Description: "Value set containing codes representing genetic tests. Currently the best source of codes is the [Genetic Test Registry](http://www.ncbi.nlm.nih.gov/gtr). The user should be aware that the GTR cannot be a sole reliable source since the test data is voluntarily updated and there is no overarching data steward. This value set contains all codes from http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-lab-codes (namely, the subset of LOINC codes with CLASSTYPE = 1), plus all codes in GTR.
-
-Implementation note: Although only a subset of LOINC codes is formally part of this value set, the value set itself contains all codes in LOINC, because FHIR cannot create an implicitly-defined value set based on LOINC's CLASSTYPE property.
-
-Conformance note: To be conformant to US Core, a LOINC code must be used, if available. Only if there is no suitable code in LOINC may other codes (such as those from GTR) be used."
-* codes from system LNC // where CLASSTYPE = 1 (FHIR terminology server can't handle this yet)
-* codes from system GTR
-
 ValueSet:    ClinVarVS
 Title: "ClinVar Value Set"
 Description: "Value set of human genetic variants, drawn from [ClinVar](https://www.ncbi.nlm.nih.gov/clinvar/). The codes in this value set refer to the ClinVar Variation ID, or the identifier for the variant or set of variants that were interpreted. [Source: NCBI ClinVar Data Dictionary](https://www.ncbi.nlm.nih.gov/projects/clinvar/ClinVarDataDictionary.pdf)"
@@ -50,17 +34,6 @@ Description: "Codes representing the structure, arrangement, and behavioral char
 * exclude codes from system SCT where concept is-a #128640002 "Glandular intraepithelial neoplasia, grade III (morphologic abnormality)"
 * exclude codes from system SCT where concept is-a #450890000 "Glandular intraepithelial neoplasia, low grade (morphologic abnormality)"
 * exclude codes from system SCT where concept is-a #703548001 "Endometrioid intraepithelial neoplasia (morphologic abnormality)"
-
-
-ValueSet:   CancerHistologicGradeVS
-Title:  "Cancer Histologic Grade Value Set"
-Description:  "The grade of the tumor. This is a subset of the LOINC answer list LL213-0, which represents allowable values for NAACCR data item #440. The original answer list is outdated, as it includes terms pointing to the lineage of hematopoietic/lymphoid neoplasms, which have been retired by NAACCR as of version 18 Data Standards and Data Dictionary."
-* SCT#54102005  "G1 grade (finding)"
-* SCT#1663004   "G2 grade (finding)"
-* SCT#61026006  "G3 grade (finding)"
-* SCT#258245003 "G4 grade (finding)"
-* SCT#60815008  "Grade not determined (finding)" // synonyms include not applicable, not stated
-//* SCT#12619005  "GX grade (finding)" // includes synonym "Grade cannot be assessed", this is the terminology used by AJCC
 
 ValueSet:   ConditionStatusTrendVS
 Title: "Condition Status Trend Value Set"

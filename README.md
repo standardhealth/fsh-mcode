@@ -12,9 +12,7 @@ After you check out mCODE from Github, install SUSHI (the FSH compiler), [as ins
 
 To compile mCODE, open a command window and navigate to the directory where mCODE has been checked out. Issue the following command:
 
-`$ sushi . -o ./build/input/resources`
-
->**NOTE:** Do **not** omit the `-o` option, because that will destroy certain customizations of the implementation guide (IG) configuration.
+`$ sushi .
 
 ## Running the IG Publisher
 
@@ -24,7 +22,7 @@ Now run:
 
 Windows:   `$ _genonce`
 
-Mac:   `$ sh _genonce.sh`
+Mac:   `$ ./_genonce.sh`
 
 This will run the HL7 IG Publisher, which will take several minutes to complete. After the publisher is finished, open the file _/build/output/index.html_ to see the resulting IG.
 
