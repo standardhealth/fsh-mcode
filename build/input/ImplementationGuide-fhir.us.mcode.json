@@ -218,30 +218,6 @@
         },
         {
           "reference": {
-            "reference": "StructureDefinition/RadiationDose"
-          },
-          "name": "Radiation Dose",
-          "description": "Information related to the dose of radiation received in a RadiationProcedure, including the dose per fraction, the number of fractions delivered, and the total radiation dose delivered.",
-          "exampleBoolean": false
-        },
-        {
-          "reference": {
-            "reference": "StructureDefinition/RadiationDosePerFraction"
-          },
-          "name": "Radiation Dose Per Fraction",
-          "description": "The amount of radiation administered during a single session (fraction) of radiation therapy therapy.",
-          "exampleBoolean": false
-        },
-        {
-          "reference": {
-            "reference": "StructureDefinition/RadiationFractionsDelivered"
-          },
-          "name": "Radiation Fractions Delivered",
-          "description": "Records the total number of treatment sessions (fractions) administered during the first course of therapy. Corresponds to LOINC 21950-2 'Number of radiation treatment' [sic].",
-          "exampleBoolean": false
-        },
-        {
-          "reference": {
             "reference": "StructureDefinition/GenomicRegionStudied"
           },
           "name": "Genomic Region Studied",
@@ -270,14 +246,6 @@
           },
           "name": "Secondary Cancer Condition",
           "description": "Records the history of secondary neoplasms, including location(s) and the date of onset of metastases. A secondary cancer results from the spread (metastasization) of cancer from its original site (Definition from: NCI Dictionary of Cancer Terms).\r\n\r\nConformance note: For the code attribute, to be compliant with US Core Profiles, SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.",
-          "exampleBoolean": false
-        },
-        {
-          "reference": {
-            "reference": "StructureDefinition/StatementDateTime"
-          },
-          "name": "Statement Date Time",
-          "description": "The point in time when the statement was created.",
           "exampleBoolean": false
         },
         {
@@ -350,14 +318,6 @@
           },
           "name": "Termination Reason",
           "description": "A code explaining an unplanned or premature termination of a plan of treatment, course of medication, or research study.",
-          "exampleBoolean": false
-        },
-        {
-          "reference": {
-            "reference": "StructureDefinition/TotalRadiationDoseDelivered"
-          },
-          "name": "Total Radiation Dose Delivered",
-          "description": "The total amount of radiation dose delivered for the course of therapy. (source: SNOMED, ASTRO)",
           "exampleBoolean": false
         },
         {

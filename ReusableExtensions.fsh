@@ -12,12 +12,6 @@ Description: "A code explaining an unplanned or premature termination of a plan 
 * value[x] only CodeableConcept
 * valueCodeableConcept from TreatmentTerminationReasonVS (required)
 
-Extension: StatementDateTime
-Id:  StatementDateTime
-Title: "Statement Date Time"
-Description: "The point in time when the statement was created."
-* value[x] only dateTime
-
 Extension: Laterality
 Id:  Laterality
 Title: "Laterality"

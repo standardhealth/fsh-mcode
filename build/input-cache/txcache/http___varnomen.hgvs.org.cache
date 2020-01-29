@@ -38,3 +38,13 @@ e: {
   "error" : "Error from server: Unable to provide support for code system http://varnomen.hgvs.org"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://varnomen.hgvs.org",
+  "code" : "NG_005905.2:g.126148_126152GTAAA[1]"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://varnomen.hgvs.org\" is not known (encountered paired with code = \"NG_005905.2:g.126148_126152GTAAA[1]\"); The code provided (http://varnomen.hgvs.org#NG_005905.2:g.126148_126152GTAAA[1]) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------

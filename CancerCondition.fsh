@@ -101,5 +101,4 @@ Conformance note: For the HistologyMorphologyBehavior attribute, to be compliant
     IsPrimaryTumor 0..1
 * IsPrimaryTumor ^short = "Whether the tumor is the original or first tumor in the body, for a particular cancer."
 * IsPrimaryTumor.value[x] only CodeableConcept
-* IsPrimaryTumor.valueCodeabeConcept from YesNoUnknownVS
 */
