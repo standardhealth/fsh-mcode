@@ -57,7 +57,7 @@ Description:  "The type of evidence backing up the clinical determination of can
 
 ValueSet:   CancerStagingSystemVS
 Title: "Cancer Staging System Value Set"
-Description:    "System used for staging. Because SNOMED CT does not currently have a code representing AJCC Version 8, specify the exact text 'AJCC Version 8' in the text sub-field of the code structure, and omit the code."
+Description:    "System used for staging. If the staging system is AJCC Version 8, use the NCI thesaurus code C146985 (AJCC Cancer Staging Manual 8th Edition) in its place. This is because SNOMED does not have an equivalent concept for AJCC Version 8 at this time."
 * SCT#444256004 "American Joint Commission on Cancer, Cancer Staging Manual, 6th edition neoplasm staging system (tumor staging)"
 * SCT#443830009 "American Joint Commission on Cancer, Cancer Staging Manual, 7th edition neoplasm staging system (tumor staging)"
 * SCT#258235000 "International Union Against Cancer (tumor staging)"
