@@ -2,7 +2,7 @@ Profile: CancerPatient
 Parent: USCorePatient
 Id: CancerPatient
 Title: "Cancer Patient"
-Description: "A patient who has been diagnosed with cancer"
+Description: "A patient who has been diagnosed with or is receiving medical treatment for a malignant growth or tumour."
 /* There seem to be several unnecessary or unintended diffs in mCODE Patient:
  1) maritalStatus binding is not changed in US Core; it should be extensible, not required
  2) organization should be Reference(Organization), not Reference(US Core Organization)
