@@ -14,21 +14,6 @@ InstanceOf: CancerGeneticVariant
 * component[GenomicDNAChange].valueCodeableConcept = HGVS#NC_000019.8:g.1171707G>A "NC_000019.8:g.1171707G>A"
 * component[GenomicSourceClass].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 
-Instance: mCODECancerGeneticVariantExample02
-InstanceOf: CancerGeneticVariant
-* id = "mCODECancerGeneticVariantExample02"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerGeneticVariant"
-* status = #final "Final"
-* method = LNC#LA26398-0 "Sequencing"
-* code = LNC#69548-6 "Genetic variant assessment"
-* subject = Reference(mCODEPatientExample02)
-* effectiveDateTime = "2019-04-01"
-* valueCodeableConcept = SCT#10828004 "Positive (qualifier value)"
-* valueCodeableConcept = LNC#LA9633-4 "Present"
-* interpretation = ObsInt#POS "Positive"
-* component[GeneStudied].code = LNC#48018-6 "Gene studied [ID]"
-* component[GeneStudied].valueCodeableConcept = HGNC#HGNC:1100 "BRCA1"
-
 Instance: mCODECancerGenomicsReportExample01
 InstanceOf: CancerGenomicsReport
 * id = "mCODECancerGenomicsReportExample01"

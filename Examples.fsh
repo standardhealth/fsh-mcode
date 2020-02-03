@@ -12,19 +12,6 @@ InstanceOf: PrimaryCancerCondition
 * stage.summary = AJCC#3C "IIIC"
 * stage.assessment = Reference(mCODETNMClinicalStageGroupExample01)
 
-Instance: mCODESecondaryCancerConditionExample01
-InstanceOf: SecondaryCancerCondition
-* id = "mCODESecondaryCancerConditionExample01"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/SecondaryCancerCondition"
-* extension[RelatedPrimaryCancerCondition].url = "http://hl7.org/fhir/us/mcode/StructureDefinition/RelatedPrimaryCancerCondition"
-* extension[RelatedPrimaryCancerCondition].valueReference = Reference(mCODEPrimaryCancerConditionExample01)
-* clinicalStatus = ClinStatus#active "Active"
-* verificationStatus = VerStatus#confirmed "Confirmed"
-* code = SCT#94225005 "Secondary malignant neoplasm of brain"
-* subject = Reference(mCODEPatientExample01)
-* onsetDateTime = "2019-05-01"
-* asserter = Reference(mCODEPractitionerExample01)
-
 
 Instance: mCODEComorbidConditionExample01
 InstanceOf: ComorbidCondition
@@ -36,20 +23,6 @@ InstanceOf: ComorbidCondition
 * subject = Reference(mCODEPatientExample01)
 * asserter = Reference(mCODEPractitionerExample01)
 * onsetDateTime = "2018-04-01"
-
-
-Instance: mCODECancerDiseaseStatusExample01
-InstanceOf: CancerDiseaseStatus
-* id = "mCODECancerDiseaseStatusExample01"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerDiseaseStatus"
-* extension[EvidenceType].url = "http://hl7.org/fhir/us/mcode/StructureDefinition/EvidenceType"
-* extension[EvidenceType].valueCodeableConcept = SCT#252416005 "Histopathology test (procedure)"
-* status = #final "final"
-* category = ObsCat#laboratory "laboratory"
-* subject = Reference(mCODEPatientExample01)
-* effectiveDateTime = "2019-04-01"
-* performer = Reference(mCODEPractitionerExample01) 
-* valueCodeableConcept = SCT#385633008 "Improving"
 
 
 Instance: mCODEPatientExample01
