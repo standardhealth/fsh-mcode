@@ -1,11 +1,4 @@
-// restore and remove AssertedDate extension (below)
-// Alias: AssertedDate = http://hl7.org/fhir/StructureDefinition/condition-assertedDate
-// temporary!~
-Extension: AssertedDate
-Id: AssertedDate
-Title: "Asserted Date"
-Description: "Date when the condition was asserted"
-* value[x] only dateTime
+Alias: AssertedDate = http://hl7.org/fhir/StructureDefinition/condition-assertedDate
 
 Profile: CancerConditionParent
 Parent:  USCoreCondition
@@ -22,9 +15,7 @@ Description:  "Abstract parent class for describing a primary or secondary metas
     AssertedDate 0..1 and 
     HistologyMorphologyBehavior 0..1
 * bodySite.extension contains 
-    Laterality 0..1 and
-    AnatomicalOrientation 0..* and
-    RelationToLandmark 0..*
+    Laterality 0..1
 * extension[AssertedDate], extension[HistologyMorphologyBehavior], bodySite, bodySite.extension[Laterality] MS
 * category = SCT#64572001 "Disease"
 * severity 0..0
@@ -40,10 +31,10 @@ Description: "Records the history of the primary cancer condition, the original 
 
 Cancer staging information summarized in this profile should reflect the most recent staging assessment on the patient, and should be updated if and when there is a new staging assessment. Past staging assessments will be preserved in instances of the TNMClinicalStageGroup and/or TNMPathologicalStageGroup, which refer back to PrimaryCancerCondition.
 
-Conformance note: For the code attribute, to be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used."
+Conformance note: For the code attribute, to be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used."
 * ^abstract = false
 * code from PrimaryOrUncertainBehaviorCancerDisorderVS (extensible)
-* stage.assessment only Reference(CancerStageGroupParent)
+* stage.assessment only Reference(TNMClinicalStageGroup | TNMPathologicalStageGroup)
 
 Profile: SecondaryCancerCondition
 Parent: CancerConditionParent
@@ -85,9 +76,7 @@ Description:  "A comorbidity refers to one or more diseases or conditions that o
 * code from ComorbidConditionVS
 * bodySite from http://hl7.org/fhir/ValueSet/body-site (preferred)
 * bodySite.extension contains
-    Laterality 0..1 and
-    AnatomicalOrientation 0..* and
-    RelationToLandmark 0..*
+    Laterality 0..1
 * subject only Reference(USCorePatient)
 
 
@@ -97,7 +86,7 @@ Description:  "A comorbidity refers to one or more diseases or conditions that o
 
 
 
-// Tumor profile was in mCODE, but not primary (hidden). The way we have used the CancerConditionParent, it is not necessary to list Tumor explicitly in TumorMarkerTest and CancerDiseaseStatus. For example, we have `* focus only Reference(CancerConditionParent)` and not (in CIMPL) `Value only PrimaryCancerCondition or SecondaryCancerCondition or Tumor`
+// Tumor profile was in mCODE, but not primary (hidden). The way we have used the CancerConditionParent, it is not necessary to list Tumor explicitly in TumorMarker and CancerDiseaseStatus. For example, we have `* focus only Reference(CancerConditionParent)` and not (in CIMPL) `Value only PrimaryCancerCondition or SecondaryCancerCondition or Tumor`
 /*
 Profile: Tumor
 Parent: CancerConditionParent
@@ -112,5 +101,4 @@ Conformance note: For the HistologyMorphologyBehavior attribute, to be compliant
     IsPrimaryTumor 0..1
 * IsPrimaryTumor ^short = "Whether the tumor is the original or first tumor in the body, for a particular cancer."
 * IsPrimaryTumor.value[x] only CodeableConcept
-* IsPrimaryTumor.valueCodeabeConcept from YesNoUnknownVS
 */

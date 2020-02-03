@@ -1,79 +1,59 @@
-ValueSet: 	YesNoUnknownVS
-Description:	"A value set containing yes, no, and unknown."
-* SCT#373066001			"Yes"
-* SCT#373067005			"No"
-* SCT#261665006			"Unknown"
-
-ValueSet:    GeneticTestVS
-Title: "Genetic Test Value Set"
-Description: "Value set containing codes representing genetic tests. Currently the best source of codes is the [Genetic Test Registry](http://www.ncbi.nlm.nih.gov/gtr). The user should be aware that the GTR cannot be a sole reliable source since the test data is voluntarily updated and there is no overarching data steward. This value set contains all codes from http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-lab-codes (namely, the subset of LOINC codes with CLASSTYPE = 1), plus all codes in GTR.
-
-Implementation note: Although only a subset of LOINC codes is formally part of this value set, the value set itself contains all codes in LOINC, because FHIR cannot create an implicitly-defined value set based on LOINC's CLASSTYPE property.
-
-Conformance note: To be conformant to US Core, a LOINC code must be used, if available. Only if there is no suitable code in LOINC may other codes (such as those from GTR) be used."
-* codes from system LNC // where CLASSTYPE = 1 (FHIR terminology server can't handle this yet)
-* codes from system GTR
-
 ValueSet:    ClinVarVS
 Title: "ClinVar Value Set"
 Description: "Value set of human genetic variants, drawn from [ClinVar](https://www.ncbi.nlm.nih.gov/clinvar/). The codes in this value set refer to the ClinVar Variation ID, or the identifier for the variant or set of variants that were interpreted. [Source: NCBI ClinVar Data Dictionary](https://www.ncbi.nlm.nih.gov/projects/clinvar/ClinVarDataDictionary.pdf)"
 * codes from system CLINVAR
 
+ValueSet:  HGNCVS
+Title: "HUGO Gene Nomenclature Committee Gene Names Value Set"
+Description: "HUGO Gene Nomenclature Committee Gene Names Value Set"
+* codes from system HGNC
+
+ValueSet: HGVSVS
+Title: "Human Genome Variation Society Sequence Variant Nomenclature Value Set"
+Description: "HGVS nomenclature is used to report and exchange information regarding variants found in DNA, RNA, and protein sequences."
+* codes from system HGVS
 
 ValueSet:     CancerBodyLocationVS
 Title: "Cancer Body Location Value Set"
 Description:  "Codes describing the location(s) of primary or secondary cancer. The value set includes all codes from the SNOMED CT body structure hierarchy (codes descending from 123037004 'Body Structure'). The cancer body location may also be expressed using ICD-O-3 topography codes, however, those codes are not included here due to intellectual property restrictions. No other code systems are considered conformant."
 * codes from system SCT where concept is-a #123037004  "Body Structure"
 
+/* 
 ValueSet:  AnatomicalOrientationVS
 Title: "Anatomical Orientation Value Set"
 Description:  "Terms that specify anatomical orientation."
 * codes from system SCT where concept is-a #272424004 "Relative sites (qualifier value)"
+*/
 
 ValueSet:   HistologyMorphologyBehaviorVS
 Title: "Histology Morphology Behavior Value Set"
 Description: "Codes representing the structure, arrangement, and behavioral characteristics of malignant neoplasms, and cancer cells. Inclusion criteria: in situ neoplasms and malignant neoplasms. Exclusion criteria: benign neoplasms and neoplasms of unspecified behavior. Note: As the vocabulary binding is extensible within this IG, ICD-O-3 morphology codes (including behavior suffix) may also be used; they are not included in the value set for intellectual property reasons. For primary cancers, the ICD-O-3 behavior suffix should be /1, /2, or /3. For secondary cancers, the ICD-O-3 behavior suffix should be /6. Only SNOMED CT and ICD-O-3 are considered conformant to the specification. However, to be compliant with US Core Profiles, ICD-O-3 may only be used if there is no suitable code in SNOMED CT."
 * codes from system SCT where concept is-a #367651003 "Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)"
 * codes from system SCT where concept is-a #399919001 "Carcinoma in situ - category (morphologic abnormality)"
-* codes from system SCT where
-    concept is-a #399983006 "In situ adenomatous neoplasm - category (morphologic abnormality)" and
-    concept is-not-a #450893003 "Papillary neoplasm, pancreatobiliary-type, with high grade intraepithelial neoplasia (morphologic abnormality)" and
-    concept is-not-a #128640002 "Glandular intraepithelial neoplasia, grade III (morphologic abnormality)" and
-    concept is-not-a #450890000 "Glandular intraepithelial neoplasia, low grade (morphologic abnormality)" and
-    concept is-not-a #703548001 "Endometrioid intraepithelial neoplasia (morphologic abnormality)"
+* codes from system SCT where concept is-a #399983006 "In situ adenomatous neoplasm - category (morphologic abnormality)"
 * SCT#399878004 "Malignant neoplasm with pilar differentiation (morphologic abnormality)"
-
-ValueSet:   CancerHistologicGradeVS
-Title:  "Cancer Histologic Grade Value Set"
-Description:  "The grade of the tumor. This is a subset of the LOINC answer list LL213-0, which represents allowable values for NAACCR data item #440. The original answer list is outdated, as it includes terms pointing to the lineage of hematopoietic/lymphoid neoplasms, which have been retired by NAACCR as of version 18 Data Standards and Data Dictionary."
-* SCT#54102005  "G1 grade (finding)"
-* SCT#1663004   "G2 grade (finding)"
-* SCT#61026006  "G3 grade (finding)"
-* SCT#258245003 "G4 grade (finding)"
-* SCT#60815008  "Grade not determined (finding)" // synonyms include not applicable, not stated
-//* SCT#12619005  "GX grade (finding)" // includes synonym "Grade cannot be assessed", this is the terminology used by AJCC
+* exclude codes from system SCT where concept is-a #450893003 "Papillary neoplasm, pancreatobiliary-type, with high grade intraepithelial neoplasia (morphologic abnormality)"
+* exclude codes from system SCT where concept is-a #128640002 "Glandular intraepithelial neoplasia, grade III (morphologic abnormality)"
+* exclude codes from system SCT where concept is-a #450890000 "Glandular intraepithelial neoplasia, low grade (morphologic abnormality)"
+* exclude codes from system SCT where concept is-a #703548001 "Endometrioid intraepithelial neoplasia (morphologic abnormality)"
 
 ValueSet:   ConditionStatusTrendVS
 Title: "Condition Status Trend Value Set"
-Description:  "Standardized value set that describes the trend or status of a disease, condition, or ability. Based on LOINC answer lists LL2751-7 and LL4721-8. The value SNOMED CT 260415000 (Not Detected) should be used to express No Evidence of Disease (NED), condition resolved, or full remission."
-* SCT#260415000       "Not detected. Use this term for expressing NED (no evidence of disease), condition resolved, or full remission."   //* SCT#723506003 "Resolved" or * SCT#103338009 "In full remission"
-* SCT#385633008       "Improving"
-* SCT#58158008        "Stable"
-* SCT#230993007       "Worsening"
-* SCT#42425007	    "Equivocal. Equivocal represents a borderline value, too close to call; for example, a value very close to a cut-off between positive and negative."
-* SCT#82334004        "Indeterminate. Indeterminate means the results were uninterpretable, or cannot be determined; technical issues prevented obtaining a valid result."
+Description:  "How patient's given disease, condition, or ability is trending."
+* SCT#260415000 "Not detected (qualifier)"
+* SCT#268910001 "Patient condition improved (finding)"
+* SCT#359746009 "Patient's condition stable (finding)"
+* SCT#271299001 "Patient's condition worsened (finding)"
+* SCT#709137006 "Patient condition undetermined (finding)"
 
 ValueSet: CancerDiseaseStatusEvidenceTypeVS
 Title: "Cancer Disease Status Evidence Type Value Set"
 Description:  "The type of evidence backing up the clinical determination of cancer progression. The code '* SCT#252416005 Histopathology test (procedure)' is intended to be used when there is a biopsy that contributes evidence of the cancer disease status."
-//SCT codes are children of * SCT#386053000 "Evaluation procedure (procedure)"
 * SCT#363679005 "Imaging (procedure)"
 * SCT#252416005 "Histopathology test (procedure)"
 * SCT#711015009 "Assessment of symptom control (procedure)"
 * SCT#5880005   "Physical examination procedure (procedure)"
-* SCT#250724005 "Tumor marker measurement (procedure)"
 * SCT#386344002 "Laboratory data interpretation (procedure)"
-//MTH#C0005516	"Biological markers"
 
 ValueSet:   CancerStagingSystemVS
 Title: "Cancer Staging System Value Set"
@@ -118,12 +98,11 @@ Description: "This value set is intended to contain allowable values for the M c
 * SNOMED CT: The SNOMED CT US Edition has content related to the M category under the hierarchy of 385380006 'Metastasis category finding', such as 30893008 'M0 category' and 443841006 'pM1a category'. If using SNOMED CT to store M category findings, the use of codes that do not contain descriptions of the categories, such as the examples provided, is encouraged, as stage finding codes in SNOMED CT may not be up-to-date with current AJCC guidance. Note that SNOMED CT codes do not always make a distinction between clinical and pathological classifications (e.g. 'cM0' and 'pM0' may be represented by the same SNOMED CT code 30893008 'M0 category'). In addition, SNOMED CT may not have complete TNM staging terminology and may require supplementation with codes from another controlled vocabulary (e.g. NCI Thesaurus)."
 * codes from system AJCC
 
-
 ValueSet: CancerRelatedSurgicalProcedureVS
 Title: "Cancer-Related Surgical Procedure Value Set"
 Description: "Includes selected SNOMED CT codes that may be used in the treatment of cancer tumors. Codes from ICD-10-PCS and CPT are acceptable. CPT codes are not listed here due to intellectual property restrictions. ICD-10-PCS codes are not listed because of a limitation in the FHIR Implementation Guide publisher. For CPT and ICD-10-PCS, only codes representing surgical procedures should be used. 
 
-Conformance note: If an ICD-10-PCS code is used, and a semantically equivalent SNOMED CT code is available, the resulting FHIR Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html)."
+Conformance note: If an ICD-10-PCS code is used, and a semantically equivalent SNOMED CT code is available, the resulting FHIR Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/index.html)."
 * SCT#174337000    "Destruction of lesion"
 * SCT#49264007    "Excision of lesion"
 * SCT#119894003    "Anus excision"
@@ -506,7 +485,7 @@ ValueSet:   SecondaryCancerDisorderVS
 Title: "Secondary Cancer Disorder Value Set"
 Description:  "Types of secondary malignant neoplastic disease, coded in SNOMED CT or ICD-10-CM. 
 
-Conformance note: To be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.
+Conformance note: To be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.
 
 * SNOMED CT coding: Use a code from the disorder hierarchy under secondary malignant neoplastic disease (SNOMED CT 128462008).
 * ICD-10-CM coding: Use one of the codes given in this value set representing secondary malignant neoplasms and neoplasms of uncertain or unspecified behavior. If body site is not precoordinated (implied by the code), it should be specified separately using the body location.
@@ -572,7 +551,7 @@ ValueSet:       RadiationProcedureVS
 Title: "Radiation Procedure Value Set"
 Description:    "Codes describing radiation therapy procedures. The value set includes a limited set of radiation modality codes from SNOMED CT, however, ICD-10-PCS code from Section D (Radiation Therapy) and appropriate CPT radiation procedure codes are also considered compliant. CPT codes are not explicitly included due to licensing restrictions. ICD-10-PCS codes are not included explicitly because they are not currently supported by the FHIR IG Publishing tool.
 
-Conformance note: If an ICD-10-PCS code is used, and a semantically equivalent SNOMED CT or CPT code is available, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html)."
+Conformance note: If an ICD-10-PCS code is used, and a semantically equivalent SNOMED CT or CPT code is available, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/index.html)."
 * SCT#448385000	"Megavoltage radiation therapy using photons (procedure)"
 * SCT#45643008	"Teleradiotherapy using electrons (procedure)"
 * SCT#10611004    "Teleradiotherapy protons (procedure)"
@@ -5510,6 +5489,7 @@ Description:    "Value set for Eastern Cooperative Oncology Group performance st
 * SCT#423237006   "ECOG Grade 4: Bedbound"
 * SCT#423409001   "ECOG Grade 5: Death"
 
+/*
 ValueSet:  AnatomicalDirectionVS
 Title: "Anatomical Direction Value Set"
 Description:       "Terms that specify anatomical direction."
@@ -5525,6 +5505,8 @@ Description:    "The type of feature that constitutes the landmark, for example,
 * SCT#13136005        "Injection site (morphologic abnormality)"
 * SCT#43526002        "Operative site (morphologic abnormality)"
 * codes from system SCT where concept is-a #40388003 "Implant, device (physical object)"
+*/
+
 
 ValueSet: LateralityVS
 Title: "Laterality Value Set"
@@ -5538,15 +5520,15 @@ ValueSet:       PrimaryOrUncertainBehaviorCancerDisorderVS
 Title: "Primary or Uncertain Behavior Cancer Disorder Value Set"
 Description:    "Types of primary malignant neoplastic disease, coded in SNOMED CT or ICD-10-CM. 
 
-Conformance note: To be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), ICD-10-CM should only be used if a suitable code is not available from SNOMED.
+Conformance note: To be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/index.html), ICD-10-CM should only be used if a suitable code is not available from SNOMED.
 
 For SNOMED CT coding, use a code from the disorder hierarchy under SNOMED CT 363346000 'Malignant neoplastic disease (disorder)' excluding codes descending from SNOMED CT 128462008 'Secondary malignant neoplastic disease (disorder)'. If body location is not precoordinated (i.e., implied by the code), the site of the primary tumor should be specified in the body site attribute. 
 
 For ICD-10-CM coding, use one of the codes given in this value set representing primary malignant neoplasms and neoplasms of uncertain or unspecified behavior.
 
 Note that ICD-O-3 specifies morphology and topography, not disorder. If ICD-O-3 is used, the primary cancer disorder code must be specifically be SNOMED CT 363346000  'Malignant neoplastic disease (disorder)'. The ICD-O-3 morphology and topography codes should be entered in the HistologyMorphologyBehavior and body location fields, respectively."
-* codes from system SCT where concept is-a #363346000 "Malignant neoplastic disease (disorder)" and 
-concept is-not-a #128462008  "Secondary malignant neoplastic disease (disorder)"
+* codes from system SCT where concept is-a #363346000 "Malignant neoplastic disease (disorder)"
+* exclude codes from system SCT where concept is-a #128462008  "Secondary malignant neoplastic disease (disorder)"
 * ICD10CM#C000       "Malignant neoplasm of external upper lip"
 * ICD10CM#C001       "Malignant neoplasm of external lower lip"
 * ICD10CM#C002       "Malignant neoplasm of external lip, unspecified"

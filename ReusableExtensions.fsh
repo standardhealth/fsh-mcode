@@ -12,12 +12,6 @@ Description: "A code explaining an unplanned or premature termination of a plan 
 * value[x] only CodeableConcept
 * valueCodeableConcept from TreatmentTerminationReasonVS (required)
 
-Extension: StatementDateTime
-Id:  StatementDateTime
-Title: "Statement Date Time"
-Description: "The point in time when the statement was created."
-* value[x] only dateTime
-
 Extension: Laterality
 Id:  Laterality
 Title: "Laterality"
@@ -25,6 +19,7 @@ Description: "Body side of the body location, if needed to distinguish from a si
 * value[x] only CodeableConcept
 * valueCodeableConcept from LateralityVS (required)
 
+/*
 Extension: AnatomicalOrientation
 Id:  AnatomicalOrientation
 Title: "Anatomical Orientation"
@@ -62,8 +57,8 @@ Description: "The body location of the landmark, specified by a location code an
 * value[x] 0..0
 * extension contains
     BodySiteCode 1..1 and
-    Laterality 0..1 and
-    AnatomicalOrientation 0..*
+    Laterality 0..1 // and
+//    AnatomicalOrientation 0..*
 
 Extension: BodySiteCode
 Id:  BodySiteCode
@@ -85,3 +80,4 @@ Title: "Landmark to Body Location Distance"
 Description: "How far the body location of interest is from the given landmark."
 * value[x] only Quantity
 * valueQuantity from UnitsOfLengthVS (required)
+*/

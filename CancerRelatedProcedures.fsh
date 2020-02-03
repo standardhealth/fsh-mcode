@@ -4,7 +4,7 @@ Id:       CancerRelatedRadiationProcedure
 Title:    "Cancer-Related Radiation Procedure"
 Description: "A radiological treatment addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the ReasonReference and ReasonCode to cancer conditions. 
 
-Conformance note: If an ICD-10-PCS code is used in the code attribute, and there is a semantically equivalent SNOMED CT or CPT code, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html)"
+Conformance note: If an ICD-10-PCS code is used in the code attribute, and there is a semantically equivalent SNOMED CT or CPT code, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/index.html)"
 /* Issues relative to mCODE 0.9.x
 1) basedOn should not include ProcedureRequest. No such class in R4.
 2) basedOn should include CarePlan
@@ -19,11 +19,9 @@ Conformance note: If an ICD-10-PCS code is used in the code attribute, and there
 11) report should allow Reference(DiagnosticReport | DocumentReference | Composition) -- currently mCODE constrains to DiagnosticReport only.
 */
 * extension contains 
-    RadiationDose 0..1 and 
     TreatmentIntent 0..1 and 
-    TerminationReason 0..* and 
-    StatementDateTime 0..1
-* bodySite, extension[TreatmentIntent], extension[RadiationDose] MS    
+    TerminationReason 0..*
+* bodySite, extension[TreatmentIntent] MS    
 * partOf only Reference(Procedure)
 * category = SCT#53438000 "Radiation therapy procedure or service (procedure)"
 * code from RadiationProcedureVS (extensible)
@@ -33,11 +31,29 @@ Conformance note: If an ICD-10-PCS code is used in the code attribute, and there
 * reasonReference only Reference(CancerConditionParent)
 * bodySite from RadiationTargetBodySiteVS (extensible)
 * bodySite.extension contains
-    Laterality 0..1 and
-    AnatomicalOrientation 0..* and
-    RelationToLandmark 0..*
+    Laterality 0..1
 * focalDevice 0..0
 
+Profile:  CancerRelatedSurgicalProcedure
+Parent:   USCoreProcedure
+Id:       CancerRelatedSurgicalProcedure
+Title:    "Cancer-Related Surgical Procedure"
+Description: "A surgical action addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the ReasonReference and ReasonCode to cancer conditions. Conformance note: If an ICD-10-PCS code is used in the code attribute, and there is a semantically equivalent SNOMED CT or CPT code, the resulting Procedure instance will not be compliant with US Core Profiles."
+* code from CancerRelatedSurgicalProcedureVS (extensible)
+* extension contains 
+    TreatmentIntent 0..1
+* reasonCode, reasonReference, extension[TreatmentIntent] MS  // other MS will be inherited from USCoreProcedure
+* subject only Reference(USCorePatient)
+* category = SCT#387713003 "Surgical procedure"
+* reasonCode from CancerDisorderVS (extensible)
+* reasonReference only Reference(CancerConditionParent)  // rather than Primary, Secondary, Tumor
+* partOf only Reference(Procedure)
+* recorder only Reference(Practitioner | PractitionerRole)
+* performer.actor only Reference(Practitioner | PractitionerRole | Organization)
+* bodySite.extension contains
+    Laterality 0..1
+
+    /* Save for possible later use
 
 Extension: RadiationDose
 Id: RadiationDose
@@ -70,25 +86,4 @@ Description: "The total amount of radiation dose delivered for the course of the
 * value[x] only Quantity
 * valueQuantity = UCUM#cGy
 
-
-Profile:  CancerRelatedSurgicalProcedure
-Parent:   USCoreProcedure
-Id:       CancerRelatedSurgicalProcedure
-Title:    "Cancer-Related Surgical Procedure"
-Description: "A surgical action addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the ReasonReference and ReasonCode to cancer conditions. Conformance note: If an ICD-10-PCS code is used in the code attribute, and there is a semantically equivalent SNOMED CT or CPT code, the resulting Procedure instance will not be compliant with US Core Profiles."
-* code from CancerRelatedSurgicalProcedureVS (extensible)
-* extension contains 
-    TreatmentIntent 0..1 and 
-    StatementDateTime 0..1
-* reasonCode, reasonReference, extension[TreatmentIntent] MS  // other MS will be inherited from USCoreProcedure
-* subject only Reference(USCorePatient)
-* category = SCT#387713003 "Surgical procedure"
-* reasonCode from CancerDisorderVS (extensible)
-* reasonReference only Reference(CancerConditionParent)  // rather than Primary, Secondary, Tumor
-* partOf only Reference(Procedure)
-* recorder only Reference(Practitioner | PractitionerRole)
-* performer.actor only Reference(Practitioner | PractitionerRole | Organization)
-* bodySite.extension contains
-    Laterality 0..1 and
-    AnatomicalOrientation 0..* and
-    RelationToLandmark 0..*
+*/

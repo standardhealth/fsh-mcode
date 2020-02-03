@@ -12,6 +12,31 @@ InstanceOf: PrimaryCancerCondition
 * stage.summary = AJCC#3C "IIIC"
 * stage.assessment = Reference(mCODETNMClinicalStageGroupExample01)
 
+Instance: mCODESecondaryCancerConditionExample01
+InstanceOf: SecondaryCancerCondition
+* id = "mCODESecondaryCancerConditionExample01"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/SecondaryCancerCondition"
+* extension[RelatedPrimaryCancerCondition].url = "http://hl7.org/fhir/us/mcode/StructureDefinition/RelatedPrimaryCancerCondition"
+* extension[RelatedPrimaryCancerCondition].valueReference = Reference(mCODEPrimaryCancerConditionExample01)
+* clinicalStatus = ClinStatus#active "Active"
+* verificationStatus = VerStatus#confirmed "Confirmed"
+* code = SCT#94225005 "Secondary malignant neoplasm of brain"
+* subject = Reference(mCODEPatientExample01)
+* onsetDateTime = "2019-05-01"
+* asserter = Reference(mCODEPractitionerExample01)
+
+Instance: mCODECancerDiseaseStatusExample01
+InstanceOf: CancerDiseaseStatus
+* id = "mCODECancerDiseaseStatusExample01"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerDiseaseStatus"
+* extension[EvidenceType].url = "http://hl7.org/fhir/us/mcode/StructureDefinition/EvidenceType"
+* extension[EvidenceType].valueCodeableConcept = SCT#252416005 "Histopathology test (procedure)"
+* status = #final "final"
+* category = ObsCat#laboratory "laboratory"
+* subject = Reference(mCODEPatientExample01)
+* effectiveDateTime = "2019-04-01"
+* performer = Reference(mCODEPractitionerExample01)
+* valueCodeableConcept = SCT#268910001 "Patient condition improved (finding)"
 
 Instance: mCODEComorbidConditionExample01
 InstanceOf: ComorbidCondition
@@ -55,7 +80,11 @@ InstanceOf: CancerPatient
 * id = "mCODEPatientExample02"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerPatient"
 // The following lines must use the slice names, not the defining URLs
-* extension[race].extension[ombCategory].valueCoding = OmbCat#2186-5 "Not Hispanic or Latino"
+* extension[race].url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+* extension[race].extension[ombCategory].url = "ombCategory"
+* extension[race].extension[ombCategory].valueCoding = OmbRaceCat#1002-5 "American Indian or Alaska Native"
+* extension[race].extension[text].url = "text"
+* extension[race].extension[text].valueString = "Lakota and Crow"
 * extension[birthsex].valueCode = #F
 * identifier.use = #usual
 * identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#MR "Medical Record Number"
@@ -83,6 +112,8 @@ Instance: mCODEOrganizationExample01
 InstanceOf: USCoreOrganization
 * id = "mCODEOrganizationExample01"
 * identifier[NPI].value = "1265714091"
+// workaround for https://github.com/FHIR/sushi/issues/148: "Pattern in StructureDefinition not reflected in Instance" opened 1-25-2020 by MK
+* identifier[NPI].system = "http://hl7.org/fhir/sid/us-npi"   // although URI is not a supported type in FSH yet, apparently you can get away with giving the URI as a string, and the json comes out correctly. 
 * active = true
 * name = "Foundation Medicine"
 * contact.telecom.system = #phone
@@ -97,9 +128,10 @@ Instance: mCODEPractitionerExample01
 InstanceOf: USCorePractitioner
 * id = "mCODEPractitionerExample01"
 * identifier[NPI].value = "9988776655"
+// workaround for https://github.com/FHIR/sushi/issues/148: "Pattern in StructureDefinition not reflected in Instance" opened 1-25-2020 by MK
+* identifier[NPI].system = "http://hl7.org/fhir/sid/us-npi"   // although URI is not a supported type in FSH yet, apparently you can get away with giving the URI as a string, and the json comes out correctly. 
 * name.family = "Anydoc"
 * name.given = "Kyle"
- 
 * name.prefix = "Dr."
 * gender = #male
 * address.use = #home
@@ -109,6 +141,7 @@ InstanceOf: USCorePractitioner
 * address.postalCode = "12345"
 * address.country = "US"
 * qualification.code = http://terminology.hl7.org/CodeSystem/v2-0360|2.7#MD "Doctor of Medicine"
+
 
 Instance: mCODEECOGPerformanceStatusExample01 
 InstanceOf: ECOGPerformanceStatus
@@ -144,9 +177,6 @@ InstanceOf: CancerRelatedMedicationStatement
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * dateAsserted = "2019-04-01"
-// The following workaround are necessasry in 0.6.0 (see https://github.com/FHIR/sushi/issues/113)
-* extension[TreatmentIntent].url = "http://hl7.org/fhir/us/mcode/StructureDefinition/TreatmentIntent"
-// ------------ end workaround -------------
 * extension[TreatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 * dosage.text = "250mg orally once daily with or without food"
 * dosage.route = SCT#26643006 "Oral use"
@@ -162,9 +192,6 @@ InstanceOf: CancerRelatedSurgicalProcedure
 * subject = Reference(mCODEPatientExample01)
 * asserter = Reference(mCODEPractitionerExample01)
 * performedDateTime = "2019-03-01"
-// The following workaround are necessasry in 0.6.0 (see https://github.com/FHIR/sushi/issues/113)
-* extension[TreatmentIntent].url = "http://hl7.org/fhir/us/mcode/StructureDefinition/TreatmentIntent"
-// ------------ end workaround -------------
 * extension[TreatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 * reasonReference = Reference(mCODEPrimaryCancerConditionExample01)
 * bodySite = SCT#41224006 "Structure of lower lobe of left lung (body structure)"
@@ -178,14 +205,9 @@ InstanceOf: CancerRelatedRadiationProcedure
 * subject = Reference(mCODEPatientExample01)
 * asserter = Reference(mCODEPractitionerExample01)
 * performedDateTime = "2019-03-01"
-// The following workaround are necessary in 0.6.0 (see https://github.com/FHIR/sushi/issues/113)
-* extension[TreatmentIntent].url = "http://hl7.org/fhir/us/mcode/StructureDefinition/TreatmentIntent"
-* extension[RadiationDose].url = "http://hl7.org/fhir/us/mcode/StructureDefinition/RadiationDose"
-* extension[RadiationDose].extension[TotalRadiationDoseDelivered].url = "http://hl7.org/fhir/us/mcode/StructureDefinition/TotalRadiationDoseDelivered"
-// ------------ end workaround -------------
 * extension[TreatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
-* extension[RadiationDose].extension[TotalRadiationDoseDelivered].valueQuantity = UCUM#cGy 
-* extension[RadiationDose].extension[TotalRadiationDoseDelivered].valueQuantity.value = 1200.0
+//* extension[RadiationDose].extension[TotalRadiationDoseDelivered].valueQuantity = UCUM#cGy 
+//* extension[RadiationDose].extension[TotalRadiationDoseDelivered].valueQuantity.value = 1200.0
 * reasonReference = Reference(mCODEPrimaryCancerConditionExample01)
 * bodySite = SCT#41224006 "Structure of lower lobe of left lung (body structure)"
 
