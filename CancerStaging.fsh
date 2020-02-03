@@ -30,6 +30,7 @@ Parent: CancerStageParent
 Title: "TNM Clinical Stage Group"
 Description: "The extent of the cancer in the body, according to the TNM classification system, based on evidence such as physical examination, imaging, and/or biopsy."
 * ^abstract = false
+* hasMember MS
 * code = LNC#21908-9 "Stage group.clinical Cancer"
 * valueCodeableConcept from TNMStageGroupVS (preferred)
 * hasMember ^slicing.discriminator.type = #profile // #pattern
@@ -89,6 +90,7 @@ Parent: CancerStageParent
 Title: "TNM Pathological Stage Group"
 Description: "The extent of the cancer in the body, according to the TNM classification system, assessed through pathologic analysis of a specimen."
 * ^abstract = false
+* hasMember MS
 * code =  LNC#21902-2 "Stage group.pathology Cancer"
 * valueCodeableConcept from TNMStageGroupVS (preferred)
 * hasMember ^slicing.discriminator.type = #profile // #pattern
