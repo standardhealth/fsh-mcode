@@ -153,7 +153,7 @@ InstanceOf: ECOGPerformanceStatus
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * performer = Reference(mCODEPractitionerExample01) 
-* valueCodeableConcept = SCT#422512005 "ECOG Performance Status - grade 1"
+* valueInteger = 0
 
 Instance: mCODEKarnofskyPerformanceStatusExample01
 InstanceOf: KarnofskyPerformanceStatus
@@ -165,7 +165,7 @@ InstanceOf: KarnofskyPerformanceStatus
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * performer = Reference(mCODEPractitionerExample01)
-* valueCodeableConcept = LNC#LA29177-5 "Normal activity with effort; some signs or symptoms of disease"
+* valueInteger = 10
 
 Instance: mCODECancerRelatedMedicationStatementExample01
 InstanceOf: CancerRelatedMedicationStatement
