@@ -21,6 +21,8 @@ Description:    "The Karnofsky Performance Status (KPS) is a tool used to measur
 * effective[x] only dateTime or Period
 * performer only Reference(Practitioner)
 * value[x] only integer
+* interpretation from http://loinc.org/vs/LL4986-7 (extensible)
+
 // * valueCodeableConcept from KarnofskyPerformanceStatusVS (required)
 
 Profile:    ECOGPerformanceStatus
@@ -28,7 +30,7 @@ Parent:     Observation
 Id:         ECOGPerformanceStatus
 Title:      "ECOG Performance Status"
 Description:    "The Eastern Cooperative Oncology Group (ECOG) Performance Status represents the patient's functional status and is used to determine their ability to tolerate therapies in serious illness, specifically for chemotherapy. (Definition from: [LOINC](https://loinc.org/89262-0/))."
-* status, code, subject, effective[x] MS
+* status, code, subject, effective[x], value[x] MS
 * subject 1..1
 * value[x] 1..1
 * dataAbsentReason 0..0
@@ -46,4 +48,5 @@ Description:    "The Eastern Cooperative Oncology Group (ECOG) Performance Statu
 * effective[x] only dateTime or Period 
 * performer only Reference(Practitioner)
 * value[x] only integer
+* interpretation from http://loinc.org/vs/LL529-9 (extensible)
 // * valueCodeableConcept from ECOGPerformanceStatusVS (required)
