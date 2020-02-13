@@ -1,6 +1,6 @@
 Profile: CancerPatient
 Parent: USCorePatient
-Id: CancerPatient
+Id: mcode-cancer-patient
 Title: "Cancer Patient"
 Description: "A patient who has been diagnosed with or is receiving medical treatment for a malignant growth or tumour."
 /* There seem to be several unnecessary or unintended diffs in mCODE Patient:

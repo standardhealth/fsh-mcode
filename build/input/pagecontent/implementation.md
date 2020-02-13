@@ -87,7 +87,7 @@
 </ul>
 <p>Instead, mCODE uses an approach that defines body sites conceptually, and has the required specificity, by introducing a laterality extension:</p>
 <ul>
-    <li><a href="StructureDefinition-Laterality.html">Laterality</a> - the side of the body the body location, if needed to distinguish from a similar location on the other side of the body</li>
+    <li><a href="StructureDefinition-mcode-laterality.html">Laterality</a> - the side of the body the body location, if needed to distinguish from a similar location on the other side of the body</li>
 </ul>
 
 <h4><a name="VitalSigns"></a>Vital Sign Profiles</h4>

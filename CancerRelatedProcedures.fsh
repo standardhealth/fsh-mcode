@@ -1,6 +1,6 @@
 Profile:  CancerRelatedRadiationProcedure
 Parent:   USCoreProcedure
-Id:       CancerRelatedRadiationProcedure
+Id:       mcode-cancer-related-radiation-procedure
 Title:    "Cancer-Related Radiation Procedure"
 Description: "A radiological treatment addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the ReasonReference and ReasonCode to cancer conditions. 
 
@@ -36,7 +36,7 @@ Conformance note: If an ICD-10-PCS code is used in the code attribute, and there
 
 Profile:  CancerRelatedSurgicalProcedure
 Parent:   USCoreProcedure
-Id:       CancerRelatedSurgicalProcedure
+Id:       mcode-cancer-related-surgical-procedure
 Title:    "Cancer-Related Surgical Procedure"
 Description: "A surgical action addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the ReasonReference and ReasonCode to cancer conditions. Conformance note: If an ICD-10-PCS code is used in the code attribute, and there is a semantically equivalent SNOMED CT or CPT code, the resulting Procedure instance will not be compliant with US Core Profiles."
 * code from CancerRelatedSurgicalProcedureVS (extensible)
@@ -56,7 +56,7 @@ Description: "A surgical action addressing a cancer condition. The scope of this
     /* Save for possible later use
 
 Extension: RadiationDose
-Id: RadiationDose
+Id: mcode-radiation-dose
 Title:  "Radiation Dose"
 Description: "Information related to the dose of radiation received in a RadiationProcedure, including the dose per fraction, the number of fractions delivered, and the total radiation dose delivered."
 * value[x] 0..0
@@ -66,21 +66,21 @@ Description: "Information related to the dose of radiation received in a Radiati
     TotalRadiationDoseDelivered 0..1
 
 Extension: RadiationDosePerFraction
-Id: RadiationDosePerFraction
+Id: mcode-radiation-dose-per-fraction
 Title: "Radiation Dose Per Fraction"
 Description: "The amount of radiation administered during a single session (fraction) of radiation therapy therapy."
 * value[x] only Quantity
 * valueQuantity = UCUM#cGy
 
 Extension: RadiationFractionsDelivered
-Id: RadiationFractionsDelivered
+Id: mcode-radiation-fractions-delivered
 Title: "Radiation Fractions Delivered"
 Description: "Records the total number of treatment sessions (fractions) administered during the first course of therapy. Corresponds to LOINC 21950-2 'Number of radiation treatment' [sic]."
 * value[x] only Quantity
 * valueQuantity = UCUM#1
 
 Extension: TotalRadiationDoseDelivered
-Id: TotalRadiationDoseDelivered
+Id: mcode-total-radiation-dose-delivered
 Title: "Total Radiation Dose Delivered"
 Description: "The total amount of radiation dose delivered for the course of therapy. (source: SNOMED, ASTRO)"
 * value[x] only Quantity
