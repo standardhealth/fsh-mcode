@@ -3,7 +3,7 @@ Parent:     Observation
 Id:         KarnofskyPerformanceStatus
 Title:      "Karnofsky Performance Status"
 Description:    "The Karnofsky Performance Status (KPS) is a tool used to measure a patient's functional status. It can be used to compare the effectiveness of different therapies and to help assess the prognosis of certain patients, such as those with certain cancers. The KPS score ranges from 0 to 100 in intervals of 10. Higher scores are associated with better functional status, with 100 representing no symptoms or evidence of disease, and 0 representing death."
-* status, code, subject, effective[x] MS
+* status, code, subject, effective[x], valueInteger MS
 * subject 1..1
 * value[x] 1..1
 * dataAbsentReason 0..0
@@ -21,16 +21,14 @@ Description:    "The Karnofsky Performance Status (KPS) is a tool used to measur
 * effective[x] only dateTime or Period
 * performer only Reference(Practitioner)
 * value[x] only integer
-* interpretation from http://loinc.org/vs/LL4986-7 (extensible)
-
-// * valueCodeableConcept from KarnofskyPerformanceStatusVS (required)
+* interpretation from http://loinc.org/vs/LL4986-7 (required)
 
 Profile:    ECOGPerformanceStatus
 Parent:     Observation
 Id:         ECOGPerformanceStatus
 Title:      "ECOG Performance Status"
 Description:    "The Eastern Cooperative Oncology Group (ECOG) Performance Status represents the patient's functional status and is used to determine their ability to tolerate therapies in serious illness, specifically for chemotherapy. (Definition from: [LOINC](https://loinc.org/89262-0/))."
-* status, code, subject, effective[x], value[x] MS
+* status, code, subject, effective[x], valueInteger MS
 * subject 1..1
 * value[x] 1..1
 * dataAbsentReason 0..0
@@ -48,5 +46,4 @@ Description:    "The Eastern Cooperative Oncology Group (ECOG) Performance Statu
 * effective[x] only dateTime or Period 
 * performer only Reference(Practitioner)
 * value[x] only integer
-* interpretation from http://loinc.org/vs/LL529-9 (extensible)
-// * valueCodeableConcept from ECOGPerformanceStatusVS (required)
+* interpretation from http://loinc.org/vs/LL529-9 (required)

@@ -4,7 +4,7 @@
     "url": "http://hl7.org/fhir/us/mcode/ImplementationGuide/fhir.us.mcode",
     "version": "0.9.5",
     "name": "mCODE IG",
-    "title": "HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE) Release 1 - US Realm | STU1 PreRel#2",
+    "title": "HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE) Release 1 - US Realm | STU1",
     "status": "draft",
     "publisher": "HL7 International Clinical Interoperability Council",
     "contact": [
@@ -594,20 +594,6 @@
           },
           "name": "ComorbidConditionVS",
           "description": "SNOMED and ICD-10-CM codes for common comorbid conditions. Aligns with Elixhauser comorbidity scale. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt. Conformance note: If an ICD-10-CM code is used, and an equivalent SNOMED CT code is available, the resulting instance will not validate against US Core Profiles."
-        },
-        {
-          "reference": {
-            "reference": "ValueSet/KarnofskyPerformanceStatusVS"
-          },
-          "name": "KarnofskyPerformanceStatusVS",
-          "description": "Value set for Karnofsky Performance Status, with codes for each decade from 100 to 0. Higher scores are associated with better functional status, with 100 representing no symptoms or evidence of disease, and 0 representing death. This value set corresponds to LOINC list LL4986-7"
-        },
-        {
-          "reference": {
-            "reference": "ValueSet/ECOGPerformanceStatusVS"
-          },
-          "name": "ECOGPerformanceStatusVS",
-          "description": "Value set for Eastern Cooperative Oncology Group performance status. Values range from grade 0 (Asymptomatic) to grade 5 (Dead)."
         },
         {
           "reference": {
