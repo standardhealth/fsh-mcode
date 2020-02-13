@@ -1,19 +1,23 @@
 ValueSet:    ClinVarVS
+Id: mcode-clinvar-vs
 Title: "ClinVar Value Set"
 Description: "Value set of human genetic variants, drawn from [ClinVar](https://www.ncbi.nlm.nih.gov/clinvar/). The codes in this value set refer to the ClinVar Variation ID, or the identifier for the variant or set of variants that were interpreted. [Source: NCBI ClinVar Data Dictionary](https://www.ncbi.nlm.nih.gov/projects/clinvar/ClinVarDataDictionary.pdf)"
 * codes from system CLINVAR
 
 ValueSet:  HGNCVS
+Id: mcode-hgnc-vs
 Title: "HUGO Gene Nomenclature Committee Gene Names Value Set"
 Description: "HUGO Gene Nomenclature Committee Gene Names Value Set"
 * codes from system HGNC
 
 ValueSet: HGVSVS
+Id: mcode-hgvs-vs
 Title: "Human Genome Variation Society Sequence Variant Nomenclature Value Set"
 Description: "HGVS nomenclature is used to report and exchange information regarding variants found in DNA, RNA, and protein sequences."
 * codes from system HGVS
 
 ValueSet:     CancerBodyLocationVS
+Id: mcode-cancer-body-location-vs
 Title: "Cancer Body Location Value Set"
 Description:  "Codes describing the location(s) of primary or secondary cancer. The value set includes all codes from the SNOMED CT body structure hierarchy (codes descending from 123037004 'Body Structure'). The cancer body location may also be expressed using ICD-O-3 topography codes, however, those codes are not included here due to intellectual property restrictions. No other code systems are considered conformant."
 * codes from system SCT where concept is-a #123037004  "Body Structure"
@@ -26,6 +30,7 @@ Description:  "Terms that specify anatomical orientation."
 */
 
 ValueSet:   HistologyMorphologyBehaviorVS
+Id: mcode-histology-morphology-behavior-vs
 Title: "Histology Morphology Behavior Value Set"
 Description: "Codes representing the structure, arrangement, and behavioral characteristics of malignant neoplasms, and cancer cells. Inclusion criteria: in situ neoplasms and malignant neoplasms. Exclusion criteria: benign neoplasms and neoplasms of unspecified behavior. Note: As the vocabulary binding is extensible within this IG, ICD-O-3 morphology codes (including behavior suffix) may also be used; they are not included in the value set for intellectual property reasons. For primary cancers, the ICD-O-3 behavior suffix should be /1, /2, or /3. For secondary cancers, the ICD-O-3 behavior suffix should be /6. Only SNOMED CT and ICD-O-3 are considered conformant to the specification. However, to be compliant with US Core Profiles, ICD-O-3 may only be used if there is no suitable code in SNOMED CT."
 * codes from system SCT where concept is-a #367651003 "Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)"
@@ -38,6 +43,7 @@ Description: "Codes representing the structure, arrangement, and behavioral char
 * exclude codes from system SCT where concept is-a #703548001 "Endometrioid intraepithelial neoplasia (morphologic abnormality)"
 
 ValueSet:   ConditionStatusTrendVS
+Id: mcode-condition-status-trend-vs
 Title: "Condition Status Trend Value Set"
 Description:  "How patient's given disease, condition, or ability is trending."
 * SCT#260415000 "Not detected (qualifier)"
@@ -47,6 +53,7 @@ Description:  "How patient's given disease, condition, or ability is trending."
 * SCT#709137006 "Patient condition undetermined (finding)"
 
 ValueSet: CancerDiseaseStatusEvidenceTypeVS
+Id: mcode-cancer-disease-status-evidence-type-vs
 Title: "Cancer Disease Status Evidence Type Value Set"
 Description:  "The type of evidence backing up the clinical determination of cancer progression. The code '* SCT#252416005 Histopathology test (procedure)' is intended to be used when there is a biopsy that contributes evidence of the cancer disease status."
 * SCT#363679005 "Imaging (procedure)"
@@ -56,6 +63,7 @@ Description:  "The type of evidence backing up the clinical determination of can
 * SCT#386344002 "Laboratory data interpretation (procedure)"
 
 ValueSet:   CancerStagingSystemVS
+Id: mcode-cancer-staging-system-vs
 Title: "Cancer Staging System Value Set"
 Description:    "System used for staging. If the staging system is AJCC Version 8, use the NCI thesaurus code C146985 (AJCC Cancer Staging Manual 8th Edition) in its place. This is because SNOMED does not have an equivalent concept for AJCC Version 8 at this time."
 * SCT#444256004 "American Joint Commission on Cancer, Cancer Staging Manual, 6th edition neoplasm staging system (tumor staging)"
@@ -63,8 +71,9 @@ Description:    "System used for staging. If the staging system is AJCC Version 
 * SCT#258235000 "International Union Against Cancer (tumor staging)"
 
 ValueSet: TNMStageGroupVS
+Id: mcode-tnm-stage-group-vs
 Title: "TNM Stage Group Value Set"
-Description: "This value set is intended to contain allowable values for Stage Group, according to TNM staging rules. SNOMED CT codes or AJCC codes (preferrably, version 8 for current cancers) are allowed, but are not listed here due to AJCC intellectual property restrictions.
+Description: "This value set is intended to contain allowable values for Stage Group, according to TNM staging rules. SNOMED CT codes or AJCC codes (preferably, version 8 for current cancers) are allowed, but are not listed here due to AJCC intellectual property restrictions.
 
 *AJCC terminology: examples of stage groups include 'Stage 0' and 'Stage IIA'. The full set of stage groups, as well rules on how to assign a stage group, can be accessed through the AJCC Staging Manual and any applicable updates and corrections, as well as the AJCC API.
 
@@ -72,8 +81,9 @@ Description: "This value set is intended to contain allowable values for Stage G
 * codes from system AJCC
 
 ValueSet: TNMPrimaryTumorCategoryVS
+Id: mcode-tnm-primary-tumor-category-vs
 Title: "TNM Primary Tumor Category Value Set"
-Description: "This value set is intended to contain allowable values for the T category, according to TNM staging rules. SNOMED CT codes or AJCC codes (preferrably, version 8 for current cancers) are allowed, but are not listed here due to AJCC intellectual property restrictions.
+Description: "This value set is intended to contain allowable values for the T category, according to TNM staging rules. SNOMED CT codes or AJCC codes (preferably, version 8 for current cancers) are allowed, but are not listed here due to AJCC intellectual property restrictions.
 
 * AJCC terminology: examples of T categories include 'cTX', used when the tumor primary tumor cannot be evaluated, 'pT0', denoting there is no evidence of a primary tumor, and 'pTis', referencing carcinoma in situ (with some cancer-specific exceptions). Other T categories refer to increasing size of the primary tumor. Please note allowable T categories may vary between clinical and pathologic classifications. The full set of allowable clinical and pathologic T categories, along with its current descriptions, can be accessed through the AJCC Staging Manual and any applicable updates and corrections, as well as the AJCC API.
 
@@ -81,8 +91,9 @@ Description: "This value set is intended to contain allowable values for the T c
 * codes from system AJCC
 
 ValueSet: TNMRegionalNodesCategoryVS
+Id: mcode-tnm-regional-nodes-category-vs
 Title: "TNM Regional Nodes Category Value Set"
-Description: "This value set is intended to contain allowable values for the N category, according to TNM staging rules. SNOMED CT codes or AJCC codes (preferrably, version 8 for current cancers) are allowed, but are not listed here due to AJCC intellectual property restrictions.
+Description: "This value set is intended to contain allowable values for the N category, according to TNM staging rules. SNOMED CT codes or AJCC codes (preferably, version 8 for current cancers) are allowed, but are not listed here due to AJCC intellectual property restrictions.
 
 * AJCC terminology: examples of N categories include 'cN0', indicating no evidence of lymph node involvement, and 'pN1', indicating regional lymph node involvement to a small extent, with specific thresholds for the lymph node groups and number of lymph nodes involved. Other N categories refer to increasing lymph node involvement. Please note allowable N categories may vary between clinical and pathologic classifications. The full set of allowable clinical and pathologic N categories, along with its current descriptions, can be accessed through the AJCC Staging Manual and any applicable updates and corrections, as well as the AJCC API.
 
@@ -90,8 +101,9 @@ Description: "This value set is intended to contain allowable values for the N c
 * codes from system AJCC
 
 ValueSet: TNMDistantMetastasesCategoryVS
+Id: mcode-tnm-distant-metastases-category-vs
 Title: "TNM Distant Metastases Category Value Set"
-Description: "This value set is intended to contain allowable values for the M category, according to TNM staging rules. SNOMED CT codes or AJCC codes (preferrably, version 8 for current cancers) are allowed, but are not listed here due to AJCC intellectual property restrictions.
+Description: "This value set is intended to contain allowable values for the M category, according to TNM staging rules. SNOMED CT codes or AJCC codes (preferably, version 8 for current cancers) are allowed, but are not listed here due to AJCC intellectual property restrictions.
 
 * AJCC terminology: examples of M categories include 'cM0', denoting there is no evidence of distant metastases, and 'pM1', an indication that the cancer has metasticized. The full set of allowable clinical and pathologic M categories, along with its current descriptions, can be accessed through the AJCC Staging Manual and any applicable updates and corrections, as well as the AJCC API.
 
@@ -99,6 +111,7 @@ Description: "This value set is intended to contain allowable values for the M c
 * codes from system AJCC
 
 ValueSet: CancerRelatedSurgicalProcedureVS
+Id: mcode-cancer-related-surgical-procedure-vs
 Title: "Cancer-Related Surgical Procedure Value Set"
 Description: "Includes selected SNOMED CT codes that may be used in the treatment of cancer tumors. Codes from ICD-10-PCS and CPT are acceptable. CPT codes are not listed here due to intellectual property restrictions. ICD-10-PCS codes are not listed because of a limitation in the FHIR Implementation Guide publisher. For CPT and ICD-10-PCS, only codes representing surgical procedures should be used. 
 
@@ -282,6 +295,7 @@ Conformance note: If an ICD-10-PCS code is used, and a semantically equivalent S
 * SCT#15463004    "Operation on thyroid gland [NOS]"
 
 ValueSet:       TumorMarkerTestVS
+Id: mcode-tumor-marker-test-vs
 Description:    "Codes representing tests for tumor markers. This value set of LOINC codes is not comprehensive and can be extended. LOINC codes are preferred. Other vocabularies can be used only if the test of interest is not covered by LOINC.
 
 FHIR implementation note: At the current time, profiles for the specific LOINC tests mentioned here do not exist."
@@ -447,6 +461,7 @@ FHIR implementation note: At the current time, profiles for the specific LOINC t
 * LNC#15324-7       "Prostate specific Ag/Prostate volume calculated from planimetry"
 
 ValueSet:   GeneticSpecimenTypeVS
+Id: mcode-genetic-specimen-type-vs
 Title: "Genetic Specimen Type Value Set"
 Description:    "The type of specimen analyzed in a genetic test. The values are taken from code system http://terminology.hl7.org/CodeSystem/v2-0487, and represent a subset of HL7 Version 2 Table 0487 (http://hl7.org/fhir/v2/0487)."
 * SPTY#AMN       "Amniotic fluid"
@@ -482,6 +497,7 @@ Description:    "The type of specimen analyzed in a genetic test. The values are
 * SPTY#WND       "Wound"
 
 ValueSet:   SecondaryCancerDisorderVS
+Id: mcode-secondary-cancer-disorder-vs
 Title: "Secondary Cancer Disorder Value Set"
 Description:  "Types of secondary malignant neoplastic disease, coded in SNOMED CT or ICD-10-CM. 
 
@@ -548,6 +564,7 @@ Note that ICD-O-3 specifies morphology and topography, not disorder; in this cas
 * ICD10CM#C800       "Disseminated malignant neoplasm, unspecified"
 
 ValueSet:       RadiationProcedureVS
+Id: mcode-radiation-procedure-vs
 Title: "Radiation Procedure Value Set"
 Description:    "Codes describing radiation therapy procedures. The value set includes a limited set of radiation modality codes from SNOMED CT, however, ICD-10-PCS code from Section D (Radiation Therapy) and appropriate CPT radiation procedure codes are also considered compliant. CPT codes are not explicitly included due to licensing restrictions. ICD-10-PCS codes are not included explicitly because they are not currently supported by the FHIR IG Publishing tool.
 
@@ -559,6 +576,7 @@ Conformance note: If an ICD-10-PCS code is used, and a semantically equivalent S
 * SCT#152198000	"Brachytherapy (procedure)"
 
 ValueSet:      CancerDisorderVS
+Id: mcode-cancer-disorder-vs
 Title: "Cancer Disorder Value Set"
 Description:   "A broad cancer-related value set containing both primary and secondary tumor types, with codes from ICD-10 and SNOMED CT, including both diagnosis and histology/morphology/behavior codes. ICD-O-3 morphology codes may also be used and are considered conformant to the specification. For SNOMED, the value set includes all codes descending from 363346000 'Malignant neoplastic disease (disorder)' and 108369006 'Neoplasm (morphologic abnormality)'."
 * codes from system SCT where concept is-a #363346000 "Malignant neoplastic disease (disorder)"
@@ -1857,6 +1875,7 @@ Description:   "A broad cancer-related value set containing both primary and sec
 * ICD10CM#C800       "Disseminated malignant neoplasm, unspecified"
 
 ValueSet:       RadiationTargetBodySiteVS
+Id: mcode-radiation-target-body-site-vs
 Title: "Radiation Target Body Site Value Set"
 Description:    "Codes for body sites that can be targets of radiation therapy. This list of sites is based on Commission on Cancer’s 'Standards for Oncology Registry Entry  - STORE 2018'. This value set contains SNOMED CT equivalent terms."
 * SCT#81105003       "Cervical lymph node group (body structure)"
@@ -1932,6 +1951,7 @@ Description:    "Codes for body sites that can be targets of radiation therapy. 
 // no concept for hemibody
 
 ValueSet:   ComorbidConditionVS
+Id: mcode-comorbid-condition-vs
 Title: "Comorbid Condition Value Set"
 Description:    "SNOMED and ICD-10-CM codes for common comorbid conditions. Aligns with Elixhauser comorbidity scale. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt. 
 
@@ -5464,6 +5484,7 @@ Conformance note: If an ICD-10-CM code is used, and an equivalent SNOMED CT code
 * ICD10CM#Z95828    "Presence of other vascular implants and grafts"
 * ICD10CM#Z992    "Dependence on renal dialysis"
 
+/*
 ValueSet:       KarnofskyPerformanceStatusVS
 Title: "Karnofsky Performance Status Value Set"
 Description:    "Value set for Karnofsky Performance Status, with codes for each decade from 100 to 0. Higher scores are associated with better functional status, with 100 representing no symptoms or evidence of disease, and 0 representing death. This value set corresponds to LOINC list LL4986-7"
@@ -5489,7 +5510,6 @@ Description:    "Value set for Eastern Cooperative Oncology Group performance st
 * SCT#423237006   "ECOG Grade 4: Bedbound"
 * SCT#423409001   "ECOG Grade 5: Death"
 
-/*
 ValueSet:  AnatomicalDirectionVS
 Title: "Anatomical Direction Value Set"
 Description:       "Terms that specify anatomical direction."
@@ -5509,6 +5529,7 @@ Description:    "The type of feature that constitutes the landmark, for example,
 
 
 ValueSet: LateralityVS
+Id: mcode-laterality-vs
 Title: "Laterality Value Set"
 Description: "Body side of the body location, if needed to distinguish from a similar location on the other side of the body."
 * SCT#51440002 "Right and left"
@@ -5517,6 +5538,7 @@ Description: "Body side of the body location, if needed to distinguish from a si
 * SCT#31156008 "Structure of left half of body"
 
 ValueSet:       PrimaryOrUncertainBehaviorCancerDisorderVS
+Id: mcode-primary-or-uncertain-behavior-cancer-disorder-vs
 Title: "Primary or Uncertain Behavior Cancer Disorder Value Set"
 Description:    "Types of primary malignant neoplastic disease, coded in SNOMED CT or ICD-10-CM. 
 
@@ -6770,6 +6792,7 @@ Note that ICD-O-3 specifies morphology and topography, not disorder. If ICD-O-3 
 * ICD10CM#D499       "Neoplasm of unspecified behavior of unspecified site"
 
 ValueSet:   TreatmentTerminationReasonVS
+Id: mcode-treatment-termination-reason-vs
 Title: "Treatment Termination Reason Value Set"
 Description:  "Values used to describe the reasons for stopping a treatment. Includes code for 'treatment completed' as well as codes for unplanned (early) stoppage. Applies to medications and other treatments that take place over a period of time, such as radiation treatments."
 * SCT#182992009       "Treatment completed (situation)"  // could more generally be 397943006 "Planned (qualifier value)"
@@ -6782,12 +6805,14 @@ Description:  "Values used to describe the reasons for stopping a treatment. Inc
 * SCT#309846006       "Treatment not available"
 
 ValueSet:		TreatmentIntentVS
+Id: mcode-treatment-intent-vs
 Title: "Treatment Intent Value Set"
 Description:	"The purpose of a treatment. The value set includes 'curative' and 'palliative'. Curative is defined as any treatment meant to reduce or control a disease process, even if a 'cure' is not anticipated. Palliative includes treatments meant to reduce symptoms and side effects, such as antiemetics."
 * SCT#373808002   "Curative - procedure intent"
 * SCT#363676003   "Palliative - procedure intent"
 
 ValueSet:			UnitsOfLengthVS
+Id: mcode-units-of-length-vs
 Title:              "Units of Length Value Set"
 Description:		"Units of measure for length or distance on a human scale."
 * UCUM#mm				"Millimeter"

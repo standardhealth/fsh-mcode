@@ -1,7 +1,7 @@
 Instance: mCODEPrimaryCancerConditionExample01
 InstanceOf: PrimaryCancerCondition
 * id = "mCODEPrimaryCancerConditionExample01"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/PrimaryCancerCondition"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition"
 * clinicalStatus = ClinStatus#active "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
 * code = SCT#254637007 "Non-small cell lung cancer (disorder)"
@@ -15,8 +15,7 @@ InstanceOf: PrimaryCancerCondition
 Instance: mCODESecondaryCancerConditionExample01
 InstanceOf: SecondaryCancerCondition
 * id = "mCODESecondaryCancerConditionExample01"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/SecondaryCancerCondition"
-* extension[RelatedPrimaryCancerCondition].url = "http://hl7.org/fhir/us/mcode/StructureDefinition/RelatedPrimaryCancerCondition"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition"
 * extension[RelatedPrimaryCancerCondition].valueReference = Reference(mCODEPrimaryCancerConditionExample01)
 * clinicalStatus = ClinStatus#active "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
@@ -28,8 +27,8 @@ InstanceOf: SecondaryCancerCondition
 Instance: mCODECancerDiseaseStatusExample01
 InstanceOf: CancerDiseaseStatus
 * id = "mCODECancerDiseaseStatusExample01"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerDiseaseStatus"
-* extension[EvidenceType].url = "http://hl7.org/fhir/us/mcode/StructureDefinition/EvidenceType"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-disease-status"
+//* extension[EvidenceType].url = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-evidence-type"
 * extension[EvidenceType].valueCodeableConcept = SCT#252416005 "Histopathology test (procedure)"
 * status = #final "final"
 * category = ObsCat#laboratory "laboratory"
@@ -41,7 +40,7 @@ InstanceOf: CancerDiseaseStatus
 Instance: mCODEComorbidConditionExample01
 InstanceOf: ComorbidCondition
 * id = "mCODEComorbidConditionExample01"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/ComorbidCondition"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-comorbid-condition"
 * clinicalStatus = ClinStatus#active "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
 * code = SCT#44054006 "Type 2 diabetes mellitus"
@@ -53,7 +52,7 @@ InstanceOf: ComorbidCondition
 Instance: mCODEPatientExample01
 InstanceOf: CancerPatient
 * id = "mCODEPatientExample01"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerPatient"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient"
 * identifier.use = #usual
 * identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#MR "Medical Record Number"
 * identifier.system = "http://hospital.example.org"
@@ -78,12 +77,12 @@ InstanceOf: CancerPatient
 Instance: mCODEPatientExample02
 InstanceOf: CancerPatient
 * id = "mCODEPatientExample02"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerPatient"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient"
 // The following lines must use the slice names, not the defining URLs
-* extension[race].url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
-* extension[race].extension[ombCategory].url = "ombCategory"
+//* extension[race].url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+//* extension[race].extension[ombCategory].url = "ombCategory"
 * extension[race].extension[ombCategory].valueCoding = OmbRaceCat#1002-5 "American Indian or Alaska Native"
-* extension[race].extension[text].url = "text"
+//* extension[race].extension[text].url = "text"
 * extension[race].extension[text].valueString = "Lakota and Crow"
 * extension[birthsex].valueCode = #F
 * identifier.use = #usual
@@ -112,8 +111,6 @@ Instance: mCODEOrganizationExample01
 InstanceOf: USCoreOrganization
 * id = "mCODEOrganizationExample01"
 * identifier[NPI].value = "1265714091"
-// workaround for https://github.com/FHIR/sushi/issues/148: "Pattern in StructureDefinition not reflected in Instance" opened 1-25-2020 by MK
-* identifier[NPI].system = "http://hl7.org/fhir/sid/us-npi"   // although URI is not a supported type in FSH yet, apparently you can get away with giving the URI as a string, and the json comes out correctly. 
 * active = true
 * name = "Foundation Medicine"
 * contact.telecom.system = #phone
@@ -128,8 +125,6 @@ Instance: mCODEPractitionerExample01
 InstanceOf: USCorePractitioner
 * id = "mCODEPractitionerExample01"
 * identifier[NPI].value = "9988776655"
-// workaround for https://github.com/FHIR/sushi/issues/148: "Pattern in StructureDefinition not reflected in Instance" opened 1-25-2020 by MK
-* identifier[NPI].system = "http://hl7.org/fhir/sid/us-npi"   // although URI is not a supported type in FSH yet, apparently you can get away with giving the URI as a string, and the json comes out correctly. 
 * name.family = "Anydoc"
 * name.given = "Kyle"
 * name.prefix = "Dr."
@@ -146,7 +141,7 @@ InstanceOf: USCorePractitioner
 Instance: mCODEECOGPerformanceStatusExample01 
 InstanceOf: ECOGPerformanceStatus
 * id = "mCODEECOGPerformanceStatusExample01"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/ECOGPerformanceStatus" 
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-ecog-performance-status" 
 * status = #final "final"
 * category = ObsCat#survey "survey"
 * method = SCT#5880005 "Clinical examination"
@@ -159,7 +154,7 @@ InstanceOf: ECOGPerformanceStatus
 Instance: mCODEKarnofskyPerformanceStatusExample01
 InstanceOf: KarnofskyPerformanceStatus
 * id = "mCODEKarnofskyPerformanceStatusExample01"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/KarnofskyPerformanceStatus"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-karnofsky-performance-status"
 * status = #final "final"
 * category = ObsCat#survey "survey"
 * method = SCT#5880005 "Clinical examination"
@@ -172,7 +167,7 @@ InstanceOf: KarnofskyPerformanceStatus
 Instance: mCODECancerRelatedMedicationStatementExample01
 InstanceOf: CancerRelatedMedicationStatement
 * id = "mCODECancerRelatedMedicationStatementExample01"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerRelatedMedicationStatement"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-statement"
 * status = MedStatus#active "active"
 * category = MedCat#community "community"
 * medicationCodeableConcept = RXN#349472 "gefitinib 250 MG Oral Tablet"
@@ -188,7 +183,7 @@ InstanceOf: CancerRelatedMedicationStatement
 Instance: mCODECancerRelatedSurgicalProcedureExample01
 InstanceOf: CancerRelatedSurgicalProcedure
 * id = "mCODECancerRelatedSurgicalProcedureExample01"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerRelatedSurgicalProcedure"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-surgical-procedure"
 * status = #completed "completed"
 * code = SCT#359615001 "Partial lobectomy of lung (procedure)"
 * subject = Reference(mCODEPatientExample01)
@@ -201,7 +196,7 @@ InstanceOf: CancerRelatedSurgicalProcedure
 Instance: mCODECancerRelatedRadiationProcedureExample01
 InstanceOf: CancerRelatedRadiationProcedure 
 * id = "mCODECancerRelatedRadiationProcedureExample01"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerRelatedRadiationProcedure"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-radiation-procedure"
 * status = #completed "completed" 
 * code = SCT#152198000 "Brachytherapy (procedure)"
 * subject = Reference(mCODEPatientExample01)
@@ -216,7 +211,7 @@ InstanceOf: CancerRelatedRadiationProcedure
 Instance: mCODETNMClinicalStageGroupExample01
 InstanceOf: TNMClinicalStageGroup
 * id = "mCODETNMClinicalStageGroupExample01"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMClinicalStageGroup"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-stage-group"
 * status = #final "final" 
 * category = ObsCat#survey "Survey"
 * method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
@@ -230,7 +225,7 @@ InstanceOf: TNMClinicalStageGroup
 Instance: mCODETNMClinicalDistantMetastasesCategoryExample01
 InstanceOf: TNMClinicalDistantMetastasesCategory
 * id = "mCODETNMClinicalDistantMetastasesCategoryExample01"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMClinicalDistantMetastasesCategory"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-distant-metastases-category"
 * status = #final "final" 
 * category = ObsCat#survey "Survey"
 * method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
@@ -241,7 +236,7 @@ InstanceOf: TNMClinicalDistantMetastasesCategory
 Instance: mCODETNMClinicalPrimaryTumorCategoryExample01
 InstanceOf: TNMClinicalPrimaryTumorCategory
 * id = "mCODETNMClinicalPrimaryTumorCategoryExample01"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMClinicalPrimaryTumorCategory"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-primary-tumor-category"
 * status = #final "final" 
 * category = ObsCat#survey "Survey"
 * method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
@@ -253,7 +248,7 @@ InstanceOf: TNMClinicalPrimaryTumorCategory
 Instance: mCODETNMClinicalRegionalNodesCategoryExample01
 InstanceOf: TNMClinicalRegionalNodesCategory
 * id = "mCODETNMClinicalRegionalNodesCategoryExample01"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMClinicalRegionalNodesCategory"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-regional-nodes-category"
 * status = #final "final" 
 * category = ObsCat#survey "Survey"
 * method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
@@ -265,7 +260,7 @@ InstanceOf: TNMClinicalRegionalNodesCategory
 Instance: mCODETNMPathologicalStageGroupExample01
 InstanceOf: TNMPathologicalStageGroup
 * id = "mCODETNMPathologicalStageGroupExample01"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMPathologicalStageGroup"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-stage-group"
 * status = #final "final" 
 * category = ObsCat#laboratory "laboratory"
 * method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
@@ -280,7 +275,7 @@ InstanceOf: TNMPathologicalStageGroup
 Instance: mCODETNMPathologicalDistantMetastasesCategoryExample01
 InstanceOf: TNMPathologicalDistantMetastasesCategory
 * id = "mCODETNMPathologicalDistantMetastasesCategoryExample01"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMPathologicalDistantMetastasesCategory"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-distant-metastases-category"
 * status = #final "final" 
 * category = ObsCat#laboratory "laboratory"
 * method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
@@ -292,7 +287,7 @@ InstanceOf: TNMPathologicalDistantMetastasesCategory
 Instance: mCODETNMPathologicalPrimaryTumorCategoryExample01
 InstanceOf: TNMPathologicalPrimaryTumorCategory
 * id = "mCODETNMPathologicalPrimaryTumorCategoryExample01"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMPathologicalPrimaryTumorCategory"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-primary-tumor-category"
 * status = #final "final" 
 * category = ObsCat#laboratory "laboratory"
 * method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
@@ -304,7 +299,7 @@ InstanceOf: TNMPathologicalPrimaryTumorCategory
 Instance: mCODETNMPathologicalRegionalNodesCategoryExample01
 InstanceOf: TNMPathologicalRegionalNodesCategory
 * id = "mCODETNMPathologicalRegionalNodesCategoryExample01"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMPathologicalRegionalNodesCategory"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-regional-nodes-category"
 * status = #final "final" 
 * category = ObsCat#laboratory "laboratory"
 * method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 

@@ -48,3 +48,20 @@ v: {
   "error" : "The code system \"http://varnomen.hgvs.org\" is not known (encountered paired with code = \"NG_005905.2:g.126148_126152GTAAA[1]\"); The code provided (http://varnomen.hgvs.org#NG_005905.2:g.126148_126152GTAAA[1]) is not  valid in the value set All codes known to the system"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://varnomen.hgvs.org",
+  "code" : "NG_005905.2:g.126148_126152GTAAA[1]"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://varnomen.hgvs.org"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "CodeSystem uri 'http://varnomen.hgvs.org' is unknown"
+}
+-------------------------------------------------------------------------------------
