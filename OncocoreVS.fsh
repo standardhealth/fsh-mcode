@@ -5463,7 +5463,7 @@ Conformance note: If an ICD-10-CM code is used, and an equivalent SNOMED CT code
 * ICD10CM#Z95820    "Peripheral vascular angioplasty status with implants and grafts"
 * ICD10CM#Z95828    "Presence of other vascular implants and grafts"
 * ICD10CM#Z992    "Dependence on renal dialysis"
-
+/*
 ValueSet:       KarnofskyPerformanceStatusVS
 Title: "Karnofsky Performance Status Value Set"
 Description:    "Value set for Karnofsky Performance Status, with codes for each decade from 100 to 0. Higher scores are associated with better functional status, with 100 representing no symptoms or evidence of disease, and 0 representing death. This value set corresponds to LOINC list LL4986-7"
@@ -5489,7 +5489,6 @@ Description:    "Value set for Eastern Cooperative Oncology Group performance st
 * SCT#423237006   "ECOG Grade 4: Bedbound"
 * SCT#423409001   "ECOG Grade 5: Death"
 
-/*
 ValueSet:  AnatomicalDirectionVS
 Title: "Anatomical Direction Value Set"
 Description:       "Terms that specify anatomical direction."
@@ -5506,7 +5505,6 @@ Description:    "The type of feature that constitutes the landmark, for example,
 * SCT#43526002        "Operative site (morphologic abnormality)"
 * codes from system SCT where concept is-a #40388003 "Implant, device (physical object)"
 */
-
 
 ValueSet: LateralityVS
 Title: "Laterality Value Set"
