@@ -37,6 +37,7 @@ Description: "Codes representing the structure, arrangement, and behavioral char
 * codes from system SCT where concept is-a #399919001 "Carcinoma in situ - category (morphologic abnormality)"
 * codes from system SCT where concept is-a #399983006 "In situ adenomatous neoplasm - category (morphologic abnormality)"
 * SCT#399878004 "Malignant neoplasm with pilar differentiation (morphologic abnormality)"
+* SCT#253035009 "In situ melanocytic morphology (morphologic abnormality)"
 * exclude codes from system SCT where concept is-a #450893003 "Papillary neoplasm, pancreatobiliary-type, with high grade intraepithelial neoplasia (morphologic abnormality)"
 * exclude codes from system SCT where concept is-a #128640002 "Glandular intraepithelial neoplasia, grade III (morphologic abnormality)"
 * exclude codes from system SCT where concept is-a #450890000 "Glandular intraepithelial neoplasia, low grade (morphologic abnormality)"
@@ -5532,8 +5533,9 @@ Title: "Laterality Value Set"
 Description: "Body side of the body location, if needed to distinguish from a similar location on the other side of the body."
 * SCT#51440002 "Right and left"
 * SCT#399488007 "Midline"
-* SCT#85421007 "Structure of right half of body"
-* SCT#31156008 "Structure of left half of body"
+* SCT#24028007 "Right (qualifier value)"
+* SCT#7771000  "Left (qualifier value)"
+* SCT#66459002 "Unilateral (qualifier value)"
 
 ValueSet:       PrimaryOrUncertainBehaviorCancerDisorderVS
 Id: mcode-primary-or-uncertain-behavior-cancer-disorder-vs
