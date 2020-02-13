@@ -85,7 +85,7 @@
     <li>The bodySite attribute is a terminology concept, but BodyStructure is a resource, representing a body site on a specific patient. Concepts and instances are not analogous and cannot be arbitrarily swapped.</li>
     <li>Even if the difference between a terminology concept and an patient-specific resource is overlooked, the BodyStructure resource is insufficient for mCODE's purposes.</li>
 </ul>
-<p>Instead, mCODE uses an approach that defines body sites conceptually, and has the required specificity, by introducing three optional extensions on bodySite:</p>
+<p>Instead, mCODE uses an approach that defines body sites conceptually, and has the required specificity, by introducing a laterality extension:</p>
 <ul>
     <li><a href="StructureDefinition-Laterality.html">Laterality</a> - the side of the body the body location, if needed to distinguish from a similar location on the other side of the body</li>
 </ul>
