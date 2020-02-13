@@ -16,7 +16,6 @@ Instance: mCODESecondaryCancerConditionExample01
 InstanceOf: SecondaryCancerCondition
 * id = "mCODESecondaryCancerConditionExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/SecondaryCancerCondition"
-* extension[RelatedPrimaryCancerCondition].url = "http://hl7.org/fhir/us/mcode/StructureDefinition/RelatedPrimaryCancerCondition"
 * extension[RelatedPrimaryCancerCondition].valueReference = Reference(mCODEPrimaryCancerConditionExample01)
 * clinicalStatus = ClinStatus#active "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
@@ -29,7 +28,6 @@ Instance: mCODECancerDiseaseStatusExample01
 InstanceOf: CancerDiseaseStatus
 * id = "mCODECancerDiseaseStatusExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerDiseaseStatus"
-* extension[EvidenceType].url = "http://hl7.org/fhir/us/mcode/StructureDefinition/EvidenceType"
 * extension[EvidenceType].valueCodeableConcept = SCT#252416005 "Histopathology test (procedure)"
 * status = #final "final"
 * category = ObsCat#laboratory "laboratory"
