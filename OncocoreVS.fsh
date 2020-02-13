@@ -5531,8 +5531,8 @@ ValueSet: LateralityVS
 Id: mcode-laterality-vs
 Title: "Laterality Value Set"
 Description: "Body side of the body location, if needed to distinguish from a similar location on the other side of the body."
-* SCT#51440002 "Right and left"
-* SCT#399488007 "Midline"
+* SCT#51440002 "Right and left (qualifier value)"
+* SCT#399488007 "Midline (qualifier value)"
 * SCT#24028007 "Right (qualifier value)"
 * SCT#7771000  "Left (qualifier value)"
 * SCT#66459002 "Unilateral (qualifier value)"
