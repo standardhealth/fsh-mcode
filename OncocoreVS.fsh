@@ -5483,7 +5483,6 @@ Conformance note: If an ICD-10-CM code is used, and an equivalent SNOMED CT code
 * ICD10CM#Z95820    "Peripheral vascular angioplasty status with implants and grafts"
 * ICD10CM#Z95828    "Presence of other vascular implants and grafts"
 * ICD10CM#Z992    "Dependence on renal dialysis"
-
 /*
 ValueSet:       KarnofskyPerformanceStatusVS
 Title: "Karnofsky Performance Status Value Set"
@@ -5526,7 +5525,6 @@ Description:    "The type of feature that constitutes the landmark, for example,
 * SCT#43526002        "Operative site (morphologic abnormality)"
 * codes from system SCT where concept is-a #40388003 "Implant, device (physical object)"
 */
-
 
 ValueSet: LateralityVS
 Id: mcode-laterality-vs

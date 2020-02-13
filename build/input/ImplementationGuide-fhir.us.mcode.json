@@ -2,7 +2,7 @@
     "resourceType": "ImplementationGuide",
     "id": "fhir.us.mcode",
     "url": "http://hl7.org/fhir/us/mcode/ImplementationGuide/fhir.us.mcode",
-    "version": "0.9.5",
+    "version": "1.0",
     "name": "mCODE IG",
     "title": "HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE) Release 1 - US Realm | STU1",
     "status": "draft",
