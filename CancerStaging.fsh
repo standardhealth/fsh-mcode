@@ -1,5 +1,5 @@
 Profile: CancerStageParent
-Id: CancerStageParent
+Id: mcode-cancer-stage-parent
 Parent: Observation
 Title: "Cancer Stage Parent"
 Description:  "Abstract parent class for members of cancer staging panels. Cancer panel members must include a timing element and staging system, and focus on a cancer disorder. Specific realizations will have value sets specific to certain staging systems."
@@ -25,7 +25,7 @@ Description:  "Abstract parent class for members of cancer staging panels. Cance
 //-------------------- Clinical Staging -------------------------
 
 Profile: TNMClinicalStageGroup
-Id: TNMClinicalStageGroup
+Id: mcode-tnm-clinical-stage-group
 Parent: CancerStageParent
 Title: "TNM Clinical Stage Group"
 Description: "The extent of the cancer in the body, according to the TNM classification system, based on evidence such as physical examination, imaging, and/or biopsy."
@@ -56,7 +56,7 @@ Description: "The extent of the cancer in the body, according to the TNM classif
 * hasMember[TNMClinicalDistantMetastasesCategory] ^comment = "When using this element, the Observation must validate against the specified profile."
 
 Profile:  TNMClinicalPrimaryTumorCategory
-Id: TNMClinicalPrimaryTumorCategory
+Id: mcode-tnm-clinical-primary-tumor-category
 Parent: CancerStageParent
 Title: "TNM Clinical Primary Tumor Category"
 Description: "Category of the primary tumor, based on its size and extent, based on evidence such as physical examination, imaging, and/or biopsy."
@@ -65,7 +65,7 @@ Description: "Category of the primary tumor, based on its size and extent, based
 * valueCodeableConcept from TNMPrimaryTumorCategoryVS (preferred)
 
 Profile:  TNMClinicalRegionalNodesCategory
-Id: TNMClinicalRegionalNodesCategory
+Id: mcode-tnm-clinical-regional-nodes-category
 Parent: CancerStageParent
 Title: "TNM Clinical Regional Nodes Category"
 Description: "Category of the presence or absence of metastases in regional lymph nodes, based on evidence such as physical examination, imaging, and/or biopsy."
@@ -74,7 +74,7 @@ Description: "Category of the presence or absence of metastases in regional lymp
 * valueCodeableConcept from TNMRegionalNodesCategoryVS (preferred)
 
 Profile:  TNMClinicalDistantMetastasesCategory
-Id: TNMClinicalDistantMetastasesCategory
+Id: mcode-tnm-clinical-distant-metastases-category
 Parent: CancerStageParent
 Title: "TNM Clinical Distant Metastases Category"
 Description: "Category describing the extent of a tumor metastasis in remote anatomical locations, based on evidence such as physical examination, imaging, and/or biopsy."
@@ -85,7 +85,7 @@ Description: "Category describing the extent of a tumor metastasis in remote ana
 //-------------------- Pathological Staging -------------------------
 
 Profile: TNMPathologicalStageGroup
-Id: TNMPathologicalStageGroup
+Id: mcode-tnm-pathological-stage-group
 Parent: CancerStageParent
 Title: "TNM Pathological Stage Group"
 Description: "The extent of the cancer in the body, according to the TNM classification system, assessed through pathologic analysis of a specimen."
@@ -115,7 +115,7 @@ Description: "The extent of the cancer in the body, according to the TNM classif
 * hasMember[TNMPathologicalDistantMetastasesCategory] ^comment = "When using this element, the Observation must validate against the specified profile."
 
 Profile:  TNMPathologicalPrimaryTumorCategory
-Id: TNMPathologicalPrimaryTumorCategory
+Id: mcode-tnm-pathological-primary-tumor-category
 Parent: CancerStageParent
 Title: "TNM Pathological Primary Tumor Category"
 Description: "Category of the primary tumor, based on its size and extent, assessed through pathologic analysis of a specimen."
@@ -124,7 +124,7 @@ Description: "Category of the primary tumor, based on its size and extent, asses
 * valueCodeableConcept from TNMPrimaryTumorCategoryVS (preferred)
 
 Profile:  TNMPathologicalRegionalNodesCategory
-Id: TNMPathologicalRegionalNodesCategory
+Id: mcode-tnm-pathological-regional-nodes-category
 Parent: CancerStageParent
 Title: "TNM Pathological Regional Nodes Category"
 Description: "Category of the presence or absence of metastases in regional lymph nodes, assessed through pathologic analysis of a specimen."
@@ -133,7 +133,7 @@ Description: "Category of the presence or absence of metastases in regional lymp
 * valueCodeableConcept from TNMRegionalNodesCategoryVS (preferred)
 
 Profile:  TNMPathologicalDistantMetastasesCategory
-Id: TNMPathologicalDistantMetastasesCategory
+Id: mcode-tnm-pathological-distant-metastases-category
 Parent: CancerStageParent
 Title: "TNM Pathological Distant Metastases Category"
 Description: "Category describing the presence or absence of metastases in remote anatomical locations, assessed through pathologic analysis of a specimen."

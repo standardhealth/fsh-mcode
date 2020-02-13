@@ -2,7 +2,7 @@ Alias: AssertedDate = http://hl7.org/fhir/StructureDefinition/condition-asserted
 
 Profile: CancerConditionParent
 Parent:  USCoreCondition
-Id: CancerConditionParent
+Id: mcode-cancer-condition-parent
 Title: "Cancer Condition Parent"
 Description:  "Abstract parent class for describing a primary or secondary metastatic neoplastic diseases, or individual tumors."
 /* Issues relative to mCODE 0.9.x
@@ -24,7 +24,7 @@ Description:  "Abstract parent class for describing a primary or secondary metas
 * recorder only Reference(Practitioner | PractitionerRole)
 
 Profile: PrimaryCancerCondition
-Id: PrimaryCancerCondition
+Id: mcode-primary-cancer-condition
 Title: "Primary Cancer Condition"
 Parent: CancerConditionParent
 Description: "Records the history of the primary cancer condition, the original or first tumor in the body (Definition from: [NCI Dictionary of Cancer Terms](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor)). Cancers that are not clearly secondary (i.e., of uncertain origin or behavior) should be documented as primary.
@@ -38,7 +38,7 @@ Conformance note: For the code attribute, to be compliant with [US Core Profiles
 
 Profile: SecondaryCancerCondition
 Parent: CancerConditionParent
-Id: SecondaryCancerCondition
+Id: mcode-secondary-cancer-condition
 Title: "Secondary Cancer Condition"
 Description: "Records the history of secondary neoplasms, including location(s) and the date of onset of metastases. A secondary cancer results from the spread (metastasization) of cancer from its original site (Definition from: NCI Dictionary of Cancer Terms).
 
@@ -52,14 +52,14 @@ Conformance note: For the code attribute, to be compliant with US Core Profiles,
 // Extensions
 
 Extension:  HistologyMorphologyBehavior
-Id: HistologyMorphologyBehavior
+Id: mcode-histology-morphology-behavior
 Title: "Histology-Morphology-Behavior"
 Description: "A description of the morphologic and behavioral characteristics of the cancer."
 * value[x] only CodeableConcept
 * valueCodeableConcept from HistologyMorphologyBehaviorVS (extensible)
 
 Extension: RelatedPrimaryCancerCondition
-Id: RelatedPrimaryCancerCondition
+Id: mcode-related-primary-cancer-condition
 Title: "Related Primary Cancer Condition"
 Description: "The primary cancer related to this secondary cancer."
 * value[x] only Reference
@@ -68,7 +68,7 @@ Description: "The primary cancer related to this secondary cancer."
 
 Profile: ComorbidCondition
 Parent:  USCoreCondition
-Id: ComorbidCondition
+Id: mcode-comorbid-condition
 Title: "Comorbid Condition"
 Description:  "A comorbidity refers to one or more diseases or conditions that occur along with another condition in the same person at the same time. Conditions considered comorbidities are often long-term or chronic conditions. Comorbidities are defined relative to an index disease and may be categorical, rather than described in full detail. The comorbid condition class provides comorbidity codes corresponding the Elixhauser Comorbidity Index. Conformance note: If an ICD-10-CM code is used for the code attribute, and a semantically equivalent SNOMED code is available, the resulting instance will not be compliant with US Core Profiles."
 * verificationStatus 1..1
@@ -90,7 +90,7 @@ Description:  "A comorbidity refers to one or more diseases or conditions that o
 /*
 Profile: Tumor
 Parent: CancerConditionParent
-Id: Tumor
+Id: mcode-tumor
 Title: "Tumor"
 Description: "The presence of an abnormal mass of tissue (neoplasm) that results when cells divide more than they should or do not die when they should. Tumors may be benign (not cancer), or malignant (cancer). (source: NCI Dictionary).
 
