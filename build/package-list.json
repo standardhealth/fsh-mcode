@@ -18,7 +18,8 @@
       "desc": "STU 1 Release (Mmm yyyy Ballot)",
       "path": "http://hl7.org/fhir/us/mcode/ImplementationGuide/fhir.us.mcode",
       "status": "trial-use",
-      "sequence": "STU 1"
+      "sequence": "STU 1",
+      "current": true
     },
     {
       "version": "0.9.1",
