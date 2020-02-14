@@ -21,7 +21,6 @@ Conformance note: If an ICD-10-PCS code is used in the code attribute, and there
 * extension contains 
     TreatmentIntent 0..1 and 
     TerminationReason 0..*
-* bodySite, extension[TreatmentIntent] MS    
 * partOf only Reference(Procedure)
 * category = SCT#53438000 "Radiation therapy procedure or service (procedure)"
 * code from RadiationProcedureVS (extensible)
@@ -33,6 +32,8 @@ Conformance note: If an ICD-10-PCS code is used in the code attribute, and there
 * bodySite.extension contains
     Laterality 0..1
 * focalDevice 0..0
+* bodySite, bodySite.extension[Laterality], extension[TreatmentIntent] MS    
+
 
 Profile:  CancerRelatedSurgicalProcedure
 Parent:   USCoreProcedure
@@ -42,7 +43,6 @@ Description: "A surgical action addressing a cancer condition. The scope of this
 * code from CancerRelatedSurgicalProcedureVS (extensible)
 * extension contains 
     TreatmentIntent 0..1
-* reasonCode, reasonReference, extension[TreatmentIntent] MS  // other MS will be inherited from USCoreProcedure
 * subject only Reference(USCorePatient)
 * category = SCT#387713003 "Surgical procedure"
 * reasonCode from CancerDisorderVS (extensible)
@@ -52,6 +52,7 @@ Description: "A surgical action addressing a cancer condition. The scope of this
 * performer.actor only Reference(Practitioner | PractitionerRole | Organization)
 * bodySite.extension contains
     Laterality 0..1
+* reasonCode, reasonReference, extension[TreatmentIntent], bodySite, bodySite.extension[Laterality] MS  // other MS will be inherited from USCoreProcedure
 
     /* Save for possible later use
 
