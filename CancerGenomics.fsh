@@ -157,6 +157,7 @@ Title:      "Genomic Region Studied"
 Description:    "The area of the genome region referenced in testing for variants."
 * code MS
 * code = LNC#53041-0 "DNA region of interest panel"
+* value[x] 0..0
 * component ^slicing.discriminator.type = #pattern
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
