@@ -127,11 +127,10 @@ Id:         mcode-cancer-genomics-report
 Title:      "Cancer Genomics Report"
 Description:    "Genetic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome.
 The identity of non-genomic laboratory tests is typically represented by a LOINC code. However, many genetic tests and panels do not have LOINC codes, although some might have an identifier in NCBI Genetic Testing Registry (GTR), a central location for voluntary submission of genetic test information by providers. To identify the diagnostic report, the name of the report must be in the text sub-field of the code structure. If there is a coded identifier from GTR, LOINC, or other source, then it should be included into the the code sub-field of the code structure. If there is no suitable code, the code can be omitted."
-* encounter, specimen MS  // the other MS elements are already in US Core. Do we want encounter here?
+* specimen MS
 * basedOn only Reference (ServiceRequest | CarePlan)
 * subject only Reference(CancerPatient)
 * code = LNC#81247-9 "Master HL7 genetic variant reporting panel"
-* code.text = "A LOINC-designated panel of key components captured in a genomics report. It includes one or more observations involving genes, chromosomes, and protein variants as well as one or more DNA regions of study for identifying these variants."
 * specimen only Reference(GeneticSpecimen)
 * result ^slicing.discriminator.type = #pattern
 * result ^slicing.discriminator.path = "$this.resolve().code"
