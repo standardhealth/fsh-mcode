@@ -1,0 +1,16 @@
+name: SUSHI CI
+
+on: [push]
+
+jobs:
+  test:
+    name: Test using latest SUSHI w/ Node 12.x on Ubuntu linux
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+    - run: npm install -D fsh-sushi
+    - run: npx sushi -v
+    - run: npx sushi .
