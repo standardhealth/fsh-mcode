@@ -90,12 +90,12 @@
 </ul>
 
 <h4><a name="VitalSigns"></a>Vital Sign Profiles</h4>
-<p>The vital sign profiles defined by mCODE are consistent with the <a href="http://hl7.org/fhir/R4/observation-vitalsigns.html" target="_blank">FHIR vital sign profiles</a>, which are incorporated by reference into <a href="http://hl7.org/fhir/us/core/index.html" target="_blank">US Core v3</a>. The difference between FHIR and mCODE vital signs is that mCODE provides for reporting of preconditions, body positions, blood pressure method, and blood pressure body location, with appropriate value sets. The vital signs model in mCODE is aligned with the Vital Signs Implementation Guide being developed in cooperation with the <a href="https://www.hl7.org/Special/Committees/cimi/index.cfm" target="_blank">Clinical Information Modeling Initiative (CIMI) Work Group</a>.</p> 
- <p>Although mCODE defines its own vital signs profiles, if and when detailed vital signs profiles are standardized in a widely-accepted FHIR IG, mCODE will likely switch over to those profiles.</p>
+<p>The vital signs height, weight, and blood pressure are part of the mCODE data set. However, vital sign profiles are not defined in mCODE. Instead, mCODE uses the <a href="http://hl7.org/fhir/R4/observation-vitalsigns.html" target="_blank">FHIR vital sign profiles</a>, which are incorporated by reference into <a href="http://hl7.org/fhir/us/core/index.html" target="_blank">US Core v3</a>.</p> 
+ <p>If and when detailed vital signs profiles are standardized in a widely-accepted FHIR IG, mCODE may switch over to those profiles.</p>
 
-<h4><a name="LaboratoryProfiles"></a>Laboratory Profiles</h4> 
+<h4><a name="LaboratoryProfiles"></a>Laboratory Profiles</h4>
 
-<p>Reporting of individual laboratory results must conform to the <a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html">US Core Laboratory Result Profile</a>. Several examples of laboratory result reporting are given in the <a href="http://hl7.org/fhir/us/core/index.html">US Core IG</a>. For example, see this <a href="http://hl7.org/fhir/us/core/Observation-erythrocytes.html">erythrocytes laboratory reporting example</a>.</p>
+<p>Complete Blood Count (CBC) and Comprehensive Metabolic Panel (CMP) are part of the mCODE data set. Reporting these results must conform to the <a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html">US Core Laboratory Result Profile</a>. Several examples of laboratory result reporting are given in the <a href="http://hl7.org/fhir/us/core/index.html">US Core IG</a>. For example, see this <a href="http://hl7.org/fhir/us/core/Observation-erythrocytes.html">erythrocytes laboratory reporting example</a>.</p>
 
 <p>In practice, there are different variations on these panels, as exemplified by <a href="https://search.loinc.org/searchLOINC/search.zul?query=CBC">this list of various CBCs</a>. The individual LOINC codes of interest to mCODE are any that are reported as part of the CBC and CMP panels, which include, but are not limited to:</p>
 
