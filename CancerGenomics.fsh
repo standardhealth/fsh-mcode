@@ -130,6 +130,7 @@ The identity of non-genomic laboratory tests is typically represented by a LOINC
 * specimen MS
 * basedOn only Reference (ServiceRequest | CarePlan)
 * subject only Reference(CancerPatient)
+* category = DiagosticService#GE
 * code = LNC#81247-9 "Master HL7 genetic variant reporting panel"
 * specimen only Reference(GeneticSpecimen)
 * result ^slicing.discriminator.type = #pattern
