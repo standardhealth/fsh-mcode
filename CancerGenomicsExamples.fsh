@@ -1,5 +1,6 @@
 Instance: mCODECancerGeneticVariantExample01
 InstanceOf: CancerGeneticVariant
+Description: "mCODE Example for Cancer Genetic Variant"
 * id = "mCODECancerGeneticVariantExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant"
 * status = #final "Final"
@@ -20,6 +21,7 @@ InstanceOf: CancerGeneticVariant
  */
 Instance: mCODECancerGeneticVariantExample02
 InstanceOf: CancerGeneticVariant
+Description: "mCODE Example for Cancer Genetic Variant"
 * id = "mCODECancerGeneticVariantExample02"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant"
 * status = #final "Final"
@@ -35,6 +37,7 @@ InstanceOf: CancerGeneticVariant
 
 Instance: mCODECancerGenomicsReportExample01
 InstanceOf: CancerGenomicsReport
+Description: "mCODE Example for Cancer Genomics Report"
 * id = "mCODECancerGenomicsReportExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomics-report"
 * status = #final "Final"
@@ -47,6 +50,7 @@ InstanceOf: CancerGenomicsReport
 
 Instance: mCODEGenomicRegionStudiedExample01
 InstanceOf: GenomicRegionStudied
+Description: "mCODE Example for Genomic Region Studied"
 * id = "mCODEGenomicRegionStudiedExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-region-studied"
 * status = #final "final"
@@ -57,6 +61,7 @@ InstanceOf: GenomicRegionStudied
 
 Instance: mCODETumorMarkerExample01 
 InstanceOf: TumorMarker
+Description: "mCODE Example for Tumor Marker Example"
 * id = "mCODETumorMarkerExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker"
 * status = #final "final"
@@ -68,6 +73,7 @@ InstanceOf: TumorMarker
 
 Instance: mCODEGeneticSpecimenExample01 
 InstanceOf: GeneticSpecimen
+Description: "mCODE Example for Genetic Specimen"
 * id = "mCODEGeneticSpecimenExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen"
 * status = #available "Available"
