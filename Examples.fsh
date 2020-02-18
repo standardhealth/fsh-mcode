@@ -1,5 +1,6 @@
 Instance: mCODEPrimaryCancerConditionExample01
 InstanceOf: PrimaryCancerCondition
+Description: "mCODE Example for Primary Cancer Condition"
 * id = "mCODEPrimaryCancerConditionExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition"
 * clinicalStatus = ClinStatus#active "Active"
@@ -14,6 +15,7 @@ InstanceOf: PrimaryCancerCondition
 
 Instance: mCODESecondaryCancerConditionExample01
 InstanceOf: SecondaryCancerCondition
+Description: "mCODE Example for Secondary Cancer Condition"
 * id = "mCODESecondaryCancerConditionExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition"
 * extension[RelatedPrimaryCancerCondition].valueReference = Reference(mCODEPrimaryCancerConditionExample01)
@@ -26,6 +28,7 @@ InstanceOf: SecondaryCancerCondition
 
 Instance: mCODECancerDiseaseStatusExample01
 InstanceOf: CancerDiseaseStatus
+Description: "mCODE Example for Cancer Disease Status"
 * id = "mCODECancerDiseaseStatusExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-disease-status"
 //* extension[EvidenceType].url = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-evidence-type"
@@ -39,6 +42,7 @@ InstanceOf: CancerDiseaseStatus
 
 Instance: mCODEComorbidConditionExample01
 InstanceOf: ComorbidCondition
+Description: "mCODE Example for Comorbid Condition"
 * id = "mCODEComorbidConditionExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-comorbid-condition"
 * clinicalStatus = ClinStatus#active "Active"
@@ -51,6 +55,7 @@ InstanceOf: ComorbidCondition
 
 Instance: mCODEPatientExample01
 InstanceOf: CancerPatient
+Description: "mCODE Example for Patient"
 * id = "mCODEPatientExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient"
 * identifier.use = #usual
@@ -76,6 +81,7 @@ InstanceOf: CancerPatient
 
 Instance: mCODEPatientExample02
 InstanceOf: CancerPatient
+Description: "mCODE Example for Patient"
 * id = "mCODEPatientExample02"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient"
 // The following lines must use the slice names, not the defining URLs
@@ -109,6 +115,7 @@ InstanceOf: CancerPatient
 
 Instance: mCODEOrganizationExample01
 InstanceOf: USCoreOrganization
+Description: "mCODE Example for Organization"
 * id = "mCODEOrganizationExample01"
 * identifier[NPI].value = "1265714091"
 * active = true
@@ -123,6 +130,7 @@ InstanceOf: USCoreOrganization
 
 Instance: mCODEPractitionerExample01
 InstanceOf: USCorePractitioner
+Description: "mCODE Example for Practitioner"
 * id = "mCODEPractitionerExample01"
 * identifier[NPI].value = "9988776655"
 * name.family = "Anydoc"
@@ -140,6 +148,7 @@ InstanceOf: USCorePractitioner
 
 Instance: mCODEECOGPerformanceStatusExample01 
 InstanceOf: ECOGPerformanceStatus
+Description: "mCODE Example for ECOG Performance Status"
 * id = "mCODEECOGPerformanceStatusExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-ecog-performance-status" 
 * status = #final "final"
@@ -153,6 +162,7 @@ InstanceOf: ECOGPerformanceStatus
 
 Instance: mCODEKarnofskyPerformanceStatusExample01
 InstanceOf: KarnofskyPerformanceStatus
+Description: "mCODE Example for Karnofsky Performance Status"
 * id = "mCODEKarnofskyPerformanceStatusExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-karnofsky-performance-status"
 * status = #final "final"
@@ -166,6 +176,7 @@ InstanceOf: KarnofskyPerformanceStatus
 
 Instance: mCODECancerRelatedMedicationStatementExample01
 InstanceOf: CancerRelatedMedicationStatement
+Description: "mCODE Example for Cancer Related Medication Statement"
 * id = "mCODECancerRelatedMedicationStatementExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-statement"
 * status = MedStatus#active "active"
@@ -182,6 +193,7 @@ InstanceOf: CancerRelatedMedicationStatement
 
 Instance: mCODECancerRelatedSurgicalProcedureExample01
 InstanceOf: CancerRelatedSurgicalProcedure
+Description: "mCODE Example for Cancer Related Surgical Procedure"
 * id = "mCODECancerRelatedSurgicalProcedureExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-surgical-procedure"
 * status = #completed "completed"
@@ -195,6 +207,7 @@ InstanceOf: CancerRelatedSurgicalProcedure
 
 Instance: mCODECancerRelatedRadiationProcedureExample01
 InstanceOf: CancerRelatedRadiationProcedure 
+Description: "mCODE Example for Cancer Related Radiation Procedure"
 * id = "mCODECancerRelatedRadiationProcedureExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-radiation-procedure"
 * status = #completed "completed" 
@@ -210,6 +223,7 @@ InstanceOf: CancerRelatedRadiationProcedure
 
 Instance: mCODETNMClinicalStageGroupExample01
 InstanceOf: TNMClinicalStageGroup
+Description: "mCODE Example for TNM Clinical Stage Group"
 * id = "mCODETNMClinicalStageGroupExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-stage-group"
 * status = #final "final" 
@@ -224,6 +238,7 @@ InstanceOf: TNMClinicalStageGroup
 
 Instance: mCODETNMClinicalDistantMetastasesCategoryExample01
 InstanceOf: TNMClinicalDistantMetastasesCategory
+Description: "mCODE Example for TNM Clinical Distant Metastases Category"
 * id = "mCODETNMClinicalDistantMetastasesCategoryExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-distant-metastases-category"
 * status = #final "final" 
@@ -235,6 +250,7 @@ InstanceOf: TNMClinicalDistantMetastasesCategory
 
 Instance: mCODETNMClinicalPrimaryTumorCategoryExample01
 InstanceOf: TNMClinicalPrimaryTumorCategory
+Description: "mCODE Example for TNM Clinical Primary Tumor Category"
 * id = "mCODETNMClinicalPrimaryTumorCategoryExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-primary-tumor-category"
 * status = #final "final" 
@@ -247,6 +263,7 @@ InstanceOf: TNMClinicalPrimaryTumorCategory
 
 Instance: mCODETNMClinicalRegionalNodesCategoryExample01
 InstanceOf: TNMClinicalRegionalNodesCategory
+Description: "mCODE Example for TNM Clinical Regional Nodes Category"
 * id = "mCODETNMClinicalRegionalNodesCategoryExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-regional-nodes-category"
 * status = #final "final" 
@@ -259,6 +276,7 @@ InstanceOf: TNMClinicalRegionalNodesCategory
 
 Instance: mCODETNMPathologicalStageGroupExample01
 InstanceOf: TNMPathologicalStageGroup
+Description: "mCODE Example for TNM Pathological Stage Group"
 * id = "mCODETNMPathologicalStageGroupExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-stage-group"
 * status = #final "final" 
@@ -274,6 +292,7 @@ InstanceOf: TNMPathologicalStageGroup
 
 Instance: mCODETNMPathologicalDistantMetastasesCategoryExample01
 InstanceOf: TNMPathologicalDistantMetastasesCategory
+Description: "mCODE Example for TNM Pathological Distant Metastases Category"
 * id = "mCODETNMPathologicalDistantMetastasesCategoryExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-distant-metastases-category"
 * status = #final "final" 
@@ -286,6 +305,7 @@ InstanceOf: TNMPathologicalDistantMetastasesCategory
 
 Instance: mCODETNMPathologicalPrimaryTumorCategoryExample01
 InstanceOf: TNMPathologicalPrimaryTumorCategory
+Description: "mCODE Example for TNM Pathological Primary Tumor Category"
 * id = "mCODETNMPathologicalPrimaryTumorCategoryExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-primary-tumor-category"
 * status = #final "final" 
@@ -298,6 +318,7 @@ InstanceOf: TNMPathologicalPrimaryTumorCategory
 
 Instance: mCODETNMPathologicalRegionalNodesCategoryExample01
 InstanceOf: TNMPathologicalRegionalNodesCategory
+Description: "mCODE Example for TNM Pathological Regional Nodes Category"
 * id = "mCODETNMPathologicalRegionalNodesCategoryExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-regional-nodes-category"
 * status = #final "final" 
