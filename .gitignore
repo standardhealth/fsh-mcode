@@ -1,9 +1,8 @@
-build/input/resources/**
+build/*.*
+build/input/**
+build/input-cache/org.hl7.fhir.publisher.jar
 build/output/**
 build/temp/**
 build/template/**
-build/input/.DS_Store
-build/StructureDefinition*
-build/ValueSet*
-build/input/input-cache/org.hl7.fhir.publisher.jar
-.DS_Store
+**/.DS_Store
+**/thumbs.db
