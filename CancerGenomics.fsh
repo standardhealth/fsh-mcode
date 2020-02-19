@@ -196,13 +196,13 @@ Description:    "The area of the genome region referenced in testing for variant
 * component[GeneStudied].valueCodeableConcept from HGNCVS (extensible)
 
 * component[DNARegionDescription] ^short = "Description of ranges of DNA sequences examined"
-* component[DNARegionDescription] ^definition= "Description for the DNA region studied in the genomics report"
+* component[DNARegionDescription] ^definition = "Description for the DNA region studied in the genomics report"
 * component[DNARegionDescription].code = LNC#81293-3
 * component[DNARegionDescription].value[x] only string
 * component[DNARegionDescription].valueString 1..1
 
 * component[DNARangesExamined] ^short = "Range(s) of DNA sequence examined"
-* component[DNARangesExamined] ^definiition = "The range(s) of the DNA sequence examined"
+* component[DNARangesExamined] ^definition = "The range(s) of the DNA sequence examined"
 * component[DNARangesExamined].code = LNC#51959-5
 * component[DNARangesExamined].value[x] only Range
 * component[DNARangesExamined].valueRange 1..1
