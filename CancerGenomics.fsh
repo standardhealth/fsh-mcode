@@ -23,6 +23,7 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * method from http://loinc.org/vs/LL4048-6 (extensible)
 * specimen only Reference(GeneticSpecimen) 
 * value[x] only CodeableConcept
+* value[x] ^definition = "The overall result of the genetic test; specifically, whether a variant is present, absent, no call, or indeterminant."
 * valueCodeableConcept from http://loinc.org/vs/LL1971-2 (required)
 * component ^slicing.discriminator.type = #pattern
 * component ^slicing.discriminator.path = "code"
@@ -38,40 +39,48 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
     CytogeneticLocation 0..* MS and
     CytogeneticNomenclature 0..1 MS 
 * component[GeneStudied] ^short = "Gene studied [ID]"
+* component[GeneStudied] ^definition = "A gene targeted for mutation analysis, identified in HUGO Gene Nomenclature Committee (HGNC) notation. The required code is HGNC gene ID. Gene IDs are of the format HGNC:n, where n is a unique number. Only the number, n, should be given as the code. For example, the HGNC identifier for the EGFR gene is 3236. The display text associated with the code should be the HGNC official gene symbol. For example, the official gene symbol for epidermal growth factor receptor is EGFR."
 * component[GeneStudied].code = LNC#48018-6
 * component[GeneStudied].value[x] only CodeableConcept
 * component[GeneStudied].valueCodeableConcept 1..1
 * component[GeneStudied].valueCodeableConcept from HGNCVS (extensible)
 * component[VariationCode] ^short = "Discrete genetic variant"
+* component[VariationCode] ^definition = "The variation ID assigned by ClinVar, for example, 360448 is the identifier which includes the HGVS nomenclature NM_005228.4(EGFR):c.-237A>G (single nucleotide variant in EGFR). Other acceptable variant standards include the Catalogue Of Somatic Mutations In Cancer (COSMIC) and the International System for Human Cytogenetic Nomenclature (ISCN)."
 * component[VariationCode].code = LNC#81252-9
 * component[VariationCode].value[x] only CodeableConcept
 * component[VariationCode].valueCodeableConcept 1..1
 * component[VariationCode].valueCodeableConcept from ClinVarVS (preferred)
 * component[GenomicDNAChange] ^short = "Genomic DNA change (gHGVS)"
+* component[GenomicDNAChange] ^definition = "The symbolic representation of a genetic structural variant reported using HGVS nomenclature (gHGVS)"
 * component[GenomicDNAChange].code = LNC#81290-9
 * component[GenomicDNAChange].value[x] only CodeableConcept
 * component[GenomicDNAChange].valueCodeableConcept 1..1
 * component[GenomicDNAChange].valueCodeableConcept from HGVSVS (required)
 * component[GenomicSourceClass] ^short = "Genomic source class [Type]"
+* component[GenomicSourceClass] ^definition = "The genomic class of the specimen being analyzed, for example, germline for inherited genome, somatic for cancer genome, and prenatal for fetal genome."
 * component[GenomicSourceClass].code = LNC#48002-0
 * component[GenomicSourceClass].value[x] only CodeableConcept
 * component[GenomicSourceClass].valueCodeableConcept 1..1
 * component[GenomicSourceClass].valueCodeableConcept from http://loinc.org/vs/LL378-1 (required)
 * component[AminoAcidChange] ^short = "Amino acid change (pHGVS)"
+* component[AminoAcidChange] ^definition = "The symbolic representation of an amino acid variant reported using HGVS nomenclature (pHGVS)."
 * component[AminoAcidChange].code = LNC#48005-3
 * component[AminoAcidChange].value[x] only CodeableConcept
 * component[AminoAcidChange].valueCodeableConcept 1..1
 * component[AminoAcidChange].valueCodeableConcept from HGVSVS (required)
 * component[AminoAcidChangeType] ^short = "Amino acid change [Type]"
+* component[AminoAcidChangeType] ^definition = "The type of change related to the amino acid variant."
 * component[AminoAcidChangeType].code = LNC#48006-1
 * component[AminoAcidChangeType].value[x] only CodeableConcept
 * component[AminoAcidChangeType].valueCodeableConcept 1..1
 * component[AminoAcidChangeType].valueCodeableConcept from http://loinc.org/vs/LL380-7 (required)
 * component[CytogeneticLocation] ^short = "Cytogenetic (chromosome) location"
+* component[CytogeneticLocation] ^definition = "The cytogenetic (chromosome) location."
 * component[CytogeneticLocation].code = LNC#48001-2
 * component[CytogeneticLocation].value[x] 1..1 
 // CG Reporting IG does not constrain the CytogeneticLocation value type.
 * component[CytogeneticNomenclature] ^short = "Variant ISCN"
+* component[CytogeneticNomenclature] ^definition = "The cytogenetic (chromosome) location, represented using the International System for Human Cytogenetic Nomenclature (ISCN)"
 * component[CytogeneticNomenclature].code = LNC#81291-7
 * component[CytogeneticNomenclature].value[x] only CodeableConcept
 * component[CytogeneticNomenclature].valueCodeableConcept 1..1
@@ -85,22 +94,13 @@ Title:          "Tumor Marker"
 Description:    "The result of a tumor marker test. Tumor marker tests are generally used to guide cancer treatment decisions and monitor treatment, as well as to predict the chance of recovery and cancer recurrence. A tumor marker is a substance found in tissue or blood or other body fluids that may be a sign of cancer or certain benign (noncancer) conditions. Most tumor markers are made by both normal cells and cancer cells, but they are made in larger amounts by cancer cells. A tumor marker may help to diagnose cancer, plan treatment, or find out how well treatment is working or if cancer has come back. Examples of tumor markers include CA-125 (in ovarian cancer), CA 15-3 (in breast cancer), CEA (in colon cancer), and PSA (in prostate cancer). Tumor markers differ from genetic markers in that they are measured at the levels of the protein and substance post-RNA protein synthesis. (Definition adapted from: [NCI Dictionary of Cancer Terms](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/tumor-marker-test) and [Cancer.Net](https://www.cancer.net/navigating-cancer-care/diagnosing-cancer/tests-and-procedures/tumor-marker-tests)).
 
 Implementation note: The data value for TumorMarker has cardinality is 0..1 (required if known) because when the test result is indeterminate, no quantitative data value will be reported. Instead, the reason for the null value will be reported in the DataAbsentReason field."
-* status, code, subject, effective[x], valueCodeableConcept MS
+* status, code, subject, effective[x], value[x] MS
 * bodySite 0..0
 * referenceRange 0..1
 * hasMember 0..0
 * component 0..0
 * interpretation 0..1
 * subject 1..1
-/*
-* identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "type.coding.code"
-* identifier ^slicing.rules = #open
-* identifier contains
-    AccessionIdentifier 0..1 MS and
-    FillerOrderNumber 0..1 MS and
-    PlacerOrderNumber 0..1 MS
-*/
 * basedOn only Reference(ServiceRequest | MedicationRequest)
 * partOf only Reference(MedicationAdministration | MedicationStatement | Procedure)
 * code from TumorMarkerTestVS (extensible)
@@ -108,6 +108,7 @@ Implementation note: The data value for TumorMarker has cardinality is 0..1 (req
 * focus only Reference(CancerConditionParent)
 * effective[x] only dateTime or Period
 * performer only Reference(Practitioner)
+* value[x] only Quantity or Ratio or CodeableConcept
 
 Profile:    GeneticSpecimen
 Parent:     Specimen
@@ -172,6 +173,7 @@ Description:    "The area of the genome region referenced in testing for variant
     GenomicReferenceSequenceId 0..1 MS
 
 * component[GeneMutations] ^short = "Gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal"
+* component[GeneMutations] ^definition = "The gene mutations tested for in blood or tissue by molecular genetics methods"
 * component[GeneMutations].code = LNC#36908-2
 * component[GeneMutations].value[x] only CodeableConcept
 * component[GeneMutations].valueCodeableConcept 1..1
@@ -179,27 +181,31 @@ Description:    "The area of the genome region referenced in testing for variant
 // MK 1/23/2020 should this be http://www.genenames.org/geneId (extensible)?
 
 * component[GeneStudied] ^short = "Gene studied [ID]"
+* component[GeneStudied] ^definition = "The ID for the gene studied"
 * component[GeneStudied].code = LNC#48018-6
 * component[GeneStudied].value[x] only CodeableConcept
 * component[GeneStudied].valueCodeableConcept 1..1
 * component[GeneStudied].valueCodeableConcept from HGNCVS (extensible)
 
-* component[DNARegionDescription] ^short = "Description for the DNA region studied in the genomics report"
+* component[DNARegionDescription] ^short = "Description of ranges of DNA sequences examined"
+* component[DNARegionDescription] ^definition = "Description for the DNA region studied in the genomics report"
 * component[DNARegionDescription].code = LNC#81293-3
 * component[DNARegionDescription].value[x] only string
 * component[DNARegionDescription].valueString 1..1
 
 * component[DNARangesExamined] ^short = "Range(s) of DNA sequence examined"
+* component[DNARangesExamined] ^definition = "The range(s) of the DNA sequence examined"
 * component[DNARangesExamined].code = LNC#51959-5
 * component[DNARangesExamined].value[x] only Range
 * component[DNARangesExamined].valueRange 1..1
 
-* component[GenomicRegionCoordinateSystem] ^short = "A genomic coordinate is a position along a sequence."
+* component[GenomicRegionCoordinateSystem] ^short = "Genomic coordinate system [Type]."
+* component[GenomicRegionCoordinateSystem] ^definition = "The method of counting along the genome, for example, 0-based interval counting or 0-based character counting."
 * component[GenomicRegionCoordinateSystem].code = LNC#92822-6
 * component[GenomicRegionCoordinateSystem].value[x] only CodeableConcept
 * component[GenomicRegionCoordinateSystem].valueCodeableConcept 1..1
 * component[GenomicRegionCoordinateSystem].valueCodeableConcept from http://loinc.org/vs/LL5323-2 (preferred)
-
-* component[GenomicReferenceSequenceId] ^short = "Range(s) of DNA sequence examined. The genomic reference sequence is a contiguous stretch of chromosome DNA that spans all of the exons of the gene and includes transcribed and non transcribed stretches. For this ID use either the NCBI genomic nucleotide RefSeq IDs with their version number (see: NCBI.NLM.NIH.Gov/RefSeq) or use the LRG identifiers, without transcript (t or p) extensions -- when they become available. (source: LOINC)"
+* component[GenomicReferenceSequenceId] ^short = "Genomic reference sequence [ID]"
+* component[GenomicReferenceSequenceId] ^definition = "Range(s) of DNA sequence examined. The genomic reference sequence is a contiguous stretch of chromosome DNA that spans all of the exons of the gene and includes transcribed and non transcribed stretches. For this ID use either the NCBI genomic nucleotide RefSeq IDs with their version number (see: NCBI.NLM.NIH.Gov/RefSeq) or use the LRG identifiers, without transcript (t or p) extensions -- when they become available. (source: LOINC)"
 * component[GenomicReferenceSequenceId].code = LNC#48013-7
 * component[GenomicReferenceSequenceId].value[x] 1..1 // no value type specified

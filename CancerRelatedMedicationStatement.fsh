@@ -20,3 +20,4 @@ Description:    "A record of the use of a medication (individual administration 
 * effective[x] 1..1  // change from 0..1 to 1..1
 * reasonCode 0..1 
 * dosage 0..1
+* medicationCodeableConcept from http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes (extensible)
