@@ -39,6 +39,7 @@ Description:    "A clinician's qualitative judgment on the current trend of the 
 Extension: EvidenceType
 Title: "Evidence Type"
 Id:  mcode-evidence-type
+Description: "Categorization of the kind of evidence used as input to the clinical judgment. This corresponds to both the S and O in SOAP."
 * value[x] only CodeableConcept
 
 
