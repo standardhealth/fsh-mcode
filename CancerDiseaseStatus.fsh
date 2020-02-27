@@ -2,18 +2,9 @@ Profile:  CancerDiseaseStatus
 Parent:   Observation
 Id:       mcode-cancer-disease-status
 Title:    "Cancer Disease Status"
-Description:    "A clinician's qualitative judgment on the current trend of the cancer, e.g., whether it is stable, worsening (progressing), or improving (responding). The judgment may be based a single type or multiple kinds of evidence, such as imaging data, assessment of symptoms, tumor markers, laboratory data, etc."
-/* There are several anomalies in mCODE 0.9.3:
-1) Not sure if `basedOn` should include MedicationRequest or just ServiceRequest. 
-2) ProcedureRequest shouldn't in `basedOn` -- it is an artifact of OBF (doesn't exist in FHIR)
-3) Should `partOf` include MedicationAdministration or MedicationStatement?
-4) There's no reason category should be 0..1 (maybe because of DSTU2?) 
-4) Binding of category should be preferred, not extensible
-5) Unless we are forcing US Core onto mCODE users, encounter should be Reference(Encounter), not Reference(US Core Encounter)
-6) patient should be Reference(CancerPatient) -- the mCODE profile -- not Reference(US Core Patient)
-7) There's no apparent reason that interpretation should constrained to 0..1 (from 0..*)
-8) derivedFrom is missing Reference(ImagingStudy | MolecularSequence) choices - I think these were omitted only because they weren't in OBF.
-*/
+Description:    "A clinician's qualitative judgment on the current trend of the cancer, e.g., whether it is stable, worsening (progressing), or improving (responding). The judgment may be based a single type or multiple kinds of evidence, such as imaging data, assessment of symptoms, tumor markers, laboratory data, etc.
+
+Note: The LOINC code chosen to represent this observation (LOINC 88040-1, Response to cancer treatment) does not precisely match the meaning of this profile, but it is the closest available LOINC code at the present time. It is acknowledged that the disease status is different than the status of the disease due to treatment, although in the context of an oncologist visit, disease status can mean response to treatment for patients under their care. However, the LOINC code 88041-2 is more granular than the definition of the profile because cancer disease status is observable regardless of whether the patient is under treatment. The plan is to request a new LOINC code that represents cancer disease status, as it is defined here, and replace the current LOINC code with the new code before normative publication of mCODE."
 * extension contains EvidenceType 0..*
 * extension[EvidenceType].valueCodeableConcept from CancerDiseaseStatusEvidenceTypeVS (required)
 * status, code, subject, effective[x], valueCodeableConcept MS
