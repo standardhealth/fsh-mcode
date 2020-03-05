@@ -110836,3 +110836,206 @@ e: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "182992009"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "182992009",
+        "display" : "Treatment completed (situation)"
+      },
+      {
+        "code" : "58848006",
+        "display" : "Lack of drug action (finding)"
+      },
+      {
+        "code" : "281647001",
+        "display" : "Adverse reaction (disorder)"
+      },
+      {
+        "code" : "160932005",
+        "display" : "Financial problem"
+      },
+      {
+        "code" : "105480006",
+        "display" : "Refusal of treatment by patient"
+      },
+      {
+        "code" : "107724000",
+        "display" : "Patient transfer"
+      },
+      {
+        "code" : "309846006",
+        "display" : "Treatment not available"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code \"182992009\" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#182992009) is not  valid"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "182992009"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code \"182992009\" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#182992009) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "35917007"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "367651003"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Unable to locate code 367651003"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "35917007"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "399919001"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Unable to locate code 399919001"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "35917007"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "399983006"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Unable to locate code 399983006"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "35917007"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "399878004",
+        "display" : "Malignant neoplasm with pilar differentiation (morphologic abnormality)"
+      },
+      {
+        "code" : "253035009",
+        "display" : "In situ melanocytic morphology (morphologic abnormality)"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code \"35917007\" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#35917007) is not  valid"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "35917007"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code \"35917007\" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#35917007) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "7771000"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "51440002",
+        "display" : "Right and left (qualifier value)"
+      },
+      {
+        "code" : "399488007",
+        "display" : "Midline (qualifier value)"
+      },
+      {
+        "code" : "24028007",
+        "display" : "Right (qualifier value)"
+      },
+      {
+        "code" : "7771000",
+        "display" : "Left (qualifier value)"
+      },
+      {
+        "code" : "66459002",
+        "display" : "Unilateral (qualifier value)"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code \"7771000\" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#7771000) is not  valid"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "7771000"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code \"7771000\" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#7771000) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------

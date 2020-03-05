@@ -1,5 +1,5 @@
 {
-    "name": "fhir.us.mcode",
+    "name": "hl7.fhir.us.mcode",
     "version" : "1.0.0",
     "canonical" : "http://hl7.org/fhir/us/mcode",
     "url" : "http://hl7.org/fhir/us/mcode/ImplementationGuide/fhir.us.mcode",
