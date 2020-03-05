@@ -6,7 +6,9 @@ Description: "mCODE Example for Primary Cancer Condition"
 * clinicalStatus = ClinStatus#active "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
 * code = SCT#254637007 "Non-small cell lung cancer (disorder)"
+* extension[mcode-histology-morphology-behavior].valueCodeableConcept = SCT#35917007 "	Adenocarcinoma"
 * bodySite = SCT#39607008 "Lung structure (body structure)"
+* bodySite.extension[mcode-laterality].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
 * subject = Reference(mCODEPatientExample01)
 * onsetDateTime = "2019-04-01"
 * asserter = Reference(mCODEPractitionerExample01)
@@ -186,6 +188,24 @@ Description: "mCODE Example for Cancer Related Medication Statement"
 * effectiveDateTime = "2019-04-01"
 * dateAsserted = "2019-04-01"
 * extension[TreatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
+* dosage.text = "250mg orally once daily with or without food"
+* dosage.route = SCT#26643006 "Oral use"
+* dosage.doseAndRate.doseQuantity.value = 250.0
+* dosage.doseAndRate.doseQuantity = UCUM#mg "mg"
+
+Instance: mCODECancerRelatedMedicationStatementExample02
+InstanceOf: CancerRelatedMedicationStatement
+Description: "mCODE Example for Cancer Related Medication Statement"
+* id = "mCODECancerRelatedMedicationStatementExample02"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-statement"
+* status = MedStatus#stopped "stopped"
+* category = MedCat#community "community"
+* medicationCodeableConcept = RXN#349472 "gefitinib 250 MG Oral Tablet"
+* subject = Reference(mCODEPatientExample01)
+* effectiveDateTime = "2019-04-01"
+* dateAsserted = "2019-04-01"
+* extension[TreatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
+* extension[mcode-termination-reason].valueCodeableConcept = SCT#182992009 "Treatment completed (situation)"
 * dosage.text = "250mg orally once daily with or without food"
 * dosage.route = SCT#26643006 "Oral use"
 * dosage.doseAndRate.doseQuantity.value = 250.0
