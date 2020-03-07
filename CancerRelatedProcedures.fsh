@@ -19,8 +19,8 @@ Conformance note: If an ICD-10-PCS code is used in the code attribute, and there
 11) report should allow Reference(DiagnosticReport | DocumentReference | Composition) -- currently mCODE constrains to DiagnosticReport only.
 */
 * extension contains
-    TreatmentIntent named TreatmentIntent 0..1 and
-    TerminationReason named TerminationReason 0..*
+    TreatmentIntent named treatmentIntent 0..1 and
+    TerminationReason named terminationReason 0..*
 * partOf only Reference(Procedure)
 * category = SCT#53438000 "Radiation therapy procedure or service (procedure)"
 * code from RadiationProcedureVS (extensible)
@@ -31,9 +31,9 @@ Conformance note: If an ICD-10-PCS code is used in the code attribute, and there
 * reasonReference only Reference(CancerConditionParent)
 * bodySite from RadiationTargetBodySiteVS (extensible)
 * bodySite.extension contains
-    Laterality named Laterality 0..1
+    Laterality named laterality 0..1
 * focalDevice 0..0
-* bodySite, bodySite.extension[Laterality], extension[TreatmentIntent] MS
+* bodySite, bodySite.extension[laterality], extension[treatmentIntent] MS
 
 
 Profile:  CancerRelatedSurgicalProcedure
@@ -43,7 +43,7 @@ Title:    "Cancer-Related Surgical Procedure"
 Description: "A surgical action addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the ReasonReference and ReasonCode to cancer conditions. Conformance note: If an ICD-10-PCS code is used in the code attribute, and there is a semantically equivalent SNOMED CT or CPT code, the resulting Procedure instance will not be compliant with US Core Profiles."
 * code from CancerRelatedSurgicalProcedureVS (extensible)
 * extension contains
-    TreatmentIntent named TreatmentIntent 0..1
+    TreatmentIntent named treatmentIntent 0..1
 * subject only Reference(CancerPatient)
 * category = SCT#387713003 "Surgical procedure"
 * reasonCode from CancerDisorderVS (extensible)
@@ -52,8 +52,8 @@ Description: "A surgical action addressing a cancer condition. The scope of this
 * recorder only Reference(Practitioner | PractitionerRole)
 * performer.actor only Reference(Practitioner | PractitionerRole | Organization)
 * bodySite.extension contains
-    Laterality named Laterality 0..1
-* reasonCode, reasonReference, extension[TreatmentIntent], bodySite, bodySite.extension[Laterality] MS  // other MS will be inherited from USCoreProcedure
+    Laterality named laterality 0..1
+* reasonCode, reasonReference, extension[treatmentIntent], bodySite, bodySite.extension[laterality] MS  // other MS will be inherited from USCoreProcedure
 
     /* Save for possible later use
 

@@ -12,11 +12,11 @@ Description:  "Abstract parent class for describing a primary or secondary metas
 */
 * ^abstract = true
 * extension contains
-    AssertedDate named AssertedDate 0..1 and
-    HistologyMorphologyBehavior named HistologyMorphologyBehavior 0..1
+    AssertedDate named assertedDate 0..1 and
+    HistologyMorphologyBehavior named histologyMorphologyBehavior 0..1
 * bodySite.extension contains
-    Laterality named Laterality 0..1
-* extension[AssertedDate], extension[HistologyMorphologyBehavior], bodySite, bodySite.extension[Laterality] MS
+    Laterality named laterality 0..1
+* extension[assertedDate], extension[histologyMorphologyBehavior], bodySite, bodySite.extension[laterality] MS
 * category = SCT#64572001 "Disease"
 * severity 0..0
 * bodySite from CancerBodyLocationVS (preferred)
@@ -45,7 +45,7 @@ Description: "Records the history of secondary neoplasms, including location(s) 
 Conformance note: For the code attribute, to be compliant with US Core Profiles, SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used."
 * ^abstract = false
 * extension contains
-    RelatedPrimaryCancerCondition named RelatedPrimaryCancerCondition 0..1
+    RelatedPrimaryCancerCondition named relatedPrimaryCancerCondition 0..1
 * code from SecondaryCancerDisorderVS
 * stage 0..0
 
@@ -76,7 +76,7 @@ Description:  "A comorbidity refers to one or more diseases or conditions that o
 * code from ComorbidConditionVS
 * bodySite from http://hl7.org/fhir/ValueSet/body-site (preferred)
 * bodySite.extension contains
-    Laterality named Laterality 0..1
+    Laterality named laterality 0..1
 * subject only Reference(USCorePatient)
 
 

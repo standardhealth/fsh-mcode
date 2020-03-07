@@ -14,8 +14,8 @@ Description:    "A record of the use of a medication (individual administration 
 */
 * effective[x], medication[x] MS
 * extension contains
-    TreatmentIntent named TreatmentIntent 0..1 MS and
-    TerminationReason named TerminationReason 0..* MS
+    TreatmentIntent named treatmentIntent 0..1 MS and
+    TerminationReason named terminationReason 0..* MS
 //* reasonReference only Reference(PrimaryCancerCondition | SecondaryCancerCondition | Observation | DiagnosticReport | ComorbidCondition)
 * effective[x] 1..1  // change from 0..1 to 1..1
 * reasonCode 0..1

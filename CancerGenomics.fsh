@@ -118,8 +118,8 @@ Description:    "A small sample of blood, hair, skin, amniotic fluid (the fluid 
 * type 1..1 MS
 * type from GeneticSpecimenTypeVS
 * collection.bodySite.extension contains
-    Laterality named Laterality 0..1
-* collection.bodySite, collection.bodySite.extension[Laterality] MS
+    Laterality named laterality 0..1
+* collection.bodySite, collection.bodySite.extension[laterality] MS
 
 
 Profile:    CancerGenomicsReport
