@@ -6,9 +6,9 @@ Description: "mCODE Example for Primary Cancer Condition"
 * clinicalStatus = ClinStatus#active "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
 * code = SCT#254637007 "Non-small cell lung cancer (disorder)"
-* extension[HistologyMorphologyBehavior].valueCodeableConcept = SCT#35917007 "Adenocarcinoma"
+* extension[histologyMorphologyBehavior].valueCodeableConcept = SCT#35917007 "Adenocarcinoma"
 * bodySite = SCT#39607008 "Lung structure (body structure)"
-* bodySite.extension[Laterality].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
+* bodySite.extension[laterality].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
 * subject = Reference(mCODEPatientExample01)
 * onsetDateTime = "2019-04-01"
 * asserter = Reference(mCODEPractitionerExample01)
@@ -20,7 +20,7 @@ InstanceOf: SecondaryCancerCondition
 Description: "mCODE Example for Secondary Cancer Condition"
 * id = "mCODESecondaryCancerConditionExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition"
-* extension[RelatedPrimaryCancerCondition].valueReference = Reference(mCODEPrimaryCancerConditionExample01)
+* extension[relatedPrimaryCancerCondition].valueReference = Reference(mCODEPrimaryCancerConditionExample01)
 * clinicalStatus = ClinStatus#active "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
 * code = SCT#94225005 "Secondary malignant neoplasm of brain"
@@ -33,8 +33,8 @@ InstanceOf: CancerDiseaseStatus
 Description: "mCODE Example for Cancer Disease Status"
 * id = "mCODECancerDiseaseStatusExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-disease-status"
-//* extension[EvidenceType].url = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-evidence-type"
-* extension[EvidenceType].valueCodeableConcept = SCT#252416005 "Histopathology test (procedure)"
+//* extension[evidenceType].url = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-evidence-type"
+* extension[evidenceType].valueCodeableConcept = SCT#252416005 "Histopathology test (procedure)"
 * status = #final "final"
 * category = ObsCat#laboratory "laboratory"
 * subject = Reference(mCODEPatientExample01)
@@ -69,7 +69,7 @@ Description: "mCODE Example for Patient"
 * name.given[1] = "B."
 * contact.telecom[0].system = #phone
 * contact.telecom[0].value = "555-555-5555"
-* contact.telecom[0].use = #home 
+* contact.telecom[0].use = #home
 * contact.telecom[1].system = #email
 * contact.telecom[1].value = "john.anyperson@example.com"
 * gender = #male
@@ -102,7 +102,7 @@ Description: "mCODE Example for Patient"
 * name.given[1] = "A."
 * contact.telecom[0].system = #phone
 * contact.telecom[0].value = "999-999-9999"
-* contact.telecom[0].use = #home 
+* contact.telecom[0].use = #home
 * contact.telecom[1].system = #email
 * contact.telecom[1].value = "eve.anyperson@example.com"
 * gender = #female
@@ -148,17 +148,17 @@ Description: "mCODE Example for Practitioner"
 * qualification.code = http://terminology.hl7.org/CodeSystem/v2-0360|2.7#MD "Doctor of Medicine"
 
 
-Instance: mCODEECOGPerformanceStatusExample01 
+Instance: mCODEECOGPerformanceStatusExample01
 InstanceOf: ECOGPerformanceStatus
 Description: "mCODE Example for ECOG Performance Status"
 * id = "mCODEECOGPerformanceStatusExample01"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-ecog-performance-status" 
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-ecog-performance-status"
 * status = #final "final"
 * category = ObsCat#survey "survey"
 * method = SCT#5880005 "Clinical examination"
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
-* performer = Reference(mCODEPractitionerExample01) 
+* performer = Reference(mCODEPractitionerExample01)
 * valueInteger = 0
 * interpretation = LNC#LA9622-7 "Fully active, able to carry on all pre-disease performance without restriction"
 
@@ -187,7 +187,7 @@ Description: "mCODE Example for Cancer Related Medication Statement"
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * dateAsserted = "2019-04-01"
-* extension[TreatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
+* extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 * dosage.text = "250mg orally once daily with or without food"
 * dosage.route = SCT#26643006 "Oral use"
 * dosage.doseAndRate.doseQuantity.value = 250.0
@@ -204,8 +204,8 @@ Description: "mCODE Example for Cancer Related Medication Statement"
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * dateAsserted = "2019-04-01"
-* extension[TreatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
-* extension[TerminationReason].valueCodeableConcept = SCT#182992009 "Treatment completed (situation)"
+* extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
+* extension[terminationReason].valueCodeableConcept = SCT#182992009 "Treatment completed (situation)"
 * dosage.text = "250mg orally once daily with or without food"
 * dosage.route = SCT#26643006 "Oral use"
 * dosage.doseAndRate.doseQuantity.value = 250.0
@@ -221,22 +221,22 @@ Description: "mCODE Example for Cancer Related Surgical Procedure"
 * subject = Reference(mCODEPatientExample01)
 * asserter = Reference(mCODEPractitionerExample01)
 * performedDateTime = "2019-03-01"
-* extension[TreatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
+* extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 * reasonReference = Reference(mCODEPrimaryCancerConditionExample01)
 * bodySite = SCT#41224006 "Structure of lower lobe of left lung (body structure)"
 
 Instance: mCODECancerRelatedRadiationProcedureExample01
-InstanceOf: CancerRelatedRadiationProcedure 
+InstanceOf: CancerRelatedRadiationProcedure
 Description: "mCODE Example for Cancer Related Radiation Procedure"
 * id = "mCODECancerRelatedRadiationProcedureExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-radiation-procedure"
-* status = #completed "completed" 
+* status = #completed "completed"
 * code = SCT#152198000 "Brachytherapy (procedure)"
 * subject = Reference(mCODEPatientExample01)
 * asserter = Reference(mCODEPractitionerExample01)
 * performedDateTime = "2019-03-01"
-* extension[TreatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
-//* extension[RadiationDose].extension[TotalRadiationDoseDelivered].valueQuantity = UCUM#cGy 
+* extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
+//* extension[RadiationDose].extension[TotalRadiationDoseDelivered].valueQuantity = UCUM#cGy
 //* extension[RadiationDose].extension[TotalRadiationDoseDelivered].valueQuantity.value = 1200.0
 * reasonReference = Reference(mCODEPrimaryCancerConditionExample01)
 * bodySite = SCT#41224006 "Structure of lower lobe of left lung (body structure)"
@@ -246,9 +246,9 @@ InstanceOf: TNMClinicalStageGroup
 Description: "mCODE Example for TNM Clinical Stage Group"
 * id = "mCODETNMClinicalStageGroupExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-stage-group"
-* status = #final "final" 
+* status = #final "final"
 * category = ObsCat#survey "Survey"
-* method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
+* method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#3C "IIIC"
@@ -261,9 +261,9 @@ InstanceOf: TNMClinicalDistantMetastasesCategory
 Description: "mCODE Example for TNM Clinical Distant Metastases Category"
 * id = "mCODETNMClinicalDistantMetastasesCategoryExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-distant-metastases-category"
-* status = #final "final" 
+* status = #final "final"
 * category = ObsCat#survey "Survey"
-* method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
+* method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#cM0 "M0"
@@ -273,9 +273,9 @@ InstanceOf: TNMClinicalPrimaryTumorCategory
 Description: "mCODE Example for TNM Clinical Primary Tumor Category"
 * id = "mCODETNMClinicalPrimaryTumorCategoryExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-primary-tumor-category"
-* status = #final "final" 
+* status = #final "final"
 * category = ObsCat#survey "Survey"
-* method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
+* method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#cT3 "T3"
@@ -286,9 +286,9 @@ InstanceOf: TNMClinicalRegionalNodesCategory
 Description: "mCODE Example for TNM Clinical Regional Nodes Category"
 * id = "mCODETNMClinicalRegionalNodesCategoryExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-regional-nodes-category"
-* status = #final "final" 
+* status = #final "final"
 * category = ObsCat#survey "Survey"
-* method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
+* method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#cN3 "N3"
@@ -299,9 +299,9 @@ InstanceOf: TNMPathologicalStageGroup
 Description: "mCODE Example for TNM Pathological Stage Group"
 * id = "mCODETNMPathologicalStageGroupExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-stage-group"
-* status = #final "final" 
+* status = #final "final"
 * category = ObsCat#laboratory "laboratory"
-* method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
+* method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#3C "IIIC"
@@ -315,9 +315,9 @@ InstanceOf: TNMPathologicalDistantMetastasesCategory
 Description: "mCODE Example for TNM Pathological Distant Metastases Category"
 * id = "mCODETNMPathologicalDistantMetastasesCategoryExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-distant-metastases-category"
-* status = #final "final" 
+* status = #final "final"
 * category = ObsCat#laboratory "laboratory"
-* method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
+* method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#pM0 "M0"
@@ -328,9 +328,9 @@ InstanceOf: TNMPathologicalPrimaryTumorCategory
 Description: "mCODE Example for TNM Pathological Primary Tumor Category"
 * id = "mCODETNMPathologicalPrimaryTumorCategoryExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-primary-tumor-category"
-* status = #final "final" 
+* status = #final "final"
 * category = ObsCat#laboratory "laboratory"
-* method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
+* method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#pT3 "T3"
@@ -341,9 +341,9 @@ InstanceOf: TNMPathologicalRegionalNodesCategory
 Description: "mCODE Example for TNM Pathological Regional Nodes Category"
 * id = "mCODETNMPathologicalRegionalNodesCategoryExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-regional-nodes-category"
-* status = #final "final" 
+* status = #final "final"
 * category = ObsCat#laboratory "laboratory"
-* method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition" 
+* method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#pN3 "N3"

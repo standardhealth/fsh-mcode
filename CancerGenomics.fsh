@@ -21,7 +21,7 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 */
 * code = LNC#69548-6 "Genetic variant assessment"
 * method from http://loinc.org/vs/LL4048-6 (extensible)
-* specimen only Reference(GeneticSpecimen) 
+* specimen only Reference(GeneticSpecimen)
 * value[x] only CodeableConcept
 * value[x] ^definition = "The overall result of the genetic test; specifically, whether a variant is present, absent, no call, or indeterminant."
 * valueCodeableConcept from http://loinc.org/vs/LL1971-2 (required)
@@ -37,7 +37,7 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
     AminoAcidChange 0..1 MS and
     AminoAcidChangeType 0..1 MS and
     CytogeneticLocation 0..* MS and
-    CytogeneticNomenclature 0..1 MS 
+    CytogeneticNomenclature 0..1 MS
 * component[GeneStudied] ^short = "Gene studied [ID]"
 * component[GeneStudied] ^definition = "A gene targeted for mutation analysis, identified in HUGO Gene Nomenclature Committee (HGNC) notation. The required code is HGNC gene ID. Gene IDs are of the format HGNC:n, where n is a unique number. Only the number, n, should be given as the code. For example, the HGNC identifier for the EGFR gene is 3236. The display text associated with the code should be the HGNC official gene symbol. For example, the official gene symbol for epidermal growth factor receptor is EGFR."
 * component[GeneStudied].code = LNC#48018-6
@@ -77,7 +77,7 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * component[CytogeneticLocation] ^short = "Cytogenetic (chromosome) location"
 * component[CytogeneticLocation] ^definition = "The cytogenetic (chromosome) location."
 * component[CytogeneticLocation].code = LNC#48001-2
-* component[CytogeneticLocation].value[x] 1..1 
+* component[CytogeneticLocation].value[x] 1..1
 // CG Reporting IG does not constrain the CytogeneticLocation value type.
 * component[CytogeneticNomenclature] ^short = "Variant ISCN"
 * component[CytogeneticNomenclature] ^definition = "The cytogenetic (chromosome) location, represented using the International System for Human Cytogenetic Nomenclature (ISCN)"
@@ -117,9 +117,9 @@ Title:      "Genetic Specimen"
 Description:    "A small sample of blood, hair, skin, amniotic fluid (the fluid that surrounds a fetus during pregnancy), or other tissue which is excised from a subject for the purposes of genomics testing or analysis."
 * type 1..1 MS
 * type from GeneticSpecimenTypeVS
-* collection.bodySite.extension contains 
-    Laterality 0..1
-* collection.bodySite, collection.bodySite.extension[Laterality] MS 
+* collection.bodySite.extension contains
+    Laterality named laterality 0..1
+* collection.bodySite, collection.bodySite.extension[laterality] MS
 
 
 Profile:    CancerGenomicsReport

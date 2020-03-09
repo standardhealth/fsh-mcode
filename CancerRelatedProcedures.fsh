@@ -2,7 +2,7 @@ Profile:  CancerRelatedRadiationProcedure
 Parent:   USCoreProcedure
 Id:       mcode-cancer-related-radiation-procedure
 Title:    "Cancer-Related Radiation Procedure"
-Description: "A radiological treatment addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the ReasonReference and ReasonCode to cancer conditions. 
+Description: "A radiological treatment addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the ReasonReference and ReasonCode to cancer conditions.
 
 Conformance note: If an ICD-10-PCS code is used in the code attribute, and there is a semantically equivalent SNOMED CT or CPT code, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/index.html)"
 /* Issues relative to mCODE 0.9.x
@@ -18,9 +18,9 @@ Conformance note: If an ICD-10-PCS code is used in the code attribute, and there
 10) Encounter should not be constrained to US Core Encounter -- US Core doesn't have this constraint
 11) report should allow Reference(DiagnosticReport | DocumentReference | Composition) -- currently mCODE constrains to DiagnosticReport only.
 */
-* extension contains 
-    TreatmentIntent 0..1 and 
-    TerminationReason 0..*
+* extension contains
+    TreatmentIntent named treatmentIntent 0..1 and
+    TerminationReason named terminationReason 0..*
 * partOf only Reference(Procedure)
 * category = SCT#53438000 "Radiation therapy procedure or service (procedure)"
 * code from RadiationProcedureVS (extensible)
@@ -31,9 +31,9 @@ Conformance note: If an ICD-10-PCS code is used in the code attribute, and there
 * reasonReference only Reference(CancerConditionParent)
 * bodySite from RadiationTargetBodySiteVS (extensible)
 * bodySite.extension contains
-    Laterality 0..1
+    Laterality named laterality 0..1
 * focalDevice 0..0
-* bodySite, bodySite.extension[Laterality], extension[TreatmentIntent] MS    
+* bodySite, bodySite.extension[laterality], extension[treatmentIntent] MS
 
 
 Profile:  CancerRelatedSurgicalProcedure
@@ -42,8 +42,8 @@ Id:       mcode-cancer-related-surgical-procedure
 Title:    "Cancer-Related Surgical Procedure"
 Description: "A surgical action addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the ReasonReference and ReasonCode to cancer conditions. Conformance note: If an ICD-10-PCS code is used in the code attribute, and there is a semantically equivalent SNOMED CT or CPT code, the resulting Procedure instance will not be compliant with US Core Profiles."
 * code from CancerRelatedSurgicalProcedureVS (extensible)
-* extension contains 
-    TreatmentIntent 0..1
+* extension contains
+    TreatmentIntent named treatmentIntent 0..1
 * subject only Reference(CancerPatient)
 * category = SCT#387713003 "Surgical procedure"
 * reasonCode from CancerDisorderVS (extensible)
@@ -52,8 +52,8 @@ Description: "A surgical action addressing a cancer condition. The scope of this
 * recorder only Reference(Practitioner | PractitionerRole)
 * performer.actor only Reference(Practitioner | PractitionerRole | Organization)
 * bodySite.extension contains
-    Laterality 0..1
-* reasonCode, reasonReference, extension[TreatmentIntent], bodySite, bodySite.extension[Laterality] MS  // other MS will be inherited from USCoreProcedure
+    Laterality named laterality 0..1
+* reasonCode, reasonReference, extension[treatmentIntent], bodySite, bodySite.extension[laterality] MS  // other MS will be inherited from USCoreProcedure
 
     /* Save for possible later use
 
@@ -62,7 +62,7 @@ Id: mcode-radiation-dose
 Title:  "Radiation Dose"
 Description: "Information related to the dose of radiation received in a RadiationProcedure, including the dose per fraction, the number of fractions delivered, and the total radiation dose delivered."
 * value[x] 0..0
-* extension contains 
+* extension contains
     RadiationDosePerFraction 0..1 and
     RadiationFractionsDelivered 0..1 and
     TotalRadiationDoseDelivered 0..1

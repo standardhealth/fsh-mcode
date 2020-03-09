@@ -12,12 +12,12 @@ Description:    "A record of the use of a medication (individual administration 
 6) informationSource is missing PractitionerRole
 7) not sure why reasonCode has be changed from 0..* to 0..1
 */
-* effective[x], medication[x] MS 
-* extension contains 
-    TreatmentIntent 0..1 MS and 
-    TerminationReason 0..* MS 
+* effective[x], medication[x] MS
+* extension contains
+    TreatmentIntent named treatmentIntent 0..1 MS and
+    TerminationReason named terminationReason 0..* MS
 //* reasonReference only Reference(PrimaryCancerCondition | SecondaryCancerCondition | Observation | DiagnosticReport | ComorbidCondition)
 * effective[x] 1..1  // change from 0..1 to 1..1
-* reasonCode 0..1 
+* reasonCode 0..1
 * dosage 0..1
 * medicationCodeableConcept from http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes (extensible)

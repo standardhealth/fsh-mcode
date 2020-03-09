@@ -11,12 +11,12 @@ Description:  "Abstract parent class for describing a primary or secondary metas
 3) Laterality should be 0..1, not 0..*
 */
 * ^abstract = true
-* extension contains 
-    AssertedDate 0..1 and 
-    HistologyMorphologyBehavior 0..1
-* bodySite.extension contains 
-    Laterality 0..1
-* extension[AssertedDate], extension[HistologyMorphologyBehavior], bodySite, bodySite.extension[Laterality] MS
+* extension contains
+    AssertedDate named assertedDate 0..1 and
+    HistologyMorphologyBehavior named histologyMorphologyBehavior 0..1
+* bodySite.extension contains
+    Laterality named laterality 0..1
+* extension[assertedDate], extension[histologyMorphologyBehavior], bodySite, bodySite.extension[laterality] MS
 * category = SCT#64572001 "Disease"
 * severity 0..0
 * bodySite from CancerBodyLocationVS (preferred)
@@ -44,8 +44,8 @@ Description: "Records the history of secondary neoplasms, including location(s) 
 
 Conformance note: For the code attribute, to be compliant with US Core Profiles, SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used."
 * ^abstract = false
-* extension contains 
-    RelatedPrimaryCancerCondition 0..1
+* extension contains
+    RelatedPrimaryCancerCondition named relatedPrimaryCancerCondition 0..1
 * code from SecondaryCancerDisorderVS
 * stage 0..0
 
@@ -76,7 +76,7 @@ Description:  "A comorbidity refers to one or more diseases or conditions that o
 * code from ComorbidConditionVS
 * bodySite from http://hl7.org/fhir/ValueSet/body-site (preferred)
 * bodySite.extension contains
-    Laterality 0..1
+    Laterality named laterality 0..1
 * subject only Reference(USCorePatient)
 
 
@@ -96,7 +96,7 @@ Description: "The presence of an abnormal mass of tissue (neoplasm) that results
 
 Conformance note: For the HistologyMorphologyBehavior attribute, to be compliant with US Core Profiles, SNOMED CT must be used unless there is no suitable code, in which case ICD-O-3 can be used."
 * ^abstract = false
-* extension contains 
+* extension contains
     RelatedPrimaryCancerCondition 0..1 and
     IsPrimaryTumor 0..1
 * IsPrimaryTumor ^short = "Whether the tumor is the original or first tumor in the body, for a particular cancer."
