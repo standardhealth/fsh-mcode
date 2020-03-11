@@ -31,7 +31,7 @@ Title: "TNM Clinical Stage Group"
 Description: "The extent of the cancer in the body, according to the TNM classification system, based on evidence such as physical examination, imaging, and/or biopsy."
 * ^abstract = false
 * hasMember MS
-* code = LNC#21908-9 "Stage group.clinical Cancer"
+* code = LNC#21908-9 //"Stage group.clinical Cancer"
 * valueCodeableConcept from TNMStageGroupVS (preferred)
 * hasMember ^slicing.discriminator.type = #profile // #pattern
 * hasMember ^slicing.discriminator.path =  "$this.resolve()" // "$this.resolve().code"
@@ -61,7 +61,7 @@ Parent: CancerStageParent
 Title: "TNM Clinical Primary Tumor Category"
 Description: "Category of the primary tumor, based on its size and extent, based on evidence such as physical examination, imaging, and/or biopsy."
 * ^abstract = false
-* code = LNC#21905-5 "Primary tumor.clinical [Class] Cancer"
+* code = LNC#21905-5 //"Primary tumor.clinical [Class] Cancer"
 * valueCodeableConcept from TNMPrimaryTumorCategoryVS (preferred)
 
 Profile:  TNMClinicalRegionalNodesCategory
@@ -70,7 +70,7 @@ Parent: CancerStageParent
 Title: "TNM Clinical Regional Nodes Category"
 Description: "Category of the presence or absence of metastases in regional lymph nodes, based on evidence such as physical examination, imaging, and/or biopsy."
 * ^abstract = false
-* code = LNC#21906-3 "Regional lymph nodes.clinical [Class] Cancer"
+* code = LNC#21906-3 //"Regional lymph nodes.clinical [Class] Cancer"
 * valueCodeableConcept from TNMRegionalNodesCategoryVS (preferred)
 
 Profile:  TNMClinicalDistantMetastasesCategory
@@ -79,7 +79,7 @@ Parent: CancerStageParent
 Title: "TNM Clinical Distant Metastases Category"
 Description: "Category describing the extent of a tumor metastasis in remote anatomical locations, based on evidence such as physical examination, imaging, and/or biopsy."
 * ^abstract = false
-* code = LNC#21907-1 "Distant metastases.clinical [Class] Cancer"
+* code = LNC#21907-1 //"Distant metastases.clinical [Class] Cancer"
 * valueCodeableConcept from TNMDistantMetastasesCategoryVS (preferred)
 
 //-------------------- Pathological Staging -------------------------
@@ -91,7 +91,7 @@ Title: "TNM Pathological Stage Group"
 Description: "The extent of the cancer in the body, according to the TNM classification system, assessed through pathologic analysis of a specimen."
 * ^abstract = false
 * hasMember MS
-* code =  LNC#21902-2 "Stage group.pathology Cancer"
+* code =  LNC#21902-2 //"Stage group.pathology Cancer"
 * valueCodeableConcept from TNMStageGroupVS (preferred)
 * hasMember ^slicing.discriminator.type = #profile // #pattern
 * hasMember ^slicing.discriminator.path =  "$this.resolve()" // "$this.resolve().code"
@@ -120,7 +120,7 @@ Parent: CancerStageParent
 Title: "TNM Pathological Primary Tumor Category"
 Description: "Category of the primary tumor, based on its size and extent, assessed through pathologic analysis of a specimen."
 * ^abstract = false
-* code = LNC#21899-0 "Primary tumor.pathology Cancer"
+* code = LNC#21899-0 //"Primary tumor.pathology Cancer"
 * valueCodeableConcept from TNMPrimaryTumorCategoryVS (preferred)
 
 Profile:  TNMPathologicalRegionalNodesCategory
@@ -129,7 +129,7 @@ Parent: CancerStageParent
 Title: "TNM Pathological Regional Nodes Category"
 Description: "Category of the presence or absence of metastases in regional lymph nodes, assessed through pathologic analysis of a specimen."
 * ^abstract = false
-* code = LNC#21900-6 "Regional lymph nodes.pathology [Class] Cancer"
+* code = LNC#21900-6 //"Regional lymph nodes.pathology [Class] Cancer"
 * valueCodeableConcept from TNMRegionalNodesCategoryVS (preferred)
 
 Profile:  TNMPathologicalDistantMetastasesCategory
@@ -138,5 +138,5 @@ Parent: CancerStageParent
 Title: "TNM Pathological Distant Metastases Category"
 Description: "Category describing the presence or absence of metastases in remote anatomical locations, assessed through pathologic analysis of a specimen."
 * ^abstract = false
-* code = LNC#21901-4 "Distant metastases.pathology [Class] Cancer"
+* code = LNC#21901-4 //"Distant metastases.pathology [Class] Cancer"
 * valueCodeableConcept from TNMDistantMetastasesCategoryVS (preferred)
