@@ -16,7 +16,7 @@ Description:    "The Karnofsky Performance Status (KPS) is a tool used to measur
 * basedOn only Reference (ServiceRequest | CarePlan)
 * partOf only Reference (Procedure)
 * category from http://hl7.org/fhir/ValueSet/observation-category (extensible)
-* code = LNC#89243-0 "Karnofsky Performance Status score"
+* code = LNC#89243-0 //"Karnofsky Performance Status score"
 * subject only Reference(USCorePatient)
 * effective[x] only dateTime or Period
 * performer only Reference(Practitioner)
@@ -41,7 +41,7 @@ Description:    "The Eastern Cooperative Oncology Group (ECOG) Performance Statu
 * basedOn only Reference(ServiceRequest | CarePlan)
 * partOf only Reference(Procedure)
 * category from http://hl7.org/fhir/ValueSet/observation-category (extensible)
-* code = LNC#89247-1 "ECOG Performance Status score"
+* code = LNC#89247-1 //"ECOG Performance Status score"
 * subject only Reference(USCorePatient)
 * effective[x] only dateTime or Period 
 * performer only Reference(Practitioner)

@@ -18,7 +18,7 @@ Note: The LOINC code chosen to represent this observation (LOINC 88040-1, Respon
 * subject 1..1
 * basedOn only Reference(ServiceRequest | MedicationRequest)
 * partOf only Reference(MedicationAdministration | MedicationStatement | Procedure)
-* code = LNC#88040-1 "Response to cancer treatment"
+* code = LNC#88040-1 //"Response to cancer treatment"
 * subject only Reference(CancerPatient)
 * focus only Reference(CancerConditionParent)
 * effective[x] only dateTime or Period

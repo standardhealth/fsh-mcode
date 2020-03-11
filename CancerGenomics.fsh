@@ -19,7 +19,7 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * identifier[FillerOrderNumber].type = IDTYPE#FILL
 * identifier[PlacerOrderNumber].type = IDTYPE#PLAC
 */
-* code = LNC#69548-6 "Genetic variant assessment"
+* code = LNC#69548-6 //"Genetic variant assessment"
 * method from http://loinc.org/vs/LL4048-6 (extensible)
 * specimen only Reference(GeneticSpecimen)
 * value[x] only CodeableConcept
@@ -133,7 +133,7 @@ The identity of non-genomic laboratory tests is typically represented by a LOINC
 * subject only Reference(CancerPatient)
 * category contains GenomicsCategory 1..1
 * category[GenomicsCategory] = DiagnosticService#GE
-* code = LNC#81247-9 "Master HL7 genetic variant reporting panel"
+* code = LNC#81247-9 //"Master HL7 genetic variant reporting panel"
 * specimen only Reference(GeneticSpecimen)
 * result ^slicing.discriminator.type = #pattern
 * result ^slicing.discriminator.path = "$this.resolve().code"
@@ -158,7 +158,7 @@ Id:         mcode-genomic-region-studied
 Title:      "Genomic Region Studied"
 Description:    "The area of the genome region referenced in testing for variants."
 * code MS
-* code = LNC#53041-0 "DNA region of interest panel"
+* code = LNC#53041-0 //"DNA region of interest panel"
 * value[x] 0..0
 * component ^slicing.discriminator.type = #pattern
 * component ^slicing.discriminator.path = "code"
